@@ -8,6 +8,7 @@ import SPARQLWrapper
 DEFAULT_LIMIT = 2
 DISTANCE = 2
 NUMBER_OF_CHALLENGES = 10
+ENFORCE_EXACT_DISTANCE = True
 
 from dataclasses import dataclass
 from clients import http_client
@@ -273,6 +274,7 @@ if __name__ == "__main__":
             paths = start_to_end_path + end_to_start_path
             valid_paths = []
             for wikipedia_path in paths:
+
                 if len(wikipedia_path.path) < DISTANCE + 1:
                     LOGGER.warning("Path too short: %s", wikipedia_path.path)
                     continue
@@ -283,6 +285,10 @@ if __name__ == "__main__":
                 LOGGER.warning("Invalid paths: %s", valid_paths)
                 # drop the paths
                 continue
+            
+            if ENFORCE_EXACT_DISTANCE:
+                valid_paths = [path for path in valid_paths if len(path.path) == DISTANCE + 1]
+            
             all_paths.extend(valid_paths)
             if len(all_paths) >= NUMBER_OF_CHALLENGES:
                 break
