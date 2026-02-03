@@ -1,0 +1,244 @@
+dataset:
+  id: ''
+  prefix: wikipedia-challenge
+questions:
+- id: Moses the Lawgiver_Population statistics for Israeli settlements in the West
+    Bank
+  path:
+  - https://en.wikipedia.org/wiki/Moses_the_Lawgiver
+  - https://en.wikipedia.org/wiki/Israel
+  - https://en.wikipedia.org/wiki/Population_statistics_for_Israeli_settlements_in_the_West_Bank
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Moses_the_Lawgiver
+      and end URI https://en.wikipedia.org/wiki/Population_statistics_for_Israeli_settlements_in_the_West_Bank.
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 10
+      out_degree: 182
+      reversed_neighborhood_size: 3865
+    start_uri_statistics:
+      in_degree: 41
+      out_degree: 72
+      reversed_neighborhood_size: 7468
+    statistics:
+      in_degree: 51
+      out_degree: 254
+      reversed_neighborhood_size: 11333
+- id: Population statistics for Israeli settlements in the West Bank_Moses the Lawgiver
+  path:
+  - https://en.wikipedia.org/wiki/Population_statistics_for_Israeli_settlements_in_the_West_Bank
+  - https://en.wikipedia.org/wiki/Gaza_Strip
+  - https://en.wikipedia.org/wiki/Palestine_(region)
+  - https://en.wikipedia.org/wiki/Book_of_Exodus
+  - https://en.wikipedia.org/wiki/Moses_the_Lawgiver
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Population_statistics_for_Israeli_settlements_in_the_West_Bank
+      and end URI https://en.wikipedia.org/wiki/Moses_the_Lawgiver. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 41
+      out_degree: 72
+      reversed_neighborhood_size: 7468
+    start_uri_statistics:
+      in_degree: 10
+      out_degree: 182
+      reversed_neighborhood_size: 3865
+    statistics:
+      in_degree: 51
+      out_degree: 254
+      reversed_neighborhood_size: 11333
+- id: Moses the Lawgiver_List of football clubs in Israel
+  path:
+  - https://en.wikipedia.org/wiki/Moses_the_Lawgiver
+  - https://en.wikipedia.org/wiki/Israel
+  - https://en.wikipedia.org/wiki/List_of_football_clubs_in_Israel
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Moses_the_Lawgiver
+      and end URI https://en.wikipedia.org/wiki/List_of_football_clubs_in_Israel.
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 8
+      out_degree: 187
+      reversed_neighborhood_size: 4977
+    start_uri_statistics:
+      in_degree: 41
+      out_degree: 72
+      reversed_neighborhood_size: 7468
+    statistics:
+      in_degree: 49
+      out_degree: 259
+      reversed_neighborhood_size: 12445
+- id: List of football clubs in Israel_Moses the Lawgiver
+  path:
+  - https://en.wikipedia.org/wiki/List_of_football_clubs_in_Israel
+  - https://en.wikipedia.org/wiki/Association_football
+  - https://en.wikipedia.org/wiki/Manchester
+  - https://en.wikipedia.org/wiki/Anthony_Burgess
+  - https://en.wikipedia.org/wiki/Moses_the_Lawgiver
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/List_of_football_clubs_in_Israel
+      and end URI https://en.wikipedia.org/wiki/Moses_the_Lawgiver. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 41
+      out_degree: 72
+      reversed_neighborhood_size: 7468
+    start_uri_statistics:
+      in_degree: 8
+      out_degree: 187
+      reversed_neighborhood_size: 4977
+    statistics:
+      in_degree: 49
+      out_degree: 259
+      reversed_neighborhood_size: 12445
+- id: Global Mall Linkou A9_World Bank
+  path:
+  - https://en.wikipedia.org/wiki/Global_Mall_Linkou_A9
+  - https://en.wikipedia.org/wiki/Taiwan
+  - https://en.wikipedia.org/wiki/World_Bank
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Global_Mall_Linkou_A9
+      and end URI https://en.wikipedia.org/wiki/World_Bank. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 6924
+      out_degree: 186
+      reversed_neighborhood_size: 29223
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 16
+      reversed_neighborhood_size: 1932
+    statistics:
+      in_degree: 6927
+      out_degree: 202
+      reversed_neighborhood_size: 31155
+- id: World Bank_Global Mall Linkou A9
+  path:
+  - https://en.wikipedia.org/wiki/World_Bank
+  - https://en.wikipedia.org/wiki/Simon_&_Schuster
+  - https://en.wikipedia.org/wiki/Dollar_General
+  - https://en.wikipedia.org/wiki/Eslite_Bookstore
+  - https://en.wikipedia.org/wiki/Global_Mall_Linkou_A9
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/World_Bank
+      and end URI https://en.wikipedia.org/wiki/Global_Mall_Linkou_A9. Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 3
+      out_degree: 16
+      reversed_neighborhood_size: 1932
+    start_uri_statistics:
+      in_degree: 6924
+      out_degree: 186
+      reversed_neighborhood_size: 29223
+    statistics:
+      in_degree: 6927
+      out_degree: 202
+      reversed_neighborhood_size: 31155
+- id: Global Mall Linkou A9_1997 Asian financial crisis
+  path:
+  - https://en.wikipedia.org/wiki/Global_Mall_Linkou_A9
+  - https://en.wikipedia.org/wiki/Sogo
+  - https://en.wikipedia.org/wiki/1997_Asian_financial_crisis
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Global_Mall_Linkou_A9
+      and end URI https://en.wikipedia.org/wiki/1997_Asian_financial_crisis. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 773
+      out_degree: 270
+      reversed_neighborhood_size: 28235
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 16
+      reversed_neighborhood_size: 1932
+    statistics:
+      in_degree: 776
+      out_degree: 286
+      reversed_neighborhood_size: 30167
+- id: 1997 Asian financial crisis_Global Mall Linkou A9
+  path:
+  - https://en.wikipedia.org/wiki/1997_Asian_financial_crisis
+  - https://en.wikipedia.org/wiki/2007_pet_food_recalls
+  - https://en.wikipedia.org/wiki/Costco
+  - https://en.wikipedia.org/wiki/Eslite_Bookstore
+  - https://en.wikipedia.org/wiki/Global_Mall_Linkou_A9
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/1997_Asian_financial_crisis
+      and end URI https://en.wikipedia.org/wiki/Global_Mall_Linkou_A9. Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 3
+      out_degree: 16
+      reversed_neighborhood_size: 1932
+    start_uri_statistics:
+      in_degree: 773
+      out_degree: 270
+      reversed_neighborhood_size: 28235
+    statistics:
+      in_degree: 776
+      out_degree: 286
+      reversed_neighborhood_size: 30167
+- id: Mooiplaas, Mpumalanga_South African literature
+  path:
+  - https://en.wikipedia.org/wiki/Mooiplaas,_Mpumalanga
+  - https://en.wikipedia.org/wiki/South_Africa
+  - https://en.wikipedia.org/wiki/South_African_literature
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Mooiplaas,_Mpumalanga
+      and end URI https://en.wikipedia.org/wiki/South_African_literature. Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 37
+      out_degree: 170
+      reversed_neighborhood_size: 11817
+    start_uri_statistics:
+      in_degree: 6
+      out_degree: 17
+      reversed_neighborhood_size: 1731
+    statistics:
+      in_degree: 43
+      out_degree: 187
+      reversed_neighborhood_size: 13548
+- id: South African literature_Mooiplaas, Mpumalanga
+  path:
+  - https://en.wikipedia.org/wiki/South_African_literature
+  - https://en.wikipedia.org/wiki/South_African_National_Defence_Force
+  - https://en.wikipedia.org/wiki/Ermelo,_South_Africa
+  - https://en.wikipedia.org/wiki/Mooiplaas,_Mpumalanga
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/South_African_literature
+      and end URI https://en.wikipedia.org/wiki/Mooiplaas,_Mpumalanga. Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 6
+      out_degree: 17
+      reversed_neighborhood_size: 1731
+    start_uri_statistics:
+      in_degree: 37
+      out_degree: 170
+      reversed_neighborhood_size: 11817
+    statistics:
+      in_degree: 43
+      out_degree: 187
+      reversed_neighborhood_size: 13548
