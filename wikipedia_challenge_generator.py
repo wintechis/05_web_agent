@@ -1,3 +1,4 @@
+import logging
 from typing import Any, Dict, List
 
 import httpx
@@ -12,6 +13,9 @@ from clients import http_client
 from typing import Tuple, Optional
 import yaml
 from functools import lru_cache
+
+LOGGER = logging.getLogger(__name__)
+
 @dataclass
 class WikipediaPage:
     url: httpx.URL
@@ -38,9 +42,9 @@ class WikipediaPath:
     end_uri_statistics: Optional[Tuple[int, int, int]] = None
     statistics: Optional[Tuple[int, int, int]] = None
 
-def find_random_wikipedia_page():
+def find_random_wikipedia_page() -> WikipediaPage:
     r = http_client.get("https://en.wikipedia.org/wiki/Special:Random", follow_redirects=True)
-    print(r.text)
+    LOGGER.debug("Random wikipedia response: %s", r.text)
     return WikipediaPage(url=r.url)
 
 
@@ -98,13 +102,13 @@ def get_n_steps_away_from_random_wikipedia_page(
     wikipedia_page: str,
 ) -> Dict[str, Any]:
     query = _build_redirect_query(n=n, wikipedia_page=wikipedia_page)
-    print(query)
+    LOGGER.debug("DBPedia redirect query: %s", query)
     sparql = SPARQLWrapper.SPARQLWrapper("https://dbpedia.org/sparql")
     sparql.setQuery(query)
     sparql.setReturnFormat(SPARQLWrapper.JSON)
     results = sparql.query().convert()
     
-    print(results)
+    LOGGER.debug("DBPedia redirect results: %s", results)
     wikipedia_pages = []
     for result in results.get("results", {}).get("bindings", []):
         if f"page{n}" in result:
@@ -127,11 +131,11 @@ def find_wiki_path(source, target) -> WikipediaPath:
         "target": target
     }
     
-    print(payload)
+    LOGGER.info("Finding path with payload: %s", payload)
     
     
     response = http_client.post(url, json=payload)
-    print(response.text)
+    LOGGER.debug("Six Degrees response: %s", response.text)
     data = response.json()
     
     # This returns a list of all shortest paths found
@@ -142,6 +146,7 @@ def find_wiki_path(source, target) -> WikipediaPath:
     minimal_length_path = None
     
     if len(paths) == 0:
+        LOGGER.info("No paths found for %s -> %s", source, target)
         return []
     
     for path in paths:
@@ -177,8 +182,8 @@ def get_reversed_neighborhood_size(end_uri):
 
         for r in results["results"]["bindings"]:
             return int(results["results"]["bindings"][0]["reversedNeighborhoodSize"]["value"])
-    except Exception as e:
-        print(e)
+    except Exception:
+        LOGGER.exception("Failed to compute reversed neighborhood size for %s", end_uri)
         return None
 
 @lru_cache(maxsize=10000)
@@ -199,8 +204,8 @@ def get_in_degree(uri):
         results = sparql.query().convert()
         for r in results["results"]["bindings"]:
             return int(r["inDegree"]["value"])
-    except Exception as e:
-        print(e)
+    except Exception:
+        LOGGER.exception("Failed to compute in degree for %s", uri)
         return None
 
 @lru_cache(maxsize=10000)
@@ -221,8 +226,9 @@ def get_out_degree(uri):
         results = sparql.query().convert()
         for r in results["results"]["bindings"]:
             return int(r["outDegree"]["value"])
-    except Exception as e:
-        print(e)
+    except Exception:
+        LOGGER.exception("Failed to compute out degree for %s", uri)
+        return None
         
 
 
@@ -233,7 +239,9 @@ def data_statistics(uri: str) -> Tuple[int, int, int]:
     return reversed_neighborhood_size, in_degree, out_degree
 
 
-def _serialize_statistics(statistics: Optional[Tuple[int, int, int]]) -> Optional[List[int]]:
+def _serialize_statistics(
+    statistics: Optional[Tuple[int, int, int]],
+) -> Optional[Dict[str, int]]:
     if statistics is None:
         return None
     return {
@@ -245,6 +253,7 @@ def _serialize_statistics(statistics: Optional[Tuple[int, int, int]]) -> Optiona
         
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO)
     
     all_paths = []
     start_uri = find_random_wikipedia_page()
@@ -257,20 +266,20 @@ if __name__ == "__main__":
         valid_paths = []
         for wikipedia_path in paths:
             if len(wikipedia_path.path) < DISTANCE + 1:
-                print(f"Path too short: {wikipedia_path.path}")
+                LOGGER.warning("Path too short: %s", wikipedia_path.path)
                 continue
             
             valid_paths.append(wikipedia_path)
 
         if len(valid_paths) != len(paths):
-            print(f"Invalid paths: {valid_paths}")
+            LOGGER.warning("Invalid paths: %s", valid_paths)
             # drop the paths
             continue
         all_paths.extend(valid_paths)
         if len(all_paths) >= NUMBER_OF_CHALLENGES:
             break
         
-    print(all_paths)
+    LOGGER.info("Found %s paths", len(all_paths))
     
     # Validate that the paths are of the expexted lenght
     
@@ -282,7 +291,12 @@ if __name__ == "__main__":
             path.start_uri_statistics[1] + path.end_uri_statistics[1],
             path.start_uri_statistics[2] + path.end_uri_statistics[2]
         )
-        print(f"Path: {path.path}, Length: {path.length}, Statistics: {path.statistics}")
+        LOGGER.info(
+            "Path: %s, Length: %s, Statistics: %s",
+            path.path,
+            path.length,
+            path.statistics,
+        )
 
     
     with open("wikipedia_challenge.yaml", "w", encoding="utf-8") as f:
