@@ -1,4 +1,5 @@
 import logging
+from urllib.parse import unquote
 from typing import Any, Dict, List
 
 import httpx
@@ -20,17 +21,17 @@ LOGGER = logging.getLogger(__name__)
 class WikipediaPage:
     url: httpx.URL
     
-    def name(self):
-        return self.url.path.split("/")[-1]
+    def name(self) -> str:
+        return unquote(self.url.path.split("/")[-1])
     
-    def dbpedia_url(self):
+    def dbpedia_url(self) -> str:
         return f"http://dbpedia.org/resource/{self.name()}"
     
-    def wikipedia_url(self):
-        return f"https://en.wikipedia.org{self.url.path}"
+    def wikipedia_url(self) -> str:
+        return f"https://en.wikipedia.org/wiki/{self.name()}"
     
-    def wikipedia_title(self):
-        return self.url.path.split("/")[-1].replace("_", " ")
+    def wikipedia_title(self) -> str:
+        return self.name().replace("_", " ")
     
 
 
@@ -134,7 +135,7 @@ def find_wiki_path(source, target) -> WikipediaPath:
     LOGGER.info("Finding path with payload: %s", payload)
     
     
-    response = http_client.post(url, json=payload)
+    response = http_client.post(url, json=payload, timeout=30)
     LOGGER.debug("Six Degrees response: %s", response.text)
     data = response.json()
     
@@ -256,28 +257,35 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
     
     all_paths = []
-    start_uri = find_random_wikipedia_page()
-    end_uris = get_n_steps_away_from_random_wikipedia_page(n=DISTANCE, wikipedia_page=start_uri.dbpedia_url())
-    
-    for end_uri in end_uris:
-        start_to_end_path = find_wiki_path(start_uri.wikipedia_title(), end_uri.wikipedia_title())
-        end_to_start_path = find_wiki_path(end_uri.wikipedia_title(), start_uri.wikipedia_title())
-        paths = start_to_end_path + end_to_start_path
-        valid_paths = []
-        for wikipedia_path in paths:
-            if len(wikipedia_path.path) < DISTANCE + 1:
-                LOGGER.warning("Path too short: %s", wikipedia_path.path)
-                continue
-            
-            valid_paths.append(wikipedia_path)
+    attempts = 0
+    while len(all_paths) < NUMBER_OF_CHALLENGES:
+        attempts += 1
+        LOGGER.info("Challenge generation attempt %s", attempts)
+        start_uri = find_random_wikipedia_page()
+        end_uris = get_n_steps_away_from_random_wikipedia_page(
+            n=DISTANCE,
+            wikipedia_page=start_uri.dbpedia_url(),
+        )
+        
+        for end_uri in end_uris:
+            start_to_end_path = find_wiki_path(start_uri.wikipedia_title(), end_uri.wikipedia_title())
+            end_to_start_path = find_wiki_path(end_uri.wikipedia_title(), start_uri.wikipedia_title())
+            paths = start_to_end_path + end_to_start_path
+            valid_paths = []
+            for wikipedia_path in paths:
+                if len(wikipedia_path.path) < DISTANCE + 1:
+                    LOGGER.warning("Path too short: %s", wikipedia_path.path)
+                    continue
+                
+                valid_paths.append(wikipedia_path)
 
-        if len(valid_paths) != len(paths):
-            LOGGER.warning("Invalid paths: %s", valid_paths)
-            # drop the paths
-            continue
-        all_paths.extend(valid_paths)
-        if len(all_paths) >= NUMBER_OF_CHALLENGES:
-            break
+            if len(valid_paths) != len(paths):
+                LOGGER.warning("Invalid paths: %s", valid_paths)
+                # drop the paths
+                continue
+            all_paths.extend(valid_paths)
+            if len(all_paths) >= NUMBER_OF_CHALLENGES:
+                break
         
     LOGGER.info("Found %s paths", len(all_paths))
     
@@ -299,33 +307,63 @@ if __name__ == "__main__":
         )
 
     
-    with open("wikipedia_challenge.yaml", "w", encoding="utf-8") as f:
-        res = {
-            "dataset": {
-                "id": "",
-                "prefix": "wikipedia-challenge"
-            },
-            "questions": []
-        }
-        for path in all_paths:
-            res["questions"].append({
-                "id": path.path[0].wikipedia_title() + "_" + path.path[-1].wikipedia_title(),
-                "question": {
-                    "en": f"Task: Find a path between the start URI {path.path[0].wikipedia_url()} and end URI {path.path[-1].wikipedia_url()}. Return all URIs of the path, including the start and end URIs, in the following format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>"
+    def _write_challenge_yaml(
+        file_name: str,
+        dataset_prefix: str,
+        uri_builder,
+    ) -> None:
+        with open(file_name, "w", encoding="utf-8") as f:
+            res = {
+                "dataset": {
+                    "id": "",
+                    "prefix": dataset_prefix,
                 },
-                "path": [page.wikipedia_url() for page in path.path],
-                "statistics": {
-                    "start_uri_statistics": path.start_uri_statistics,
-                    "end_uri_statistics": path.end_uri_statistics,
-                    "statistics": path.statistics
-                }
-            })
-        for question in res["questions"]:
-            stats = question.get("statistics", {})
-            stats["start_uri_statistics"] = _serialize_statistics(
-                stats.get("start_uri_statistics")
-            )
-            stats["end_uri_statistics"] = _serialize_statistics(stats.get("end_uri_statistics"))
-            stats["statistics"] = _serialize_statistics(stats.get("statistics"))
-        yaml.safe_dump(res, f, default_flow_style=False)
+                "questions": [],
+            }
+            for path in all_paths:
+                start_uri = uri_builder(path.path[0])
+                end_uri = uri_builder(path.path[-1])
+                res["questions"].append(
+                    {
+                        "id": path.path[0].wikipedia_title()
+                        + "_"
+                        + path.path[-1].wikipedia_title(),
+                        "question": {
+                            "en": (
+                                "Task: Find a path between the start URI "
+                                f"{start_uri} and end URI {end_uri}. "
+                                "Return all URIs of the path, including the start "
+                                "and end URIs, in the following format: "
+                                "<answer> <uri1> <uri2> <uri3> <uri4> </answer>"
+                            )
+                        },
+                        "path": [uri_builder(page) for page in path.path],
+                        "statistics": {
+                            "start_uri_statistics": path.start_uri_statistics,
+                            "end_uri_statistics": path.end_uri_statistics,
+                            "statistics": path.statistics,
+                        },
+                    }
+                )
+            for question in res["questions"]:
+                stats = question.get("statistics", {})
+                stats["start_uri_statistics"] = _serialize_statistics(
+                    stats.get("start_uri_statistics")
+                )
+                stats["end_uri_statistics"] = _serialize_statistics(
+                    stats.get("end_uri_statistics")
+                )
+                stats["statistics"] = _serialize_statistics(stats.get("statistics"))
+            yaml.safe_dump(res, f, default_flow_style=False, allow_unicode=True)
+
+    _write_challenge_yaml(
+        "wikipedia_challenge.yaml",
+        "wikipedia-challenge",
+        lambda page: page.wikipedia_url(),
+    )
+    _write_challenge_yaml(
+        "dbpedia_challenge.yaml",
+        "dbpedia-challenge",
+        lambda page: page.dbpedia_url(),
+    )
         
