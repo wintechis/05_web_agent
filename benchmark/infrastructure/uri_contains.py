@@ -6,9 +6,11 @@ import html
 import os
 import re
 import urllib.parse
+
 from loguru import logger
 
-from clients import http_client
+from agent.clients import http_client
+
 
 def _generate_uri_variations(candidate_uri: str) -> list[str]:
     """Generate different variations of a URI for robust matching.
@@ -48,7 +50,7 @@ def _generate_uri_variations(candidate_uri: str) -> list[str]:
             parsed.netloc,
             path_enc,
             query_enc,
-            frag_enc 
+            frag_enc
         ))
 
         if uri_enc and uri_enc not in variations:

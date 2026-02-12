@@ -101,4 +101,3 @@ WEB_AGENT_PROMPT_TEMPLATES = PromptTemplates(
     ),
     final_answer=FINAL_ANSWER_PROMPT_TEMPLATES,
 )
-

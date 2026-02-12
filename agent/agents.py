@@ -9,10 +9,10 @@ from smolagents import (
     validate_tool_arguments,
 )
 
-from prompt import WEB_AGENT_PROMPT_TEMPLATES
-from telemetry import init_tracing
-from tools import GETTool
-from clients import openai_inference_model
+from agent.prompt import WEB_AGENT_PROMPT_TEMPLATES
+from agent.telemetry import init_tracing
+from agent.tools import GETTool, POSTRdfTool, PUTTool
+from agent.clients import openai_inference_model
 
 RATIONALE_KEY = "_rationale"
 RATIONALE_INPUT_SPEC = {
@@ -107,7 +107,7 @@ class RationaleToolCallingAgent(ToolCallingAgent):
 
 vanilla_web_agent = RationaleToolCallingAgent(
     model=openai_inference_model,
-    tools=[GETTool()],
+    tools=[GETTool(), POSTRdfTool(), PUTTool()],
     verbosity_level=2,
     prompt_templates=WEB_AGENT_PROMPT_TEMPLATES,
 )
