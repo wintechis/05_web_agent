@@ -1,0 +1,22 @@
+metrics:
+  csr: 1.0
+  tsr: 0.0
+  po: 0.0
+  ppm: 0.0
+tasks:
+- id: Anabisetia_Elvie Thomas
+  predicted_length: 4
+  valid: false
+  success: false
+  start_uri: http://dbpedia.org/resource/Anabisetia
+  target_uri: http://dbpedia.org/resource/Elvie_Thomas
+  prefix_ratio: 0.0
+  prefix_valid_edges: []
+- id: Carotenoid_Elvie Thomas
+  predicted_length: 3
+  valid: false
+  success: false
+  start_uri: http://dbpedia.org/resource/Carotenoid
+  target_uri: http://dbpedia.org/resource/Elvie_Thomas
+  prefix_ratio: 0.0
+  prefix_valid_edges: []

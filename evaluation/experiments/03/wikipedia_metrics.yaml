@@ -1,0 +1,62 @@
+metrics:
+  csr: 1.0
+  tsr: 0.8
+  po: 0.6666666666666666
+  ppm: 0.8
+tasks:
+- id: Maciel, Paraguay_World Bank
+  predicted_length: 3
+  valid: true
+  success: true
+  start_uri: https://en.wikipedia.org/wiki/Maciel,_Paraguay
+  target_uri: https://en.wikipedia.org/wiki/World_Bank
+  prefix_ratio: 1.0
+  prefix_valid_edges:
+  - from: https://en.wikipedia.org/wiki/Maciel,_Paraguay
+    to: https://en.wikipedia.org/wiki/Paraguay
+  - from: https://en.wikipedia.org/wiki/Paraguay
+    to: https://en.wikipedia.org/wiki/World_Bank
+- id: Maciel, Paraguay_Cassava
+  predicted_length: 3
+  valid: true
+  success: true
+  start_uri: https://en.wikipedia.org/wiki/Maciel,_Paraguay
+  target_uri: https://en.wikipedia.org/wiki/Cassava
+  prefix_ratio: 1.0
+  prefix_valid_edges:
+  - from: https://en.wikipedia.org/wiki/Maciel,_Paraguay
+    to: https://en.wikipedia.org/wiki/Paraguay
+  - from: https://en.wikipedia.org/wiki/Paraguay
+    to: https://en.wikipedia.org/wiki/Cassava
+- id: Maciel, Paraguay_Lingua franca
+  predicted_length: 3
+  valid: true
+  success: true
+  start_uri: https://en.wikipedia.org/wiki/Maciel,_Paraguay
+  target_uri: https://en.wikipedia.org/wiki/Lingua_franca
+  prefix_ratio: 1.0
+  prefix_valid_edges:
+  - from: https://en.wikipedia.org/wiki/Maciel,_Paraguay
+    to: https://en.wikipedia.org/wiki/Paraguay
+  - from: https://en.wikipedia.org/wiki/Paraguay
+    to: https://en.wikipedia.org/wiki/Lingua_franca
+- id: Maciel, Paraguay_Right-wing politics
+  predicted_length: 3
+  valid: false
+  success: false
+  start_uri: https://en.wikipedia.org/wiki/Maciel,_Paraguay
+  target_uri: https://en.wikipedia.org/wiki/Right-wing_politics
+  prefix_ratio: 0.0
+  prefix_valid_edges: []
+- id: Maciel, Paraguay_Separation of powers
+  predicted_length: 3
+  valid: true
+  success: true
+  start_uri: https://en.wikipedia.org/wiki/Maciel,_Paraguay
+  target_uri: https://en.wikipedia.org/wiki/Separation_of_powers
+  prefix_ratio: 1.0
+  prefix_valid_edges:
+  - from: https://en.wikipedia.org/wiki/Maciel,_Paraguay
+    to: https://en.wikipedia.org/wiki/Paraguay
+  - from: https://en.wikipedia.org/wiki/Paraguay
+    to: https://en.wikipedia.org/wiki/Separation_of_powers

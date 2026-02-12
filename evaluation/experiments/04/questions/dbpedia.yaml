@@ -1,0 +1,82 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Anabisetia_Elvie Thomas
+  path:
+  - http://dbpedia.org/resource/Anabisetia
+  - http://dbpedia.org/resource/Bipedalism
+  - http://dbpedia.org/resource/Raccoon
+  - http://dbpedia.org/resource/Mississippi_Delta
+  - http://dbpedia.org/resource/Delta_blues
+  - http://dbpedia.org/resource/Elvie_Thomas
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Anabisetia
+      and end URI http://dbpedia.org/resource/Elvie_Thomas. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 9
+      out_degree: 29
+      reversed_neighborhood_size: 2939
+    start_uri_statistics:
+      in_degree: 22
+      out_degree: 79
+      reversed_neighborhood_size: 6824
+    statistics:
+      in_degree: 31
+      out_degree: 108
+      reversed_neighborhood_size: 9763
+# - id: Anabisetia_Elvie Thomas
+#   path:
+#   - http://dbpedia.org/resource/Anabisetia
+#   - http://dbpedia.org/resource/Bipedalism
+#   - http://dbpedia.org/resource/Raccoon
+#   - http://dbpedia.org/resource/Mississippi_Delta
+#   - http://dbpedia.org/resource/Delta_blues
+#   - http://dbpedia.org/resource/Elvie_Thomas
+#   question:
+#     en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Anabisetia
+#       and end URI http://dbpedia.org/resource/Elvie_Thomas. Return all URIs of the
+#       path, including the start and end URIs, in the following format: <answer> <uri1>
+#       <uri2> <uri3> <uri4> </answer>'
+#   statistics:
+#     end_uri_statistics:
+#       in_degree: 9
+#       out_degree: 29
+#       reversed_neighborhood_size: 2939
+#     start_uri_statistics:
+#       in_degree: 22
+#       out_degree: 79
+#       reversed_neighborhood_size: 6824
+#     statistics:
+#       in_degree: 31
+#       out_degree: 108
+#       reversed_neighborhood_size: 9763
+- id: Carotenoid_Elvie Thomas
+  path:
+  - http://dbpedia.org/resource/Carotenoid
+  - http://dbpedia.org/resource/Algae
+  - http://dbpedia.org/resource/Greek_language
+  - http://dbpedia.org/resource/Pan_flute
+  - http://dbpedia.org/resource/Delta_blues
+  - http://dbpedia.org/resource/Elvie_Thomas
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Carotenoid
+      and end URI http://dbpedia.org/resource/Elvie_Thomas. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 9
+      out_degree: 29
+      reversed_neighborhood_size: 2939
+    start_uri_statistics:
+      in_degree: 523
+      out_degree: 294
+      reversed_neighborhood_size: 16710
+    statistics:
+      in_degree: 532
+      out_degree: 323
+      reversed_neighborhood_size: 19649

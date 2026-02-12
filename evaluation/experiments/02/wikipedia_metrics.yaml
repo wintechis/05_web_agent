@@ -1,0 +1,48 @@
+metrics:
+  csr: 0.8
+  tsr: 0.4
+  po: 0.75
+  ppm: 0.06666666666666667
+tasks:
+- id: 1
+  predicted_length: 4
+  valid: true
+  success: true
+  start_uri: http://en.wikipedia.org/wiki/Pavhari_Baba
+  target_uri: http://en.wikipedia.org/wiki/Cadastre
+  prefix_ratio: 0.0
+  prefix_valid_edges: []
+- id: 2
+  predicted_length: 4
+  valid: true
+  success: true
+  start_uri: http://en.wikipedia.org/wiki/Soksom
+  target_uri: http://en.wikipedia.org/wiki/Calcium
+  prefix_ratio: 0.3333333333333333
+  prefix_valid_edges:
+  - from: http://en.wikipedia.org/wiki/Soksom
+    to: http://en.wikipedia.org/wiki/Bhutan
+- id: 3
+  predicted_length: 0
+  valid: true
+  success: []
+  start_uri: "http://en.wikipedia.org/wiki/Takashima_Sh\u016Bhan"
+  target_uri: http://en.wikipedia.org/wiki/Cabinet_Office_(Japan)
+  prefix_ratio: 0.0
+  prefix_valid_edges: []
+- id: 4
+  predicted_length: 3
+  valid: false
+  success: false
+  start_uri: http://en.wikipedia.org/wiki/La_Calle_de_los_amores
+  target_uri: http://en.wikipedia.org/wiki/Carmen_Sevilla
+  prefix_ratio: 0.0
+  prefix_valid_edges: []
+- id: 5
+  predicted_length: 3
+  valid: false
+  success: false
+  start_uri: http://en.wikipedia.org/wiki/Michael_Russell_(bishop_of_Waterford_and_Lismore)
+  target_uri: http://en.wikipedia.org/wiki/Cabinet_(government)
+  prefix_ratio: 0.0
+  prefix_valid_edges: []

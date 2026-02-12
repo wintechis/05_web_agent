@@ -1,0 +1,151 @@
+benchmark:
+- id: Maciel, Paraguay_World Bank
+  question: &id001
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Maciel,_Paraguay
+      and end URI http://dbpedia.org/resource/World_Bank. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: Maciel, Paraguay_World Bank
+    path:
+    - http://dbpedia.org/resource/Maciel,_Paraguay
+    - http://dbpedia.org/resource/Paraguay
+    - http://dbpedia.org/resource/World_Bank
+    question: *id001
+    statistics:
+      end_uri_statistics:
+        in_degree: 6924
+        out_degree: 186
+        reversed_neighborhood_size: 29223
+      start_uri_statistics:
+        in_degree: 4
+        out_degree: 15
+        reversed_neighborhood_size: 653
+      statistics:
+        in_degree: 6928
+        out_degree: 201
+        reversed_neighborhood_size: 29876
+  model: accounts/fireworks/models/kimi-k2p5
+  predicted_answer: <answer> http://dbpedia.org/resource/Maciel,_Paraguay http://dbpedia.org/resource/Paraguay
+    http://dbpedia.org/resource/World_Bank </answer>
+  trace_file: /home/dorschre/05_web_agent/web_agent_traces/5dc975259c32e88965a4ded8897e05ab.jsonl
+- id: Maciel, Paraguay_Cassava
+  question: &id002
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Maciel,_Paraguay
+      and end URI http://dbpedia.org/resource/Cassava. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: Maciel, Paraguay_Cassava
+    path:
+    - http://dbpedia.org/resource/Maciel,_Paraguay
+    - http://dbpedia.org/resource/Paraguay
+    - http://dbpedia.org/resource/Cassava
+    question: *id002
+    statistics:
+      end_uri_statistics:
+        in_degree: 2360
+        out_degree: 209
+        reversed_neighborhood_size: 25462
+      start_uri_statistics:
+        in_degree: 4
+        out_degree: 15
+        reversed_neighborhood_size: 653
+      statistics:
+        in_degree: 2364
+        out_degree: 224
+        reversed_neighborhood_size: 26115
+  model: accounts/fireworks/models/kimi-k2p5
+  predicted_answer: <answer> http://dbpedia.org/resource/Maciel,_Paraguay http://dbpedia.org/resource/Paraguay
+    http://dbpedia.org/resource/Cassava </answer>
+  trace_file: /home/dorschre/05_web_agent/web_agent_traces/4818375567d9592bb3c1dfe15811016c.jsonl
+- id: Maciel, Paraguay_Lingua franca
+  question: &id003
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Maciel,_Paraguay
+      and end URI http://dbpedia.org/resource/Lingua_franca. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: Maciel, Paraguay_Lingua franca
+    path:
+    - http://dbpedia.org/resource/Maciel,_Paraguay
+    - http://dbpedia.org/resource/Paraguay
+    - http://dbpedia.org/resource/Lingua_franca
+    question: *id003
+    statistics:
+      end_uri_statistics:
+        in_degree: 1485
+        out_degree: 274
+        reversed_neighborhood_size: 59215
+      start_uri_statistics:
+        in_degree: 4
+        out_degree: 15
+        reversed_neighborhood_size: 653
+      statistics:
+        in_degree: 1489
+        out_degree: 289
+        reversed_neighborhood_size: 59868
+  model: accounts/fireworks/models/kimi-k2p5
+  predicted_answer: <answer> http://dbpedia.org/resource/Maciel,_Paraguay http://dbpedia.org/resource/Paraguay
+    http://dbpedia.org/resource/Lingua_franca </answer>
+  trace_file: /home/dorschre/05_web_agent/web_agent_traces/b26d99f8ba6de5bc6db833836c6f7745.jsonl
+- id: Maciel, Paraguay_Right-wing politics
+  question: &id004
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Maciel,_Paraguay
+      and end URI http://dbpedia.org/resource/Right-wing_politics. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: Maciel, Paraguay_Right-wing politics
+    path:
+    - http://dbpedia.org/resource/Maciel,_Paraguay
+    - http://dbpedia.org/resource/Colorado_Party_(Paraguay)
+    - http://dbpedia.org/resource/Right-wing_politics
+    question: *id004
+    statistics:
+      end_uri_statistics:
+        in_degree: 2569
+        out_degree: 235
+        reversed_neighborhood_size: 44188
+      start_uri_statistics:
+        in_degree: 4
+        out_degree: 15
+        reversed_neighborhood_size: 653
+      statistics:
+        in_degree: 2573
+        out_degree: 250
+        reversed_neighborhood_size: 44841
+  model: accounts/fireworks/models/kimi-k2p5
+  predicted_answer: <answer> http://dbpedia.org/resource/Maciel,_Paraguay http://dbpedia.org/resource/Colorado_Party_(Paraguay)
+    http://dbpedia.org/resource/Right-wing_politics </answer>
+  trace_file: /home/dorschre/05_web_agent/web_agent_traces/77f2a5c4c9e5b4e1b870a6dee1aa4fa1.jsonl
+- id: Maciel, Paraguay_Separation of powers
+  question: &id005
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Maciel,_Paraguay
+      and end URI http://dbpedia.org/resource/Separation_of_powers. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: Maciel, Paraguay_Separation of powers
+    path:
+    - http://dbpedia.org/resource/Maciel,_Paraguay
+    - http://dbpedia.org/resource/Paraguay
+    - http://dbpedia.org/resource/Separation_of_powers
+    question: *id005
+    statistics:
+      end_uri_statistics:
+        in_degree: 1058
+        out_degree: 419
+        reversed_neighborhood_size: 41899
+      start_uri_statistics:
+        in_degree: 4
+        out_degree: 15
+        reversed_neighborhood_size: 653
+      statistics:
+        in_degree: 1062
+        out_degree: 434
+        reversed_neighborhood_size: 42552
+  model: accounts/fireworks/models/kimi-k2p5
+  predicted_answer: <answer> <http://dbpedia.org/resource/Maciel,_Paraguay> <http://dbpedia.org/resource/Paraguay>
+    <http://dbpedia.org/resource/Separation_of_powers> </answer>
+  trace_file: /home/dorschre/05_web_agent/web_agent_traces/2faa8ef70b73d2f0af9dce29a21a22eb.jsonl

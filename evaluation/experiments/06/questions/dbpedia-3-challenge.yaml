@@ -1,0 +1,124 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Peleng tarsier_Menat Formation
+  path:
+  - http://dbpedia.org/resource/Peleng_tarsier
+  - http://dbpedia.org/resource/Mammal
+  - http://dbpedia.org/resource/Paleocene
+  - http://dbpedia.org/resource/Menat_Formation
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Peleng_tarsier
+      and end URI http://dbpedia.org/resource/Menat_Formation. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 28
+      out_degree: 18
+      reversed_neighborhood_size: 3124
+    start_uri_statistics:
+      in_degree: 9
+      out_degree: 20
+      reversed_neighborhood_size: 2022
+    statistics:
+      in_degree: 37
+      out_degree: 38
+      reversed_neighborhood_size: 5146
+- id: Menat Formation_Peleng tarsier
+  path:
+  - http://dbpedia.org/resource/Menat_Formation
+  - http://dbpedia.org/resource/Plesiadapis
+  - http://dbpedia.org/resource/Tarsier
+  - http://dbpedia.org/resource/Peleng_tarsier
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Menat_Formation
+      and end URI http://dbpedia.org/resource/Peleng_tarsier. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 9
+      out_degree: 20
+      reversed_neighborhood_size: 2022
+    start_uri_statistics:
+      in_degree: 28
+      out_degree: 18
+      reversed_neighborhood_size: 3124
+    statistics:
+      in_degree: 37
+      out_degree: 38
+      reversed_neighborhood_size: 5146
+- id: List of museums in Tbilisi_British Forces casualties in Afghanistan (2001–2021)
+  path:
+  - http://dbpedia.org/resource/List_of_museums_in_Tbilisi
+  - http://dbpedia.org/resource/Georgia_(country)
+  - http://dbpedia.org/resource/Coalition_casualties_in_Afghanistan
+  - http://dbpedia.org/resource/British_Forces_casualties_in_Afghanistan_(2001–2021)
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/List_of_museums_in_Tbilisi
+      and end URI http://dbpedia.org/resource/British_Forces_casualties_in_Afghanistan_(2001–2021).
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    start_uri_statistics:
+      in_degree: 2
+      out_degree: 52
+      reversed_neighborhood_size: 2181
+    statistics:
+      in_degree: 2
+      out_degree: 52
+      reversed_neighborhood_size: 2182
+- id: British Forces casualties in Afghanistan (2001–2021)_List of museums in Tbilisi
+  path:
+  - http://dbpedia.org/resource/British_Forces_casualties_in_Afghanistan_(2001–2021)
+  - http://dbpedia.org/resource/The_Rifles
+  - http://dbpedia.org/resource/Tbilisi
+  - http://dbpedia.org/resource/List_of_museums_in_Tbilisi
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/British_Forces_casualties_in_Afghanistan_(2001–2021)
+      and end URI http://dbpedia.org/resource/List_of_museums_in_Tbilisi. Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 2
+      out_degree: 52
+      reversed_neighborhood_size: 2181
+    start_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    statistics:
+      in_degree: 2
+      out_degree: 52
+      reversed_neighborhood_size: 2182
+- id: Herman Boelen_EUREGIO
+  path:
+  - http://dbpedia.org/resource/Herman_Boelen
+  - http://dbpedia.org/resource/Amsterdam
+  - http://dbpedia.org/resource/List_of_regions_of_the_Netherlands
+  - http://dbpedia.org/resource/EUREGIO
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Herman_Boelen
+      and end URI http://dbpedia.org/resource/EUREGIO. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 12
+      out_degree: 32
+      reversed_neighborhood_size: 3591
+    start_uri_statistics:
+      in_degree: 8
+      out_degree: 19
+      reversed_neighborhood_size: 1400
+    statistics:
+      in_degree: 20
+      out_degree: 51
+      reversed_neighborhood_size: 4991

@@ -1,0 +1,44 @@
+dataset:
+  id: http://fuseki.iis.fraunhofer.de/link-following/query
+  prefix: link-following
+questions:
+- id: 1
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Pavhari_Baba and end URI http://dbpedia.org/resource/Cadastre. Return all URIs of the path, including the start and end URIs, in the following format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  path: |-
+    http://dbpedia.org/resource/Pavhari_Baba
+    http://dbpedia.org/resource/District
+    http://dbpedia.org/resource/Cadastral
+    http://dbpedia.org/resource/Cadastre
+- id: 2
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Soksom and end URI http://dbpedia.org/resource/Calcium. Return all URIs of the path, including the start and end URIs, in the following format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  path: |-
+    http://dbpedia.org/resource/Soksom
+    http://dbpedia.org/resource/Bhutan
+    http://dbpedia.org/resource/Calcium_carbide
+    http://dbpedia.org/resource/Calcium
+- id: 3
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Takashima_Shūhan and end URI http://dbpedia.org/resource/Cabinet_Office_(Japan). Return all URIs of the path, including the start and end URIs, in the following format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  path: |-
+    http://dbpedia.org/resource/Takashima_Shūhan
+    http://dbpedia.org/resource/Japan
+    http://dbpedia.org/resource/Cabinet_of_Japan
+    http://dbpedia.org/resource/Cabinet_Office_(Japan)
+- id: 4
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/La_Calle_de_los_amores and end URI http://dbpedia.org/resource/Carmen_Sevilla. Return all URIs of the path, including the start and end URIs, in the following format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  path: |-
+    http://dbpedia.org/resource/La_Calle_de_los_amores
+    http://dbpedia.org/resource/Armando_Calvo
+    http://dbpedia.org/resource/Cabaret_Woman
+    http://dbpedia.org/resource/Carmen_Sevilla
+- id: 5
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Michael_Russell_(bishop_of_Waterford_and_Lismore) and end URI http://dbpedia.org/resource/Cabinet_(government). Return all URIs of the path, including the start and end URIs, in the following format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  path: |-
+    http://dbpedia.org/resource/Michael_Russell_(bishop_of_Waterford_and_Lismore)
+    http://dbpedia.org/resource/Ronald_Reagan
+    http://dbpedia.org/resource/Cabinet_government
+    http://dbpedia.org/resource/Cabinet_(government)

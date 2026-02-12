@@ -1,0 +1,101 @@
+benchmark:
+- id: 1
+  question: &id001
+    en: 'Task: Find a path between the start URI http://en.wikipedia.org/wiki/Pavhari_Baba
+      and end URI http://en.wikipedia.org/wiki/Cadastre. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: 1
+    question: *id001
+    path: 'http://en.wikipedia.org/wiki/Pavhari_Baba
+
+      http://en.wikipedia.org/wiki/District
+
+      http://en.wikipedia.org/wiki/Cadastral
+
+      http://en.wikipedia.org/wiki/Cadastre'
+  model: mistral.ministral-14b-latest
+  predicted_answer: <answer> http://en.wikipedia.org/wiki/Pavhari_Baba http://en.wikipedia.org/wiki/Ghazipur
+    http://en.wikipedia.org/wiki/Real_estate http://en.wikipedia.org/wiki/Land_registration
+    http://en.wikipedia.org/wiki/Swami_Vivekananda </answer>
+  trace_file: /home/dorschre/05_web_agent/web_agent_traces/824f28d5d7ef1c18a08d0fdf1be0b2c9.jsonl
+- id: 2
+  question: &id002
+    en: 'Task: Find a path between the start URI http://en.wikipedia.org/wiki/Soksom
+      and end URI http://en.wikipedia.org/wiki/Calcium. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: 2
+    question: *id002
+    path: 'http://en.wikipedia.org/wiki/Soksom
+
+      http://en.wikipedia.org/wiki/Bhutan
+
+      http://en.wikipedia.org/wiki/Calcium_carbide
+
+      http://en.wikipedia.org/wiki/Calcium'
+  model: mistral.ministral-14b-latest
+  predicted_answer: <answer> http://en.wikipedia.org/wiki/Soksom http://en.wikipedia.org/wiki/Sports_in_Bhutan
+    http://en.wikipedia.org/wiki/Bhutan http://en.wikipedia.org/wiki/Geology_of_Bhutan
+    http://en.wikipedia.org/wiki/Calcium </answer>
+  trace_file: /home/dorschre/05_web_agent/web_agent_traces/4dee226c3e7ba8961f488effda463035.jsonl
+- id: 3
+  question: &id003
+    en: "Task: Find a path between the start URI http://en.wikipedia.org/wiki/Takashima_Sh\u016B\
+      han and end URI http://en.wikipedia.org/wiki/Cabinet_Office_(Japan). Return\
+      \ all URIs of the path, including the start and end URIs, in the following format:\
+      \ <answer> <uri1> <uri2> <uri3> <uri4> </answer>"
+  gold_standard_answer:
+    id: 3
+    question: *id003
+    path: "http://en.wikipedia.org/wiki/Takashima_Sh\u016Bhan\nhttp://en.wikipedia.org/wiki/Japan\n\
+      http://en.wikipedia.org/wiki/Cabinet_of_Japan\nhttp://en.wikipedia.org/wiki/Cabinet_Office_(Japan)"
+  model: mistral.ministral-14b-latest
+  predicted_answer: "<answer> http://en.wikipedia.org/wiki/Takashima_Sh\u016Bhan http://en.wikipedia.org/wiki/Bakumatsu\
+    \ http://en.wikipedia.org/wiki/Cabinet_of_Japan http://en.wikipedia.org/wiki/Cabinet_Office_(Japan)\
+    \ </answer>"
+  trace_file: /home/dorschre/05_web_agent/web_agent_traces/361a72a9e7a69ccedb65368a74c1f089.jsonl
+- id: 4
+  question: &id004
+    en: 'Task: Find a path between the start URI http://en.wikipedia.org/wiki/La_Calle_de_los_amores
+      and end URI http://en.wikipedia.org/wiki/Carmen_Sevilla. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: 4
+    question: *id004
+    path: 'http://en.wikipedia.org/wiki/La_Calle_de_los_amores
+
+      http://en.wikipedia.org/wiki/Armando_Calvo
+
+      http://en.wikipedia.org/wiki/Cabaret_Woman
+
+      http://en.wikipedia.org/wiki/Carmen_Sevilla'
+  model: mistral.ministral-14b-latest
+  predicted_answer: <answer> http://en.wikipedia.org/wiki/La_Calle_de_los_amores http://en.wikipedia.org/wiki/Carmen_Sevilla
+    </answer>
+  trace_file: /home/dorschre/05_web_agent/web_agent_traces/03d96d5ebbb855883add95122a2880ef.jsonl
+- id: 5
+  question: &id005
+    en: 'Task: Find a path between the start URI http://en.wikipedia.org/wiki/Michael_Russell_(bishop_of_Waterford_and_Lismore)
+      and end URI http://en.wikipedia.org/wiki/Cabinet_(government). Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: 5
+    question: *id005
+    path: 'http://en.wikipedia.org/wiki/Michael_Russell_(bishop_of_Waterford_and_Lismore)
+
+      http://en.wikipedia.org/wiki/Ronald_Reagan
+
+      http://en.wikipedia.org/wiki/Cabinet_government
+
+      http://en.wikipedia.org/wiki/Cabinet_(government)'
+  model: mistral.ministral-14b-latest
+  predicted_answer: <answer> http://en.wikipedia.org/wiki/Michael_Russell_(bishop_of_Waterford_and_Lismore)
+    http://en.wikipedia.org/wiki/Irish_Catholic_Bishops%27_Conference http://en.wikipedia.org/wiki/Second_Vatican_Council
+    http://en.wikipedia.org/wiki/Government_of_Ireland http://en.wikipedia.org/wiki/Cabinet_(government)
+    </answer>
+  trace_file: /home/dorschre/05_web_agent/web_agent_traces/8658a0e7298f0535ce0a90e34a60609e.jsonl

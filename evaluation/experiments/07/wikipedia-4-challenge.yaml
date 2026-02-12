@@ -1,0 +1,180 @@
+benchmark:
+- id: Acidic oxide_Orange Amps
+  question: &id001
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Acidic_oxide
+      and end URI https://en.wikipedia.org/wiki/Orange_Amps. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: Acidic oxide_Orange Amps
+    path:
+    - https://en.wikipedia.org/wiki/Acidic_oxide
+    - https://en.wikipedia.org/wiki/Aluminium_oxide
+    - https://en.wikipedia.org/wiki/Compact_disc
+    - https://en.wikipedia.org/wiki/GarageBand
+    - https://en.wikipedia.org/wiki/Orange_Amps
+    question: *id001
+    statistics:
+      end_uri_statistics:
+        in_degree: 6
+        out_degree: 1
+        reversed_neighborhood_size: 85
+      start_uri_statistics:
+        in_degree: 26
+        out_degree: 46
+        reversed_neighborhood_size: 2358
+      statistics:
+        in_degree: 32
+        out_degree: 47
+        reversed_neighborhood_size: 2443
+  model: accounts/fireworks/models/kimi-k2p5
+  predicted_answer: <answer> https://en.wikipedia.org/wiki/Acidic_oxide https://en.wikipedia.org/wiki/Aluminium_oxide
+    https://en.wikipedia.org/wiki/Aluminium https://en.wikipedia.org/wiki/Orange_Amps
+    </answer>
+  trace_file: /home/dorschre/05_web_agent/web_agent_traces/f2ff9d6ef9a7a22798da0943d1f54f9a.jsonl
+- id: Hybrid word_Orange Amps
+  question: &id002
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Hybrid_word
+      and end URI https://en.wikipedia.org/wiki/Orange_Amps. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: Hybrid word_Orange Amps
+    path:
+    - https://en.wikipedia.org/wiki/Hybrid_word
+    - https://en.wikipedia.org/wiki/A._E._Housman
+    - https://en.wikipedia.org/wiki/Birmingham
+    - https://en.wikipedia.org/wiki/Tony_Iommi
+    - https://en.wikipedia.org/wiki/Orange_Amps
+    question: *id002
+    statistics:
+      end_uri_statistics:
+        in_degree: 6
+        out_degree: 1
+        reversed_neighborhood_size: 85
+      start_uri_statistics:
+        in_degree: 85
+        out_degree: 117
+        reversed_neighborhood_size: 14293
+      statistics:
+        in_degree: 91
+        out_degree: 118
+        reversed_neighborhood_size: 14378
+  model: accounts/fireworks/models/kimi-k2p5
+  predicted_answer: <answer> https://en.wikipedia.org/wiki/Hybrid_word https://en.wikipedia.org/wiki/Beatnik
+    https://en.wikipedia.org/wiki/The_Beatles https://en.wikipedia.org/wiki/Electric_guitar
+    https://en.wikipedia.org/wiki/Orange_Amps </answer>
+  trace_file: /home/dorschre/05_web_agent/web_agent_traces/c826e290f119cd937267e3f7c4d08405.jsonl
+- id: Genetic variability_Cetacean morbillivirus
+  question: &id003
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Genetic_variability
+      and end URI https://en.wikipedia.org/wiki/Cetacean_morbillivirus. Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: Genetic variability_Cetacean morbillivirus
+    path:
+    - https://en.wikipedia.org/wiki/Genetic_variability
+    - https://en.wikipedia.org/wiki/Asexual_reproduction
+    - https://en.wikipedia.org/wiki/Sexual_reproduction
+    - https://en.wikipedia.org/wiki/Dolphin
+    - https://en.wikipedia.org/wiki/Cetacean_morbillivirus
+    question: *id003
+    statistics:
+      end_uri_statistics:
+        in_degree: 4
+        out_degree: 16
+        reversed_neighborhood_size: 2332
+      start_uri_statistics:
+        in_degree: 105
+        out_degree: 31
+        reversed_neighborhood_size: 3394
+      statistics:
+        in_degree: 109
+        out_degree: 47
+        reversed_neighborhood_size: 5726
+  model: accounts/fireworks/models/kimi-k2p5
+  predicted_answer: <answer> https://en.wikipedia.org/wiki/Genetic_variability https://en.wikipedia.org/wiki/Population
+    https://en.wikipedia.org/wiki/Marine_mammal https://en.wikipedia.org/wiki/Cetacean_morbillivirus
+    </answer>
+  trace_file: /home/dorschre/05_web_agent/web_agent_traces/41b1b66ff6d79ac61106cf3e57d0f0d7.jsonl
+- id: "Mor\xEAtel-de-Mailles_Edward Lewinski-Corwin"
+  question: &id004
+    en: "Task: Find a path between the start URI https://en.wikipedia.org/wiki/Mor\xEA\
+      tel-de-Mailles and end URI https://en.wikipedia.org/wiki/Edward_Lewinski-Corwin.\
+      \ Return all URIs of the path, including the start and end URIs, in the following\
+      \ format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>"
+  gold_standard_answer:
+    id: "Mor\xEAtel-de-Mailles_Edward Lewinski-Corwin"
+    path:
+    - "https://en.wikipedia.org/wiki/Mor\xEAtel-de-Mailles"
+    - https://en.wikipedia.org/wiki/Time_zone
+    - https://en.wikipedia.org/wiki/Germany
+    - https://en.wikipedia.org/wiki/Prussia
+    - https://en.wikipedia.org/wiki/Edward_Lewinski-Corwin
+    question: *id004
+    statistics:
+      end_uri_statistics:
+        in_degree: 0
+        out_degree: 0
+        reversed_neighborhood_size: 1
+      start_uri_statistics:
+        in_degree: 2
+        out_degree: 8
+        reversed_neighborhood_size: 3069
+      statistics:
+        in_degree: 2
+        out_degree: 8
+        reversed_neighborhood_size: 3070
+  model: accounts/fireworks/models/kimi-k2p5
+  predicted_answer: 'I need to find a path between these two Wikipedia pages. Let
+    me try a more systematic search by exploring potential intermediate connections.
+    Let me check if there are any common topics or connections through broader geographical
+    or historical pages.
+
+
+    <answer>
+
+    https://en.wikipedia.org/wiki/Mor%C3%AAtel-de-Mailles
+
+    https://en.wikipedia.org/wiki/France
+
+    https://en.wikipedia.org/wiki/Poland
+
+    https://en.wikipedia.org/wiki/Edward_Lewinski-Corwin
+
+    </answer>'
+  trace_file: /home/dorschre/05_web_agent/web_agent_traces/eed45adb11b82ca4cb1a68579f41aa08.jsonl
+- id: Genetic variability_Cyrtodactylus medioclivus
+  question: &id005
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Genetic_variability
+      and end URI https://en.wikipedia.org/wiki/Cyrtodactylus_medioclivus. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: Genetic variability_Cyrtodactylus medioclivus
+    path:
+    - https://en.wikipedia.org/wiki/Genetic_variability
+    - https://en.wikipedia.org/wiki/Biodiversity
+    - https://en.wikipedia.org/wiki/Data_deficient
+    - https://en.wikipedia.org/wiki/List_of_data_deficient_reptiles
+    - https://en.wikipedia.org/wiki/Cyrtodactylus_medioclivus
+    question: *id005
+    statistics:
+      end_uri_statistics:
+        in_degree: 3
+        out_degree: 4
+        reversed_neighborhood_size: 327
+      start_uri_statistics:
+        in_degree: 105
+        out_degree: 31
+        reversed_neighborhood_size: 3394
+      statistics:
+        in_degree: 108
+        out_degree: 35
+        reversed_neighborhood_size: 3721
+  model: accounts/fireworks/models/kimi-k2p5
+  predicted_answer: <answer> https://en.wikipedia.org/wiki/Genetic_variability https://en.wikipedia.org/wiki/Biodiversity
+    https://en.wikipedia.org/wiki/Species https://en.wikipedia.org/wiki/Animal https://en.wikipedia.org/wiki/Reptile
+    https://en.wikipedia.org/wiki/Cyrtodactylus_medioclivus </answer>
+  trace_file: /home/dorschre/05_web_agent/web_agent_traces/f9d9c6615986c656927bacea92d7507d.jsonl

@@ -1,0 +1,70 @@
+benchmark:
+- id: Anabisetia_Elvie Thomas
+  question: &id001
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Anabisetia
+      and end URI https://en.wikipedia.org/wiki/Elvie_Thomas. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: Anabisetia_Elvie Thomas
+    path:
+    - https://en.wikipedia.org/wiki/Anabisetia
+    - https://en.wikipedia.org/wiki/Bipedalism
+    - https://en.wikipedia.org/wiki/Raccoon
+    - https://en.wikipedia.org/wiki/Mississippi_Delta
+    - https://en.wikipedia.org/wiki/Delta_blues
+    - https://en.wikipedia.org/wiki/Elvie_Thomas
+    question: *id001
+    statistics:
+      end_uri_statistics:
+        in_degree: 9
+        out_degree: 29
+        reversed_neighborhood_size: 2939
+      start_uri_statistics:
+        in_degree: 22
+        out_degree: 79
+        reversed_neighborhood_size: 6824
+      statistics:
+        in_degree: 31
+        out_degree: 108
+        reversed_neighborhood_size: 9763
+  model: accounts/fireworks/models/kimi-k2p5
+  predicted_answer: <answer> https://en.wikipedia.org/wiki/Anabisetia https://en.wikipedia.org/wiki/South_America
+    https://en.wikipedia.org/wiki/United_States https://en.wikipedia.org/wiki/Texas
+    https://en.wikipedia.org/wiki/Elvie_Thomas </answer>
+  trace_file: /home/dorschre/05_web_agent/web_agent_traces/f2ee881759e958c55e0f1a30808da661.jsonl
+- id: Carotenoid_Elvie Thomas
+  question: &id002
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Carotenoid
+      and end URI https://en.wikipedia.org/wiki/Elvie_Thomas. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: Carotenoid_Elvie Thomas
+    path:
+    - https://en.wikipedia.org/wiki/Carotenoid
+    - https://en.wikipedia.org/wiki/Algae
+    - https://en.wikipedia.org/wiki/Greek_language
+    - https://en.wikipedia.org/wiki/Pan_flute
+    - https://en.wikipedia.org/wiki/Delta_blues
+    - https://en.wikipedia.org/wiki/Elvie_Thomas
+    question: *id002
+    statistics:
+      end_uri_statistics:
+        in_degree: 9
+        out_degree: 29
+        reversed_neighborhood_size: 2939
+      start_uri_statistics:
+        in_degree: 523
+        out_degree: 294
+        reversed_neighborhood_size: 16710
+      statistics:
+        in_degree: 532
+        out_degree: 323
+        reversed_neighborhood_size: 19649
+  model: accounts/fireworks/models/kimi-k2p5
+  predicted_answer: <answer> https://en.wikipedia.org/wiki/Carotenoid https://en.wikipedia.org/wiki/Plant
+    https://en.wikipedia.org/wiki/United_States https://en.wikipedia.org/wiki/Texas
+    https://en.wikipedia.org/wiki/Houston https://en.wikipedia.org/wiki/Elvie_Thomas
+    </answer>
+  trace_file: /home/dorschre/05_web_agent/web_agent_traces/dd65da97c91caa979e3ff2e40da1ce93.jsonl

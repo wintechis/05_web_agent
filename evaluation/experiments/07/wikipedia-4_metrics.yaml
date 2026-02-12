@@ -1,0 +1,50 @@
+metrics:
+  csr: 1.0
+  tsr: 0.0
+  po: 0.0
+  ppm: 0.1
+tasks:
+- id: Acidic oxide_Orange Amps
+  predicted_length: 4
+  valid: false
+  success: false
+  start_uri: https://en.wikipedia.org/wiki/Acidic_oxide
+  target_uri: https://en.wikipedia.org/wiki/Orange_Amps
+  prefix_ratio: 0.25
+  prefix_valid_edges:
+  - from: https://en.wikipedia.org/wiki/Acidic_oxide
+    to: https://en.wikipedia.org/wiki/Aluminium_oxide
+- id: Hybrid word_Orange Amps
+  predicted_length: 5
+  valid: false
+  success: false
+  start_uri: https://en.wikipedia.org/wiki/Hybrid_word
+  target_uri: https://en.wikipedia.org/wiki/Orange_Amps
+  prefix_ratio: 0.0
+  prefix_valid_edges: []
+- id: Genetic variability_Cetacean morbillivirus
+  predicted_length: 4
+  valid: false
+  success: false
+  start_uri: https://en.wikipedia.org/wiki/Genetic_variability
+  target_uri: https://en.wikipedia.org/wiki/Cetacean_morbillivirus
+  prefix_ratio: 0.0
+  prefix_valid_edges: []
+- id: "Mor\xEAtel-de-Mailles_Edward Lewinski-Corwin"
+  predicted_length: 4
+  valid: false
+  success: false
+  start_uri: "https://en.wikipedia.org/wiki/Mor\xEAtel-de-Mailles"
+  target_uri: https://en.wikipedia.org/wiki/Edward_Lewinski-Corwin
+  prefix_ratio: 0.0
+  prefix_valid_edges: []
+- id: Genetic variability_Cyrtodactylus medioclivus
+  predicted_length: 6
+  valid: false
+  success: false
+  start_uri: https://en.wikipedia.org/wiki/Genetic_variability
+  target_uri: https://en.wikipedia.org/wiki/Cyrtodactylus_medioclivus
+  prefix_ratio: 0.25
+  prefix_valid_edges:
+  - from: https://en.wikipedia.org/wiki/Genetic_variability
+    to: https://en.wikipedia.org/wiki/Biodiversity

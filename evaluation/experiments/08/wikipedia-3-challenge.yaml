@@ -1,0 +1,33 @@
+benchmark:
+- id: Acidic oxide_Orange Amps
+  question: &id001
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Acidic_oxide
+      and end URI http://dbpedia.org/resource/Orange_Amps. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      dbo:wikiPageLink <uri2>. <uri2> dbo:wikiPageLink <uri3>. <uri3> dbo:wikiPageLink
+      <uri4>. <uri4> dbo:wikiPageLink <uri5>. </answer>'
+  gold_standard_answer:
+    id: Acidic oxide_Orange Amps
+    path:
+    - http://dbpedia.org/resource/Acidic_oxide
+    - http://dbpedia.org/resource/Aluminium_oxide
+    - http://dbpedia.org/resource/Compact_disc
+    - http://dbpedia.org/resource/GarageBand
+    - http://dbpedia.org/resource/Orange_Amps
+    question: *id001
+    statistics:
+      end_uri_statistics:
+        in_degree: 6
+        out_degree: 1
+        reversed_neighborhood_size: 85
+      start_uri_statistics:
+        in_degree: 26
+        out_degree: 46
+        reversed_neighborhood_size: 2358
+      statistics:
+        in_degree: 32
+        out_degree: 47
+        reversed_neighborhood_size: 2443
+  model: glm-4.7
+  predicted_answer: ''
+  trace_file: /home/dorschre/05_web_agent/web_agent_traces/051db1f9cbdba2653cc6de731b9fa0ea.jsonl

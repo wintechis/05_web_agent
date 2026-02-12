@@ -1,0 +1,96 @@
+benchmark:
+- id: 1
+  question: &id001
+    en: 'Task: Find a path between the start URI http://en.wikipedia.org/wiki/Pavhari_Baba
+      and end URI http://en.wikipedia.org/wiki/Cadastre. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: 1
+    question: *id001
+    path: 'http://en.wikipedia.org/wiki/Pavhari_Baba
+
+      http://en.wikipedia.org/wiki/District
+
+      http://en.wikipedia.org/wiki/Cadastral
+
+      http://en.wikipedia.org/wiki/Cadastre'
+  model: accounts/fireworks/models/kimi-k2p5
+  predicted_answer: <answer> http://en.wikipedia.org/wiki/Pavhari_Baba http://en.wikipedia.org/wiki/Ghazipur
+    http://en.wikipedia.org/wiki/District http://en.wikipedia.org/wiki/Cadastre </answer>
+  trace_file: /home/dorschre/05_web_agent/web_agent_traces/a6b1c52e1308ef7173ca3c3f7ac86782.jsonl
+- id: 2
+  question: &id002
+    en: 'Task: Find a path between the start URI http://en.wikipedia.org/wiki/Soksom
+      and end URI http://en.wikipedia.org/wiki/Calcium. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: 2
+    question: *id002
+    path: 'http://en.wikipedia.org/wiki/Soksom
+
+      http://en.wikipedia.org/wiki/Bhutan
+
+      http://en.wikipedia.org/wiki/Calcium_carbide
+
+      http://en.wikipedia.org/wiki/Calcium'
+  model: accounts/fireworks/models/kimi-k2p5
+  predicted_answer: <answer> http://en.wikipedia.org/wiki/Soksom http://en.wikipedia.org/wiki/Bhutan
+    http://en.wikipedia.org/wiki/Limestone http://en.wikipedia.org/wiki/Calcium </answer>
+  trace_file: /home/dorschre/05_web_agent/web_agent_traces/d2bb832ad4ce233f819599e3016ea4a5.jsonl
+- id: 3
+  question: &id003
+    en: "Task: Find a path between the start URI http://en.wikipedia.org/wiki/Takashima_Sh\u016B\
+      han and end URI http://en.wikipedia.org/wiki/Cabinet_Office_(Japan). Return\
+      \ all URIs of the path, including the start and end URIs, in the following format:\
+      \ <answer> <uri1> <uri2> <uri3> <uri4> </answer>"
+  gold_standard_answer:
+    id: 3
+    question: *id003
+    path: "http://en.wikipedia.org/wiki/Takashima_Sh\u016Bhan\nhttp://en.wikipedia.org/wiki/Japan\n\
+      http://en.wikipedia.org/wiki/Cabinet_of_Japan\nhttp://en.wikipedia.org/wiki/Cabinet_Office_(Japan)"
+  model: accounts/fireworks/models/kimi-k2p5
+  predicted_answer: ''
+  trace_file: /home/dorschre/05_web_agent/web_agent_traces/152efd53b3015a853b2d67bc83c48a37.jsonl
+- id: 4
+  question: &id004
+    en: 'Task: Find a path between the start URI http://en.wikipedia.org/wiki/La_Calle_de_los_amores
+      and end URI http://en.wikipedia.org/wiki/Carmen_Sevilla. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: 4
+    question: *id004
+    path: 'http://en.wikipedia.org/wiki/La_Calle_de_los_amores
+
+      http://en.wikipedia.org/wiki/Armando_Calvo
+
+      http://en.wikipedia.org/wiki/Cabaret_Woman
+
+      http://en.wikipedia.org/wiki/Carmen_Sevilla'
+  model: accounts/fireworks/models/kimi-k2p5
+  predicted_answer: <answer> http://en.wikipedia.org/wiki/La_Calle_de_los_amores http://en.wikipedia.org/wiki/Carlos_Orellana
+    http://en.wikipedia.org/wiki/Carmen_Sevilla </answer>
+  trace_file: /home/dorschre/05_web_agent/web_agent_traces/84d31d8651025f8ac92640dc123264b6.jsonl
+- id: 5
+  question: &id005
+    en: 'Task: Find a path between the start URI http://en.wikipedia.org/wiki/Michael_Russell_(bishop_of_Waterford_and_Lismore)
+      and end URI http://en.wikipedia.org/wiki/Cabinet_(government). Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: 5
+    question: *id005
+    path: 'http://en.wikipedia.org/wiki/Michael_Russell_(bishop_of_Waterford_and_Lismore)
+
+      http://en.wikipedia.org/wiki/Ronald_Reagan
+
+      http://en.wikipedia.org/wiki/Cabinet_government
+
+      http://en.wikipedia.org/wiki/Cabinet_(government)'
+  model: accounts/fireworks/models/kimi-k2p5
+  predicted_answer: <answer> http://en.wikipedia.org/wiki/Michael_Russell_(bishop_of_Waterford_and_Lismore)
+    http://en.wikipedia.org/wiki/Ronald_Reagan http://en.wikipedia.org/wiki/Cabinet_(government)
+    </answer>
+  trace_file: /home/dorschre/05_web_agent/web_agent_traces/9367c6fef5f8b4d064e13cda8218d701.jsonl

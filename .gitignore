@@ -1,2 +1,6 @@
 uv.lock
 *.cpython-313.pyc
+benchmark/__pycache__/**
+changelog.md
+.env
+notes.md

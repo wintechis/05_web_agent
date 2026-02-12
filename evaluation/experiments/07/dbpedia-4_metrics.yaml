@@ -1,0 +1,48 @@
+metrics:
+  csr: 0.6
+  tsr: 0.0
+  po: 0.0
+  ppm: 0.05
+tasks:
+- id: Acidic oxide_Orange Amps
+  predicted_length: 4
+  valid: false
+  success: false
+  start_uri: http://dbpedia.org/resource/Acidic_oxide
+  target_uri: http://dbpedia.org/resource/Orange_Amps
+  prefix_ratio: 0.25
+  prefix_valid_edges:
+  - from: http://dbpedia.org/resource/Acidic_oxide
+    to: http://dbpedia.org/resource/Aluminium_oxide
+- id: Hybrid word_Orange Amps
+  predicted_length: 3
+  valid: false
+  success: false
+  start_uri: http://dbpedia.org/resource/Hybrid_word
+  target_uri: http://dbpedia.org/resource/Orange_Amps
+  prefix_ratio: 0.0
+  prefix_valid_edges: []
+- id: Genetic variability_Cetacean morbillivirus
+  predicted_length: 0
+  valid: true
+  success: []
+  start_uri: http://dbpedia.org/resource/Genetic_variability
+  target_uri: http://dbpedia.org/resource/Cetacean_morbillivirus
+  prefix_ratio: 0.0
+  prefix_valid_edges: []
+- id: "Mor\xEAtel-de-Mailles_Edward Lewinski-Corwin"
+  predicted_length: 0
+  valid: true
+  success: []
+  start_uri: "http://dbpedia.org/resource/Mor\xEAtel-de-Mailles"
+  target_uri: http://dbpedia.org/resource/Edward_Lewinski-Corwin
+  prefix_ratio: 0.0
+  prefix_valid_edges: []
+- id: Genetic variability_Cyrtodactylus medioclivus
+  predicted_length: 3
+  valid: false
+  success: false
+  start_uri: http://dbpedia.org/resource/Genetic_variability
+  target_uri: http://dbpedia.org/resource/Cyrtodactylus_medioclivus
+  prefix_ratio: 0.0
+  prefix_valid_edges: []

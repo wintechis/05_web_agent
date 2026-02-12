@@ -1,0 +1,56 @@
+metrics:
+  csr: 0.6
+  tsr: 0.4
+  po: 0.875
+  ppm: 0.2
+tasks:
+- id: Peleng tarsier_Menat Formation
+  predicted_length: 4
+  valid: true
+  success: true
+  start_uri: https://en.wikipedia.org/wiki/Peleng_tarsier
+  target_uri: https://en.wikipedia.org/wiki/Menat_Formation
+  prefix_ratio: 1.0
+  prefix_valid_edges:
+  - from: https://en.wikipedia.org/wiki/Peleng_tarsier
+    to: https://en.wikipedia.org/wiki/Mammal
+  - from: https://en.wikipedia.org/wiki/Mammal
+    to: https://en.wikipedia.org/wiki/Paleocene
+  - from: https://en.wikipedia.org/wiki/Paleocene
+    to: https://en.wikipedia.org/wiki/Menat_Formation
+- id: Menat Formation_Peleng tarsier
+  predicted_length: 5
+  valid: true
+  success: true
+  start_uri: https://en.wikipedia.org/wiki/Menat_Formation
+  target_uri: https://en.wikipedia.org/wiki/Peleng_tarsier
+  prefix_ratio: 0.0
+  prefix_valid_edges: []
+- id: "List of museums in Tbilisi_British Forces casualties in Afghanistan (2001\u2013\
+    2021)"
+  predicted_length: 0
+  valid: true
+  success: []
+  start_uri: https://en.wikipedia.org/wiki/List_of_museums_in_Tbilisi
+  target_uri: "https://en.wikipedia.org/wiki/British_Forces_casualties_in_Afghanistan_(2001\u2013\
+    2021)"
+  prefix_ratio: 0.0
+  prefix_valid_edges: []
+- id: "British Forces casualties in Afghanistan (2001\u20132021)_List of museums in\
+    \ Tbilisi"
+  predicted_length: 0
+  valid: true
+  success: []
+  start_uri: "https://en.wikipedia.org/wiki/British_Forces_casualties_in_Afghanistan_(2001\u2013\
+    2021)"
+  target_uri: https://en.wikipedia.org/wiki/List_of_museums_in_Tbilisi
+  prefix_ratio: 0.0
+  prefix_valid_edges: []
+- id: Herman Boelen_EUREGIO
+  predicted_length: 4
+  valid: false
+  success: false
+  start_uri: https://en.wikipedia.org/wiki/Herman_Boelen
+  target_uri: https://en.wikipedia.org/wiki/EUREGIO
+  prefix_ratio: 0.0
+  prefix_valid_edges: []

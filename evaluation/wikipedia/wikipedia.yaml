@@ -1,0 +1,44 @@
+dataset:
+  id: http://fuseki.iis.fraunhofer.de/link-following/query
+  prefix: link-following
+questions:
+- id: 1
+  question:
+    en: 'Task: Find a path between the start URI http://en.wikipedia.org/wiki/Pavhari_Baba and end URI http://en.wikipedia.org/wiki/Cadastre. Return all URIs of the path, including the start and end URIs, in the following format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  path: |-
+    http://en.wikipedia.org/wiki/Pavhari_Baba
+    http://en.wikipedia.org/wiki/District
+    http://en.wikipedia.org/wiki/Cadastral
+    http://en.wikipedia.org/wiki/Cadastre
+- id: 2
+  question:
+    en: 'Task: Find a path between the start URI http://en.wikipedia.org/wiki/Soksom and end URI http://en.wikipedia.org/wiki/Calcium. Return all URIs of the path, including the start and end URIs, in the following format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  path: |-
+    http://en.wikipedia.org/wiki/Soksom
+    http://en.wikipedia.org/wiki/Bhutan
+    http://en.wikipedia.org/wiki/Calcium_carbide
+    http://en.wikipedia.org/wiki/Calcium
+- id: 3
+  question:
+    en: 'Task: Find a path between the start URI http://en.wikipedia.org/wiki/Takashima_Shūhan and end URI http://en.wikipedia.org/wiki/Cabinet_Office_(Japan). Return all URIs of the path, including the start and end URIs, in the following format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  path: |-
+    http://en.wikipedia.org/wiki/Takashima_Shūhan
+    http://en.wikipedia.org/wiki/Japan
+    http://en.wikipedia.org/wiki/Cabinet_of_Japan
+    http://en.wikipedia.org/wiki/Cabinet_Office_(Japan)
+- id: 4
+  question:
+    en: 'Task: Find a path between the start URI http://en.wikipedia.org/wiki/La_Calle_de_los_amores and end URI http://en.wikipedia.org/wiki/Carmen_Sevilla. Return all URIs of the path, including the start and end URIs, in the following format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  path: |-
+    http://en.wikipedia.org/wiki/La_Calle_de_los_amores
+    http://en.wikipedia.org/wiki/Armando_Calvo
+    http://en.wikipedia.org/wiki/Cabaret_Woman
+    http://en.wikipedia.org/wiki/Carmen_Sevilla
+- id: 5
+  question:
+    en: 'Task: Find a path between the start URI http://en.wikipedia.org/wiki/Michael_Russell_(bishop_of_Waterford_and_Lismore) and end URI http://en.wikipedia.org/wiki/Cabinet_(government). Return all URIs of the path, including the start and end URIs, in the following format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  path: |-
+    http://en.wikipedia.org/wiki/Michael_Russell_(bishop_of_Waterford_and_Lismore)
+    http://en.wikipedia.org/wiki/Ronald_Reagan
+    http://en.wikipedia.org/wiki/Cabinet_government
+    http://en.wikipedia.org/wiki/Cabinet_(government)
