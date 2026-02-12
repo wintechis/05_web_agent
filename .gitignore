@@ -1,2 +1,4 @@
 uv.lock
 *.cpython-313.pyc
+.env
+notes.md
