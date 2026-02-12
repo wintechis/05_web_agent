@@ -1,11 +1,51 @@
 ## Web Agent
 
-### HTTP server
+### Installation
 
-Start the API server:
+**With uv:**
 
 ```bash
-python -m agent.server
+uv sync
+```
+
+This creates a virtual environment and installs all dependencies. Run commands with `uv run python ...` or activate the venv first.
+
+**With Python (pip):**
+
+```bash
+python -m venv .venv
+source .venv/bin/activate   # On Windows: .venv\Scripts\activate
+pip install -e .
+```
+
+**Environment configuration:**
+
+Copy `.env.example` to `.env` and fill in your API credentials:
+
+```bash
+cp .env.example .env
+# Edit .env and set OPENAI_API_KEY, OPENAI_BASE_URL, OPENAI_MODEL_ID
+```
+
+### Interacting with the Agent
+
+**Via main.py (CLI, single task):**
+
+Edit the `task` variable in `main.py` and run:
+
+```bash
+uv run python main.py
+# or, with activated venv: python main.py
+```
+
+The agent runs once, blocks until the task completes, and prints the result.
+
+**Via server (HTTP API):**
+
+Start the server:
+
+```bash
+uv run python -m agent.server
 # or: uvicorn agent.server:app --host 0.0.0.0 --port 8000
 ```
 
