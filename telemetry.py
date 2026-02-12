@@ -13,6 +13,7 @@ from opentelemetry.sdk.trace.export import (
     SpanExportResult,
 )
 from openinference.instrumentation.smolagents import SmolagentsInstrumentor
+from openinference.instrumentation.openai import OpenAIInstrumentor
 
 DEFAULT_SERVICE_NAME = "smolagents-web-agent"
 DEFAULT_TRACE_DIR = "web_agent_traces"
@@ -93,5 +94,7 @@ def init_tracing() -> None:
     )
     trace.set_tracer_provider(provider)
     SmolagentsInstrumentor().instrument()
+    
+    OpenAIInstrumentor().instrument()
 
     _TRACING_INITIALIZED = True

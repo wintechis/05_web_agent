@@ -1,6 +1,7 @@
+import argparse
 import logging
 from urllib.parse import unquote
-from typing import Any, Dict, List
+from typing import Dict, List, Optional, Tuple
 
 import httpx
 import SPARQLWrapper
@@ -9,12 +10,16 @@ DEFAULT_LIMIT = 2
 DISTANCE = 2
 NUMBER_OF_CHALLENGES = 10
 ENFORCE_EXACT_DISTANCE = True
+DEFAULT_LOG_LEVEL = "INFO"
+DEFAULT_WIKIPEDIA_OUTPUT = "wikipedia_challenge.yaml"
+DEFAULT_DBPEDIA_OUTPUT = "dbpedia_challenge.yaml"
 
 from dataclasses import dataclass
-from clients import http_client
-from typing import Tuple, Optional
-import yaml
 from functools import lru_cache
+
+import yaml
+
+from clients import http_client
 
 LOGGER = logging.getLogger(__name__)
 
@@ -102,8 +107,9 @@ LIMIT {limit}
 def get_n_steps_away_from_random_wikipedia_page(
     n: int,
     wikipedia_page: str,
-) -> Dict[str, Any]:
-    query = _build_redirect_query(n=n, wikipedia_page=wikipedia_page)
+    limit: int = DEFAULT_LIMIT,
+) -> List["WikipediaPage"]:
+    query = _build_redirect_query(n=n, wikipedia_page=wikipedia_page, limit=limit)
     LOGGER.debug("DBPedia redirect query: %s", query)
     sparql = SPARQLWrapper.SPARQLWrapper("https://dbpedia.org/sparql")
     sparql.setQuery(query)
@@ -126,7 +132,11 @@ def get_n_steps_away_from_random_wikipedia_page(
     return wikipedia_pages
 
 
-def find_wiki_path(source, target) -> WikipediaPath:
+def find_wiki_path(
+    source: str,
+    target: str,
+    distance: int = DISTANCE,
+) -> List[WikipediaPath]:
     url = "https://api.sixdegreesofwikipedia.com/paths"
     payload = {
         "source": source,
@@ -152,7 +162,7 @@ def find_wiki_path(source, target) -> WikipediaPath:
         return []
     
     for path in paths:
-        if len(path) < DISTANCE + 1:
+        if len(path) < distance + 1:
             return []
         if minimal_length_path is None or len(path) < len(minimal_length_path):
             minimal_length_path = path
@@ -254,28 +264,57 @@ def _serialize_statistics(
  
         
 
-if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO)
+def _parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Generate wikipedia/dbpedia challenges.")
+    parser.add_argument("--distance", type=int, default=DISTANCE)
+    parser.add_argument("--number-of-challenges", type=int, default=NUMBER_OF_CHALLENGES)
+    parser.add_argument("--default-limit", type=int, default=DEFAULT_LIMIT)
+    parser.add_argument(
+        "--enforce-exact-distance",
+        action=argparse.BooleanOptionalAction,
+        default=ENFORCE_EXACT_DISTANCE,
+    )
+    parser.add_argument("--log-level", type=str, default=DEFAULT_LOG_LEVEL)
+    parser.add_argument("--wikipedia-output", type=str, default=DEFAULT_WIKIPEDIA_OUTPUT)
+    parser.add_argument("--dbpedia-output", type=str, default=DEFAULT_DBPEDIA_OUTPUT)
+    return parser.parse_args()
+
+
+def main() -> None:
+    args = _parse_args()
+    logging.basicConfig(level=args.log_level.upper())
+    distance = args.distance
+    number_of_challenges = args.number_of_challenges
+    enforce_exact_distance = args.enforce_exact_distance
+    default_limit = args.default_limit
     
-    all_paths = []
+    all_paths: List[WikipediaPath] = []
     attempts = 0
-    while len(all_paths) < NUMBER_OF_CHALLENGES:
+    while len(all_paths) < number_of_challenges:
         attempts += 1
         LOGGER.info("Challenge generation attempt %s", attempts)
         start_uri = find_random_wikipedia_page()
         end_uris = get_n_steps_away_from_random_wikipedia_page(
-            n=DISTANCE,
+            n=distance,
             wikipedia_page=start_uri.dbpedia_url(),
+            limit=default_limit,
         )
         
         for end_uri in end_uris:
-            start_to_end_path = find_wiki_path(start_uri.wikipedia_title(), end_uri.wikipedia_title())
-            end_to_start_path = find_wiki_path(end_uri.wikipedia_title(), start_uri.wikipedia_title())
+            start_to_end_path = find_wiki_path(
+                start_uri.wikipedia_title(),
+                end_uri.wikipedia_title(),
+                distance=distance,
+            )
+            end_to_start_path = find_wiki_path(
+                end_uri.wikipedia_title(),
+                start_uri.wikipedia_title(),
+                distance=distance,
+            )
             paths = start_to_end_path + end_to_start_path
             valid_paths = []
             for wikipedia_path in paths:
-
-                if len(wikipedia_path.path) < DISTANCE + 1:
+                if len(wikipedia_path.path) < distance + 1:
                     LOGGER.warning("Path too short: %s", wikipedia_path.path)
                     continue
                 
@@ -286,11 +325,13 @@ if __name__ == "__main__":
                 # drop the paths
                 continue
             
-            if ENFORCE_EXACT_DISTANCE:
-                valid_paths = [path for path in valid_paths if len(path.path) == DISTANCE + 1]
+            if enforce_exact_distance:
+                valid_paths = [
+                    path for path in valid_paths if len(path.path) == distance + 1
+                ]
             
             all_paths.extend(valid_paths)
-            if len(all_paths) >= NUMBER_OF_CHALLENGES:
+            if len(all_paths) >= number_of_challenges:
                 break
         
     LOGGER.info("Found %s paths", len(all_paths))
@@ -312,7 +353,6 @@ if __name__ == "__main__":
             path.statistics,
         )
 
-    
     def _write_challenge_yaml(
         file_name: str,
         dataset_prefix: str,
@@ -363,13 +403,17 @@ if __name__ == "__main__":
             yaml.safe_dump(res, f, default_flow_style=False, allow_unicode=True)
 
     _write_challenge_yaml(
-        "wikipedia_challenge.yaml",
+        args.wikipedia_output,
         "wikipedia-challenge",
         lambda page: page.wikipedia_url(),
     )
     _write_challenge_yaml(
-        "dbpedia_challenge.yaml",
+        args.dbpedia_output,
         "dbpedia-challenge",
         lambda page: page.dbpedia_url(),
     )
+
+
+if __name__ == "__main__":
+    main()
         

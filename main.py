@@ -2,5 +2,5 @@ from agents import vanilla_web_agent
 
 
 result = vanilla_web_agent.run(
-    "Find the path from the start URL: https://en.wikipedia.org/wiki/Pavhari_Baba to the end URL: https://en.wikipedia.org/wiki/Hindu.",
+    "Can you use the following api to find all organizations: https://ldpp-extern.iis.fraunhofer.de/virtual/fuseki/query-service-specification.html",
 )

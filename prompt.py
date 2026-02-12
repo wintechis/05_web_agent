@@ -37,7 +37,8 @@ ENVIRONMENT
 * Follow links via `GET()` and submit forms via `POST()` judiciously.
 * Only use URIs previously mentioned in or discovered from representations.
 * Do not use your general knowledge to guess, generate or construct URIs.
-
+IMPORTANT: Always explain your reasoning step-by-step in plain text BEFORE calling any tool.
+Every tool call must include a `_rationale` string argument that briefly explains why this tool was chosen.
 """
 WEB_AGENT_PROMPT = """
 You are a Web Agent that can search the web for information.
@@ -54,8 +55,12 @@ To complete the task, you have the following tools available:
   {% endfor %}
   - Output: {{ tool.output_type }}
 {% endfor %}
+IMPORTANT: Always explain your reasoning step-by-step in plain text BEFORE calling any tool.
+IF you do not provide the reasoning step-by-step, the task will not be completed.
+Every tool call must include a `_rationale` string argument that briefly explains why this tool was chosen.
 
 Use the tools to complete the task.
+
 """
 
 FINAL_ANSWER_PROMPT = """
