@@ -29,7 +29,7 @@ cp .env.example .env
 
 ### Interacting with the Agent
 
-**Via main.py (CLI, single task):**
+#### **Via main.py (CLI, single task):**
 
 Edit the `task` variable in `main.py` and run:
 
@@ -40,7 +40,7 @@ uv run python main.py
 
 The agent runs once, blocks until the task completes, and prints the result.
 
-**Via server (HTTP API):**
+#### **Via server (HTTP API):**
 
 Start the server:
 
@@ -49,10 +49,10 @@ uv run python -m agent.server
 # or: uvicorn agent.server:app --host 0.0.0.0 --port 8000
 ```
 
-# Longpolling
+##### Longpolling
 - **GET /** – Run the agent synchronously via query params. Accepts `task` (required) and `id` (optional). Blocks until completion and returns the result string directly, or the error message on failure. (This is for the current version of taskmaster.)
 
-# Polling
+##### Polling
 - **POST /ask** – Submit a question. Returns `{"id": "..."}` immediately. The agent runs in the background.
 - **GET /ask/{id}** – Poll for the result. Returns `{"status": "pending"}` until ready, then `{"status": "completed", "answer": "..."}` or `{"status": "failed", "error": "..."}`.
 
