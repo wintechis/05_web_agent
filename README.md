@@ -1,21 +1,69 @@
 ## Web Agent
 
-### HTTP server
+### Installation
 
-Start the API server:
+**With uv:**
 
 ```bash
-python -m agent.server
+uv sync
+```
+
+This creates a virtual environment and installs all dependencies. Run commands with `uv run python ...` or activate the venv first.
+
+**With Python (pip):**
+
+```bash
+python -m venv .venv
+source .venv/bin/activate   # On Windows: .venv\Scripts\activate
+pip install -e .
+```
+
+**Environment configuration:**
+
+Copy `.env.example` to `.env` and fill in your API credentials:
+
+```bash
+cp .env.example .env
+# Edit .env and set OPENAI_API_KEY, OPENAI_BASE_URL, OPENAI_MODEL_ID
+```
+
+### Interacting with the Agent
+
+**Via main.py (CLI, single task):**
+
+Edit the `task` variable in `main.py` and run:
+
+```bash
+uv run python main.py
+# or, with activated venv: python main.py
+```
+
+The agent runs once, blocks until the task completes, and prints the result.
+
+**Via server (HTTP API):**
+
+Start the server:
+
+```bash
+uv run python -m agent.server
 # or: uvicorn agent.server:app --host 0.0.0.0 --port 8000
 ```
 
+# Longpolling
+- **GET /** – Run the agent synchronously via query params. Accepts `task` (required) and `id` (optional). Blocks until completion and returns the result string directly, or the error message on failure. (This is for the current version of taskmaster.)
+
+# Polling
 - **POST /ask** – Submit a question. Returns `{"id": "..."}` immediately. The agent runs in the background.
 - **GET /ask/{id}** – Poll for the result. Returns `{"status": "pending"}` until ready, then `{"status": "completed", "answer": "..."}` or `{"status": "failed", "error": "..."}`.
-- **GET /** – Run the agent synchronously via query params. Accepts `task` (required) and `id` (optional). Blocks until completion and returns the result string directly, or the error message on failure. (This is for the current version of taskmaster.)
+
 
 Example:
 
 ```bash
+# Sync request (GET /, blocks until done)
+curl "http://localhost:8000/?task=What%20is%20the%20capital%20of%20France%3F"
+# -> "Paris"
+
 # Submit question
 curl -X POST http://localhost:8000/ask -H "Content-Type: application/json" -d '{"question": "What is the capital of France?"}'
 # -> {"id": "93c9bed7-1adc-47bd-b2b9-e1252db10e69"}
@@ -23,24 +71,4 @@ curl -X POST http://localhost:8000/ask -H "Content-Type: application/json" -d '{
 # Poll for result
 curl http://localhost:8000/ask/93c9bed7-1adc-47bd-b2b9-e1252db10e69
 # -> {"status": "pending"} or {"status": "completed", "answer": "Paris", "error": null}
-
-# Sync request (GET /, blocks until done)
-curl "http://localhost:8000/?task=What%20is%20the%20capital%20of%20France%3F"
-# -> "Paris"
 ```
-
-### Run inference
-- Run a single benchmark folder and write predictions:
-  - `python3 run_inference.py benchmark/experiments/02 out/inference`
-- Optional: set `MAX_AGENT_STEPS` to cap steps:
-  - `MAX_AGENT_STEPS=10 python3 run_inference.py benchmark/experiments/02 out/inference`
-- Optional: set trace output directory:
-  - `OTEL_TRACE_DIR=web_agent_traces python3 run_inference.py benchmark/experiments/02 out/inference`
-
-The output is written as YAML files in the output folder. Each entry includes the model id and a `predicted_answer`.
-
-### Run evaluation
-- Evaluate a folder of inference outputs against the benchmark gold data:
-  - `python3 run_evaluation.py benchmark/experiments/02 out/inference out/evaluation`
-
-The evaluation output contains CSR/TSR/PO metrics and per-question details.
