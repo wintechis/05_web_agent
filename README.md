@@ -11,6 +11,7 @@ python -m agent.server
 
 - **POST /ask** – Submit a question. Returns `{"id": "..."}` immediately. The agent runs in the background.
 - **GET /ask/{id}** – Poll for the result. Returns `{"status": "pending"}` until ready, then `{"status": "completed", "answer": "..."}` or `{"status": "failed", "error": "..."}`.
+- **GET /** – Run the agent synchronously via query params. Accepts `task` (required) and `id` (optional). Blocks until completion and returns the result string directly, or the error message on failure. (This is for the current version of taskmaster.)
 
 Example:
 
@@ -22,6 +23,10 @@ curl -X POST http://localhost:8000/ask -H "Content-Type: application/json" -d '{
 # Poll for result
 curl http://localhost:8000/ask/93c9bed7-1adc-47bd-b2b9-e1252db10e69
 # -> {"status": "pending"} or {"status": "completed", "answer": "Paris", "error": null}
+
+# Sync request (GET /, blocks until done)
+curl "http://localhost:8000/?task=What%20is%20the%20capital%20of%20France%3F"
+# -> "Paris"
 ```
 
 ### Run inference
