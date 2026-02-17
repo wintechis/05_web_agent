@@ -8,6 +8,7 @@
 - Inference: when an unhandled exception occurs during agent run, store the error message as the predicted answer (prefix "Error: ", truncated to 2000 chars) and set task_state to "failed" so benchmark YAML records what went wrong instead of an empty predicted_answer.
 - Inference: include task_state in predicted_answer when the agent returns a dict with urls and task_state, so the stored string is the complete response (e.g. "task_state: partial" followed by the URL list) instead of only the URLs.
 - Hydra model experiments: add config group **model** with one YAML per LLM (qwen3_coder_30b, devstral_2_123b, qwen3_vl_30b, glm_4_7, mistral_large_3_675b, meta_llama_3_1_8b, llama_3_3_70b). Run with `model=<name>`; OPENAI_MODEL_ID is set from config and output goes to a per-model subfolder (e.g. out/dbpedia/llama-3.3-70b-instruct/). Lazy model resolution in agent/clients.py (get_openai_inference_model) and agent/agents.py (get_vanilla_web_agent) so the model chosen by Hydra is used at run time.
+- Hydra datasource config: add config group **datasource** to select dataset path sets. Options: experiment_10 (evaluation/experiments/10_dbpedia and 10_wikipedia), datasets_02, datasets_03, datasets_04, datasets_05 (from datasets/). Default is experiment_10. Run with e.g. `datasource=datasets_04`; path resolution uses cfg.datasource.dataset_paths.
 
 ### 2026-02-16
 - turtle_terser_version (resource_transform): include URI in output only on first occurrence per URI; later occurrences show only the label [label].

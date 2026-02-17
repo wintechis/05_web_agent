@@ -1,0 +1,8 @@
+# Data from datasets/02 (dbpedia_questions, wiki_questions)
+dataset_paths:
+  dbpedia:
+    input_folder: datasets/02
+    output_folder: out/datasets_02/dbpedia
+  wikipedia:
+    input_folder: datasets/02
+    output_folder: out/datasets_02/wikipedia

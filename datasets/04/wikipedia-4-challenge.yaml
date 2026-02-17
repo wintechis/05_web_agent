@@ -1,0 +1,129 @@
+dataset:
+  id: ''
+  prefix: wikipedia-challenge
+questions:
+- id: Acidic oxide_Orange Amps
+  path:
+  - https://en.wikipedia.org/wiki/Acidic_oxide
+  - https://en.wikipedia.org/wiki/Aluminium_oxide
+  - https://en.wikipedia.org/wiki/Compact_disc
+  - https://en.wikipedia.org/wiki/GarageBand
+  - https://en.wikipedia.org/wiki/Orange_Amps
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Acidic_oxide
+      and end URI https://en.wikipedia.org/wiki/Orange_Amps. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 6
+      out_degree: 1
+      reversed_neighborhood_size: 85
+    start_uri_statistics:
+      in_degree: 26
+      out_degree: 46
+      reversed_neighborhood_size: 2358
+    statistics:
+      in_degree: 32
+      out_degree: 47
+      reversed_neighborhood_size: 2443
+- id: Hybrid word_Orange Amps
+  path:
+  - https://en.wikipedia.org/wiki/Hybrid_word
+  - https://en.wikipedia.org/wiki/A._E._Housman
+  - https://en.wikipedia.org/wiki/Birmingham
+  - https://en.wikipedia.org/wiki/Tony_Iommi
+  - https://en.wikipedia.org/wiki/Orange_Amps
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Hybrid_word
+      and end URI https://en.wikipedia.org/wiki/Orange_Amps. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 6
+      out_degree: 1
+      reversed_neighborhood_size: 85
+    start_uri_statistics:
+      in_degree: 85
+      out_degree: 117
+      reversed_neighborhood_size: 14293
+    statistics:
+      in_degree: 91
+      out_degree: 118
+      reversed_neighborhood_size: 14378
+- id: Genetic variability_Cetacean morbillivirus
+  path:
+  - https://en.wikipedia.org/wiki/Genetic_variability
+  - https://en.wikipedia.org/wiki/Asexual_reproduction
+  - https://en.wikipedia.org/wiki/Sexual_reproduction
+  - https://en.wikipedia.org/wiki/Dolphin
+  - https://en.wikipedia.org/wiki/Cetacean_morbillivirus
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Genetic_variability
+      and end URI https://en.wikipedia.org/wiki/Cetacean_morbillivirus. Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 4
+      out_degree: 16
+      reversed_neighborhood_size: 2332
+    start_uri_statistics:
+      in_degree: 105
+      out_degree: 31
+      reversed_neighborhood_size: 3394
+    statistics:
+      in_degree: 109
+      out_degree: 47
+      reversed_neighborhood_size: 5726
+- id: Morêtel-de-Mailles_Edward Lewinski-Corwin
+  path:
+  - https://en.wikipedia.org/wiki/Morêtel-de-Mailles
+  - https://en.wikipedia.org/wiki/Time_zone
+  - https://en.wikipedia.org/wiki/Germany
+  - https://en.wikipedia.org/wiki/Prussia
+  - https://en.wikipedia.org/wiki/Edward_Lewinski-Corwin
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Morêtel-de-Mailles
+      and end URI https://en.wikipedia.org/wiki/Edward_Lewinski-Corwin. Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    start_uri_statistics:
+      in_degree: 2
+      out_degree: 8
+      reversed_neighborhood_size: 3069
+    statistics:
+      in_degree: 2
+      out_degree: 8
+      reversed_neighborhood_size: 3070
+- id: Genetic variability_Cyrtodactylus medioclivus
+  path:
+  - https://en.wikipedia.org/wiki/Genetic_variability
+  - https://en.wikipedia.org/wiki/Biodiversity
+  - https://en.wikipedia.org/wiki/Data_deficient
+  - https://en.wikipedia.org/wiki/List_of_data_deficient_reptiles
+  - https://en.wikipedia.org/wiki/Cyrtodactylus_medioclivus
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Genetic_variability
+      and end URI https://en.wikipedia.org/wiki/Cyrtodactylus_medioclivus. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 3
+      out_degree: 4
+      reversed_neighborhood_size: 327
+    start_uri_statistics:
+      in_degree: 105
+      out_degree: 31
+      reversed_neighborhood_size: 3394
+    statistics:
+      in_degree: 108
+      out_degree: 35
+      reversed_neighborhood_size: 3721

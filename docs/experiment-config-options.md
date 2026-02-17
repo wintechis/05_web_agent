@@ -19,7 +19,9 @@ Input/output folders are chosen from `config/config.yaml` **dataset_paths** base
 
 **Model selection:** Use the config group **model** to run the same experiment with different LLMs (e.g. `model=llama_3_3_70b`, `model=devstral_2_123b`). Output is written to a subfolder by model (e.g. `out/dbpedia/llama-3.3-70b-instruct/`) so results do not overwrite. See `config/model/` for available models.
 
-See `config/experiment/`, `config/model/`, and `run_inference_hydra.py` for the concrete setup.
+**Data source selection:** Use the config group **datasource** to switch which dataset paths are used (e.g. `datasource=experiment_10`, `datasource=datasets_04`). Each datasource defines `dataset_paths` (dbpedia and wikipedia input/output folders). Available: `experiment_10` (evaluation/experiments/10_*), `datasets_02`, `datasets_03`, `datasets_04`, `datasets_05` (from the `datasets/` folder). See `config/datasource/`.
+
+See `config/experiment/`, `config/model/`, `config/datasource/`, and `run_inference_hydra.py` for the concrete setup.
 
 ---
 

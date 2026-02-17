@@ -22,6 +22,10 @@ Usage:
   # Multirun over models
   python run_inference_hydra.py -m model=qwen3_coder_30b,llama_3_3_70b,glm_4_7
 
+  # Different data source (config group "datasource"): experiment_10, datasets_02, datasets_03, datasets_04, datasets_05
+  python run_inference_hydra.py datasource=datasets_04
+  python run_inference_hydra.py experiment=env_wikipedia_raw_html datasource=datasets_03 model=llama_3_3_70b
+
 Load .env for secrets (OPENAI_API_KEY, etc.) before running; this script sets experiment and model env from Hydra config.
 """
 
@@ -93,11 +97,21 @@ def _apply_model_to_env(cfg: DictConfig) -> None:
             os.environ["OPENAI_MODEL_ID"] = str(model_id)
 
 
+def _get_dataset_paths(cfg: DictConfig):
+    """Return dataset_paths from selected datasource or top-level (Hydra nests under cfg.datasource)."""
+    datasource = OmegaConf.select(cfg, "datasource")
+    if datasource is not None and OmegaConf.is_config(datasource):
+        p = OmegaConf.select(datasource, "dataset_paths")
+        if p is not None:
+            return p
+    return OmegaConf.select(cfg, "dataset_paths")
+
+
 def _resolve_paths(cfg: DictConfig) -> tuple[Path, Path]:
     """Resolve input_dir and output_dir from config; use dataset_paths when not overridden."""
     experiment_cfg = _get_experiment_config(cfg)
     dataset = OmegaConf.select(experiment_cfg, "dataset") or OmegaConf.select(cfg, "dataset")
-    paths = OmegaConf.select(cfg, "dataset_paths")
+    paths = _get_dataset_paths(cfg)
     input_raw = OmegaConf.select(cfg, "input_folder")
     output_raw = OmegaConf.select(cfg, "output_folder")
     use_dataset_defaults = (
@@ -106,6 +120,10 @@ def _resolve_paths(cfg: DictConfig) -> tuple[Path, Path]:
         or output_raw is None
         or OmegaConf.is_missing(cfg, "output_folder")
     )
+    if use_dataset_defaults and paths is None:
+        raise ValueError(
+            "dataset_paths not found; select a datasource, e.g. datasource=experiment_10 or datasource=datasets_04"
+        )
     if use_dataset_defaults and dataset is not None and paths is not None:
         if dataset not in paths:
             raise ValueError(

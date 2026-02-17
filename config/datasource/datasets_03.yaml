@@ -1,0 +1,7 @@
+dataset_paths:
+  dbpedia:
+    input_folder: datasets/03
+    output_folder: out/datasets_03/dbpedia
+  wikipedia:
+    input_folder: datasets/03
+    output_folder: out/datasets_03/wikipedia

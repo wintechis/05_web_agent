@@ -1,0 +1,129 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Acidic oxide_Orange Amps
+  path:
+  - http://dbpedia.org/resource/Acidic_oxide
+  - http://dbpedia.org/resource/Aluminium_oxide
+  - http://dbpedia.org/resource/Compact_disc
+  - http://dbpedia.org/resource/GarageBand
+  - http://dbpedia.org/resource/Orange_Amps
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Acidic_oxide
+      and end URI http://dbpedia.org/resource/Orange_Amps. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 6
+      out_degree: 1
+      reversed_neighborhood_size: 85
+    start_uri_statistics:
+      in_degree: 26
+      out_degree: 46
+      reversed_neighborhood_size: 2358
+    statistics:
+      in_degree: 32
+      out_degree: 47
+      reversed_neighborhood_size: 2443
+- id: Hybrid word_Orange Amps
+  path:
+  - http://dbpedia.org/resource/Hybrid_word
+  - http://dbpedia.org/resource/A._E._Housman
+  - http://dbpedia.org/resource/Birmingham
+  - http://dbpedia.org/resource/Tony_Iommi
+  - http://dbpedia.org/resource/Orange_Amps
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Hybrid_word
+      and end URI http://dbpedia.org/resource/Orange_Amps. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 6
+      out_degree: 1
+      reversed_neighborhood_size: 85
+    start_uri_statistics:
+      in_degree: 85
+      out_degree: 117
+      reversed_neighborhood_size: 14293
+    statistics:
+      in_degree: 91
+      out_degree: 118
+      reversed_neighborhood_size: 14378
+- id: Genetic variability_Cetacean morbillivirus
+  path:
+  - http://dbpedia.org/resource/Genetic_variability
+  - http://dbpedia.org/resource/Asexual_reproduction
+  - http://dbpedia.org/resource/Sexual_reproduction
+  - http://dbpedia.org/resource/Dolphin
+  - http://dbpedia.org/resource/Cetacean_morbillivirus
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Genetic_variability
+      and end URI http://dbpedia.org/resource/Cetacean_morbillivirus. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 4
+      out_degree: 16
+      reversed_neighborhood_size: 2332
+    start_uri_statistics:
+      in_degree: 105
+      out_degree: 31
+      reversed_neighborhood_size: 3394
+    statistics:
+      in_degree: 109
+      out_degree: 47
+      reversed_neighborhood_size: 5726
+- id: Morêtel-de-Mailles_Edward Lewinski-Corwin
+  path:
+  - http://dbpedia.org/resource/Morêtel-de-Mailles
+  - http://dbpedia.org/resource/Time_zone
+  - http://dbpedia.org/resource/Germany
+  - http://dbpedia.org/resource/Prussia
+  - http://dbpedia.org/resource/Edward_Lewinski-Corwin
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Morêtel-de-Mailles
+      and end URI http://dbpedia.org/resource/Edward_Lewinski-Corwin. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    start_uri_statistics:
+      in_degree: 2
+      out_degree: 8
+      reversed_neighborhood_size: 3069
+    statistics:
+      in_degree: 2
+      out_degree: 8
+      reversed_neighborhood_size: 3070
+- id: Genetic variability_Cyrtodactylus medioclivus
+  path:
+  - http://dbpedia.org/resource/Genetic_variability
+  - http://dbpedia.org/resource/Biodiversity
+  - http://dbpedia.org/resource/Data_deficient
+  - http://dbpedia.org/resource/List_of_data_deficient_reptiles
+  - http://dbpedia.org/resource/Cyrtodactylus_medioclivus
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Genetic_variability
+      and end URI http://dbpedia.org/resource/Cyrtodactylus_medioclivus. Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 3
+      out_degree: 4
+      reversed_neighborhood_size: 327
+    start_uri_statistics:
+      in_degree: 105
+      out_degree: 31
+      reversed_neighborhood_size: 3394
+    statistics:
+      in_degree: 108
+      out_degree: 35
+      reversed_neighborhood_size: 3721

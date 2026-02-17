@@ -1,0 +1,7 @@
+dataset_paths:
+  dbpedia:
+    input_folder: evaluation/experiments/10_dbpedia/questions
+    output_folder: out/dbpedia
+  wikipedia:
+    input_folder: evaluation/experiments/10_wikipedia/questions
+    output_folder: out/wikipedia

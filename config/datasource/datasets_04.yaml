@@ -1,0 +1,8 @@
+# Data from datasets/04 (dbpedia-4-challenge, wikipedia-4-challenge)
+dataset_paths:
+  dbpedia:
+    input_folder: datasets/04
+    output_folder: out/datasets_04/dbpedia
+  wikipedia:
+    input_folder: datasets/04
+    output_folder: out/datasets_04/wikipedia

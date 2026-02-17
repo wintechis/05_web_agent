@@ -1,19 +1,13 @@
 # Default config for inference. input_folder/output_folder are set from dataset_paths
-# based on the experiment's dataset (dbpedia | wikipedia) unless overridden on CLI.
-# _self_ ensures this file is the base so dataset_paths and other keys are present.
+# (from the selected datasource) and the experiment's dataset (dbpedia | wikipedia).
+# _self_ ensures this file is the base.
 defaults:
   - _self_
+  - datasource: experiment_10
   - experiment: semantic_outgoing_turtle
   - model: qwen3_coder_30b
 
-# Per-dataset default paths (used when input_folder/output_folder not overridden)
-dataset_paths:
-  dbpedia:
-    input_folder: evaluation/experiments/10_dbpedia/questions
-    output_folder: out/dbpedia
-  wikipedia:
-    input_folder: evaluation/experiments/10_wikipedia/questions
-    output_folder: out/wikipedia
+# dataset_paths come from the selected datasource (config/datasource/*.yaml)
 
 # Override from CLI or leave unset to use dataset_paths[dataset]
 input_folder: null

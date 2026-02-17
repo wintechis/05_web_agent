@@ -1,0 +1,168 @@
+benchmark:
+- id: Maciel, Paraguay_World Bank
+  question: &id001
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Maciel,_Paraguay
+      and end URI https://en.wikipedia.org/wiki/World_Bank. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: Maciel, Paraguay_World Bank
+    path:
+    - https://en.wikipedia.org/wiki/Maciel,_Paraguay
+    - https://en.wikipedia.org/wiki/Paraguay
+    - https://en.wikipedia.org/wiki/World_Bank
+    question: *id001
+    statistics:
+      end_uri_statistics:
+        in_degree: 6924
+        out_degree: 186
+        reversed_neighborhood_size: 29223
+      start_uri_statistics:
+        in_degree: 4
+        out_degree: 15
+        reversed_neighborhood_size: 653
+      statistics:
+        in_degree: 6928
+        out_degree: 201
+        reversed_neighborhood_size: 29876
+  model: devstral-2-123b-instruct-2512
+  predicted_answer: 'Error: Error while generating output:
+
+    Error code: 400 - {''error'': {''message'': "This model''s maximum context length
+    is 262144 tokens. However, your request has 485453 input tokens. Please reduce
+    the length of the input messages. (parameter=input_tokens, value=485453)", ''type'':
+    ''BadRequestError'', ''param'': ''input_tokens'', ''code'': 400}}'
+  trace_file: /home/dorschre/05_web_agent/out/datasets_02/wikipedia/devstral-2-123b-instruct-2512/traces/bce9282c50032fc44e436ec65f18c1a0.jsonl
+  task_state: failed
+- id: Maciel, Paraguay_Cassava
+  question: &id002
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Maciel,_Paraguay
+      and end URI https://en.wikipedia.org/wiki/Cassava. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: Maciel, Paraguay_Cassava
+    path:
+    - https://en.wikipedia.org/wiki/Maciel,_Paraguay
+    - https://en.wikipedia.org/wiki/Paraguay
+    - https://en.wikipedia.org/wiki/Cassava
+    question: *id002
+    statistics:
+      end_uri_statistics:
+        in_degree: 2360
+        out_degree: 209
+        reversed_neighborhood_size: 25462
+      start_uri_statistics:
+        in_degree: 4
+        out_degree: 15
+        reversed_neighborhood_size: 653
+      statistics:
+        in_degree: 2364
+        out_degree: 224
+        reversed_neighborhood_size: 26115
+  model: devstral-2-123b-instruct-2512
+  predicted_answer: 'Error: Error while generating output:
+
+    Error code: 400 - {''error'': {''message'': "This model''s maximum context length
+    is 262144 tokens. However, your request has 490470 input tokens. Please reduce
+    the length of the input messages. (parameter=input_tokens, value=490470)", ''type'':
+    ''BadRequestError'', ''param'': ''input_tokens'', ''code'': 400}}'
+  trace_file: /home/dorschre/05_web_agent/out/datasets_02/wikipedia/devstral-2-123b-instruct-2512/traces/dd835b1916c956b9cb602e3ad0d0fe0e.jsonl
+  task_state: failed
+- id: Maciel, Paraguay_Lingua franca
+  question: &id003
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Maciel,_Paraguay
+      and end URI https://en.wikipedia.org/wiki/Lingua_franca. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: Maciel, Paraguay_Lingua franca
+    path:
+    - https://en.wikipedia.org/wiki/Maciel,_Paraguay
+    - https://en.wikipedia.org/wiki/Paraguay
+    - https://en.wikipedia.org/wiki/Lingua_franca
+    question: *id003
+    statistics:
+      end_uri_statistics:
+        in_degree: 1485
+        out_degree: 274
+        reversed_neighborhood_size: 59215
+      start_uri_statistics:
+        in_degree: 4
+        out_degree: 15
+        reversed_neighborhood_size: 653
+      statistics:
+        in_degree: 1489
+        out_degree: 289
+        reversed_neighborhood_size: 59868
+  model: devstral-2-123b-instruct-2512
+  predicted_answer: 'Error: Error while generating output:
+
+    Error code: 400 - {''error'': {''message'': "This model''s maximum context length
+    is 262144 tokens. However, your request has 301933 input tokens. Please reduce
+    the length of the input messages. (parameter=input_tokens, value=301933)", ''type'':
+    ''BadRequestError'', ''param'': ''input_tokens'', ''code'': 400}}'
+  trace_file: /home/dorschre/05_web_agent/out/datasets_02/wikipedia/devstral-2-123b-instruct-2512/traces/6ff14af8929de8d55519bb5199b6db5c.jsonl
+  task_state: failed
+- id: Maciel, Paraguay_Right-wing politics
+  question: &id004
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Maciel,_Paraguay
+      and end URI https://en.wikipedia.org/wiki/Right-wing_politics. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: Maciel, Paraguay_Right-wing politics
+    path:
+    - https://en.wikipedia.org/wiki/Maciel,_Paraguay
+    - https://en.wikipedia.org/wiki/Colorado_Party_(Paraguay)
+    - https://en.wikipedia.org/wiki/Right-wing_politics
+    question: *id004
+    statistics:
+      end_uri_statistics:
+        in_degree: 2569
+        out_degree: 235
+        reversed_neighborhood_size: 44188
+      start_uri_statistics:
+        in_degree: 4
+        out_degree: 15
+        reversed_neighborhood_size: 653
+      statistics:
+        in_degree: 2573
+        out_degree: 250
+        reversed_neighborhood_size: 44841
+  model: devstral-2-123b-instruct-2512
+  predicted_answer: '{''urls'': [], ''task_state'': ''failed''}'
+  trace_file: /home/dorschre/05_web_agent/out/datasets_02/wikipedia/devstral-2-123b-instruct-2512/traces/152bdff5f8db029885f756dcd81650eb.jsonl
+  task_state: failed
+- id: Maciel, Paraguay_Separation of powers
+  question: &id005
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Maciel,_Paraguay
+      and end URI https://en.wikipedia.org/wiki/Separation_of_powers. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: Maciel, Paraguay_Separation of powers
+    path:
+    - https://en.wikipedia.org/wiki/Maciel,_Paraguay
+    - https://en.wikipedia.org/wiki/Paraguay
+    - https://en.wikipedia.org/wiki/Separation_of_powers
+    question: *id005
+    statistics:
+      end_uri_statistics:
+        in_degree: 1058
+        out_degree: 419
+        reversed_neighborhood_size: 41899
+      start_uri_statistics:
+        in_degree: 4
+        out_degree: 15
+        reversed_neighborhood_size: 653
+      statistics:
+        in_degree: 1062
+        out_degree: 434
+        reversed_neighborhood_size: 42552
+  model: devstral-2-123b-instruct-2512
+  predicted_answer: '{''urls'': [''https://en.wikipedia.org/wiki/Maciel,_Paraguay'',
+    ''https://en.wikipedia.org/wiki/Caazap%C3%A1_Department'', ''https://en.wikipedia.org/wiki/Government_of_Paraguay'',
+    ''https://en.wikipedia.org/wiki/Separation_of_powers''], ''task_state'': ''completed''}'
+  trace_file: /home/dorschre/05_web_agent/out/datasets_02/wikipedia/devstral-2-123b-instruct-2512/traces/e77620a89120723de24a2aabea28a2ad.jsonl
+  task_state: completed

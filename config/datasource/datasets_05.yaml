@@ -1,0 +1,8 @@
+# Data from datasets/05 (dbpedia.yaml, wiki.yaml)
+dataset_paths:
+  dbpedia:
+    input_folder: datasets/05
+    output_folder: out/datasets_05/dbpedia
+  wikipedia:
+    input_folder: datasets/05
+    output_folder: out/datasets_05/wikipedia
