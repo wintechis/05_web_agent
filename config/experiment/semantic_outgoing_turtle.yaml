@@ -1,0 +1,8 @@
+# dbpedia | outgoing-only | turtle (Semantic Noise experiments)
+dataset: dbpedia
+modify_context: true
+context: modified
+pruning_method: outgoing-only
+representation_format: rdf
+rdf_representation: turtle
+context_compression: false

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import logging
 from dataclasses import dataclass
 from functools import lru_cache
@@ -17,8 +18,8 @@ from agent.clients import http_client
 LOGGER = logging.getLogger(__name__)
 
 DEFAULT_LIMIT = 2
-DISTANCE = 2
-NUMBER_OF_CHALLENGES = 10
+DISTANCE = 3
+NUMBER_OF_CHALLENGES = 100
 ENFORCE_EXACT_DISTANCE = True
 DEFAULT_LOG_LEVEL = "INFO"
 DEFAULT_WIKIPEDIA_OUTPUT = "wikipedia_challenge.yaml"
@@ -142,7 +143,27 @@ def find_wiki_path(
 
     response = http_client.post(url, json=payload, timeout=30)
     LOGGER.debug("Six Degrees response: %s", response.text)
-    data = response.json()
+
+    if not response.is_success:
+        LOGGER.warning(
+            "Six Degrees API error: %s %s for %s -> %s",
+            response.status_code,
+            response.reason_phrase or "",
+            source,
+            target,
+        )
+        return []
+
+    try:
+        data = response.json()
+    except json.JSONDecodeError as e:
+        LOGGER.warning(
+            "Six Degrees API returned non-JSON (e.g. 502 body) for %s -> %s: %s",
+            source,
+            target,
+            e,
+        )
+        return []
 
     paths = data.get("paths", [])
     identifiers = data.get("pages", {})

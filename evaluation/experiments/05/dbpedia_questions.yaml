@@ -25,10 +25,9 @@ benchmark:
         in_degree: 6928
         out_degree: 201
         reversed_neighborhood_size: 29876
-  model: accounts/fireworks/models/kimi-k2p5
-  predicted_answer: <answer> http://dbpedia.org/resource/Maciel,_Paraguay http://dbpedia.org/resource/Paraguay
-    http://dbpedia.org/resource/World_Bank </answer>
-  trace_file: /home/dorschre/05_web_agent/web_agent_traces/dc53281cea2b98547522483a1e8f3e93.jsonl
+  model: qwen3-coder-30b-a3b-instruct
+  predicted_answer: ''
+  trace_file: /home/dorschre/05_web_agent/web_agent_traces/52b7f4f3e4884d3abfec87c104409ff7.jsonl
 - id: Maciel, Paraguay_Cassava
   question: &id002
     en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Maciel,_Paraguay
@@ -55,10 +54,9 @@ benchmark:
         in_degree: 2364
         out_degree: 224
         reversed_neighborhood_size: 26115
-  model: accounts/fireworks/models/kimi-k2p5
-  predicted_answer: <answer> http://dbpedia.org/resource/Maciel,_Paraguay http://dbpedia.org/resource/Paraguay
-    http://dbpedia.org/resource/Cassava </answer>
-  trace_file: /home/dorschre/05_web_agent/web_agent_traces/ebb8c8f0b0172e22dfc228d63e8a243b.jsonl
+  model: qwen3-coder-30b-a3b-instruct
+  predicted_answer: ''
+  trace_file: /home/dorschre/05_web_agent/web_agent_traces/aea634d3f2df10ee957dc2245a10475a.jsonl
 - id: Maciel, Paraguay_Lingua franca
   question: &id003
     en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Maciel,_Paraguay
@@ -85,10 +83,9 @@ benchmark:
         in_degree: 1489
         out_degree: 289
         reversed_neighborhood_size: 59868
-  model: accounts/fireworks/models/kimi-k2p5
-  predicted_answer: <answer> http://dbpedia.org/resource/Maciel,_Paraguay http://dbpedia.org/resource/Paraguay
-    http://dbpedia.org/resource/Lingua_franca </answer>
-  trace_file: /home/dorschre/05_web_agent/web_agent_traces/66def394a476ee59c30185a9373e5254.jsonl
+  model: qwen3-coder-30b-a3b-instruct
+  predicted_answer: ''
+  trace_file: /home/dorschre/05_web_agent/web_agent_traces/c86463f5912ce9fd4350f2576faf128c.jsonl
 - id: Maciel, Paraguay_Right-wing politics
   question: &id004
     en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Maciel,_Paraguay
@@ -115,10 +112,9 @@ benchmark:
         in_degree: 2573
         out_degree: 250
         reversed_neighborhood_size: 44841
-  model: accounts/fireworks/models/kimi-k2p5
-  predicted_answer: <answer> http://dbpedia.org/resource/Maciel,_Paraguay http://dbpedia.org/resource/Colorado_Party_(Paraguay)
-    http://dbpedia.org/resource/Right-wing_politics </answer>
-  trace_file: /home/dorschre/05_web_agent/web_agent_traces/1802e121d0a199fbe52d085f362346b4.jsonl
+  model: qwen3-coder-30b-a3b-instruct
+  predicted_answer: ''
+  trace_file: /home/dorschre/05_web_agent/web_agent_traces/3e25374b475d35d1ae50efec5a2558da.jsonl
 - id: Maciel, Paraguay_Separation of powers
   question: &id005
     en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Maciel,_Paraguay
@@ -145,7 +141,6 @@ benchmark:
         in_degree: 1062
         out_degree: 434
         reversed_neighborhood_size: 42552
-  model: accounts/fireworks/models/kimi-k2p5
-  predicted_answer: <answer> http://dbpedia.org/resource/Maciel,_Paraguay http://dbpedia.org/resource/Paraguay
-    http://dbpedia.org/resource/Separation_of_powers </answer>
-  trace_file: /home/dorschre/05_web_agent/web_agent_traces/46d5de1821d312ff35b7f4efca51ccd0.jsonl
+  model: qwen3-coder-30b-a3b-instruct
+  predicted_answer: ''
+  trace_file: /home/dorschre/05_web_agent/web_agent_traces/6f3b3687d8ee5fa088cfd5a1000e6f66.jsonl

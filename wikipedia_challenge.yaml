@@ -1,0 +1,2409 @@
+dataset:
+  id: ''
+  prefix: wikipedia-challenge
+questions:
+- id: W. B. Henderson_Siege of Breteuil
+  path:
+  - https://en.wikipedia.org/wiki/W._B._Henderson
+  - https://en.wikipedia.org/wiki/Telegraphy
+  - https://en.wikipedia.org/wiki/Artillery
+  - https://en.wikipedia.org/wiki/Siege_of_Breteuil
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/W._B._Henderson
+      and end URI https://en.wikipedia.org/wiki/Siege_of_Breteuil. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 5
+      out_degree: 77
+      reversed_neighborhood_size: 6237
+    start_uri_statistics:
+      in_degree: 11
+      out_degree: 65
+      reversed_neighborhood_size: 10423
+    statistics:
+      in_degree: 16
+      out_degree: 142
+      reversed_neighborhood_size: 16660
+- id: W. B. Henderson_Shock therapy (economics)
+  path:
+  - https://en.wikipedia.org/wiki/W._B._Henderson
+  - https://en.wikipedia.org/wiki/American_Civil_War
+  - https://en.wikipedia.org/wiki/American_Dream
+  - https://en.wikipedia.org/wiki/Shock_therapy_(economics)
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/W._B._Henderson
+      and end URI https://en.wikipedia.org/wiki/Shock_therapy_(economics). Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 97
+      out_degree: 99
+      reversed_neighborhood_size: 12096
+    start_uri_statistics:
+      in_degree: 11
+      out_degree: 65
+      reversed_neighborhood_size: 10423
+    statistics:
+      in_degree: 108
+      out_degree: 164
+      reversed_neighborhood_size: 22519
+- id: Lynne Cohen_Kangchenjunga
+  path:
+  - https://en.wikipedia.org/wiki/Lynne_Cohen
+  - https://en.wikipedia.org/wiki/Ann_Arbor,_Michigan
+  - https://en.wikipedia.org/wiki/Köppen_climate_classification
+  - https://en.wikipedia.org/wiki/Kangchenjunga
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Lynne_Cohen
+      and end URI https://en.wikipedia.org/wiki/Kangchenjunga. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 320
+      out_degree: 212
+      reversed_neighborhood_size: 17914
+    start_uri_statistics:
+      in_degree: 18
+      out_degree: 70
+      reversed_neighborhood_size: 8379
+    statistics:
+      in_degree: 338
+      out_degree: 282
+      reversed_neighborhood_size: 26293
+- id: Lynne Cohen_Mount Ararat
+  path:
+  - https://en.wikipedia.org/wiki/Lynne_Cohen
+  - https://en.wikipedia.org/wiki/Ann_Arbor,_Michigan
+  - https://en.wikipedia.org/wiki/Köppen_climate_classification
+  - https://en.wikipedia.org/wiki/Mount_Ararat
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Lynne_Cohen
+      and end URI https://en.wikipedia.org/wiki/Mount_Ararat. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 330
+      out_degree: 339
+      reversed_neighborhood_size: 30585
+    start_uri_statistics:
+      in_degree: 18
+      out_degree: 70
+      reversed_neighborhood_size: 8379
+    statistics:
+      in_degree: 348
+      out_degree: 409
+      reversed_neighborhood_size: 38964
+- id: Mathilde Mann_British Forces casualties in Afghanistan (2001–2021)
+  path:
+  - https://en.wikipedia.org/wiki/Mathilde_Mann
+  - https://en.wikipedia.org/wiki/Germany
+  - https://en.wikipedia.org/wiki/War_in_Afghanistan_(2001–2021)
+  - https://en.wikipedia.org/wiki/British_Forces_casualties_in_Afghanistan_(2001–2021)
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Mathilde_Mann
+      and end URI https://en.wikipedia.org/wiki/British_Forces_casualties_in_Afghanistan_(2001–2021).
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    start_uri_statistics:
+      in_degree: 1
+      out_degree: 35
+      reversed_neighborhood_size: 6714
+    statistics:
+      in_degree: 1
+      out_degree: 35
+      reversed_neighborhood_size: 6715
+- id: James Robert McLean_List of Confederate units from North Carolina in the American
+    Civil War
+  path:
+  - https://en.wikipedia.org/wiki/James_Robert_McLean
+  - https://en.wikipedia.org/wiki/Confederate_States_of_America
+  - https://en.wikipedia.org/wiki/Battle_of_Roanoke_Island
+  - https://en.wikipedia.org/wiki/List_of_Confederate_units_from_North_Carolina_in_the_American_Civil_War
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/James_Robert_McLean
+      and end URI https://en.wikipedia.org/wiki/List_of_Confederate_units_from_North_Carolina_in_the_American_Civil_War.
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 9
+      reversed_neighborhood_size: 1595
+    statistics:
+      in_degree: 3
+      out_degree: 9
+      reversed_neighborhood_size: 1596
+- id: List of Confederate units from North Carolina in the American Civil War_James
+    Robert McLean
+  path:
+  - https://en.wikipedia.org/wiki/List_of_Confederate_units_from_North_Carolina_in_the_American_Civil_War
+  - https://en.wikipedia.org/wiki/43rd_North_Carolina_Infantry_Regiment
+  - https://en.wikipedia.org/wiki/Halifax_County,_North_Carolina
+  - https://en.wikipedia.org/wiki/James_Robert_McLean
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/List_of_Confederate_units_from_North_Carolina_in_the_American_Civil_War
+      and end URI https://en.wikipedia.org/wiki/James_Robert_McLean. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 3
+      out_degree: 9
+      reversed_neighborhood_size: 1595
+    start_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    statistics:
+      in_degree: 3
+      out_degree: 9
+      reversed_neighborhood_size: 1596
+- id: Tara of the Twilight_Jack Hodgins
+  path:
+  - https://en.wikipedia.org/wiki/Tara_of_the_Twilight
+  - https://en.wikipedia.org/wiki/1979_in_literature
+  - https://en.wikipedia.org/wiki/1979_Governor_General's_Awards
+  - https://en.wikipedia.org/wiki/Jack_Hodgins
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Tara_of_the_Twilight
+      and end URI https://en.wikipedia.org/wiki/Jack_Hodgins. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 23
+      out_degree: 44
+      reversed_neighborhood_size: 3494
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 11
+      reversed_neighborhood_size: 972
+    statistics:
+      in_degree: 26
+      out_degree: 55
+      reversed_neighborhood_size: 4466
+- id: Tara of the Twilight_1978 Georgian demonstrations
+  path:
+  - https://en.wikipedia.org/wiki/Tara_of_the_Twilight
+  - https://en.wikipedia.org/wiki/1979_in_literature
+  - https://en.wikipedia.org/wiki/April_14
+  - https://en.wikipedia.org/wiki/1978_Georgian_demonstrations
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Tara_of_the_Twilight
+      and end URI https://en.wikipedia.org/wiki/1978_Georgian_demonstrations. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 12
+      out_degree: 57
+      reversed_neighborhood_size: 7235
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 11
+      reversed_neighborhood_size: 972
+    statistics:
+      in_degree: 15
+      out_degree: 68
+      reversed_neighborhood_size: 8207
+- id: Diptychus sewerzowi_European Advisory Commission
+  path:
+  - https://en.wikipedia.org/wiki/Diptychus_sewerzowi
+  - https://en.wikipedia.org/wiki/Central_Asia
+  - https://en.wikipedia.org/wiki/European_Union
+  - https://en.wikipedia.org/wiki/European_Advisory_Commission
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Diptychus_sewerzowi
+      and end URI https://en.wikipedia.org/wiki/European_Advisory_Commission. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 40
+      out_degree: 43
+      reversed_neighborhood_size: 6469
+    start_uri_statistics:
+      in_degree: 1
+      out_degree: 5
+      reversed_neighborhood_size: 463
+    statistics:
+      in_degree: 41
+      out_degree: 48
+      reversed_neighborhood_size: 6932
+- id: Diptychus sewerzowi_Four Books and Five Classics
+  path:
+  - https://en.wikipedia.org/wiki/Diptychus_sewerzowi
+  - https://en.wikipedia.org/wiki/Central_Asia
+  - https://en.wikipedia.org/wiki/Chinese_folk_religion
+  - https://en.wikipedia.org/wiki/Four_Books_and_Five_Classics
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Diptychus_sewerzowi
+      and end URI https://en.wikipedia.org/wiki/Four_Books_and_Five_Classics. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 112
+      out_degree: 65
+      reversed_neighborhood_size: 7641
+    start_uri_statistics:
+      in_degree: 1
+      out_degree: 5
+      reversed_neighborhood_size: 463
+    statistics:
+      in_degree: 113
+      out_degree: 70
+      reversed_neighborhood_size: 8104
+- id: The Beginning and the End (1993 film)_List of stop motion films
+  path:
+  - https://en.wikipedia.org/wiki/The_Beginning_and_the_End_(1993_film)
+  - https://en.wikipedia.org/wiki/Pan's_Labyrinth
+  - https://en.wikipedia.org/wiki/Chicken_Run
+  - https://en.wikipedia.org/wiki/List_of_stop_motion_films
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/The_Beginning_and_the_End_(1993_film)
+      and end URI https://en.wikipedia.org/wiki/List_of_stop_motion_films. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 28
+      out_degree: 792
+      reversed_neighborhood_size: 64358
+    start_uri_statistics:
+      in_degree: 20
+      out_degree: 24
+      reversed_neighborhood_size: 1175
+    statistics:
+      in_degree: 48
+      out_degree: 816
+      reversed_neighborhood_size: 65533
+- id: List of stop motion films_The Beginning and the End (1993 film)
+  path:
+  - https://en.wikipedia.org/wiki/List_of_stop_motion_films
+  - https://en.wikipedia.org/wiki/Guadalajara_International_Film_Festival
+  - https://en.wikipedia.org/wiki/Arturo_Ripstein
+  - https://en.wikipedia.org/wiki/The_Beginning_and_the_End_(1993_film)
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/List_of_stop_motion_films
+      and end URI https://en.wikipedia.org/wiki/The_Beginning_and_the_End_(1993_film).
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 20
+      out_degree: 24
+      reversed_neighborhood_size: 1175
+    start_uri_statistics:
+      in_degree: 28
+      out_degree: 792
+      reversed_neighborhood_size: 64358
+    statistics:
+      in_degree: 48
+      out_degree: 816
+      reversed_neighborhood_size: 65533
+- id: The Beginning and the End (1993 film)_Los Angeles Film Critics Association Award
+    for Best Music
+  path:
+  - https://en.wikipedia.org/wiki/The_Beginning_and_the_End_(1993_film)
+  - https://en.wikipedia.org/wiki/Academy_Awards
+  - https://en.wikipedia.org/wiki/Amadeus_(film)
+  - https://en.wikipedia.org/wiki/Los_Angeles_Film_Critics_Association_Award_for_Best_Music
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/The_Beginning_and_the_End_(1993_film)
+      and end URI https://en.wikipedia.org/wiki/Los_Angeles_Film_Critics_Association_Award_for_Best_Music.
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 81
+      out_degree: 80
+      reversed_neighborhood_size: 10953
+    start_uri_statistics:
+      in_degree: 20
+      out_degree: 24
+      reversed_neighborhood_size: 1175
+    statistics:
+      in_degree: 101
+      out_degree: 104
+      reversed_neighborhood_size: 12128
+- id: Los Angeles Film Critics Association Award for Best Music_The Beginning and
+    the End (1993 film)
+  path:
+  - https://en.wikipedia.org/wiki/Los_Angeles_Film_Critics_Association_Award_for_Best_Music
+  - https://en.wikipedia.org/wiki/Far_from_Heaven
+  - https://en.wikipedia.org/wiki/Roma_(2018_film)
+  - https://en.wikipedia.org/wiki/The_Beginning_and_the_End_(1993_film)
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Los_Angeles_Film_Critics_Association_Award_for_Best_Music
+      and end URI https://en.wikipedia.org/wiki/The_Beginning_and_the_End_(1993_film).
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 20
+      out_degree: 24
+      reversed_neighborhood_size: 1175
+    start_uri_statistics:
+      in_degree: 81
+      out_degree: 80
+      reversed_neighborhood_size: 10953
+    statistics:
+      in_degree: 101
+      out_degree: 104
+      reversed_neighborhood_size: 12128
+- id: Jeffrey Segal_Whig history
+  path:
+  - https://en.wikipedia.org/wiki/Jeffrey_Segal
+  - https://en.wikipedia.org/wiki/London
+  - https://en.wikipedia.org/wiki/English_Reformation
+  - https://en.wikipedia.org/wiki/Whig_history
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Jeffrey_Segal
+      and end URI https://en.wikipedia.org/wiki/Whig_history. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 133
+      out_degree: 112
+      reversed_neighborhood_size: 13425
+    start_uri_statistics:
+      in_degree: 30
+      out_degree: 37
+      reversed_neighborhood_size: 4794
+    statistics:
+      in_degree: 163
+      out_degree: 149
+      reversed_neighborhood_size: 18219
+- id: Kumiko Haba_Wine bar
+  path:
+  - https://en.wikipedia.org/wiki/Kumiko_Haba
+  - https://en.wikipedia.org/wiki/Nationalism
+  - https://en.wikipedia.org/wiki/Max_Stirner
+  - https://en.wikipedia.org/wiki/Wine_bar
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Kumiko_Haba
+      and end URI https://en.wikipedia.org/wiki/Wine_bar. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 67
+      out_degree: 16
+      reversed_neighborhood_size: 2664
+    start_uri_statistics:
+      in_degree: 2
+      out_degree: 37
+      reversed_neighborhood_size: 3530
+    statistics:
+      in_degree: 69
+      out_degree: 53
+      reversed_neighborhood_size: 6194
+- id: Kumiko Haba_Wine bar
+  path:
+  - https://en.wikipedia.org/wiki/Kumiko_Haba
+  - https://en.wikipedia.org/wiki/Nationalism
+  - https://en.wikipedia.org/wiki/Max_Stirner
+  - https://en.wikipedia.org/wiki/Wine_bar
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Kumiko_Haba
+      and end URI https://en.wikipedia.org/wiki/Wine_bar. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 67
+      out_degree: 16
+      reversed_neighborhood_size: 2664
+    start_uri_statistics:
+      in_degree: 2
+      out_degree: 37
+      reversed_neighborhood_size: 3530
+    statistics:
+      in_degree: 69
+      out_degree: 53
+      reversed_neighborhood_size: 6194
+- id: 28th Infantry Division (United States)_Arthur Robison
+  path:
+  - https://en.wikipedia.org/wiki/28th_Infantry_Division_(United_States)
+  - https://en.wikipedia.org/wiki/Germany
+  - https://en.wikipedia.org/wiki/German_expressionist_cinema
+  - https://en.wikipedia.org/wiki/Arthur_Robison
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/28th_Infantry_Division_(United_States)
+      and end URI https://en.wikipedia.org/wiki/Arthur_Robison. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 70
+      out_degree: 25
+      reversed_neighborhood_size: 3584
+    start_uri_statistics:
+      in_degree: 259
+      out_degree: 343
+      reversed_neighborhood_size: 37632
+    statistics:
+      in_degree: 329
+      out_degree: 368
+      reversed_neighborhood_size: 41216
+- id: Arthur Robison_28th Infantry Division (United States)
+  path:
+  - https://en.wikipedia.org/wiki/Arthur_Robison
+  - https://en.wikipedia.org/wiki/Chicago
+  - https://en.wikipedia.org/wiki/United_States_Army
+  - https://en.wikipedia.org/wiki/28th_Infantry_Division_(United_States)
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Arthur_Robison
+      and end URI https://en.wikipedia.org/wiki/28th_Infantry_Division_(United_States).
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 259
+      out_degree: 343
+      reversed_neighborhood_size: 37632
+    start_uri_statistics:
+      in_degree: 70
+      out_degree: 25
+      reversed_neighborhood_size: 3584
+    statistics:
+      in_degree: 329
+      out_degree: 368
+      reversed_neighborhood_size: 41216
+- id: 1nonly_Freddie Gibbs
+  path:
+  - https://en.wikipedia.org/wiki/1nonly
+  - https://en.wikipedia.org/wiki/Warner_Records
+  - https://en.wikipedia.org/wiki/Gangsta_rap
+  - https://en.wikipedia.org/wiki/Freddie_Gibbs
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/1nonly
+      and end URI https://en.wikipedia.org/wiki/Freddie_Gibbs. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 359
+      out_degree: 122
+      reversed_neighborhood_size: 13493
+    start_uri_statistics:
+      in_degree: 1
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    statistics:
+      in_degree: 360
+      out_degree: 122
+      reversed_neighborhood_size: 13494
+- id: Freddie Gibbs_Robyn Ottolini
+  path:
+  - https://en.wikipedia.org/wiki/Freddie_Gibbs
+  - https://en.wikipedia.org/wiki/The_Alchemist_(musician)
+  - https://en.wikipedia.org/wiki/Empire_Distribution
+  - https://en.wikipedia.org/wiki/Robyn_Ottolini
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Freddie_Gibbs
+      and end URI https://en.wikipedia.org/wiki/Robyn_Ottolini. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 22
+      out_degree: 31
+      reversed_neighborhood_size: 4812
+    start_uri_statistics:
+      in_degree: 359
+      out_degree: 122
+      reversed_neighborhood_size: 13493
+    statistics:
+      in_degree: 381
+      out_degree: 153
+      reversed_neighborhood_size: 18305
+- id: Alexandra Saduakassova_ISO 3166-2:CN
+  path:
+  - https://en.wikipedia.org/wiki/Alexandra_Saduakassova
+  - https://en.wikipedia.org/wiki/Kazakhstan
+  - https://en.wikipedia.org/wiki/Hong_Kong
+  - https://en.wikipedia.org/wiki/ISO_3166-2:CN
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Alexandra_Saduakassova
+      and end URI https://en.wikipedia.org/wiki/ISO_3166-2:CN. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 375
+      out_degree: 78
+      reversed_neighborhood_size: 17121
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 14
+      reversed_neighborhood_size: 1058
+    statistics:
+      in_degree: 379
+      out_degree: 92
+      reversed_neighborhood_size: 18179
+- id: Alexandra Saduakassova_Porteño
+  path:
+  - https://en.wikipedia.org/wiki/Alexandra_Saduakassova
+  - https://en.wikipedia.org/wiki/Kazakhstan
+  - https://en.wikipedia.org/wiki/Demonym
+  - https://en.wikipedia.org/wiki/Porteño
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Alexandra_Saduakassova
+      and end URI https://en.wikipedia.org/wiki/Porteño. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 81
+      out_degree: 42
+      reversed_neighborhood_size: 8582
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 14
+      reversed_neighborhood_size: 1058
+    statistics:
+      in_degree: 85
+      out_degree: 56
+      reversed_neighborhood_size: 9640
+- id: 30th Guards Army Corps_British Forces casualties in Afghanistan (2001–2021)
+  path:
+  - https://en.wikipedia.org/wiki/30th_Guards_Army_Corps
+  - https://en.wikipedia.org/wiki/Battle_honour
+  - https://en.wikipedia.org/wiki/War_in_Afghanistan_(2001–2021)
+  - https://en.wikipedia.org/wiki/British_Forces_casualties_in_Afghanistan_(2001–2021)
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/30th_Guards_Army_Corps
+      and end URI https://en.wikipedia.org/wiki/British_Forces_casualties_in_Afghanistan_(2001–2021).
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    start_uri_statistics:
+      in_degree: 11
+      out_degree: 47
+      reversed_neighborhood_size: 4000
+    statistics:
+      in_degree: 11
+      out_degree: 47
+      reversed_neighborhood_size: 4001
+- id: Tamiami Formation_Lisandro Formation
+  path:
+  - https://en.wikipedia.org/wiki/Tamiami_Formation
+  - https://en.wikipedia.org/wiki/Geologic_time_scale
+  - https://en.wikipedia.org/wiki/List_of_fossil_sites
+  - https://en.wikipedia.org/wiki/Lisandro_Formation
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Tamiami_Formation
+      and end URI https://en.wikipedia.org/wiki/Lisandro_Formation. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 17
+      out_degree: 68
+      reversed_neighborhood_size: 6747
+    start_uri_statistics:
+      in_degree: 18
+      out_degree: 48
+      reversed_neighborhood_size: 2923
+    statistics:
+      in_degree: 35
+      out_degree: 116
+      reversed_neighborhood_size: 9670
+- id: Lisandro Formation_Tamiami Formation
+  path:
+  - https://en.wikipedia.org/wiki/Lisandro_Formation
+  - https://en.wikipedia.org/wiki/Titanosauria
+  - https://en.wikipedia.org/wiki/2019_in_paleontology
+  - https://en.wikipedia.org/wiki/Tamiami_Formation
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Lisandro_Formation
+      and end URI https://en.wikipedia.org/wiki/Tamiami_Formation. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 18
+      out_degree: 48
+      reversed_neighborhood_size: 2923
+    start_uri_statistics:
+      in_degree: 17
+      out_degree: 68
+      reversed_neighborhood_size: 6747
+    statistics:
+      in_degree: 35
+      out_degree: 116
+      reversed_neighborhood_size: 9670
+- id: Tamiami Formation_Lisandro Formation
+  path:
+  - https://en.wikipedia.org/wiki/Tamiami_Formation
+  - https://en.wikipedia.org/wiki/Geologic_time_scale
+  - https://en.wikipedia.org/wiki/List_of_fossil_sites
+  - https://en.wikipedia.org/wiki/Lisandro_Formation
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Tamiami_Formation
+      and end URI https://en.wikipedia.org/wiki/Lisandro_Formation. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 17
+      out_degree: 68
+      reversed_neighborhood_size: 6747
+    start_uri_statistics:
+      in_degree: 18
+      out_degree: 48
+      reversed_neighborhood_size: 2923
+    statistics:
+      in_degree: 35
+      out_degree: 116
+      reversed_neighborhood_size: 9670
+- id: Lisandro Formation_Tamiami Formation
+  path:
+  - https://en.wikipedia.org/wiki/Lisandro_Formation
+  - https://en.wikipedia.org/wiki/Titanosauria
+  - https://en.wikipedia.org/wiki/2019_in_paleontology
+  - https://en.wikipedia.org/wiki/Tamiami_Formation
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Lisandro_Formation
+      and end URI https://en.wikipedia.org/wiki/Tamiami_Formation. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 18
+      out_degree: 48
+      reversed_neighborhood_size: 2923
+    start_uri_statistics:
+      in_degree: 17
+      out_degree: 68
+      reversed_neighborhood_size: 6747
+    statistics:
+      in_degree: 35
+      out_degree: 116
+      reversed_neighborhood_size: 9670
+- id: Raquel Pennington_Kankakee Sands
+  path:
+  - https://en.wikipedia.org/wiki/Raquel_Pennington
+  - https://en.wikipedia.org/wiki/New_York_(state)
+  - https://en.wikipedia.org/wiki/American_bison
+  - https://en.wikipedia.org/wiki/Kankakee_Sands
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Raquel_Pennington
+      and end URI https://en.wikipedia.org/wiki/Kankakee_Sands. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 3
+      out_degree: 83
+      reversed_neighborhood_size: 11069
+    start_uri_statistics:
+      in_degree: 69
+      out_degree: 113
+      reversed_neighborhood_size: 10506
+    statistics:
+      in_degree: 72
+      out_degree: 196
+      reversed_neighborhood_size: 21575
+- id: Raquel Pennington_Rancholabrean
+  path:
+  - https://en.wikipedia.org/wiki/Raquel_Pennington
+  - https://en.wikipedia.org/wiki/New_York_(state)
+  - https://en.wikipedia.org/wiki/American_bison
+  - https://en.wikipedia.org/wiki/Rancholabrean
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Raquel_Pennington
+      and end URI https://en.wikipedia.org/wiki/Rancholabrean. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 67
+      out_degree: 25
+      reversed_neighborhood_size: 1440
+    start_uri_statistics:
+      in_degree: 69
+      out_degree: 113
+      reversed_neighborhood_size: 10506
+    statistics:
+      in_degree: 136
+      out_degree: 138
+      reversed_neighborhood_size: 11946
+- id: Iowa nice_List of fossil sites
+  path:
+  - https://en.wikipedia.org/wiki/Iowa_nice
+  - https://en.wikipedia.org/wiki/Nebraska
+  - https://en.wikipedia.org/wiki/Ashfall_Fossil_Beds
+  - https://en.wikipedia.org/wiki/List_of_fossil_sites
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Iowa_nice
+      and end URI https://en.wikipedia.org/wiki/List_of_fossil_sites. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 263
+      out_degree: 874
+      reversed_neighborhood_size: 102799
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 34
+      reversed_neighborhood_size: 4384
+    statistics:
+      in_degree: 266
+      out_degree: 908
+      reversed_neighborhood_size: 107183
+- id: List of fossil sites_Iowa nice
+  path:
+  - https://en.wikipedia.org/wiki/List_of_fossil_sites
+  - https://en.wikipedia.org/wiki/Kentucky
+  - https://en.wikipedia.org/wiki/Southern_hospitality
+  - https://en.wikipedia.org/wiki/Iowa_nice
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/List_of_fossil_sites
+      and end URI https://en.wikipedia.org/wiki/Iowa_nice. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 3
+      out_degree: 34
+      reversed_neighborhood_size: 4384
+    start_uri_statistics:
+      in_degree: 263
+      out_degree: 874
+      reversed_neighborhood_size: 102799
+    statistics:
+      in_degree: 266
+      out_degree: 908
+      reversed_neighborhood_size: 107183
+- id: Iowa nice_Iapetognathus fluctivagus
+  path:
+  - https://en.wikipedia.org/wiki/Iowa_nice
+  - https://en.wikipedia.org/wiki/Iowa
+  - https://en.wikipedia.org/wiki/Cambrian
+  - https://en.wikipedia.org/wiki/Iapetognathus_fluctivagus
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Iowa_nice
+      and end URI https://en.wikipedia.org/wiki/Iapetognathus_fluctivagus. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 10
+      out_degree: 43
+      reversed_neighborhood_size: 10938
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 34
+      reversed_neighborhood_size: 4384
+    statistics:
+      in_degree: 13
+      out_degree: 77
+      reversed_neighborhood_size: 15322
+- id: Iapetognathus fluctivagus_Iowa nice
+  path:
+  - https://en.wikipedia.org/wiki/Iapetognathus_fluctivagus
+  - https://en.wikipedia.org/wiki/Oklahoma
+  - https://en.wikipedia.org/wiki/Southern_hospitality
+  - https://en.wikipedia.org/wiki/Iowa_nice
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Iapetognathus_fluctivagus
+      and end URI https://en.wikipedia.org/wiki/Iowa_nice. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 3
+      out_degree: 34
+      reversed_neighborhood_size: 4384
+    start_uri_statistics:
+      in_degree: 10
+      out_degree: 43
+      reversed_neighborhood_size: 10938
+    statistics:
+      in_degree: 13
+      out_degree: 77
+      reversed_neighborhood_size: 15322
+- id: Tedorigawa Dam_Hybrid word
+  path:
+  - https://en.wikipedia.org/wiki/Tedorigawa_Dam
+  - https://en.wikipedia.org/wiki/Japan
+  - https://en.wikipedia.org/wiki/Kanji
+  - https://en.wikipedia.org/wiki/Hybrid_word
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Tedorigawa_Dam
+      and end URI https://en.wikipedia.org/wiki/Hybrid_word. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 85
+      out_degree: 117
+      reversed_neighborhood_size: 14293
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 6
+      reversed_neighborhood_size: 1310
+    statistics:
+      in_degree: 89
+      out_degree: 123
+      reversed_neighborhood_size: 15603
+- id: Tedorigawa Dam_Part of speech
+  path:
+  - https://en.wikipedia.org/wiki/Tedorigawa_Dam
+  - https://en.wikipedia.org/wiki/Japan
+  - https://en.wikipedia.org/wiki/Endonym_and_exonym
+  - https://en.wikipedia.org/wiki/Part_of_speech
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Tedorigawa_Dam
+      and end URI https://en.wikipedia.org/wiki/Part_of_speech. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 191
+      out_degree: 117
+      reversed_neighborhood_size: 7363
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 6
+      reversed_neighborhood_size: 1310
+    statistics:
+      in_degree: 195
+      out_degree: 123
+      reversed_neighborhood_size: 8673
+- id: Kristján Harðarson_2032 Summer Paralympics
+  path:
+  - https://en.wikipedia.org/wiki/Kristján_Harðarson
+  - https://en.wikipedia.org/wiki/Sport_of_athletics
+  - https://en.wikipedia.org/wiki/1960_Summer_Paralympics
+  - https://en.wikipedia.org/wiki/2032_Summer_Paralympics
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Kristján_Harðarson
+      and end URI https://en.wikipedia.org/wiki/2032_Summer_Paralympics. Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 51
+      out_degree: 29
+      reversed_neighborhood_size: 2525
+    start_uri_statistics:
+      in_degree: 5
+      out_degree: 9
+      reversed_neighborhood_size: 894
+    statistics:
+      in_degree: 56
+      out_degree: 38
+      reversed_neighborhood_size: 3419
+- id: Kristján Harðarson_World Para Nordic Skiing Championships
+  path:
+  - https://en.wikipedia.org/wiki/Kristján_Harðarson
+  - https://en.wikipedia.org/wiki/Sport_of_athletics
+  - https://en.wikipedia.org/wiki/World_Athletics_Championships
+  - https://en.wikipedia.org/wiki/World_Para_Nordic_Skiing_Championships
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Kristján_Harðarson
+      and end URI https://en.wikipedia.org/wiki/World_Para_Nordic_Skiing_Championships.
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 9
+      out_degree: 28
+      reversed_neighborhood_size: 2309
+    start_uri_statistics:
+      in_degree: 5
+      out_degree: 9
+      reversed_neighborhood_size: 894
+    statistics:
+      in_degree: 14
+      out_degree: 37
+      reversed_neighborhood_size: 3203
+- id: 'Cognasse_Snoopy Presents: It''s the Small Things, Charlie Brown'
+  path:
+  - https://en.wikipedia.org/wiki/Cognasse
+  - https://en.wikipedia.org/wiki/Paramount_Pictures
+  - https://en.wikipedia.org/wiki/Peanuts_filmography
+  - https://en.wikipedia.org/wiki/Snoopy_Presents:_It's_the_Small_Things,_Charlie_Brown
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Cognasse
+      and end URI https://en.wikipedia.org/wiki/Snoopy_Presents:_It''s_the_Small_Things,_Charlie_Brown.
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    start_uri_statistics:
+      in_degree: 9
+      out_degree: 39
+      reversed_neighborhood_size: 1957
+    statistics:
+      in_degree: 9
+      out_degree: 39
+      reversed_neighborhood_size: 1958
+- id: 'Cognasse_Snoopy Presents: It''s the Small Things, Charlie Brown'
+  path:
+  - https://en.wikipedia.org/wiki/Cognasse
+  - https://en.wikipedia.org/wiki/Paramount_Pictures
+  - https://en.wikipedia.org/wiki/Peanuts_filmography
+  - https://en.wikipedia.org/wiki/Snoopy_Presents:_It's_the_Small_Things,_Charlie_Brown
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Cognasse
+      and end URI https://en.wikipedia.org/wiki/Snoopy_Presents:_It''s_the_Small_Things,_Charlie_Brown.
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    start_uri_statistics:
+      in_degree: 9
+      out_degree: 39
+      reversed_neighborhood_size: 1957
+    statistics:
+      in_degree: 9
+      out_degree: 39
+      reversed_neighborhood_size: 1958
+- id: Albert William Herre_Minor league
+  path:
+  - https://en.wikipedia.org/wiki/Albert_William_Herre
+  - https://en.wikipedia.org/wiki/Toledo,_Ohio
+  - https://en.wikipedia.org/wiki/Scottsdale,_Arizona
+  - https://en.wikipedia.org/wiki/Minor_league
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Albert_William_Herre
+      and end URI https://en.wikipedia.org/wiki/Minor_league. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 764
+      out_degree: 187
+      reversed_neighborhood_size: 20072
+    start_uri_statistics:
+      in_degree: 255
+      out_degree: 28
+      reversed_neighborhood_size: 3520
+    statistics:
+      in_degree: 1019
+      out_degree: 215
+      reversed_neighborhood_size: 23592
+- id: Albert William Herre_Disease
+  path:
+  - https://en.wikipedia.org/wiki/Albert_William_Herre
+  - https://en.wikipedia.org/wiki/Ecology
+  - https://en.wikipedia.org/wiki/Tissue_(biology)
+  - https://en.wikipedia.org/wiki/Disease
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Albert_William_Herre
+      and end URI https://en.wikipedia.org/wiki/Disease. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 1888
+      out_degree: 289
+      reversed_neighborhood_size: 22909
+    start_uri_statistics:
+      in_degree: 255
+      out_degree: 28
+      reversed_neighborhood_size: 3520
+    statistics:
+      in_degree: 2143
+      out_degree: 317
+      reversed_neighborhood_size: 26429
+- id: Disease_Albert William Herre
+  path:
+  - https://en.wikipedia.org/wiki/Disease
+  - https://en.wikipedia.org/wiki/Function_(biology)
+  - https://en.wikipedia.org/wiki/Ichthyology
+  - https://en.wikipedia.org/wiki/Albert_William_Herre
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Disease
+      and end URI https://en.wikipedia.org/wiki/Albert_William_Herre. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 255
+      out_degree: 28
+      reversed_neighborhood_size: 3520
+    start_uri_statistics:
+      in_degree: 1888
+      out_degree: 289
+      reversed_neighborhood_size: 22909
+    statistics:
+      in_degree: 2143
+      out_degree: 317
+      reversed_neighborhood_size: 26429
+- id: Berezan Estuary_Mold and human health
+  path:
+  - https://en.wikipedia.org/wiki/Berezan_Estuary
+  - https://en.wikipedia.org/wiki/Sea
+  - https://en.wikipedia.org/wiki/Condensation
+  - https://en.wikipedia.org/wiki/Mold_and_human_health
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Berezan_Estuary
+      and end URI https://en.wikipedia.org/wiki/Mold_and_human_health. Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    start_uri_statistics:
+      in_degree: 11
+      out_degree: 19
+      reversed_neighborhood_size: 3523
+    statistics:
+      in_degree: 11
+      out_degree: 19
+      reversed_neighborhood_size: 3524
+- id: Emamrud_Shock therapy (economics)
+  path:
+  - https://en.wikipedia.org/wiki/Emamrud
+  - https://en.wikipedia.org/wiki/Persian_language
+  - https://en.wikipedia.org/wiki/Russia
+  - https://en.wikipedia.org/wiki/Shock_therapy_(economics)
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Emamrud
+      and end URI https://en.wikipedia.org/wiki/Shock_therapy_(economics). Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 97
+      out_degree: 99
+      reversed_neighborhood_size: 12096
+    start_uri_statistics:
+      in_degree: 1
+      out_degree: 14
+      reversed_neighborhood_size: 2367
+    statistics:
+      in_degree: 98
+      out_degree: 113
+      reversed_neighborhood_size: 14463
+- id: 1997 Irish general election_Charles Lucas (Royal Navy officer)
+  path:
+  - https://en.wikipedia.org/wiki/1997_Irish_general_election
+  - https://en.wikipedia.org/wiki/Twenty-seventh_Amendment_of_the_Constitution_of_Ireland
+  - https://en.wikipedia.org/wiki/County_Monaghan
+  - https://en.wikipedia.org/wiki/Charles_Lucas_(Royal_Navy_officer)
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/1997_Irish_general_election
+      and end URI https://en.wikipedia.org/wiki/Charles_Lucas_(Royal_Navy_officer).
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    start_uri_statistics:
+      in_degree: 316
+      out_degree: 179
+      reversed_neighborhood_size: 4977
+    statistics:
+      in_degree: 316
+      out_degree: 179
+      reversed_neighborhood_size: 4978
+- id: Charles Lucas (Royal Navy officer)_1997 Irish general election
+  path:
+  - https://en.wikipedia.org/wiki/Charles_Lucas_(Royal_Navy_officer)
+  - https://en.wikipedia.org/wiki/United_Kingdom_of_Great_Britain_and_Ireland
+  - https://en.wikipedia.org/wiki/Politics_of_the_Republic_of_Ireland
+  - https://en.wikipedia.org/wiki/1997_Irish_general_election
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Charles_Lucas_(Royal_Navy_officer)
+      and end URI https://en.wikipedia.org/wiki/1997_Irish_general_election. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 316
+      out_degree: 179
+      reversed_neighborhood_size: 4977
+    start_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    statistics:
+      in_degree: 316
+      out_degree: 179
+      reversed_neighborhood_size: 4978
+- id: Loded_If You Knew Susie
+  path:
+  - https://en.wikipedia.org/wiki/Loded
+  - https://en.wikipedia.org/wiki/Capitol_Records
+  - https://en.wikipedia.org/wiki/Buddy_DeSylva
+  - https://en.wikipedia.org/wiki/If_You_Knew_Susie
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Loded
+      and end URI https://en.wikipedia.org/wiki/If_You_Knew_Susie. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 23
+      out_degree: 26
+      reversed_neighborhood_size: 3109
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 14
+      reversed_neighborhood_size: 1831
+    statistics:
+      in_degree: 27
+      out_degree: 40
+      reversed_neighborhood_size: 4940
+- id: Loded_It All Depends on You
+  path:
+  - https://en.wikipedia.org/wiki/Loded
+  - https://en.wikipedia.org/wiki/Record_label
+  - https://en.wikipedia.org/wiki/Frank_Sinatra
+  - https://en.wikipedia.org/wiki/It_All_Depends_on_You
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Loded
+      and end URI https://en.wikipedia.org/wiki/It_All_Depends_on_You. Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 37
+      out_degree: 78
+      reversed_neighborhood_size: 16238
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 14
+      reversed_neighborhood_size: 1831
+    statistics:
+      in_degree: 41
+      out_degree: 92
+      reversed_neighborhood_size: 18069
+- id: Siege of Breteuil_Windward and leeward
+  path:
+  - https://en.wikipedia.org/wiki/Siege_of_Breteuil
+  - https://en.wikipedia.org/wiki/Bordeaux
+  - https://en.wikipedia.org/wiki/Guadeloupe
+  - https://en.wikipedia.org/wiki/Windward_and_leeward
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Siege_of_Breteuil
+      and end URI https://en.wikipedia.org/wiki/Windward_and_leeward. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 228
+      out_degree: 38
+      reversed_neighborhood_size: 1909
+    start_uri_statistics:
+      in_degree: 5
+      out_degree: 77
+      reversed_neighborhood_size: 6237
+    statistics:
+      in_degree: 233
+      out_degree: 115
+      reversed_neighborhood_size: 8146
+- id: Arsenal_Windward and leeward
+  path:
+  - https://en.wikipedia.org/wiki/Arsenal
+  - https://en.wikipedia.org/wiki/Artillery
+  - https://en.wikipedia.org/wiki/Naval_warfare
+  - https://en.wikipedia.org/wiki/Windward_and_leeward
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Arsenal
+      and end URI https://en.wikipedia.org/wiki/Windward_and_leeward. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 228
+      out_degree: 38
+      reversed_neighborhood_size: 1909
+    start_uri_statistics:
+      in_degree: 486
+      out_degree: 43
+      reversed_neighborhood_size: 2626
+    statistics:
+      in_degree: 714
+      out_degree: 81
+      reversed_neighborhood_size: 4535
+- id: Judicial dissolution_June 1976 in Polish protests
+  path:
+  - https://en.wikipedia.org/wiki/Judicial_dissolution
+  - https://en.wikipedia.org/wiki/Capital_punishment
+  - https://en.wikipedia.org/wiki/East_Germany
+  - https://en.wikipedia.org/wiki/June_1976_in_Polish_protests
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Judicial_dissolution
+      and end URI https://en.wikipedia.org/wiki/June_1976_in_Polish_protests. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    start_uri_statistics:
+      in_degree: 5
+      out_degree: 20
+      reversed_neighborhood_size: 3422
+    statistics:
+      in_degree: 5
+      out_degree: 20
+      reversed_neighborhood_size: 3423
+- id: Flatfoot (film)_1st Visual Effects Society Awards
+  path:
+  - https://en.wikipedia.org/wiki/Flatfoot_(film)
+  - https://en.wikipedia.org/wiki/Malèna_(film)
+  - https://en.wikipedia.org/wiki/Gangs_of_New_York
+  - https://en.wikipedia.org/wiki/1st_Visual_Effects_Society_Awards
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Flatfoot_(film)
+      and end URI https://en.wikipedia.org/wiki/1st_Visual_Effects_Society_Awards.
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 16
+      out_degree: 101
+      reversed_neighborhood_size: 8615
+    start_uri_statistics:
+      in_degree: 29
+      out_degree: 40
+      reversed_neighborhood_size: 3844
+    statistics:
+      in_degree: 45
+      out_degree: 141
+      reversed_neighborhood_size: 12459
+- id: 1st Visual Effects Society Awards_Flatfoot (film)
+  path:
+  - https://en.wikipedia.org/wiki/1st_Visual_Effects_Society_Awards
+  - https://en.wikipedia.org/wiki/Film
+  - https://en.wikipedia.org/wiki/Poliziotteschi
+  - https://en.wikipedia.org/wiki/Flatfoot_(film)
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/1st_Visual_Effects_Society_Awards
+      and end URI https://en.wikipedia.org/wiki/Flatfoot_(film). Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 29
+      out_degree: 40
+      reversed_neighborhood_size: 3844
+    start_uri_statistics:
+      in_degree: 16
+      out_degree: 101
+      reversed_neighborhood_size: 8615
+    statistics:
+      in_degree: 45
+      out_degree: 141
+      reversed_neighborhood_size: 12459
+- id: Flatfoot (film)_Academy
+  path:
+  - https://en.wikipedia.org/wiki/Flatfoot_(film)
+  - https://en.wikipedia.org/wiki/Comedy_film
+  - https://en.wikipedia.org/wiki/Paracinema
+  - https://en.wikipedia.org/wiki/Academy
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Flatfoot_(film)
+      and end URI https://en.wikipedia.org/wiki/Academy. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 608
+      out_degree: 467
+      reversed_neighborhood_size: 49235
+    start_uri_statistics:
+      in_degree: 29
+      out_degree: 40
+      reversed_neighborhood_size: 3844
+    statistics:
+      in_degree: 637
+      out_degree: 507
+      reversed_neighborhood_size: 53079
+- id: Academy_Flatfoot (film)
+  path:
+  - https://en.wikipedia.org/wiki/Academy
+  - https://en.wikipedia.org/wiki/Italy
+  - https://en.wikipedia.org/wiki/The_Good,_the_Bad_and_the_Ugly
+  - https://en.wikipedia.org/wiki/Flatfoot_(film)
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Academy
+      and end URI https://en.wikipedia.org/wiki/Flatfoot_(film). Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 29
+      out_degree: 40
+      reversed_neighborhood_size: 3844
+    start_uri_statistics:
+      in_degree: 608
+      out_degree: 467
+      reversed_neighborhood_size: 49235
+    statistics:
+      in_degree: 637
+      out_degree: 507
+      reversed_neighborhood_size: 53079
+- id: Baffin Island_Jake Warren
+  path:
+  - https://en.wikipedia.org/wiki/Baffin_Island
+  - https://en.wikipedia.org/wiki/Massey_Island
+  - https://en.wikipedia.org/wiki/Vincent_Massey
+  - https://en.wikipedia.org/wiki/Jake_Warren
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Baffin_Island
+      and end URI https://en.wikipedia.org/wiki/Jake_Warren. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 11
+      out_degree: 28
+      reversed_neighborhood_size: 4981
+    start_uri_statistics:
+      in_degree: 964
+      out_degree: 195
+      reversed_neighborhood_size: 21079
+    statistics:
+      in_degree: 975
+      out_degree: 223
+      reversed_neighborhood_size: 26060
+- id: Jake Warren_Craton
+  path:
+  - https://en.wikipedia.org/wiki/Jake_Warren
+  - https://en.wikipedia.org/wiki/Ontario
+  - https://en.wikipedia.org/wiki/Hudson_Bay
+  - https://en.wikipedia.org/wiki/Craton
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Jake_Warren
+      and end URI https://en.wikipedia.org/wiki/Craton. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 326
+      out_degree: 76
+      reversed_neighborhood_size: 7745
+    start_uri_statistics:
+      in_degree: 11
+      out_degree: 28
+      reversed_neighborhood_size: 4981
+    statistics:
+      in_degree: 337
+      out_degree: 104
+      reversed_neighborhood_size: 12726
+- id: Kenji Kaido_Silent protagonist
+  path:
+  - https://en.wikipedia.org/wiki/Kenji_Kaido
+  - https://en.wikipedia.org/wiki/Video_game
+  - https://en.wikipedia.org/wiki/Player_character
+  - https://en.wikipedia.org/wiki/Silent_protagonist
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Kenji_Kaido
+      and end URI https://en.wikipedia.org/wiki/Silent_protagonist. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 95
+      out_degree: 34
+      reversed_neighborhood_size: 3965
+    start_uri_statistics:
+      in_degree: 6
+      out_degree: 20
+      reversed_neighborhood_size: 1108
+    statistics:
+      in_degree: 101
+      out_degree: 54
+      reversed_neighborhood_size: 5073
+- id: Silent protagonist_Kenji Kaido
+  path:
+  - https://en.wikipedia.org/wiki/Silent_protagonist
+  - https://en.wikipedia.org/wiki/Video_game
+  - https://en.wikipedia.org/wiki/Sony_Interactive_Entertainment
+  - https://en.wikipedia.org/wiki/Kenji_Kaido
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Silent_protagonist
+      and end URI https://en.wikipedia.org/wiki/Kenji_Kaido. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 6
+      out_degree: 20
+      reversed_neighborhood_size: 1108
+    start_uri_statistics:
+      in_degree: 95
+      out_degree: 34
+      reversed_neighborhood_size: 3965
+    statistics:
+      in_degree: 101
+      out_degree: 54
+      reversed_neighborhood_size: 5073
+- id: Kenji Kaido_Silent protagonist
+  path:
+  - https://en.wikipedia.org/wiki/Kenji_Kaido
+  - https://en.wikipedia.org/wiki/Video_game
+  - https://en.wikipedia.org/wiki/Player_character
+  - https://en.wikipedia.org/wiki/Silent_protagonist
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Kenji_Kaido
+      and end URI https://en.wikipedia.org/wiki/Silent_protagonist. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 95
+      out_degree: 34
+      reversed_neighborhood_size: 3965
+    start_uri_statistics:
+      in_degree: 6
+      out_degree: 20
+      reversed_neighborhood_size: 1108
+    statistics:
+      in_degree: 101
+      out_degree: 54
+      reversed_neighborhood_size: 5073
+- id: Silent protagonist_Kenji Kaido
+  path:
+  - https://en.wikipedia.org/wiki/Silent_protagonist
+  - https://en.wikipedia.org/wiki/Video_game
+  - https://en.wikipedia.org/wiki/Sony_Interactive_Entertainment
+  - https://en.wikipedia.org/wiki/Kenji_Kaido
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Silent_protagonist
+      and end URI https://en.wikipedia.org/wiki/Kenji_Kaido. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 6
+      out_degree: 20
+      reversed_neighborhood_size: 1108
+    start_uri_statistics:
+      in_degree: 95
+      out_degree: 34
+      reversed_neighborhood_size: 3965
+    statistics:
+      in_degree: 101
+      out_degree: 54
+      reversed_neighborhood_size: 5073
+- id: Talothe_Salary cap
+  path:
+  - https://en.wikipedia.org/wiki/Talothe
+  - https://en.wikipedia.org/wiki/India
+  - https://en.wikipedia.org/wiki/Indian_Premier_League
+  - https://en.wikipedia.org/wiki/Salary_cap
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Talothe
+      and end URI https://en.wikipedia.org/wiki/Salary_cap. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 497
+      out_degree: 292
+      reversed_neighborhood_size: 48127
+    start_uri_statistics:
+      in_degree: 0
+      out_degree: 14
+      reversed_neighborhood_size: 2086
+    statistics:
+      in_degree: 497
+      out_degree: 306
+      reversed_neighborhood_size: 50213
+- id: Talothe_Salary cap
+  path:
+  - https://en.wikipedia.org/wiki/Talothe
+  - https://en.wikipedia.org/wiki/India
+  - https://en.wikipedia.org/wiki/Indian_Premier_League
+  - https://en.wikipedia.org/wiki/Salary_cap
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Talothe
+      and end URI https://en.wikipedia.org/wiki/Salary_cap. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 497
+      out_degree: 292
+      reversed_neighborhood_size: 48127
+    start_uri_statistics:
+      in_degree: 0
+      out_degree: 14
+      reversed_neighborhood_size: 2086
+    statistics:
+      in_degree: 497
+      out_degree: 306
+      reversed_neighborhood_size: 50213
+- id: Filip Moravčík_Finlandia Hall
+  path:
+  - https://en.wikipedia.org/wiki/Filip_Moravčík
+  - https://en.wikipedia.org/wiki/Czechoslovakia
+  - https://en.wikipedia.org/wiki/Finland
+  - https://en.wikipedia.org/wiki/Finlandia_Hall
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Filip_Moravčík
+      and end URI https://en.wikipedia.org/wiki/Finlandia_Hall. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 68
+      out_degree: 46
+      reversed_neighborhood_size: 7551
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 19
+      reversed_neighborhood_size: 1877
+    statistics:
+      in_degree: 71
+      out_degree: 65
+      reversed_neighborhood_size: 9428
+- id: Filip Moravčík_Hermann Gösmann
+  path:
+  - https://en.wikipedia.org/wiki/Filip_Moravčík
+  - https://en.wikipedia.org/wiki/Association_football
+  - https://en.wikipedia.org/wiki/Bundesliga
+  - https://en.wikipedia.org/wiki/Hermann_Gösmann
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Filip_Moravčík
+      and end URI https://en.wikipedia.org/wiki/Hermann_Gösmann. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 8
+      out_degree: 28
+      reversed_neighborhood_size: 4481
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 19
+      reversed_neighborhood_size: 1877
+    statistics:
+      in_degree: 11
+      out_degree: 47
+      reversed_neighborhood_size: 6358
+- id: List of Charleroi Metro stations_List of monarchs of Germany
+  path:
+  - https://en.wikipedia.org/wiki/List_of_Charleroi_Metro_stations
+  - https://en.wikipedia.org/wiki/Belgium
+  - https://en.wikipedia.org/wiki/Holy_Roman_Empire
+  - https://en.wikipedia.org/wiki/List_of_monarchs_of_Germany
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/List_of_Charleroi_Metro_stations
+      and end URI https://en.wikipedia.org/wiki/List_of_monarchs_of_Germany. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    start_uri_statistics:
+      in_degree: 7
+      out_degree: 46
+      reversed_neighborhood_size: 1755
+    statistics:
+      in_degree: 7
+      out_degree: 46
+      reversed_neighborhood_size: 1756
+- id: List of Charleroi Metro stations_List of monarchs of Germany
+  path:
+  - https://en.wikipedia.org/wiki/List_of_Charleroi_Metro_stations
+  - https://en.wikipedia.org/wiki/Belgium
+  - https://en.wikipedia.org/wiki/Holy_Roman_Empire
+  - https://en.wikipedia.org/wiki/List_of_monarchs_of_Germany
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/List_of_Charleroi_Metro_stations
+      and end URI https://en.wikipedia.org/wiki/List_of_monarchs_of_Germany. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    start_uri_statistics:
+      in_degree: 7
+      out_degree: 46
+      reversed_neighborhood_size: 1755
+    statistics:
+      in_degree: 7
+      out_degree: 46
+      reversed_neighborhood_size: 1756
+- id: Jitex BK_List of monarchs of Germany
+  path:
+  - https://en.wikipedia.org/wiki/Jitex_BK
+  - https://en.wikipedia.org/wiki/Umeå_IK
+  - https://en.wikipedia.org/wiki/Frankfurt
+  - https://en.wikipedia.org/wiki/List_of_monarchs_of_Germany
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Jitex_BK
+      and end URI https://en.wikipedia.org/wiki/List_of_monarchs_of_Germany. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    start_uri_statistics:
+      in_degree: 106
+      out_degree: 21
+      reversed_neighborhood_size: 1713
+    statistics:
+      in_degree: 106
+      out_degree: 21
+      reversed_neighborhood_size: 1714
+- id: Jitex BK_List of monarchs of Germany
+  path:
+  - https://en.wikipedia.org/wiki/Jitex_BK
+  - https://en.wikipedia.org/wiki/Umeå_IK
+  - https://en.wikipedia.org/wiki/Frankfurt
+  - https://en.wikipedia.org/wiki/List_of_monarchs_of_Germany
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Jitex_BK
+      and end URI https://en.wikipedia.org/wiki/List_of_monarchs_of_Germany. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    start_uri_statistics:
+      in_degree: 106
+      out_degree: 21
+      reversed_neighborhood_size: 1713
+    statistics:
+      in_degree: 106
+      out_degree: 21
+      reversed_neighborhood_size: 1714
+- id: Maes–Garreau law_Anticipation (artificial intelligence)
+  path:
+  - https://en.wikipedia.org/wiki/Maes–Garreau_law
+  - https://en.wikipedia.org/wiki/Mind_uploading
+  - https://en.wikipedia.org/wiki/Artificial_consciousness
+  - https://en.wikipedia.org/wiki/Anticipation_(artificial_intelligence)
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Maes–Garreau_law
+      and end URI https://en.wikipedia.org/wiki/Anticipation_(artificial_intelligence).
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 9
+      out_degree: 15
+      reversed_neighborhood_size: 1645
+    start_uri_statistics:
+      in_degree: 5
+      out_degree: 10
+      reversed_neighborhood_size: 648
+    statistics:
+      in_degree: 14
+      out_degree: 25
+      reversed_neighborhood_size: 2293
+- id: Maes–Garreau law_Dot-com party
+  path:
+  - https://en.wikipedia.org/wiki/Maes–Garreau_law
+  - https://en.wikipedia.org/wiki/Wired_(magazine)
+  - https://en.wikipedia.org/wiki/Dot-com_bubble
+  - https://en.wikipedia.org/wiki/Dot-com_party
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Maes–Garreau_law
+      and end URI https://en.wikipedia.org/wiki/Dot-com_party. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 8
+      out_degree: 55
+      reversed_neighborhood_size: 6514
+    start_uri_statistics:
+      in_degree: 5
+      out_degree: 10
+      reversed_neighborhood_size: 648
+    statistics:
+      in_degree: 13
+      out_degree: 65
+      reversed_neighborhood_size: 7162
+- id: List of listed buildings in Elgin, Moray_NASCAR Nationwide Series at Memphis
+    Motorsports Park
+  path:
+  - https://en.wikipedia.org/wiki/List_of_listed_buildings_in_Elgin,_Moray
+  - https://en.wikipedia.org/wiki/Scotland
+  - https://en.wikipedia.org/wiki/Dario_Franchitti
+  - https://en.wikipedia.org/wiki/NASCAR_Nationwide_Series_at_Memphis_Motorsports_Park
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/List_of_listed_buildings_in_Elgin,_Moray
+      and end URI https://en.wikipedia.org/wiki/NASCAR_Nationwide_Series_at_Memphis_Motorsports_Park.
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    start_uri_statistics:
+      in_degree: 1
+      out_degree: 8
+      reversed_neighborhood_size: 2433
+    statistics:
+      in_degree: 1
+      out_degree: 8
+      reversed_neighborhood_size: 2434
+- id: Workiz_Rachel Moore (arts administrator)
+  path:
+  - https://en.wikipedia.org/wiki/Workiz
+  - https://en.wikipedia.org/wiki/California
+  - https://en.wikipedia.org/wiki/Davis,_California
+  - https://en.wikipedia.org/wiki/Rachel_Moore_(arts_administrator)
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Workiz
+      and end URI https://en.wikipedia.org/wiki/Rachel_Moore_(arts_administrator).
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 3
+      out_degree: 28
+      reversed_neighborhood_size: 3556
+    start_uri_statistics:
+      in_degree: 1
+      out_degree: 21
+      reversed_neighborhood_size: 4187
+    statistics:
+      in_degree: 4
+      out_degree: 49
+      reversed_neighborhood_size: 7743
+- id: Workiz_Antonio Armijo
+  path:
+  - https://en.wikipedia.org/wiki/Workiz
+  - https://en.wikipedia.org/wiki/California
+  - https://en.wikipedia.org/wiki/El_Monte,_California
+  - https://en.wikipedia.org/wiki/Antonio_Armijo
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Workiz
+      and end URI https://en.wikipedia.org/wiki/Antonio_Armijo. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 34
+      out_degree: 24
+      reversed_neighborhood_size: 885
+    start_uri_statistics:
+      in_degree: 1
+      out_degree: 21
+      reversed_neighborhood_size: 4187
+    statistics:
+      in_degree: 35
+      out_degree: 45
+      reversed_neighborhood_size: 5072
+- id: Creag Odhar_NASCAR Nationwide Series at Memphis Motorsports Park
+  path:
+  - https://en.wikipedia.org/wiki/Creag_Odhar
+  - https://en.wikipedia.org/wiki/Scotland
+  - https://en.wikipedia.org/wiki/Dario_Franchitti
+  - https://en.wikipedia.org/wiki/NASCAR_Nationwide_Series_at_Memphis_Motorsports_Park
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Creag_Odhar
+      and end URI https://en.wikipedia.org/wiki/NASCAR_Nationwide_Series_at_Memphis_Motorsports_Park.
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    start_uri_statistics:
+      in_degree: 2
+      out_degree: 7
+      reversed_neighborhood_size: 1902
+    statistics:
+      in_degree: 2
+      out_degree: 7
+      reversed_neighborhood_size: 1903
+- id: Jungle Raiders (serial)_Renaissance Communications
+  path:
+  - https://en.wikipedia.org/wiki/Jungle_Raiders_(serial)
+  - https://en.wikipedia.org/wiki/20th_Century_Studios
+  - https://en.wikipedia.org/wiki/Fox_Broadcasting_Company
+  - https://en.wikipedia.org/wiki/Renaissance_Communications
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Jungle_Raiders_(serial)
+      and end URI https://en.wikipedia.org/wiki/Renaissance_Communications. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    start_uri_statistics:
+      in_degree: 21
+      out_degree: 42
+      reversed_neighborhood_size: 4327
+    statistics:
+      in_degree: 21
+      out_degree: 42
+      reversed_neighborhood_size: 4328
+- id: Bounkiling_FIFA Men's World Ranking
+  path:
+  - https://en.wikipedia.org/wiki/Bounkiling
+  - https://en.wikipedia.org/wiki/Greenwich_Mean_Time
+  - https://en.wikipedia.org/wiki/Faroe_Islands
+  - https://en.wikipedia.org/wiki/FIFA_Men's_World_Ranking
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Bounkiling
+      and end URI https://en.wikipedia.org/wiki/FIFA_Men''s_World_Ranking. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 37
+      out_degree: 74
+      reversed_neighborhood_size: 11052
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 11
+      reversed_neighborhood_size: 719
+    statistics:
+      in_degree: 41
+      out_degree: 85
+      reversed_neighborhood_size: 11771
+- id: Bounkiling_FIFA Men's World Ranking
+  path:
+  - https://en.wikipedia.org/wiki/Bounkiling
+  - https://en.wikipedia.org/wiki/Greenwich_Mean_Time
+  - https://en.wikipedia.org/wiki/Faroe_Islands
+  - https://en.wikipedia.org/wiki/FIFA_Men's_World_Ranking
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Bounkiling
+      and end URI https://en.wikipedia.org/wiki/FIFA_Men''s_World_Ranking. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 37
+      out_degree: 74
+      reversed_neighborhood_size: 11052
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 11
+      reversed_neighborhood_size: 719
+    statistics:
+      in_degree: 41
+      out_degree: 85
+      reversed_neighborhood_size: 11771
+- id: Ciara Fowler_Shock therapy (economics)
+  path:
+  - https://en.wikipedia.org/wiki/Ciara_Fowler
+  - https://en.wikipedia.org/wiki/Dublin
+  - https://en.wikipedia.org/wiki/Poland
+  - https://en.wikipedia.org/wiki/Shock_therapy_(economics)
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Ciara_Fowler
+      and end URI https://en.wikipedia.org/wiki/Shock_therapy_(economics). Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 97
+      out_degree: 99
+      reversed_neighborhood_size: 12096
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 28
+      reversed_neighborhood_size: 2520
+    statistics:
+      in_degree: 101
+      out_degree: 127
+      reversed_neighborhood_size: 14616
+- id: Old Urban Cemetery_Alaskan (1883 steamship)
+  path:
+  - https://en.wikipedia.org/wiki/Old_Urban_Cemetery
+  - https://en.wikipedia.org/wiki/1918_San_Fermín_earthquake
+  - https://en.wikipedia.org/wiki/List_of_disasters_in_the_United_States_by_death_toll
+  - https://en.wikipedia.org/wiki/Alaskan_(1883_steamship)
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Old_Urban_Cemetery
+      and end URI https://en.wikipedia.org/wiki/Alaskan_(1883_steamship). Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 11
+      reversed_neighborhood_size: 536
+    statistics:
+      in_degree: 4
+      out_degree: 11
+      reversed_neighborhood_size: 537
+- id: Centro Studi GISED_Elvas
+  path:
+  - https://en.wikipedia.org/wiki/Centro_Studi_GISED
+  - https://en.wikipedia.org/wiki/Bergamo
+  - https://en.wikipedia.org/wiki/List_of_World_Heritage_Sites_by_year_of_inscription
+  - https://en.wikipedia.org/wiki/Elvas
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Centro_Studi_GISED
+      and end URI https://en.wikipedia.org/wiki/Elvas. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 170
+      out_degree: 63
+      reversed_neighborhood_size: 7415
+    start_uri_statistics:
+      in_degree: 2
+      out_degree: 18
+      reversed_neighborhood_size: 2763
+    statistics:
+      in_degree: 172
+      out_degree: 81
+      reversed_neighborhood_size: 10178
+- id: Centro Studi GISED_Chernivtsi University
+  path:
+  - https://en.wikipedia.org/wiki/Centro_Studi_GISED
+  - https://en.wikipedia.org/wiki/Italy
+  - https://en.wikipedia.org/wiki/Ukraine
+  - https://en.wikipedia.org/wiki/Chernivtsi_University
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Centro_Studi_GISED
+      and end URI https://en.wikipedia.org/wiki/Chernivtsi_University. Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 129
+      out_degree: 170
+      reversed_neighborhood_size: 36937
+    start_uri_statistics:
+      in_degree: 2
+      out_degree: 18
+      reversed_neighborhood_size: 2763
+    statistics:
+      in_degree: 131
+      out_degree: 188
+      reversed_neighborhood_size: 39700
+- id: Chernivtsi University_Centro Studi GISED
+  path:
+  - https://en.wikipedia.org/wiki/Chernivtsi_University
+  - https://en.wikipedia.org/wiki/Luhansk_State_Medical_University
+  - https://en.wikipedia.org/wiki/Dermatology
+  - https://en.wikipedia.org/wiki/Centro_Studi_GISED
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Chernivtsi_University
+      and end URI https://en.wikipedia.org/wiki/Centro_Studi_GISED. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 2
+      out_degree: 18
+      reversed_neighborhood_size: 2763
+    start_uri_statistics:
+      in_degree: 129
+      out_degree: 170
+      reversed_neighborhood_size: 36937
+    statistics:
+      in_degree: 131
+      out_degree: 188
+      reversed_neighborhood_size: 39700
+- id: Purna Shah_Rishabha (Hindu sage)
+  path:
+  - https://en.wikipedia.org/wiki/Purna_Shah
+  - https://en.wikipedia.org/wiki/Hinduism
+  - https://en.wikipedia.org/wiki/Matsya
+  - https://en.wikipedia.org/wiki/Rishabha_(Hindu_sage)
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Purna_Shah
+      and end URI https://en.wikipedia.org/wiki/Rishabha_(Hindu_sage). Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    start_uri_statistics:
+      in_degree: 8
+      out_degree: 17
+      reversed_neighborhood_size: 1949
+    statistics:
+      in_degree: 8
+      out_degree: 17
+      reversed_neighborhood_size: 1950
+- id: Rishabha (Hindu sage)_Purna Shah
+  path:
+  - https://en.wikipedia.org/wiki/Rishabha_(Hindu_sage)
+  - https://en.wikipedia.org/wiki/Hinduism
+  - https://en.wikipedia.org/wiki/Shah_dynasty
+  - https://en.wikipedia.org/wiki/Purna_Shah
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Rishabha_(Hindu_sage)
+      and end URI https://en.wikipedia.org/wiki/Purna_Shah. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 8
+      out_degree: 17
+      reversed_neighborhood_size: 1949
+    start_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    statistics:
+      in_degree: 8
+      out_degree: 17
+      reversed_neighborhood_size: 1950
+- id: Purna Shah_Rishabha (Hindu sage)
+  path:
+  - https://en.wikipedia.org/wiki/Purna_Shah
+  - https://en.wikipedia.org/wiki/Hinduism
+  - https://en.wikipedia.org/wiki/Matsya
+  - https://en.wikipedia.org/wiki/Rishabha_(Hindu_sage)
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Purna_Shah
+      and end URI https://en.wikipedia.org/wiki/Rishabha_(Hindu_sage). Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    start_uri_statistics:
+      in_degree: 8
+      out_degree: 17
+      reversed_neighborhood_size: 1949
+    statistics:
+      in_degree: 8
+      out_degree: 17
+      reversed_neighborhood_size: 1950
+- id: Rishabha (Hindu sage)_Purna Shah
+  path:
+  - https://en.wikipedia.org/wiki/Rishabha_(Hindu_sage)
+  - https://en.wikipedia.org/wiki/Hinduism
+  - https://en.wikipedia.org/wiki/Shah_dynasty
+  - https://en.wikipedia.org/wiki/Purna_Shah
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Rishabha_(Hindu_sage)
+      and end URI https://en.wikipedia.org/wiki/Purna_Shah. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 8
+      out_degree: 17
+      reversed_neighborhood_size: 1949
+    start_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    statistics:
+      in_degree: 8
+      out_degree: 17
+      reversed_neighborhood_size: 1950
+- id: John E. Bridges_International Broadcasting Bureau
+  path:
+  - https://en.wikipedia.org/wiki/John_E._Bridges
+  - https://en.wikipedia.org/wiki/Seattle_Pacific_University
+  - https://en.wikipedia.org/wiki/NPR
+  - https://en.wikipedia.org/wiki/International_Broadcasting_Bureau
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/John_E._Bridges
+      and end URI https://en.wikipedia.org/wiki/International_Broadcasting_Bureau.
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 36
+      out_degree: 32
+      reversed_neighborhood_size: 4767
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 19
+      reversed_neighborhood_size: 1991
+    statistics:
+      in_degree: 39
+      out_degree: 51
+      reversed_neighborhood_size: 6758
+- id: International Broadcasting Bureau_John E. Bridges
+  path:
+  - https://en.wikipedia.org/wiki/International_Broadcasting_Bureau
+  - https://en.wikipedia.org/wiki/Bill_Clinton
+  - https://en.wikipedia.org/wiki/Christine_Gregoire
+  - https://en.wikipedia.org/wiki/John_E._Bridges
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/International_Broadcasting_Bureau
+      and end URI https://en.wikipedia.org/wiki/John_E._Bridges. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 3
+      out_degree: 19
+      reversed_neighborhood_size: 1991
+    start_uri_statistics:
+      in_degree: 36
+      out_degree: 32
+      reversed_neighborhood_size: 4767
+    statistics:
+      in_degree: 39
+      out_degree: 51
+      reversed_neighborhood_size: 6758
+- id: John E. Bridges_2021 British Columbia wildfires
+  path:
+  - https://en.wikipedia.org/wiki/John_E._Bridges
+  - https://en.wikipedia.org/wiki/Washington_(state)
+  - https://en.wikipedia.org/wiki/2021_Western_North_America_heat_wave
+  - https://en.wikipedia.org/wiki/2021_British_Columbia_wildfires
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/John_E._Bridges
+      and end URI https://en.wikipedia.org/wiki/2021_British_Columbia_wildfires. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 13
+      out_degree: 37
+      reversed_neighborhood_size: 4460
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 19
+      reversed_neighborhood_size: 1991
+    statistics:
+      in_degree: 16
+      out_degree: 56
+      reversed_neighborhood_size: 6451
+- id: Edaganasalai_Leeds Tiger
+  path:
+  - https://en.wikipedia.org/wiki/Edaganasalai
+  - https://en.wikipedia.org/wiki/India
+  - https://en.wikipedia.org/wiki/Bengal_tiger
+  - https://en.wikipedia.org/wiki/Leeds_Tiger
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Edaganasalai
+      and end URI https://en.wikipedia.org/wiki/Leeds_Tiger. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 6
+      out_degree: 46
+      reversed_neighborhood_size: 6035
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 10
+      reversed_neighborhood_size: 2430
+    statistics:
+      in_degree: 9
+      out_degree: 56
+      reversed_neighborhood_size: 8465
+- id: Edaganasalai_Shock therapy (economics)
+  path:
+  - https://en.wikipedia.org/wiki/Edaganasalai
+  - https://en.wikipedia.org/wiki/India
+  - https://en.wikipedia.org/wiki/Bharatiya_Janata_Party
+  - https://en.wikipedia.org/wiki/Shock_therapy_(economics)
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Edaganasalai
+      and end URI https://en.wikipedia.org/wiki/Shock_therapy_(economics). Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 97
+      out_degree: 99
+      reversed_neighborhood_size: 12096
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 10
+      reversed_neighborhood_size: 2430
+    statistics:
+      in_degree: 100
+      out_degree: 109
+      reversed_neighborhood_size: 14526
+- id: Akai Terukage_Hybrid word
+  path:
+  - https://en.wikipedia.org/wiki/Akai_Terukage
+  - https://en.wikipedia.org/wiki/Japanese_name
+  - https://en.wikipedia.org/wiki/Latin
+  - https://en.wikipedia.org/wiki/Hybrid_word
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Akai_Terukage
+      and end URI https://en.wikipedia.org/wiki/Hybrid_word. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 85
+      out_degree: 117
+      reversed_neighborhood_size: 14293
+    start_uri_statistics:
+      in_degree: 2
+      out_degree: 7
+      reversed_neighborhood_size: 254
+    statistics:
+      in_degree: 87
+      out_degree: 124
+      reversed_neighborhood_size: 14547
+- id: Incentive Software_Whig history
+  path:
+  - https://en.wikipedia.org/wiki/Incentive_Software
+  - https://en.wikipedia.org/wiki/Reading,_Berkshire
+  - https://en.wikipedia.org/wiki/Glorious_Revolution
+  - https://en.wikipedia.org/wiki/Whig_history
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Incentive_Software
+      and end URI https://en.wikipedia.org/wiki/Whig_history. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 133
+      out_degree: 112
+      reversed_neighborhood_size: 13425
+    start_uri_statistics:
+      in_degree: 38
+      out_degree: 47
+      reversed_neighborhood_size: 2981
+    statistics:
+      in_degree: 171
+      out_degree: 159
+      reversed_neighborhood_size: 16406
+- id: Incentive Software_Eleutheran Adventurers
+  path:
+  - https://en.wikipedia.org/wiki/Incentive_Software
+  - https://en.wikipedia.org/wiki/Reading,_Berkshire
+  - https://en.wikipedia.org/wiki/English_Civil_War
+  - https://en.wikipedia.org/wiki/Eleutheran_Adventurers
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Incentive_Software
+      and end URI https://en.wikipedia.org/wiki/Eleutheran_Adventurers. Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 29
+      out_degree: 36
+      reversed_neighborhood_size: 5584
+    start_uri_statistics:
+      in_degree: 38
+      out_degree: 47
+      reversed_neighborhood_size: 2981
+    statistics:
+      in_degree: 67
+      out_degree: 83
+      reversed_neighborhood_size: 8565
+- id: Tauernkogel (Venediger Group)_European Optical Society
+  path:
+  - https://en.wikipedia.org/wiki/Tauernkogel_(Venediger_Group)
+  - https://en.wikipedia.org/wiki/Austria
+  - https://en.wikipedia.org/wiki/Anton_Zeilinger
+  - https://en.wikipedia.org/wiki/European_Optical_Society
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Tauernkogel_(Venediger_Group)
+      and end URI https://en.wikipedia.org/wiki/European_Optical_Society. Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 26
+      out_degree: 23
+      reversed_neighborhood_size: 2953
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 13
+      reversed_neighborhood_size: 963
+    statistics:
+      in_degree: 30
+      out_degree: 36
+      reversed_neighborhood_size: 3916
+- id: Rick Cluff_Baffin Island
+  path:
+  - https://en.wikipedia.org/wiki/Rick_Cluff
+  - https://en.wikipedia.org/wiki/Ontario
+  - https://en.wikipedia.org/wiki/Mountain_peaks_of_Canada
+  - https://en.wikipedia.org/wiki/Baffin_Island
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Rick_Cluff
+      and end URI https://en.wikipedia.org/wiki/Baffin_Island. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 964
+      out_degree: 195
+      reversed_neighborhood_size: 21079
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 15
+      reversed_neighborhood_size: 2875
+    statistics:
+      in_degree: 967
+      out_degree: 210
+      reversed_neighborhood_size: 23954
+- id: Baffin Island_Rick Cluff
+  path:
+  - https://en.wikipedia.org/wiki/Baffin_Island
+  - https://en.wikipedia.org/wiki/CBC_News
+  - https://en.wikipedia.org/wiki/List_of_Canadian_Broadcasting_Corporation_personalities
+  - https://en.wikipedia.org/wiki/Rick_Cluff
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Baffin_Island
+      and end URI https://en.wikipedia.org/wiki/Rick_Cluff. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 3
+      out_degree: 15
+      reversed_neighborhood_size: 2875
+    start_uri_statistics:
+      in_degree: 964
+      out_degree: 195
+      reversed_neighborhood_size: 21079
+    statistics:
+      in_degree: 967
+      out_degree: 210
+      reversed_neighborhood_size: 23954

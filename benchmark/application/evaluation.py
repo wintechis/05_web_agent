@@ -16,6 +16,19 @@ from benchmark.domain.path_parser import (
 from benchmark.infrastructure.yaml_io import dump_yaml, iter_entries, load_yaml
 
 
+def _print_evaluation_config_overview(
+    results_path: str, output_path: str | None
+) -> None:
+    """Print configuration overview at the start of an evaluation run."""
+    lines = [
+        "========== Evaluation run: configuration overview ==========",
+        f"  results_file = {results_path}",
+        f"  output      = {output_path if output_path else '(stdout only)'}",
+        "=============================================================",
+    ]
+    print("\n".join(lines))
+
+
 class RunEvaluationUseCase:
     """Evaluate benchmark results and optionally persist metrics."""
 
@@ -25,6 +38,7 @@ class RunEvaluationUseCase:
     def run(self, results_path: str, output_path: str | None = None) -> None:
         """Load results, compute metrics, print to stdout. Optionally write YAML to output_path."""
         abs_path = os.path.abspath(results_path)
+        _print_evaluation_config_overview(abs_path, output_path)
         logger.info("Evaluating results file: {}", abs_path)
 
         data = load_yaml(abs_path)

@@ -15,6 +15,22 @@ from benchmark.application.wikipedia_challenge_generator import (
 )
 
 
+def _print_generate_challenge_config_overview(args: argparse.Namespace) -> None:
+    """Print configuration overview at the start of a generate_challenge run."""
+    lines = [
+        "========== Generate challenge run: configuration overview ==========",
+        f"  distance              = {args.distance}",
+        f"  number_of_challenges  = {args.number_of_challenges}",
+        f"  default_limit         = {args.default_limit}",
+        f"  enforce_exact_distance = {args.enforce_exact_distance}",
+        f"  log_level             = {args.log_level}",
+        f"  wikipedia_output      = {args.wikipedia_output}",
+        f"  dbpedia_output        = {args.dbpedia_output}",
+        "===================================================================",
+    ]
+    print("\n".join(lines))
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(
         description="Generate wikipedia/dbpedia challenges."
@@ -45,6 +61,8 @@ def main() -> None:
     args = parser.parse_args()
 
     logging.basicConfig(level=args.log_level.upper())
+
+    _print_generate_challenge_config_overview(args)
 
     use_case = GenerateChallengeUseCase()
     use_case.run(

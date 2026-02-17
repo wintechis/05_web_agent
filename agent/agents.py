@@ -4,15 +4,18 @@ from dotenv import load_dotenv
 from smolagents import (
     AgentToolCallError,
     AgentToolExecutionError,
+    ChatMessage,
     LogLevel,
+    MessageRole,
     ToolCallingAgent,
     validate_tool_arguments,
 )
+from smolagents.agents import populate_template
+from smolagents.models import parse_json_if_needed
 
 from agent.prompt import WEB_AGENT_PROMPT_TEMPLATES
-from agent.telemetry import init_tracing
-from agent.tools import GETTool, POSTRdfTool, PUTTool
-from agent.clients import openai_inference_model
+from agent.tools import GETTool, POSTRdfTool, PUTTool, StructuredFinalAnswerTool
+from agent.clients import get_openai_inference_model
 
 RATIONALE_KEY = "_rationale"
 RATIONALE_INPUT_SPEC = {
@@ -22,7 +25,9 @@ RATIONALE_INPUT_SPEC = {
 
 load_dotenv()
 
-init_tracing()
+# Tracing is initialized by RunInferenceUseCase.run() (after setting OTEL_TRACE_DIR) so
+# trace files are written to the benchmark output folder. For standalone agent use, set
+# OTEL_TRACE_DIR and call init_tracing() before running.
 
 
 # Vanilla Web Agent
@@ -84,7 +89,7 @@ class RationaleToolCallingAgent(ToolCallingAgent):
         if rationale:
             self.logger.log(
                 f"Rationale: {rationale}",
-                level=LogLevel.INFO,
+                level=LogLevel.DEBUG,
             )
 
         try:
@@ -104,10 +109,64 @@ class RationaleToolCallingAgent(ToolCallingAgent):
                 )
             raise AgentToolExecutionError(error_msg, self.logger) from exc
 
+    def _handle_max_steps_reached(self, task: str) -> Any:
+        """When max steps is reached, ask the model for a structured final_answer tool call so we still get urls + task_state."""
+        final_tool = self.tools.get("final_answer")
+        if final_tool is None:
+            return super()._handle_max_steps_reached(task)
 
-vanilla_web_agent = RationaleToolCallingAgent(
-    model=openai_inference_model,
-    tools=[GETTool(), POSTRdfTool(), PUTTool()],
-    verbosity_level=2,
-    prompt_templates=WEB_AGENT_PROMPT_TEMPLATES,
-)
+        messages = [
+            ChatMessage(
+                role=MessageRole.SYSTEM,
+                content=[{"type": "text", "text": self.prompt_templates["final_answer"]["pre_messages"]}],
+            )
+        ]
+        messages += self.write_memory_to_messages()[1:]
+        messages.append(
+            ChatMessage(
+                role=MessageRole.USER,
+                content=[
+                    {
+                        "type": "text",
+                        "text": populate_template(
+                            self.prompt_templates["final_answer"]["post_messages"], variables={"task": task}
+                        ),
+                    }
+                ],
+            )
+        )
+        try:
+            chat_message: ChatMessage = self.model.generate(messages, tools_to_call_from=[final_tool])
+        except Exception:
+            return super()._handle_max_steps_reached(task)
+
+        if not chat_message.tool_calls:
+            return super()._handle_max_steps_reached(task)
+        final_call = next(
+            (tc for tc in chat_message.tool_calls if getattr(tc.function, "name", None) == "final_answer"),
+            None,
+        )
+        if final_call is None:
+            return super()._handle_max_steps_reached(task)
+
+        arguments = parse_json_if_needed(getattr(final_call.function, "arguments", {}) or {})
+        if not isinstance(arguments, dict):
+            arguments = {}
+        try:
+            return self.execute_tool_call("final_answer", arguments)
+        except Exception:
+            return super()._handle_max_steps_reached(task)
+
+
+def get_vanilla_web_agent() -> RationaleToolCallingAgent:
+    """Return the web agent using the current OPENAI_MODEL_ID (for Hydra/model switching)."""
+    return RationaleToolCallingAgent(
+        model=get_openai_inference_model(),
+        tools=[GETTool(), POSTRdfTool(), PUTTool(), StructuredFinalAnswerTool()],
+        verbosity_level=LogLevel.INFO,
+        prompt_templates=WEB_AGENT_PROMPT_TEMPLATES,
+    )
+
+
+# Default agent at import time; use get_vanilla_web_agent() when model may be set later (e.g. Hydra).
+vanilla_web_agent = get_vanilla_web_agent()

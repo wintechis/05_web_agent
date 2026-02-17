@@ -1,0 +1,8 @@
+# dbpedia | in-and-outgoing | json-ld (Semantic Noise experiments)
+dataset: dbpedia
+modify_context: true
+context: modified
+pruning_method: in-and-outgoing
+representation_format: rdf
+rdf_representation: json-ld
+context_compression: false

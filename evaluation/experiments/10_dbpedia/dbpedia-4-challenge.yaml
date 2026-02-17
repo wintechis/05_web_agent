@@ -1,0 +1,34 @@
+benchmark:
+- id: Peleng tarsier_Menat Formation
+  question: &id001
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Peleng_tarsier
+      and end URI http://dbpedia.org/resource/Menat_Formation. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: Peleng tarsier_Menat Formation
+    question: *id001
+    gold_standard_answer:
+      id: Peleng tarsier_Menat Formation
+      path:
+      - http://dbpedia.org/resource/Peleng_tarsier
+      - http://dbpedia.org/resource/Mammal
+      - http://dbpedia.org/resource/Paleocene
+      - http://dbpedia.org/resource/Menat_Formation
+      question: *id001
+      statistics:
+        end_uri_statistics:
+          in_degree: 28
+          out_degree: 18
+          reversed_neighborhood_size: 3124
+        start_uri_statistics:
+          in_degree: 9
+          out_degree: 20
+          reversed_neighborhood_size: 2022
+        statistics:
+          in_degree: 37
+          out_degree: 38
+          reversed_neighborhood_size: 5146
+  model: qwen3-coder-30b-a3b-instruct
+  predicted_answer: ''
+  trace_file: /home/dorschre/05_web_agent/evaluation/experiments/10_dbpedia/traces/034e6f7dc1065c563315b3b2d82e48d4.jsonl

@@ -1,0 +1,8 @@
+# dbpedia | in-and-outgoing | turtle (Semantic Noise experiments)
+dataset: dbpedia
+modify_context: true
+context: modified
+pruning_method: in-and-outgoing
+representation_format: rdf
+rdf_representation: turtle
+context_compression: false

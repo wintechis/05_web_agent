@@ -1,0 +1,9 @@
+# wikipedia | html | markdown | compression
+dataset: wikipedia
+modify_context: true
+context: modified
+representation_format: html
+rdf_representation: html
+pruning_method: unpruned
+context_compression: true
+max_token_for_model: "120000"

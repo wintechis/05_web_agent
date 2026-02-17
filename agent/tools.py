@@ -1,10 +1,20 @@
 import json
+import time
 import markdownify
 import httpx
 from pydantic import BaseModel
 from smolagents import Tool
 
 from agent.clients import http_client
+
+GET_MAX_RETRIES = 3
+GET_RETRY_DELAY_SECONDS = 1.0
+from agent.resource_transform import (
+    get_accept_header_when_modify_context,
+    get_modify_context,
+    get_representation,
+    modify_uri,
+)
 
 
 class Response(BaseModel):
@@ -71,26 +81,57 @@ def _http_error_response(response: httpx.Response, url: str) -> Response | None:
 
 
 def _get(url: str) -> Response:
-    """Internal synchronous function to fetch and process URL."""
-    response = http_client.get(url)
+    """Internal synchronous function to fetch and process URL. Retries on transient transport errors."""
+    # Server Configuration 
+    fetch_url = modify_uri(url) if get_modify_context() else url
+    headers = {"Accept": get_accept_header_when_modify_context()} if get_modify_context() else None
+    last_exc: Exception | None = None
 
-    error_response = _http_error_response(response, url)
-    if error_response is not None:
-        return error_response
+    for attempt in range(GET_MAX_RETRIES):
+        try:
+            if headers is not None:
+                response = http_client.get(fetch_url, headers=headers)
+            else:
+                response = http_client.get(fetch_url)
+        except httpx.TransportError as exc:
+            last_exc = exc
+            if attempt < GET_MAX_RETRIES - 1:
+                time.sleep(GET_RETRY_DELAY_SECONDS)
+                continue
+            return Response(
+                text=f"Request failed after {GET_MAX_RETRIES} attempts: {exc!s}. Please try again or use another URL.",
+                url=url,
+                status_code=None,
+            )
 
-    content_type = response.headers.get("Content-Type")
-    if content_type == "application/sparql-results+json":
-        text = response.text
-    if content_type == "text/html":
-        text = process_html(response.text)
-    else:
-        text = response.text
-    
+        error_response = _http_error_response(response, url)
+        if error_response is not None:
+            return error_response
+
+
+        # Client Configuration
+        # Syntactic Noise Cleaning
+        if get_modify_context():
+            text = get_representation(response.text, url)
+        else:
+            content_type = response.headers.get("Content-Type")
+            if content_type == "application/sparql-results+json":
+                text = response.text
+            elif content_type == "text/html":
+                text = process_html(response.text)
+            else:
+                text = response.text
+
+        return Response(
+            text=text,
+            url=url,
+            status_code=response.status_code,
+        )
 
     return Response(
-        text=text,
+        text=f"Request failed after {GET_MAX_RETRIES} attempts: {last_exc!s}. Please try again or use another URL.",
         url=url,
-        status_code=response.status_code,
+        status_code=None,
     )
 
 
@@ -311,3 +352,43 @@ class POSTRdfTool(Tool):
         """Parse RDF, validate, convert to Turtle, POST to URL."""
         result = _post_rdf(url, data_binary.strip())
         return f"URL: {result.url}\n\nStatus Code: {result.status_code}\n\nContent:\n{result.text}"
+
+
+# Allowed values for LLM-reported task state (structured final answer).
+TASK_STATE_VALUES = ("completed", "partial", "failed", "unclear")
+
+
+class StructuredFinalAnswerTool(Tool):
+    """Final-answer tool that returns structured output: list of URLs + task state."""
+
+    name = "final_answer"
+    description = (
+        "Call this when you are done with the task. Provide the list of URLs that answer the user's question "
+        "and the task state (completed, partial, failed, or unclear)."
+    )
+    inputs = {
+        "urls": {
+            "type": "array",
+            "items": {"type": "string"},
+            "description": "List of URLs that form the answer. Use empty list if none.",
+            "nullable": True,
+        },
+        "task_state": {
+            "type": "string",
+            "description": "State of the task: completed (goal achieved), partial (some progress, goal not fully met), failed (goal not achieved), unclear (goal or success criteria ambiguous).",
+            "enum": list(TASK_STATE_VALUES),
+            "nullable": True,
+        },
+    }
+    output_type = "object"
+
+    def forward(self, urls: list[str] | None = None, task_state: str | None = None) -> dict:
+        """Return structured final answer for the pipeline."""
+        if urls is None:
+            urls = []
+        elif not isinstance(urls, list):
+            urls = [str(urls)] if urls else []
+        else:
+            urls = [str(u) for u in urls]
+        state = (task_state if task_state in TASK_STATE_VALUES else "unclear") or "unclear"
+        return {"urls": urls, "task_state": state}

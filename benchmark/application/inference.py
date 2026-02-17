@@ -3,9 +3,12 @@
 import os
 from typing import Any
 
+from loguru import logger
 from opentelemetry import trace
 
-from agent.agents import vanilla_web_agent
+from agent.agents import get_vanilla_web_agent
+from agent.clients import get_openai_inference_model
+from agent.telemetry import DEFAULT_TRACE_DIR, TRACE_DIR_ENV, init_tracing
 from benchmark.constants import (
     BENCHMARK_KEY,
     DEFAULT_MAX_AGENT_STEPS,
@@ -14,26 +17,35 @@ from benchmark.constants import (
     MODEL_KEY,
     PREDICTED_KEY,
     QUESTION_KEY,
-    QUESTIONS_KEY,
+    TASK_STATE_KEY,
     TRACE_FILE_KEY,
 )
-from benchmark.infrastructure.yaml_io import dump_yaml, iter_yaml_files, load_yaml
-from agent.clients import openai_inference_model
-from agent.telemetry import DEFAULT_TRACE_DIR, TRACE_DIR_ENV, init_tracing
+from benchmark.infrastructure.yaml_io import dump_yaml, iter_entries, iter_yaml_files, load_yaml
 
 
-def _normalize_answer(answer: Any) -> str:
-    """Convert agent answer to string for storage."""
+def _normalize_answer(answer: Any, include_task_state_in_text: bool = False) -> str:
+    """Convert agent answer (list, dict with urls, or string) to string for storage."""
     if answer is None:
         return ""
-    if isinstance(answer, list):
-        return "\n".join(str(item) for item in answer)
     return str(answer)
+
+
+def _extract_answer_and_task_state(answer: Any) -> tuple[str, str | None]:
+    """Extract predicted answer string (complete response) and optional task_state from agent result."""
+    # Include task_state in predicted_answer so the stored string is the full agent response
+    predicted = _normalize_answer(answer, include_task_state_in_text=True)
+    task_state = None
+    if isinstance(answer, dict) and "task_state" in answer:
+        task_state = answer.get("task_state")
+        if task_state is not None:
+            task_state = str(task_state).strip() or None
+    return predicted, task_state
 
 
 def _model_id() -> str:
     """Get current model identifier from clients."""
-    model_id = getattr(openai_inference_model, "model_id", None)
+    model = get_openai_inference_model()
+    model_id = getattr(model, "model_id", None)
     return str(model_id) if model_id else "unknown"
 
 
@@ -53,19 +65,68 @@ def _max_agent_steps() -> int:
         return DEFAULT_MAX_AGENT_STEPS
 
 
+def _print_inference_config_overview(
+    input_dir: str, output_dir: str, trace_dir: str
+) -> None:
+    """Print configuration overview at the start of a run (paths + env-driven settings)."""
+    model_id = getattr(get_openai_inference_model(), "model_id", None) or "unknown"
+    max_steps = _max_agent_steps()
+    modify_ctx = os.getenv("MODIFY_CONTEXT", "").strip().lower() in ("true", "1", "yes")
+    repr_fmt = os.getenv("REPRESENTATION_FORMAT", "wikitext").strip().lower()
+    context = os.getenv("CONTEXT", "modified").strip().lower()
+    rdf_repr = os.getenv("RDF_REPRESENTATION", "html").strip().lower()
+    pruning = os.getenv("PRUNING_METHOD", "unpruned").strip().lower()
+    ctx_comp = os.getenv("CONTEXT_COMPRESSION", "").strip().lower() in ("true", "1", "yes")
+    max_tokens = os.getenv("MAX_TOKEN_FOR_MODEL", "120000").strip()
+    temperature = os.getenv("OPENAI_TEMPERATURE", "").strip() or "(not set)"
+    top_p = os.getenv("OPENAI_TOP_P", "").strip() or "(not set)"
+    seed = os.getenv("OPENAI_SEED", "").strip() or "(not set)"
+
+    lines = [
+        "========== Inference run: configuration overview ==========",
+        "Paths:",
+        f"  input_dir   = {input_dir}",
+        f"  output_dir  = {output_dir}",
+        f"  trace_dir   = {trace_dir}",
+        "Agent / steps:",
+        f"  model_id    = {model_id}",
+        f"  MAX_AGENT_STEPS = {max_steps}",
+        "Determinism (model sampling):",
+        f"  OPENAI_TEMPERATURE = {temperature}",
+        f"  OPENAI_TOP_P      = {top_p}",
+        f"  OPENAI_SEED       = {seed}",
+        "Resource transformation (GET tool):",
+        f"  MODIFY_CONTEXT       = {modify_ctx}",
+        f"  REPRESENTATION_FORMAT = {repr_fmt}",
+        f"  CONTEXT              = {context}",
+        f"  RDF_REPRESENTATION   = {rdf_repr}",
+        f"  PRUNING_METHOD       = {pruning}",
+        "Context compression:",
+        f"  CONTEXT_COMPRESSION  = {ctx_comp}",
+        f"  MAX_TOKEN_FOR_MODEL  = {max_tokens}",
+        "============================================================",
+    ]
+    print("\n".join(lines))
+
+
 def _run_agent(question_text: str) -> Any:
-    """Invoke vanilla web agent with optional max_steps."""
+    """Invoke vanilla web agent with optional max_steps (uses current OPENAI_MODEL_ID)."""
+    agent = get_vanilla_web_agent()
     max_steps = _max_agent_steps()
     if max_steps > 0:
         try:
-            return vanilla_web_agent.run(question_text, max_steps=max_steps)
+            return agent.run(question_text, max_steps=max_steps)
         except TypeError:
-            return vanilla_web_agent.run(question_text)
-    return vanilla_web_agent.run(question_text)
+            return agent.run(question_text)
+    return agent.run(question_text)
 
 
-def _run_question(question_text: str, trace_dir: str) -> tuple[str, str]:
-    """Run agent for one question, return (normalized_answer, trace_file_path)."""
+# Maximum length for error text stored as predicted answer (avoid huge YAML)
+_MAX_ERROR_AS_ANSWER_LEN = 2000
+
+
+def _run_question(question_text: str, trace_dir: str) -> tuple[str, str, str | None]:
+    """Run agent for one question, return (normalized_answer, trace_file_path, task_state or None)."""
     tracer = trace.get_tracer(__name__)
     with tracer.start_as_current_span("inference_run") as span:
         trace_id = format(span.get_span_context().trace_id, "032x")
@@ -74,9 +135,13 @@ def _run_question(question_text: str, trace_dir: str) -> tuple[str, str]:
             answer = _run_agent(question_text)
         except Exception as exc:
             print(f"Agent error: {exc}")
-            return "", trace_file
+            err_msg = str(exc).strip()
+            if len(err_msg) > _MAX_ERROR_AS_ANSWER_LEN:
+                err_msg = err_msg[:_MAX_ERROR_AS_ANSWER_LEN] + "..."
+            return f"Error: {err_msg}", trace_file, "failed"
     print(f"Answer: {answer}")
-    return _normalize_answer(answer), trace_file
+    predicted, task_state = _extract_answer_and_task_state(answer)
+    return predicted, trace_file, task_state
 
 
 class RunInferenceUseCase:
@@ -100,6 +165,8 @@ class RunInferenceUseCase:
             else os.path.abspath(os.getenv(TRACE_DIR_ENV, DEFAULT_TRACE_DIR))
         )
 
+        _print_inference_config_overview(abs_input, abs_output, abs_trace)
+
         os.environ[TRACE_DIR_ENV] = abs_trace
         init_tracing()
 
@@ -115,12 +182,15 @@ class RunInferenceUseCase:
     ) -> None:
         """Process single YAML file and write results."""
         data = load_yaml(input_path)
-        questions = data.get(QUESTIONS_KEY, [])
-        if not isinstance(questions, list):
-            raise ValueError(f"Missing '{QUESTIONS_KEY}' list in {input_path}")
+        entries = iter_entries(data)
+        if not entries:
+            logger.warning(
+                "No benchmark/questions entries in %s; expected top-level 'benchmark' or 'questions' list",
+                input_path,
+            )
 
         output_entries: list[dict[str, Any]] = []
-        for entry in questions:
+        for entry in entries:
             if not isinstance(entry, dict):
                 continue
             question_block = entry.get(QUESTION_KEY, {})
@@ -129,17 +199,18 @@ class RunInferenceUseCase:
                 if isinstance(question_block, dict)
                 else str(question_block)
             )
-            predicted_answer, trace_file = _run_question(question_text, trace_dir)
-            output_entries.append(
-                {
-                    "id": entry.get("id"),
-                    QUESTION_KEY: question_block,
-                    GOLD_STANDARD_KEY: entry,
-                    MODEL_KEY: _model_id(),
-                    PREDICTED_KEY: predicted_answer,
-                    TRACE_FILE_KEY: trace_file,
-                }
-            )
+            predicted_answer, trace_file, task_state = _run_question(question_text, trace_dir)
+            entry_dict: dict[str, Any] = {
+                "id": entry.get("id"),
+                QUESTION_KEY: question_block,
+                GOLD_STANDARD_KEY: entry,
+                MODEL_KEY: _model_id(),
+                PREDICTED_KEY: predicted_answer,
+                TRACE_FILE_KEY: trace_file,
+            }
+            if task_state is not None:
+                entry_dict[TASK_STATE_KEY] = task_state
+            output_entries.append(entry_dict)
 
         output_data = {BENCHMARK_KEY: output_entries}
         os.makedirs(output_dir, exist_ok=True)

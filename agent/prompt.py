@@ -34,7 +34,7 @@ TOOLS
 {% endfor %}
 
 ENVIRONMENT
-* Follow links via `GET()` and submit forms via `POST()` judiciously.
+* If tools available: Follow links via `GET()` and submit forms via `POST()` judiciously.
 * Only use URIs previously mentioned in or discovered from representations.
 * Do not use your general knowledge to guess, generate or construct URIs.
 IMPORTANT: Always explain your reasoning step-by-step in plain text BEFORE calling any tool.
@@ -64,13 +64,15 @@ Use the tools to complete the task.
 """
 
 FINAL_ANSWER_PROMPT = """
-Return the final answer to the user as a List of URLs. Use the following format:
-[
-    "https://www.example.com",
-    "https://www.example.com/page2",
-]
+When you are done, call the final_answer tool with two arguments:
+1. urls: A list of URLs that answer the user's question. Use an empty list [] if you have no URLs.
+2. task_state: One of:
+   - completed: You found a full answer (the requested path or information).
+   - partial: You found some relevant URLs but the answer is incomplete.
+   - failed: You could not find the answer or encountered errors.
+   - unclear: The question is ambiguous or success criteria are unclear.
 
-If you don't have any information to return, return an empty list.
+Always provide both urls and task_state.
 """
 
 FINAL_ANSWER_USER_PROMPT = "The user asked: {{ task }}"

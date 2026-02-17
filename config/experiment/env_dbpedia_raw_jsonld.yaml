@@ -1,0 +1,8 @@
+# dbpedia | raw | json-ld (Environment experiments)
+dataset: dbpedia
+modify_context: true
+context: raw
+representation_format: rdf
+rdf_representation: json-ld
+pruning_method: unpruned
+context_compression: false

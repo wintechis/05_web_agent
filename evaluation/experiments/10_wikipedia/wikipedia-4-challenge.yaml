@@ -1,0 +1,36 @@
+benchmark:
+- id: Peleng tarsier_Menat Formation
+  question: &id001
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Peleng_tarsier
+      and end URI https://en.wikipedia.org/wiki/Menat_Formation. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: Peleng tarsier_Menat Formation
+    question: *id001
+    gold_standard_answer:
+      id: Peleng tarsier_Menat Formation
+      path:
+      - https://en.wikipedia.org/wiki/Peleng_tarsier
+      - https://en.wikipedia.org/wiki/Mammal
+      - https://en.wikipedia.org/wiki/Paleocene
+      - https://en.wikipedia.org/wiki/Menat_Formation
+      question: *id001
+      statistics:
+        end_uri_statistics:
+          in_degree: 28
+          out_degree: 18
+          reversed_neighborhood_size: 3124
+        start_uri_statistics:
+          in_degree: 9
+          out_degree: 20
+          reversed_neighborhood_size: 2022
+        statistics:
+          in_degree: 37
+          out_degree: 38
+          reversed_neighborhood_size: 5146
+  model: qwen3-coder-30b-a3b-instruct
+  predicted_answer: "[\n    \"https://en.wikipedia.org/wiki/Peleng_tarsier\",\n  \
+    \  \"https://en.wikipedia.org/wiki/Primate\",\n    \"https://en.wikipedia.org/wiki/Fossil\"\
+    ,\n    \"https://en.wikipedia.org/wiki/Menat_Formation\"\n]"
+  trace_file: /home/dorschre/05_web_agent/evaluation/experiments/10_wikipedia/traces/cd226194ea92fcaf784d79425665bc5e.jsonl
