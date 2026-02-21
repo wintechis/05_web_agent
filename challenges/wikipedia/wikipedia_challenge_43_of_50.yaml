@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Eve Oja_Gondwana
+  path:
+  - https://en.wikipedia.com/wiki/Eve_Oja
+  - https://en.wikipedia.com/wiki/Mali
+  - https://en.wikipedia.com/wiki/Madagascar
+  - https://en.wikipedia.com/wiki/Gondwana
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Eve_Oja
+      and end URI https://en.wikipedia.com/wiki/Gondwana. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 1301
+      out_degree: 313
+      reversed_neighborhood_size: 25017
+    start_uri_statistics:
+      in_degree: 5
+      out_degree: 18
+      reversed_neighborhood_size: 2151
+    statistics:
+      in_degree: 1306
+      out_degree: 331
+      reversed_neighborhood_size: 27168
+  task_complexity: 4
+- id: List of flag bearers for Slovakia at the Olympics_World Bank
+  path:
+  - https://en.wikipedia.com/wiki/List_of_flag_bearers_for_Slovakia_at_the_Olympics
+  - https://en.wikipedia.com/wiki/Olympic_Games
+  - https://en.wikipedia.com/wiki/Finland
+  - https://en.wikipedia.com/wiki/World_Bank
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/List_of_flag_bearers_for_Slovakia_at_the_Olympics
+      and end URI https://en.wikipedia.com/wiki/World_Bank. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 6924
+      out_degree: 186
+      reversed_neighborhood_size: 29223
+    start_uri_statistics:
+      in_degree: 12
+      out_degree: 30
+      reversed_neighborhood_size: 5992
+    statistics:
+      in_degree: 6936
+      out_degree: 216
+      reversed_neighborhood_size: 35215
+  task_complexity: 4

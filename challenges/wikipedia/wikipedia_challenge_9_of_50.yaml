@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: La Kahena_Cheryl (drag queen)
+  path:
+  - https://en.wikipedia.com/wiki/La_Kahena
+  - https://en.wikipedia.com/wiki/Drag_queen
+  - https://en.wikipedia.com/wiki/List_of_drag_queens
+  - https://en.wikipedia.com/wiki/Cheryl_(drag_queen)
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/La_Kahena
+      and end URI https://en.wikipedia.com/wiki/Cheryl_(drag_queen). Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    start_uri_statistics:
+      in_degree: 0
+      out_degree: 1
+      reversed_neighborhood_size: 38
+    statistics:
+      in_degree: 0
+      out_degree: 1
+      reversed_neighborhood_size: 39
+  task_complexity: 0
+- id: Joe McGrail_1931 All-America college football team
+  path:
+  - https://en.wikipedia.com/wiki/Joe_McGrail
+  - https://en.wikipedia.com/wiki/College_football
+  - https://en.wikipedia.com/wiki/Harvard_Crimson_football
+  - https://en.wikipedia.com/wiki/1931_All-America_college_football_team
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Joe_McGrail
+      and end URI https://en.wikipedia.com/wiki/1931_All-America_college_football_team.
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    start_uri_statistics:
+      in_degree: 5
+      out_degree: 15
+      reversed_neighborhood_size: 2271
+    statistics:
+      in_degree: 5
+      out_degree: 15
+      reversed_neighborhood_size: 2272
+  task_complexity: 0

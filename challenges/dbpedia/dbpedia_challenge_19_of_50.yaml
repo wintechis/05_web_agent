@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Nicolas Nemiri_Carnac
+  path:
+  - http://dbpedia.org/resource/Nicolas_Nemiri
+  - http://dbpedia.org/resource/Jean_Giraud
+  - http://dbpedia.org/resource/François_Mitterrand
+  - http://dbpedia.org/resource/Carnac
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Nicolas_Nemiri
+      and end URI http://dbpedia.org/resource/Carnac. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 78
+      out_degree: 47
+      reversed_neighborhood_size: 8251
+    start_uri_statistics:
+      in_degree: 1
+      out_degree: 13
+      reversed_neighborhood_size: 2405
+    statistics:
+      in_degree: 79
+      out_degree: 60
+      reversed_neighborhood_size: 10656
+  task_complexity: 1
+- id: Mohamed Mnyaa_Shock therapy (economics)
+  path:
+  - http://dbpedia.org/resource/Mohamed_Mnyaa
+  - http://dbpedia.org/resource/Tanzania
+  - http://dbpedia.org/resource/World_Bank
+  - http://dbpedia.org/resource/Shock_therapy_(economics)
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Mohamed_Mnyaa
+      and end URI http://dbpedia.org/resource/Shock_therapy_(economics). Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 97
+      out_degree: 99
+      reversed_neighborhood_size: 12096
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 19
+      reversed_neighborhood_size: 1356
+    statistics:
+      in_degree: 101
+      out_degree: 118
+      reversed_neighborhood_size: 13452
+  task_complexity: 1

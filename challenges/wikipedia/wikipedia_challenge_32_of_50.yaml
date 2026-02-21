@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Afşin-Elbistan power stations_Disease
+  path:
+  - https://en.wikipedia.com/wiki/Afşin-Elbistan_power_stations
+  - https://en.wikipedia.com/wiki/Carbon_dioxide
+  - https://en.wikipedia.com/wiki/Acetone
+  - https://en.wikipedia.com/wiki/Disease
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Afşin-Elbistan_power_stations
+      and end URI https://en.wikipedia.com/wiki/Disease. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 1888
+      out_degree: 289
+      reversed_neighborhood_size: 22909
+    start_uri_statistics:
+      in_degree: 11
+      out_degree: 34
+      reversed_neighborhood_size: 3654
+    statistics:
+      in_degree: 1899
+      out_degree: 323
+      reversed_neighborhood_size: 26563
+  task_complexity: 3
+- id: Raj Narain_Albinism
+  path:
+  - https://en.wikipedia.com/wiki/Raj_Narain
+  - https://en.wikipedia.com/wiki/India
+  - https://en.wikipedia.com/wiki/Bengal_tiger
+  - https://en.wikipedia.com/wiki/Albinism
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Raj_Narain
+      and end URI https://en.wikipedia.com/wiki/Albinism. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 505
+      out_degree: 272
+      reversed_neighborhood_size: 21159
+    start_uri_statistics:
+      in_degree: 54
+      out_degree: 87
+      reversed_neighborhood_size: 7279
+    statistics:
+      in_degree: 559
+      out_degree: 359
+      reversed_neighborhood_size: 28438
+  task_complexity: 3

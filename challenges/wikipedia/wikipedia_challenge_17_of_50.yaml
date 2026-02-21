@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Artyom Shneyerov_Falsifiability
+  path:
+  - https://en.wikipedia.com/wiki/Artyom_Shneyerov
+  - https://en.wikipedia.com/wiki/Econometrics
+  - https://en.wikipedia.com/wiki/Supply_and_demand
+  - https://en.wikipedia.com/wiki/Falsifiability
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Artyom_Shneyerov
+      and end URI https://en.wikipedia.com/wiki/Falsifiability. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 340
+      out_degree: 120
+      reversed_neighborhood_size: 10604
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 29
+      reversed_neighborhood_size: 3390
+    statistics:
+      in_degree: 343
+      out_degree: 149
+      reversed_neighborhood_size: 13994
+  task_complexity: 1
+- id: Bounkiling_FIFA Men's World Ranking
+  path:
+  - https://en.wikipedia.com/wiki/Bounkiling
+  - https://en.wikipedia.com/wiki/Greenwich_Mean_Time
+  - https://en.wikipedia.com/wiki/Faroe_Islands
+  - https://en.wikipedia.com/wiki/FIFA_Men's_World_Ranking
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Bounkiling
+      and end URI https://en.wikipedia.com/wiki/FIFA_Men''s_World_Ranking. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 37
+      out_degree: 74
+      reversed_neighborhood_size: 11052
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 11
+      reversed_neighborhood_size: 719
+    statistics:
+      in_degree: 41
+      out_degree: 85
+      reversed_neighborhood_size: 11771
+  task_complexity: 1

@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: John Doby Kennedy_Canadian Shield
+  path:
+  - http://dbpedia.org/resource/John_Doby_Kennedy
+  - http://dbpedia.org/resource/American_Civil_War
+  - http://dbpedia.org/resource/Midwestern_United_States
+  - http://dbpedia.org/resource/Canadian_Shield
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/John_Doby_Kennedy
+      and end URI http://dbpedia.org/resource/Canadian_Shield. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 638
+      out_degree: 180
+      reversed_neighborhood_size: 23144
+    start_uri_statistics:
+      in_degree: 21
+      out_degree: 67
+      reversed_neighborhood_size: 10441
+    statistics:
+      in_degree: 659
+      out_degree: 247
+      reversed_neighborhood_size: 33585
+  task_complexity: 3
+- id: 49_List of Alsatians and Lotharingians
+  path:
+  - http://dbpedia.org/resource/49
+  - http://dbpedia.org/resource/1949
+  - http://dbpedia.org/resource/Arsène_Wenger
+  - http://dbpedia.org/resource/List_of_Alsatians_and_Lotharingians
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/49 and
+      end URI http://dbpedia.org/resource/List_of_Alsatians_and_Lotharingians. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 11
+      out_degree: 167
+      reversed_neighborhood_size: 18995
+    start_uri_statistics:
+      in_degree: 1
+      out_degree: 6
+      reversed_neighborhood_size: 2009
+    statistics:
+      in_degree: 12
+      out_degree: 173
+      reversed_neighborhood_size: 21004
+  task_complexity: 3

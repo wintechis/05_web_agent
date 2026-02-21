@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: FIFA 23_Jacques Yaméogo
+  path:
+  - http://dbpedia.org/resource/FIFA_23
+  - http://dbpedia.org/resource/FIFA
+  - http://dbpedia.org/resource/Burkina_Faso_national_football_team
+  - http://dbpedia.org/resource/Jacques_Yaméogo
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/FIFA_23
+      and end URI http://dbpedia.org/resource/Jacques_Yaméogo. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 4
+      out_degree: 24
+      reversed_neighborhood_size: 1203
+    start_uri_statistics:
+      in_degree: 37
+      out_degree: 127
+      reversed_neighborhood_size: 17655
+    statistics:
+      in_degree: 41
+      out_degree: 151
+      reversed_neighborhood_size: 18858
+  task_complexity: 0
+- id: John E. Bridges_International Broadcasting Bureau
+  path:
+  - http://dbpedia.org/resource/John_E._Bridges
+  - http://dbpedia.org/resource/Seattle_Pacific_University
+  - http://dbpedia.org/resource/NPR
+  - http://dbpedia.org/resource/International_Broadcasting_Bureau
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/John_E._Bridges
+      and end URI http://dbpedia.org/resource/International_Broadcasting_Bureau. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 36
+      out_degree: 32
+      reversed_neighborhood_size: 4767
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 19
+      reversed_neighborhood_size: 1991
+    statistics:
+      in_degree: 39
+      out_degree: 51
+      reversed_neighborhood_size: 6758
+  task_complexity: 0

@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Ronald Clair Roat_Bobby Cannavale
+  path:
+  - https://en.wikipedia.com/wiki/Ronald_Clair_Roat
+  - https://en.wikipedia.com/wiki/Evansville,_Indiana
+  - https://en.wikipedia.com/wiki/Boardwalk_Empire
+  - https://en.wikipedia.com/wiki/Bobby_Cannavale
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Ronald_Clair_Roat
+      and end URI https://en.wikipedia.com/wiki/Bobby_Cannavale. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 355
+      out_degree: 256
+      reversed_neighborhood_size: 28115
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 18
+      reversed_neighborhood_size: 1713
+    statistics:
+      in_degree: 358
+      out_degree: 274
+      reversed_neighborhood_size: 29828
+  task_complexity: 4
+- id: Artyom Shneyerov_World Bank
+  path:
+  - https://en.wikipedia.com/wiki/Artyom_Shneyerov
+  - https://en.wikipedia.com/wiki/Econometrics
+  - https://en.wikipedia.com/wiki/List_of_economists
+  - https://en.wikipedia.com/wiki/World_Bank
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Artyom_Shneyerov
+      and end URI https://en.wikipedia.com/wiki/World_Bank. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 6924
+      out_degree: 186
+      reversed_neighborhood_size: 29223
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 29
+      reversed_neighborhood_size: 3390
+    statistics:
+      in_degree: 6927
+      out_degree: 215
+      reversed_neighborhood_size: 32613
+  task_complexity: 4

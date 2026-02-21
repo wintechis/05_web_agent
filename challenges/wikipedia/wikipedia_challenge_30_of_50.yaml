@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Alex James (bassist)_Vic Elford
+  path:
+  - https://en.wikipedia.com/wiki/Alex_James_(bassist)
+  - https://en.wikipedia.com/wiki/Through_the_Keyhole
+  - https://en.wikipedia.com/wiki/Stirling_Moss
+  - https://en.wikipedia.com/wiki/Vic_Elford
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Alex_James_(bassist)
+      and end URI https://en.wikipedia.com/wiki/Vic_Elford. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 144
+      out_degree: 171
+      reversed_neighborhood_size: 13140
+    start_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    statistics:
+      in_degree: 144
+      out_degree: 171
+      reversed_neighborhood_size: 13141
+  task_complexity: 2
+- id: List of fossil sites_George Villiers, 4th Earl of Clarendon
+  path:
+  - https://en.wikipedia.com/wiki/List_of_fossil_sites
+  - https://en.wikipedia.com/wiki/Killing_Fields
+  - https://en.wikipedia.com/wiki/Circassian_genocide
+  - https://en.wikipedia.com/wiki/George_Villiers,_4th_Earl_of_Clarendon
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/List_of_fossil_sites
+      and end URI https://en.wikipedia.com/wiki/George_Villiers,_4th_Earl_of_Clarendon.
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 141
+      out_degree: 106
+      reversed_neighborhood_size: 12895
+    start_uri_statistics:
+      in_degree: 263
+      out_degree: 874
+      reversed_neighborhood_size: 102799
+    statistics:
+      in_degree: 404
+      out_degree: 980
+      reversed_neighborhood_size: 115694
+  task_complexity: 2

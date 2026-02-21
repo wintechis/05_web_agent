@@ -4,3 +4,7 @@ benchmark/__pycache__/**
 changelog.md
 .env
 notes.md
+
+# Inference and run outputs
+out/
+outputs/

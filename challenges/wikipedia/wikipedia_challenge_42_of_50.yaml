@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Saw Diga of Mye-Ne_Cyanobacteria
+  path:
+  - https://en.wikipedia.com/wiki/Saw_Diga_of_Mye-Ne
+  - https://en.wikipedia.com/wiki/Myanmar
+  - https://en.wikipedia.com/wiki/Habitat
+  - https://en.wikipedia.com/wiki/Cyanobacteria
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Saw_Diga_of_Mye-Ne
+      and end URI https://en.wikipedia.com/wiki/Cyanobacteria. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 1318
+      out_degree: 442
+      reversed_neighborhood_size: 25325
+    start_uri_statistics:
+      in_degree: 15
+      out_degree: 30
+      reversed_neighborhood_size: 1162
+    statistics:
+      in_degree: 1333
+      out_degree: 472
+      reversed_neighborhood_size: 26487
+  task_complexity: 4
+- id: Adelaida García Morales_Mount Ararat
+  path:
+  - https://en.wikipedia.com/wiki/Adelaida_García_Morales
+  - https://en.wikipedia.com/wiki/Diacritic
+  - https://en.wikipedia.com/wiki/Arabic_alphabet
+  - https://en.wikipedia.com/wiki/Mount_Ararat
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Adelaida_García_Morales
+      and end URI https://en.wikipedia.com/wiki/Mount_Ararat. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 330
+      out_degree: 339
+      reversed_neighborhood_size: 30585
+    start_uri_statistics:
+      in_degree: 8
+      out_degree: 15
+      reversed_neighborhood_size: 1846
+    statistics:
+      in_degree: 338
+      out_degree: 354
+      reversed_neighborhood_size: 32431
+  task_complexity: 4

@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Atmospheric pressure_George Villiers, 4th Earl of Clarendon
+  path:
+  - https://en.wikipedia.com/wiki/Atmospheric_pressure
+  - https://en.wikipedia.com/wiki/Japan
+  - https://en.wikipedia.com/wiki/Second_French_Empire
+  - https://en.wikipedia.com/wiki/George_Villiers,_4th_Earl_of_Clarendon
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Atmospheric_pressure
+      and end URI https://en.wikipedia.com/wiki/George_Villiers,_4th_Earl_of_Clarendon.
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 141
+      out_degree: 106
+      reversed_neighborhood_size: 12895
+    start_uri_statistics:
+      in_degree: 1067
+      out_degree: 88
+      reversed_neighborhood_size: 9741
+    statistics:
+      in_degree: 1208
+      out_degree: 194
+      reversed_neighborhood_size: 22636
+  task_complexity: 2
+- id: Boris Gulyayev_List of LTE networks
+  path:
+  - https://en.wikipedia.com/wiki/Boris_Gulyayev
+  - https://en.wikipedia.com/wiki/Yekaterinburg
+  - https://en.wikipedia.com/wiki/LTE_Advanced
+  - https://en.wikipedia.com/wiki/List_of_LTE_networks
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Boris_Gulyayev
+      and end URI https://en.wikipedia.com/wiki/List_of_LTE_networks. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 34
+      out_degree: 149
+      reversed_neighborhood_size: 14699
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 15
+      reversed_neighborhood_size: 847
+    statistics:
+      in_degree: 38
+      out_degree: 164
+      reversed_neighborhood_size: 15546
+  task_complexity: 2

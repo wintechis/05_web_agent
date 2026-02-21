@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Odontosia sieversii_Millennium Development Goals
+  path:
+  - https://en.wikipedia.com/wiki/Odontosia_sieversii
+  - https://en.wikipedia.com/wiki/China
+  - https://en.wikipedia.com/wiki/Ghana
+  - https://en.wikipedia.com/wiki/Millennium_Development_Goals
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Odontosia_sieversii
+      and end URI https://en.wikipedia.com/wiki/Millennium_Development_Goals. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 822
+      out_degree: 158
+      reversed_neighborhood_size: 22073
+    start_uri_statistics:
+      in_degree: 15
+      out_degree: 12
+      reversed_neighborhood_size: 3663
+    statistics:
+      in_degree: 837
+      out_degree: 170
+      reversed_neighborhood_size: 25736
+  task_complexity: 3
+- id: Banner blindness_Minor league
+  path:
+  - https://en.wikipedia.com/wiki/Banner_blindness
+  - https://en.wikipedia.com/wiki/Gamification
+  - https://en.wikipedia.com/wiki/Competition
+  - https://en.wikipedia.com/wiki/Minor_league
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Banner_blindness
+      and end URI https://en.wikipedia.com/wiki/Minor_league. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 764
+      out_degree: 187
+      reversed_neighborhood_size: 20072
+    start_uri_statistics:
+      in_degree: 11
+      out_degree: 33
+      reversed_neighborhood_size: 2410
+    statistics:
+      in_degree: 775
+      out_degree: 220
+      reversed_neighborhood_size: 22482
+  task_complexity: 3

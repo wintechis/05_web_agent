@@ -1,0 +1,55 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: The Beginning and the End (1993 film)_Los Angeles Film Critics Association Award
+    for Best Music
+  path:
+  - https://en.wikipedia.com/wiki/The_Beginning_and_the_End_(1993_film)
+  - https://en.wikipedia.com/wiki/Academy_Awards
+  - https://en.wikipedia.com/wiki/Amadeus_(film)
+  - https://en.wikipedia.com/wiki/Los_Angeles_Film_Critics_Association_Award_for_Best_Music
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/The_Beginning_and_the_End_(1993_film)
+      and end URI https://en.wikipedia.com/wiki/Los_Angeles_Film_Critics_Association_Award_for_Best_Music.
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 81
+      out_degree: 80
+      reversed_neighborhood_size: 10953
+    start_uri_statistics:
+      in_degree: 20
+      out_degree: 24
+      reversed_neighborhood_size: 1175
+    statistics:
+      in_degree: 101
+      out_degree: 104
+      reversed_neighborhood_size: 12128
+  task_complexity: 1
+- id: Shin'ichirō Hattori_Four Books and Five Classics
+  path:
+  - https://en.wikipedia.com/wiki/Shin'ichirō_Hattori
+  - https://en.wikipedia.com/wiki/Sankei_Shimbun
+  - https://en.wikipedia.com/wiki/Filial_piety
+  - https://en.wikipedia.com/wiki/Four_Books_and_Five_Classics
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Shin''ichirō_Hattori
+      and end URI https://en.wikipedia.com/wiki/Four_Books_and_Five_Classics. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 112
+      out_degree: 65
+      reversed_neighborhood_size: 7641
+    start_uri_statistics:
+      in_degree: 5
+      out_degree: 14
+      reversed_neighborhood_size: 288
+    statistics:
+      in_degree: 117
+      out_degree: 79
+      reversed_neighborhood_size: 7929
+  task_complexity: 1

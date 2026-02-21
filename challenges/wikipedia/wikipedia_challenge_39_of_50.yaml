@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Connie Kelly_Llan (placename)
+  path:
+  - https://en.wikipedia.com/wiki/Connie_Kelly
+  - https://en.wikipedia.com/wiki/Republic_of_Ireland
+  - https://en.wikipedia.com/wiki/Culture_of_Cornwall
+  - https://en.wikipedia.com/wiki/Llan_(placename)
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Connie_Kelly
+      and end URI https://en.wikipedia.com/wiki/Llan_(placename). Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 37
+      out_degree: 767
+      reversed_neighborhood_size: 23532
+    start_uri_statistics:
+      in_degree: 11
+      out_degree: 52
+      reversed_neighborhood_size: 3243
+    statistics:
+      in_degree: 48
+      out_degree: 819
+      reversed_neighborhood_size: 26775
+  task_complexity: 3
+- id: Jam!_April Fools' Day
+  path:
+  - https://en.wikipedia.com/wiki/Jam!
+  - https://en.wikipedia.com/wiki/Cleveland
+  - https://en.wikipedia.com/wiki/Saint_Patrick's_Day
+  - https://en.wikipedia.com/wiki/April_Fools'_Day
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Jam!
+      and end URI https://en.wikipedia.com/wiki/April_Fools''_Day. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 753
+      out_degree: 114
+      reversed_neighborhood_size: 20755
+    start_uri_statistics:
+      in_degree: 200
+      out_degree: 19
+      reversed_neighborhood_size: 3900
+    statistics:
+      in_degree: 953
+      out_degree: 133
+      reversed_neighborhood_size: 24655
+  task_complexity: 3

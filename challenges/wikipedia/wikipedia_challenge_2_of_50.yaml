@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Pulau Indah Expressway_Afif Bahardin
+  path:
+  - https://en.wikipedia.com/wiki/Pulau_Indah_Expressway
+  - https://en.wikipedia.com/wiki/Malaysia_Federal_Route_83
+  - https://en.wikipedia.com/wiki/Universiti_Teknologi_MARA
+  - https://en.wikipedia.com/wiki/Afif_Bahardin
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Pulau_Indah_Expressway
+      and end URI https://en.wikipedia.com/wiki/Afif_Bahardin. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 29
+      out_degree: 44
+      reversed_neighborhood_size: 4891
+    start_uri_statistics:
+      in_degree: 13
+      out_degree: 29
+      reversed_neighborhood_size: 1429
+    statistics:
+      in_degree: 42
+      out_degree: 73
+      reversed_neighborhood_size: 6320
+  task_complexity: 0
+- id: Lisandro Formation_Tamiami Formation
+  path:
+  - https://en.wikipedia.com/wiki/Lisandro_Formation
+  - https://en.wikipedia.com/wiki/Titanosauria
+  - https://en.wikipedia.com/wiki/2019_in_paleontology
+  - https://en.wikipedia.com/wiki/Tamiami_Formation
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Lisandro_Formation
+      and end URI https://en.wikipedia.com/wiki/Tamiami_Formation. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 18
+      out_degree: 48
+      reversed_neighborhood_size: 2923
+    start_uri_statistics:
+      in_degree: 17
+      out_degree: 68
+      reversed_neighborhood_size: 6747
+    statistics:
+      in_degree: 35
+      out_degree: 116
+      reversed_neighborhood_size: 9670
+  task_complexity: 0

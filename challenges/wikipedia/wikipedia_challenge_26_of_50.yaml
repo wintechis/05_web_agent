@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Zbigniew Zieliński_Bartoszyce
+  path:
+  - https://en.wikipedia.com/wiki/Zbigniew_Zieliński
+  - https://en.wikipedia.com/wiki/Gdańsk
+  - https://en.wikipedia.com/wiki/List_of_twin_towns_and_sister_cities_in_Poland
+  - https://en.wikipedia.com/wiki/Bartoszyce
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Zbigniew_Zieliński
+      and end URI https://en.wikipedia.com/wiki/Bartoszyce. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 250
+      out_degree: 98
+      reversed_neighborhood_size: 14729
+    start_uri_statistics:
+      in_degree: 5
+      out_degree: 18
+      reversed_neighborhood_size: 1348
+    statistics:
+      in_degree: 255
+      out_degree: 116
+      reversed_neighborhood_size: 16077
+  task_complexity: 2
+- id: Tambaksari_Carl Friedrich Philipp von Martius
+  path:
+  - https://en.wikipedia.com/wiki/Tambaksari
+  - https://en.wikipedia.com/wiki/East_Java
+  - https://en.wikipedia.com/wiki/Acacia
+  - https://en.wikipedia.com/wiki/Carl_Friedrich_Philipp_von_Martius
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Tambaksari
+      and end URI https://en.wikipedia.com/wiki/Carl_Friedrich_Philipp_von_Martius.
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 392
+      out_degree: 124
+      reversed_neighborhood_size: 13794
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 7
+      reversed_neighborhood_size: 1724
+    statistics:
+      in_degree: 396
+      out_degree: 131
+      reversed_neighborhood_size: 15518
+  task_complexity: 2

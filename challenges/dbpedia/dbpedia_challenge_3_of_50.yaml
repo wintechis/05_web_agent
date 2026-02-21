@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Conroy Marsh (Ontario)_Rancholabrean
+  path:
+  - http://dbpedia.org/resource/Conroy_Marsh_(Ontario)
+  - http://dbpedia.org/resource/Bald_eagle
+  - http://dbpedia.org/resource/American_bison
+  - http://dbpedia.org/resource/Rancholabrean
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Conroy_Marsh_(Ontario)
+      and end URI http://dbpedia.org/resource/Rancholabrean. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 67
+      out_degree: 25
+      reversed_neighborhood_size: 1440
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 19
+      reversed_neighborhood_size: 1483
+    statistics:
+      in_degree: 70
+      out_degree: 44
+      reversed_neighborhood_size: 2923
+  task_complexity: 0
+- id: Theoretical philosophy_Frank Sulloway
+  path:
+  - http://dbpedia.org/resource/Theoretical_philosophy
+  - http://dbpedia.org/resource/List_of_philosophies
+  - http://dbpedia.org/resource/David_Hume
+  - http://dbpedia.org/resource/Frank_Sulloway
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Theoretical_philosophy
+      and end URI http://dbpedia.org/resource/Frank_Sulloway. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 34
+      out_degree: 23
+      reversed_neighborhood_size: 4667
+    start_uri_statistics:
+      in_degree: 39
+      out_degree: 28
+      reversed_neighborhood_size: 9984
+    statistics:
+      in_degree: 73
+      out_degree: 51
+      reversed_neighborhood_size: 14651
+  task_complexity: 0

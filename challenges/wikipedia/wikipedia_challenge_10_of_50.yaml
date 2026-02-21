@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Life Office Management Association_Debenture
+  path:
+  - https://en.wikipedia.com/wiki/Life_Office_Management_Association
+  - https://en.wikipedia.com/wiki/Insurance
+  - https://en.wikipedia.com/wiki/Trust_company
+  - https://en.wikipedia.com/wiki/Debenture
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Life_Office_Management_Association
+      and end URI https://en.wikipedia.com/wiki/Debenture. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 163
+      out_degree: 22
+      reversed_neighborhood_size: 3623
+    start_uri_statistics:
+      in_degree: 9
+      out_degree: 8
+      reversed_neighborhood_size: 306
+    statistics:
+      in_degree: 172
+      out_degree: 30
+      reversed_neighborhood_size: 3929
+  task_complexity: 0
+- id: WNJR (FM)_Kilolo Kijakazi
+  path:
+  - https://en.wikipedia.com/wiki/WNJR_(FM)
+  - https://en.wikipedia.com/wiki/Bill_Clinton
+  - https://en.wikipedia.com/wiki/United_States_order_of_precedence
+  - https://en.wikipedia.com/wiki/Kilolo_Kijakazi
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/WNJR_(FM)
+      and end URI https://en.wikipedia.com/wiki/Kilolo_Kijakazi. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 5
+      out_degree: 29
+      reversed_neighborhood_size: 2964
+    start_uri_statistics:
+      in_degree: 12
+      out_degree: 41
+      reversed_neighborhood_size: 5284
+    statistics:
+      in_degree: 17
+      out_degree: 70
+      reversed_neighborhood_size: 8248
+  task_complexity: 0

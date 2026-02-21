@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Tor Madira Machier_Päri language
+  path:
+  - http://dbpedia.org/resource/Tor_Madira_Machier
+  - http://dbpedia.org/resource/Sudan
+  - http://dbpedia.org/resource/Equatoria
+  - http://dbpedia.org/resource/Päri_language
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Tor_Madira_Machier
+      and end URI http://dbpedia.org/resource/Päri_language. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 15
+      out_degree: 10
+      reversed_neighborhood_size: 704
+    start_uri_statistics:
+      in_degree: 2
+      out_degree: 29
+      reversed_neighborhood_size: 3340
+    statistics:
+      in_degree: 17
+      out_degree: 39
+      reversed_neighborhood_size: 4044
+  task_complexity: 0
+- id: Iapetognathus fluctivagus_Pyemotes
+  path:
+  - http://dbpedia.org/resource/Iapetognathus_fluctivagus
+  - http://dbpedia.org/resource/Cretaceous
+  - http://dbpedia.org/resource/Termite
+  - http://dbpedia.org/resource/Pyemotes
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Iapetognathus_fluctivagus
+      and end URI http://dbpedia.org/resource/Pyemotes. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 4
+      out_degree: 13
+      reversed_neighborhood_size: 1213
+    start_uri_statistics:
+      in_degree: 10
+      out_degree: 43
+      reversed_neighborhood_size: 10938
+    statistics:
+      in_degree: 14
+      out_degree: 56
+      reversed_neighborhood_size: 12151
+  task_complexity: 0

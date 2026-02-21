@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Steve Shagan_World Bank
+  path:
+  - https://en.wikipedia.com/wiki/Steve_Shagan
+  - https://en.wikipedia.com/wiki/Arthur_Laurents
+  - https://en.wikipedia.com/wiki/Bloomberg_L.P.
+  - https://en.wikipedia.com/wiki/World_Bank
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Steve_Shagan
+      and end URI https://en.wikipedia.com/wiki/World_Bank. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 6924
+      out_degree: 186
+      reversed_neighborhood_size: 29223
+    start_uri_statistics:
+      in_degree: 47
+      out_degree: 40
+      reversed_neighborhood_size: 7381
+    statistics:
+      in_degree: 6971
+      out_degree: 226
+      reversed_neighborhood_size: 36604
+  task_complexity: 4
+- id: Xyleutes xuna_Mexico at the 2020 Summer Olympics
+  path:
+  - https://en.wikipedia.com/wiki/Xyleutes_xuna
+  - https://en.wikipedia.com/wiki/Mexico
+  - https://en.wikipedia.com/wiki/Sport_in_Mexico
+  - https://en.wikipedia.com/wiki/Mexico_at_the_2020_Summer_Olympics
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Xyleutes_xuna
+      and end URI https://en.wikipedia.com/wiki/Mexico_at_the_2020_Summer_Olympics.
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 19
+      out_degree: 321
+      reversed_neighborhood_size: 24924
+    start_uri_statistics:
+      in_degree: 2
+      out_degree: 6
+      reversed_neighborhood_size: 1256
+    statistics:
+      in_degree: 21
+      out_degree: 327
+      reversed_neighborhood_size: 26180
+  task_complexity: 4

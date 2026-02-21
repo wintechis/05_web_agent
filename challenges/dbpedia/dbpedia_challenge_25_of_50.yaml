@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Rothmannia_Carnivore
+  path:
+  - http://dbpedia.org/resource/Rothmannia
+  - http://dbpedia.org/resource/Carl_Linnaeus
+  - http://dbpedia.org/resource/Animal
+  - http://dbpedia.org/resource/Carnivore
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Rothmannia
+      and end URI http://dbpedia.org/resource/Carnivore. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 1008
+      out_degree: 102
+      reversed_neighborhood_size: 12798
+    start_uri_statistics:
+      in_degree: 13
+      out_degree: 57
+      reversed_neighborhood_size: 2230
+    statistics:
+      in_degree: 1021
+      out_degree: 159
+      reversed_neighborhood_size: 15028
+  task_complexity: 2
+- id: Blood Diamond_Mamie Gummer
+  path:
+  - http://dbpedia.org/resource/Blood_Diamond
+  - http://dbpedia.org/resource/12th_Critics'_Choice_Awards
+  - http://dbpedia.org/resource/Meryl_Streep
+  - http://dbpedia.org/resource/Mamie_Gummer
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Blood_Diamond
+      and end URI http://dbpedia.org/resource/Mamie_Gummer. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 116
+      out_degree: 109
+      reversed_neighborhood_size: 13388
+    start_uri_statistics:
+      in_degree: 118
+      out_degree: 163
+      reversed_neighborhood_size: 17171
+    statistics:
+      in_degree: 234
+      out_degree: 272
+      reversed_neighborhood_size: 30559
+  task_complexity: 2

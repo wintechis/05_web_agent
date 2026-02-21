@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Bass Building (Tonopah, Nevada)_Lists of state parks by U.S. state
+  path:
+  - http://dbpedia.org/resource/Bass_Building_(Tonopah,_Nevada)
+  - http://dbpedia.org/resource/Nevada
+  - http://dbpedia.org/resource/List_of_U.S._state_colors
+  - http://dbpedia.org/resource/Lists_of_state_parks_by_U.S._state
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Bass_Building_(Tonopah,_Nevada)
+      and end URI http://dbpedia.org/resource/Lists_of_state_parks_by_U.S._state.
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 15
+      out_degree: 56
+      reversed_neighborhood_size: 11694
+    start_uri_statistics:
+      in_degree: 1
+      out_degree: 10
+      reversed_neighborhood_size: 919
+    statistics:
+      in_degree: 16
+      out_degree: 66
+      reversed_neighborhood_size: 12613
+  task_complexity: 1
+- id: If Nobody Believed in You_APRA Music Awards of 2007
+  path:
+  - http://dbpedia.org/resource/If_Nobody_Believed_in_You
+  - http://dbpedia.org/resource/Country_music
+  - http://dbpedia.org/resource/Lee_Kernaghan
+  - http://dbpedia.org/resource/APRA_Music_Awards_of_2007
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/If_Nobody_Believed_in_You
+      and end URI http://dbpedia.org/resource/APRA_Music_Awards_of_2007. Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 34
+      out_degree: 174
+      reversed_neighborhood_size: 9610
+    start_uri_statistics:
+      in_degree: 7
+      out_degree: 18
+      reversed_neighborhood_size: 1595
+    statistics:
+      in_degree: 41
+      out_degree: 192
+      reversed_neighborhood_size: 11205
+  task_complexity: 1

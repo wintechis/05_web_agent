@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Isaías Pimentel_Cyanobacteria
+  path:
+  - https://en.wikipedia.com/wiki/Isaías_Pimentel
+  - https://en.wikipedia.com/wiki/Netherlands
+  - https://en.wikipedia.com/wiki/Microorganism
+  - https://en.wikipedia.com/wiki/Cyanobacteria
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Isaías_Pimentel
+      and end URI https://en.wikipedia.com/wiki/Cyanobacteria. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 1318
+      out_degree: 442
+      reversed_neighborhood_size: 25325
+    start_uri_statistics:
+      in_degree: 40
+      out_degree: 24
+      reversed_neighborhood_size: 3659
+    statistics:
+      in_degree: 1358
+      out_degree: 466
+      reversed_neighborhood_size: 28984
+  task_complexity: 4
+- id: Leo Frigo_Mount Ararat
+  path:
+  - https://en.wikipedia.com/wiki/Leo_Frigo
+  - https://en.wikipedia.com/wiki/Iron_Mountain,_Michigan
+  - https://en.wikipedia.com/wiki/Köppen_climate_classification
+  - https://en.wikipedia.com/wiki/Mount_Ararat
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Leo_Frigo
+      and end URI https://en.wikipedia.com/wiki/Mount_Ararat. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 330
+      out_degree: 339
+      reversed_neighborhood_size: 30585
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 11
+      reversed_neighborhood_size: 588
+    statistics:
+      in_degree: 333
+      out_degree: 350
+      reversed_neighborhood_size: 31173
+  task_complexity: 4

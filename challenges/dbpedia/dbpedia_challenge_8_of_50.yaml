@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Articulatory technique_Grabby Awards
+  path:
+  - http://dbpedia.org/resource/Articulatory_technique
+  - http://dbpedia.org/resource/American_Osteopathic_Association
+  - http://dbpedia.org/resource/Chicago
+  - http://dbpedia.org/resource/Grabby_Awards
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Articulatory_technique
+      and end URI http://dbpedia.org/resource/Grabby_Awards. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 44
+      out_degree: 69
+      reversed_neighborhood_size: 3379
+    start_uri_statistics:
+      in_degree: 2
+      out_degree: 5
+      reversed_neighborhood_size: 78
+    statistics:
+      in_degree: 46
+      out_degree: 74
+      reversed_neighborhood_size: 3457
+  task_complexity: 0
+- id: John E. Bridges_2021 British Columbia wildfires
+  path:
+  - http://dbpedia.org/resource/John_E._Bridges
+  - http://dbpedia.org/resource/Washington_(state)
+  - http://dbpedia.org/resource/2021_Western_North_America_heat_wave
+  - http://dbpedia.org/resource/2021_British_Columbia_wildfires
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/John_E._Bridges
+      and end URI http://dbpedia.org/resource/2021_British_Columbia_wildfires. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 13
+      out_degree: 37
+      reversed_neighborhood_size: 4460
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 19
+      reversed_neighborhood_size: 1991
+    statistics:
+      in_degree: 16
+      out_degree: 56
+      reversed_neighborhood_size: 6451
+  task_complexity: 0

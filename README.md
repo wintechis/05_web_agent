@@ -74,6 +74,12 @@ python -m benchmark.cli.run_evaluation out/inference/wikipedia.yaml
 python -m benchmark.cli.run_evaluation out/inference/wikipedia.yaml --output out/evaluation.yaml
 ```
 
+To evaluate all result YAMLs in `out/` (wikipedia and dbpedia) and write evaluation files into each dataset folder: `python scripts/evaluate_out_datasets.py` (optional: `--out-dir out`, `--dry-run`, `--datasource datasets_05`, `--dataset dbpedia`).
+
+**Running inference on challenges**
+
+To run inference on all challenge YAMLs in `challenges/dbpedia` and `challenges/wikipedia` for every non-blacklisted experiment and (optionally) a subset of models: `python scripts/run_inference_challenges.py`. Options: `--models qwen3_coder_30b,llama_3_3_70b` (whitelist; default = all models), `--experiment-blacklist exp1,exp2` or env `EXPERIMENT_BLACKLIST`, `--dry-run`, `--extra` for Hydra overrides. Output goes to `out/challenges_run/dbpedia/<model>/` and `out/challenges_run/wikipedia/<model>/`.
+
 #### Generate challenge
 
 Generates Wikipedia/DBpedia path-finding challenge YAML files (random start/end pages connected by a path of a given distance).

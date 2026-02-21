@@ -17,13 +17,13 @@ from agent.clients import http_client
 
 LOGGER = logging.getLogger(__name__)
 
-DEFAULT_LIMIT = 2
+DEFAULT_LIMIT = 4
 DISTANCE = 3
-NUMBER_OF_CHALLENGES = 100
+NUMBER_OF_CHALLENGES = 200
 ENFORCE_EXACT_DISTANCE = True
 DEFAULT_LOG_LEVEL = "INFO"
-DEFAULT_WIKIPEDIA_OUTPUT = "wikipedia_challenge.yaml"
-DEFAULT_DBPEDIA_OUTPUT = "dbpedia_challenge.yaml"
+DEFAULT_WIKIPEDIA_OUTPUT = "wikipedia_challenge_5.yaml"
+DEFAULT_DBPEDIA_OUTPUT = "dbpedia_challenge_5.yaml"
 
 
 @dataclass
@@ -131,6 +131,10 @@ def get_n_steps_away_from_random_wikipedia_page(
     return wikipedia_pages
 
 
+# Timeout for Six Degrees API (path finding can be slow for large distance)
+SIX_DEGREES_REQUEST_TIMEOUT = 60.0
+
+
 def find_wiki_path(
     source: str,
     target: str,
@@ -141,7 +145,25 @@ def find_wiki_path(
 
     LOGGER.info("Finding path with payload: %s", payload)
 
-    response = http_client.post(url, json=payload, timeout=30)
+    try:
+        response = http_client.post(url, json=payload, timeout=SIX_DEGREES_REQUEST_TIMEOUT)
+    except (httpx.ReadTimeout, httpx.ConnectTimeout, httpx.WriteTimeout) as e:
+        LOGGER.warning(
+            "Six Degrees API timeout or connection error for %s -> %s: %s",
+            source,
+            target,
+            e,
+        )
+        return []
+    except httpx.HTTPError as e:
+        LOGGER.warning(
+            "Six Degrees API request failed for %s -> %s: %s",
+            source,
+            target,
+            e,
+        )
+        return []
+
     LOGGER.debug("Six Degrees response: %s", response.text)
 
     if not response.is_success:

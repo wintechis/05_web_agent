@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Dan Lennon_Don Valley Stadium
+  path:
+  - https://en.wikipedia.com/wiki/Dan_Lennon
+  - https://en.wikipedia.com/wiki/Track_and_field
+  - https://en.wikipedia.com/wiki/AAA_Championships
+  - https://en.wikipedia.com/wiki/Don_Valley_Stadium
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Dan_Lennon
+      and end URI https://en.wikipedia.com/wiki/Don_Valley_Stadium. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 317
+      out_degree: 126
+      reversed_neighborhood_size: 19781
+    start_uri_statistics:
+      in_degree: 1
+      out_degree: 20
+      reversed_neighborhood_size: 1552
+    statistics:
+      in_degree: 318
+      out_degree: 146
+      reversed_neighborhood_size: 21333
+  task_complexity: 3
+- id: Agryouli_Albinism
+  path:
+  - https://en.wikipedia.com/wiki/Agryouli
+  - https://en.wikipedia.com/wiki/Time_zone
+  - https://en.wikipedia.com/wiki/Tanzania
+  - https://en.wikipedia.com/wiki/Albinism
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Agryouli
+      and end URI https://en.wikipedia.com/wiki/Albinism. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 505
+      out_degree: 272
+      reversed_neighborhood_size: 21159
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 12
+      reversed_neighborhood_size: 812
+    statistics:
+      in_degree: 508
+      out_degree: 284
+      reversed_neighborhood_size: 21971
+  task_complexity: 3

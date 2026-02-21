@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Agalakote (Malur)_Albinism
+  path:
+  - https://en.wikipedia.com/wiki/Agalakote_(Malur)
+  - https://en.wikipedia.com/wiki/India
+  - https://en.wikipedia.com/wiki/Bengal_tiger
+  - https://en.wikipedia.com/wiki/Albinism
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Agalakote_(Malur)
+      and end URI https://en.wikipedia.com/wiki/Albinism. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 505
+      out_degree: 272
+      reversed_neighborhood_size: 21159
+    start_uri_statistics:
+      in_degree: 2
+      out_degree: 13
+      reversed_neighborhood_size: 2131
+    statistics:
+      in_degree: 507
+      out_degree: 285
+      reversed_neighborhood_size: 23290
+  task_complexity: 3
+- id: Gujratan_Disease
+  path:
+  - https://en.wikipedia.com/wiki/Gujratan
+  - https://en.wikipedia.com/wiki/India
+  - https://en.wikipedia.com/wiki/Karma
+  - https://en.wikipedia.com/wiki/Disease
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Gujratan
+      and end URI https://en.wikipedia.com/wiki/Disease. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 1888
+      out_degree: 289
+      reversed_neighborhood_size: 22909
+    start_uri_statistics:
+      in_degree: 1
+      out_degree: 23
+      reversed_neighborhood_size: 1451
+    statistics:
+      in_degree: 1889
+      out_degree: 312
+      reversed_neighborhood_size: 24360
+  task_complexity: 3

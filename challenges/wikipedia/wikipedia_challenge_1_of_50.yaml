@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Decorospora_Hymenobia
+  path:
+  - https://en.wikipedia.com/wiki/Decorospora
+  - https://en.wikipedia.com/wiki/Ascomycota
+  - https://en.wikipedia.com/wiki/List_of_Ascomycota_genera_incertae_sedis
+  - https://en.wikipedia.com/wiki/Hymenobia
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Decorospora
+      and end URI https://en.wikipedia.com/wiki/Hymenobia. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 2
+      out_degree: 10
+      reversed_neighborhood_size: 1995
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 11
+      reversed_neighborhood_size: 701
+    statistics:
+      in_degree: 5
+      out_degree: 21
+      reversed_neighborhood_size: 2696
+  task_complexity: 0
+- id: PDP–Laban (2021)_Save the Newchurch Guinea Pigs
+  path:
+  - https://en.wikipedia.com/wiki/PDP–Laban_(2021)
+  - https://en.wikipedia.com/wiki/Dengvaxia_controversy
+  - https://en.wikipedia.com/wiki/Guinea_pig
+  - https://en.wikipedia.com/wiki/Save_the_Newchurch_Guinea_Pigs
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/PDP–Laban_(2021)
+      and end URI https://en.wikipedia.com/wiki/Save_the_Newchurch_Guinea_Pigs. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 15
+      out_degree: 36
+      reversed_neighborhood_size: 3957
+    start_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    statistics:
+      in_degree: 15
+      out_degree: 36
+      reversed_neighborhood_size: 3958
+  task_complexity: 0

@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Life Office Management Association_Nadir of American race relations
+  path:
+  - https://en.wikipedia.com/wiki/Life_Office_Management_Association
+  - https://en.wikipedia.com/wiki/Insurance
+  - https://en.wikipedia.com/wiki/Age_of_Enlightenment
+  - https://en.wikipedia.com/wiki/Nadir_of_American_race_relations
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Life_Office_Management_Association
+      and end URI https://en.wikipedia.com/wiki/Nadir_of_American_race_relations.
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 116
+      out_degree: 162
+      reversed_neighborhood_size: 28812
+    start_uri_statistics:
+      in_degree: 9
+      out_degree: 8
+      reversed_neighborhood_size: 306
+    statistics:
+      in_degree: 125
+      out_degree: 170
+      reversed_neighborhood_size: 29118
+  task_complexity: 4
+- id: Shagging (baseball)_Miocene
+  path:
+  - https://en.wikipedia.com/wiki/Shagging_(baseball)
+  - https://en.wikipedia.com/wiki/Pittsburgh_Pirates
+  - https://en.wikipedia.com/wiki/Coal_mining
+  - https://en.wikipedia.com/wiki/Miocene
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Shagging_(baseball)
+      and end URI https://en.wikipedia.com/wiki/Miocene. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 5112
+      out_degree: 249
+      reversed_neighborhood_size: 30640
+    start_uri_statistics:
+      in_degree: 7
+      out_degree: 48
+      reversed_neighborhood_size: 5405
+    statistics:
+      in_degree: 5119
+      out_degree: 297
+      reversed_neighborhood_size: 36045
+  task_complexity: 4

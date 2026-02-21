@@ -1,0 +1,55 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Dartmouth College's Rassias Center for World Languages and Cultures_Shock therapy
+    (economics)
+  path:
+  - https://en.wikipedia.com/wiki/Dartmouth_College's_Rassias_Center_for_World_Languages_and_Cultures
+  - https://en.wikipedia.com/wiki/New_Hampshire
+  - https://en.wikipedia.com/wiki/Fiscal_conservatism
+  - https://en.wikipedia.com/wiki/Shock_therapy_(economics)
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Dartmouth_College''s_Rassias_Center_for_World_Languages_and_Cultures
+      and end URI https://en.wikipedia.com/wiki/Shock_therapy_(economics). Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 97
+      out_degree: 99
+      reversed_neighborhood_size: 12096
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 14
+      reversed_neighborhood_size: 4376
+    statistics:
+      in_degree: 101
+      out_degree: 113
+      reversed_neighborhood_size: 16472
+  task_complexity: 1
+- id: Frank Sulloway_Shock therapy (economics)
+  path:
+  - https://en.wikipedia.com/wiki/Frank_Sulloway
+  - https://en.wikipedia.com/wiki/David_Hume
+  - https://en.wikipedia.com/wiki/Friedrich_Hayek
+  - https://en.wikipedia.com/wiki/Shock_therapy_(economics)
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Frank_Sulloway
+      and end URI https://en.wikipedia.com/wiki/Shock_therapy_(economics). Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 97
+      out_degree: 99
+      reversed_neighborhood_size: 12096
+    start_uri_statistics:
+      in_degree: 34
+      out_degree: 23
+      reversed_neighborhood_size: 4667
+    statistics:
+      in_degree: 131
+      out_degree: 122
+      reversed_neighborhood_size: 16763
+  task_complexity: 1

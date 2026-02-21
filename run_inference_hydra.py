@@ -24,6 +24,8 @@ Usage:
 
   # Different data source (config group "datasource"): experiment_10, datasets_02, datasets_03, datasets_04, datasets_05
   python run_inference_hydra.py datasource=datasets_04
+  # Sweep over multiple datasources (or experiments/models): add -m before the comma-separated key
+  python run_inference_hydra.py -m datasource=datasets_02,datasets_03,datasets_04 experiment=env_wikipedia_raw_html model=llama_3_3_70b
   python run_inference_hydra.py experiment=env_wikipedia_raw_html datasource=datasets_03 model=llama_3_3_70b
 
 Load .env for secrets (OPENAI_API_KEY, etc.) before running; this script sets experiment and model env from Hydra config.

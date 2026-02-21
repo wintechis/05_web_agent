@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Afşin-Elbistan power stations_2011–12 FIBA EuroChallenge
+  path:
+  - https://en.wikipedia.com/wiki/Afşin-Elbistan_power_stations
+  - https://en.wikipedia.com/wiki/Turkey
+  - https://en.wikipedia.com/wiki/Sport_in_Turkey
+  - https://en.wikipedia.com/wiki/2011–12_FIBA_EuroChallenge
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Afşin-Elbistan_power_stations
+      and end URI https://en.wikipedia.com/wiki/2011–12_FIBA_EuroChallenge. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 52
+      out_degree: 86
+      reversed_neighborhood_size: 6158
+    start_uri_statistics:
+      in_degree: 11
+      out_degree: 34
+      reversed_neighborhood_size: 3654
+    statistics:
+      in_degree: 63
+      out_degree: 120
+      reversed_neighborhood_size: 9812
+  task_complexity: 1
+- id: If Nobody Believed in You_APRA Music Awards of 2007
+  path:
+  - https://en.wikipedia.com/wiki/If_Nobody_Believed_in_You
+  - https://en.wikipedia.com/wiki/Country_music
+  - https://en.wikipedia.com/wiki/Lee_Kernaghan
+  - https://en.wikipedia.com/wiki/APRA_Music_Awards_of_2007
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/If_Nobody_Believed_in_You
+      and end URI https://en.wikipedia.com/wiki/APRA_Music_Awards_of_2007. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 34
+      out_degree: 174
+      reversed_neighborhood_size: 9610
+    start_uri_statistics:
+      in_degree: 7
+      out_degree: 18
+      reversed_neighborhood_size: 1595
+    statistics:
+      in_degree: 41
+      out_degree: 192
+      reversed_neighborhood_size: 11205
+  task_complexity: 1

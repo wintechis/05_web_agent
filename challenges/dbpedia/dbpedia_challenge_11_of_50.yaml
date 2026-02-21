@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Eve Oja_Shock therapy (economics)
+  path:
+  - http://dbpedia.org/resource/Eve_Oja
+  - http://dbpedia.org/resource/Functional_analysis
+  - http://dbpedia.org/resource/Poland
+  - http://dbpedia.org/resource/Shock_therapy_(economics)
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Eve_Oja
+      and end URI http://dbpedia.org/resource/Shock_therapy_(economics). Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 97
+      out_degree: 99
+      reversed_neighborhood_size: 12096
+    start_uri_statistics:
+      in_degree: 5
+      out_degree: 18
+      reversed_neighborhood_size: 2151
+    statistics:
+      in_degree: 102
+      out_degree: 117
+      reversed_neighborhood_size: 14247
+  task_complexity: 1
+- id: International Broadcasting Bureau_Steve Pajcic
+  path:
+  - http://dbpedia.org/resource/International_Broadcasting_Bureau
+  - http://dbpedia.org/resource/Bill_Clinton
+  - http://dbpedia.org/resource/Bob_Graham
+  - http://dbpedia.org/resource/Steve_Pajcic
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/International_Broadcasting_Bureau
+      and end URI http://dbpedia.org/resource/Steve_Pajcic. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 16
+      out_degree: 51
+      reversed_neighborhood_size: 7099
+    start_uri_statistics:
+      in_degree: 36
+      out_degree: 32
+      reversed_neighborhood_size: 4767
+    statistics:
+      in_degree: 52
+      out_degree: 83
+      reversed_neighborhood_size: 11866
+  task_complexity: 1

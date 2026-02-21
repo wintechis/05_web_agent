@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Education in the Philippines during Spanish rule_Novaya Zemlya
+  path:
+  - http://dbpedia.org/resource/Education_in_the_Philippines_during_Spanish_rule
+  - http://dbpedia.org/resource/Animism
+  - http://dbpedia.org/resource/Arctic
+  - http://dbpedia.org/resource/Novaya_Zemlya
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Education_in_the_Philippines_during_Spanish_rule
+      and end URI http://dbpedia.org/resource/Novaya_Zemlya. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 496
+      out_degree: 170
+      reversed_neighborhood_size: 19906
+    start_uri_statistics:
+      in_degree: 13
+      out_degree: 117
+      reversed_neighborhood_size: 14207
+    statistics:
+      in_degree: 509
+      out_degree: 287
+      reversed_neighborhood_size: 34113
+  task_complexity: 3
+- id: Conroy Marsh (Ontario)_Disease
+  path:
+  - http://dbpedia.org/resource/Conroy_Marsh_(Ontario)
+  - http://dbpedia.org/resource/Bald_eagle
+  - http://dbpedia.org/resource/Prairie_dog
+  - http://dbpedia.org/resource/Disease
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Conroy_Marsh_(Ontario)
+      and end URI http://dbpedia.org/resource/Disease. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 1888
+      out_degree: 289
+      reversed_neighborhood_size: 22909
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 19
+      reversed_neighborhood_size: 1483
+    statistics:
+      in_degree: 1891
+      out_degree: 308
+      reversed_neighborhood_size: 24392
+  task_complexity: 3

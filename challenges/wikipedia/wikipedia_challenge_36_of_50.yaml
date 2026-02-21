@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Luton Major_Blur (band)
+  path:
+  - https://en.wikipedia.com/wiki/Luton_Major
+  - https://en.wikipedia.com/wiki/United_Kingdom
+  - https://en.wikipedia.com/wiki/Adele
+  - https://en.wikipedia.com/wiki/Blur_(band)
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Luton_Major
+      and end URI https://en.wikipedia.com/wiki/Blur_(band). Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 1273
+      out_degree: 174
+      reversed_neighborhood_size: 21122
+    start_uri_statistics:
+      in_degree: 12
+      out_degree: 16
+      reversed_neighborhood_size: 3462
+    statistics:
+      in_degree: 1285
+      out_degree: 190
+      reversed_neighborhood_size: 24584
+  task_complexity: 3
+- id: Qaravultomba_Turkestan
+  path:
+  - https://en.wikipedia.com/wiki/Qaravultomba
+  - https://en.wikipedia.com/wiki/Azerbaijan
+  - https://en.wikipedia.com/wiki/Turkmens
+  - https://en.wikipedia.com/wiki/Turkestan
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Qaravultomba
+      and end URI https://en.wikipedia.com/wiki/Turkestan. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 690
+      out_degree: 111
+      reversed_neighborhood_size: 20724
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 6
+      reversed_neighborhood_size: 964
+    statistics:
+      in_degree: 693
+      out_degree: 117
+      reversed_neighborhood_size: 21688
+  task_complexity: 3

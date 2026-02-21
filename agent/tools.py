@@ -355,7 +355,7 @@ class POSTRdfTool(Tool):
 
 
 # Allowed values for LLM-reported task state (structured final answer).
-TASK_STATE_VALUES = ("completed", "partial", "failed", "unclear")
+TASK_STATE_VALUES = ("completed", "partial", "failed")
 
 
 class StructuredFinalAnswerTool(Tool):
@@ -364,7 +364,7 @@ class StructuredFinalAnswerTool(Tool):
     name = "final_answer"
     description = (
         "Call this when you are done with the task. Provide the list of URLs that answer the user's question "
-        "and the task state (completed, partial, failed, or unclear)."
+        "and the task state (completed, partial, failed)."
     )
     inputs = {
         "urls": {
@@ -375,7 +375,7 @@ class StructuredFinalAnswerTool(Tool):
         },
         "task_state": {
             "type": "string",
-            "description": "State of the task: completed (goal achieved), partial (some progress, goal not fully met), failed (goal not achieved), unclear (goal or success criteria ambiguous).",
+            "description": "State of the task: completed (goal achieved), partial (some progress, goal not fully met), failed (goal not achieved).",
             "enum": list(TASK_STATE_VALUES),
             "nullable": True,
         },
@@ -390,5 +390,5 @@ class StructuredFinalAnswerTool(Tool):
             urls = [str(urls)] if urls else []
         else:
             urls = [str(u) for u in urls]
-        state = (task_state if task_state in TASK_STATE_VALUES else "unclear") or "unclear"
+        state = (task_state if task_state in TASK_STATE_VALUES else "unspecified") or "unspecified"
         return {"urls": urls, "task_state": state}

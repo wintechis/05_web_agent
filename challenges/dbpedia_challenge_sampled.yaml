@@ -1,0 +1,2466 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Decorospora_Hymenobia
+  path:
+  - http://dbpedia.org/resource/Decorospora
+  - http://dbpedia.org/resource/Ascomycota
+  - http://dbpedia.org/resource/List_of_Ascomycota_genera_incertae_sedis
+  - http://dbpedia.org/resource/Hymenobia
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Decorospora
+      and end URI http://dbpedia.org/resource/Hymenobia. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 2
+      out_degree: 10
+      reversed_neighborhood_size: 1995
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 11
+      reversed_neighborhood_size: 701
+    statistics:
+      in_degree: 5
+      out_degree: 21
+      reversed_neighborhood_size: 2696
+  task_complexity: 0
+- id: PDP–Laban (2021)_Save the Newchurch Guinea Pigs
+  path:
+  - http://dbpedia.org/resource/PDP–Laban_(2021)
+  - http://dbpedia.org/resource/Dengvaxia_controversy
+  - http://dbpedia.org/resource/Guinea_pig
+  - http://dbpedia.org/resource/Save_the_Newchurch_Guinea_Pigs
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/PDP–Laban_(2021)
+      and end URI http://dbpedia.org/resource/Save_the_Newchurch_Guinea_Pigs. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 15
+      out_degree: 36
+      reversed_neighborhood_size: 3957
+    start_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    statistics:
+      in_degree: 15
+      out_degree: 36
+      reversed_neighborhood_size: 3958
+  task_complexity: 0
+- id: Pulau Indah Expressway_Afif Bahardin
+  path:
+  - http://dbpedia.org/resource/Pulau_Indah_Expressway
+  - http://dbpedia.org/resource/Malaysia_Federal_Route_83
+  - http://dbpedia.org/resource/Universiti_Teknologi_MARA
+  - http://dbpedia.org/resource/Afif_Bahardin
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Pulau_Indah_Expressway
+      and end URI http://dbpedia.org/resource/Afif_Bahardin. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 29
+      out_degree: 44
+      reversed_neighborhood_size: 4891
+    start_uri_statistics:
+      in_degree: 13
+      out_degree: 29
+      reversed_neighborhood_size: 1429
+    statistics:
+      in_degree: 42
+      out_degree: 73
+      reversed_neighborhood_size: 6320
+  task_complexity: 0
+- id: Lisandro Formation_Tamiami Formation
+  path:
+  - http://dbpedia.org/resource/Lisandro_Formation
+  - http://dbpedia.org/resource/Titanosauria
+  - http://dbpedia.org/resource/2019_in_paleontology
+  - http://dbpedia.org/resource/Tamiami_Formation
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Lisandro_Formation
+      and end URI http://dbpedia.org/resource/Tamiami_Formation. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 18
+      out_degree: 48
+      reversed_neighborhood_size: 2923
+    start_uri_statistics:
+      in_degree: 17
+      out_degree: 68
+      reversed_neighborhood_size: 6747
+    statistics:
+      in_degree: 35
+      out_degree: 116
+      reversed_neighborhood_size: 9670
+  task_complexity: 0
+- id: Conroy Marsh (Ontario)_Rancholabrean
+  path:
+  - http://dbpedia.org/resource/Conroy_Marsh_(Ontario)
+  - http://dbpedia.org/resource/Bald_eagle
+  - http://dbpedia.org/resource/American_bison
+  - http://dbpedia.org/resource/Rancholabrean
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Conroy_Marsh_(Ontario)
+      and end URI http://dbpedia.org/resource/Rancholabrean. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 67
+      out_degree: 25
+      reversed_neighborhood_size: 1440
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 19
+      reversed_neighborhood_size: 1483
+    statistics:
+      in_degree: 70
+      out_degree: 44
+      reversed_neighborhood_size: 2923
+  task_complexity: 0
+- id: Theoretical philosophy_Frank Sulloway
+  path:
+  - http://dbpedia.org/resource/Theoretical_philosophy
+  - http://dbpedia.org/resource/List_of_philosophies
+  - http://dbpedia.org/resource/David_Hume
+  - http://dbpedia.org/resource/Frank_Sulloway
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Theoretical_philosophy
+      and end URI http://dbpedia.org/resource/Frank_Sulloway. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 34
+      out_degree: 23
+      reversed_neighborhood_size: 4667
+    start_uri_statistics:
+      in_degree: 39
+      out_degree: 28
+      reversed_neighborhood_size: 9984
+    statistics:
+      in_degree: 73
+      out_degree: 51
+      reversed_neighborhood_size: 14651
+  task_complexity: 0
+- id: FIFA 23_Jacques Yaméogo
+  path:
+  - http://dbpedia.org/resource/FIFA_23
+  - http://dbpedia.org/resource/FIFA
+  - http://dbpedia.org/resource/Burkina_Faso_national_football_team
+  - http://dbpedia.org/resource/Jacques_Yaméogo
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/FIFA_23
+      and end URI http://dbpedia.org/resource/Jacques_Yaméogo. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 4
+      out_degree: 24
+      reversed_neighborhood_size: 1203
+    start_uri_statistics:
+      in_degree: 37
+      out_degree: 127
+      reversed_neighborhood_size: 17655
+    statistics:
+      in_degree: 41
+      out_degree: 151
+      reversed_neighborhood_size: 18858
+  task_complexity: 0
+- id: John E. Bridges_International Broadcasting Bureau
+  path:
+  - http://dbpedia.org/resource/John_E._Bridges
+  - http://dbpedia.org/resource/Seattle_Pacific_University
+  - http://dbpedia.org/resource/NPR
+  - http://dbpedia.org/resource/International_Broadcasting_Bureau
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/John_E._Bridges
+      and end URI http://dbpedia.org/resource/International_Broadcasting_Bureau. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 36
+      out_degree: 32
+      reversed_neighborhood_size: 4767
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 19
+      reversed_neighborhood_size: 1991
+    statistics:
+      in_degree: 39
+      out_degree: 51
+      reversed_neighborhood_size: 6758
+  task_complexity: 0
+- id: Tor Madira Machier_Päri language
+  path:
+  - http://dbpedia.org/resource/Tor_Madira_Machier
+  - http://dbpedia.org/resource/Sudan
+  - http://dbpedia.org/resource/Equatoria
+  - http://dbpedia.org/resource/Päri_language
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Tor_Madira_Machier
+      and end URI http://dbpedia.org/resource/Päri_language. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 15
+      out_degree: 10
+      reversed_neighborhood_size: 704
+    start_uri_statistics:
+      in_degree: 2
+      out_degree: 29
+      reversed_neighborhood_size: 3340
+    statistics:
+      in_degree: 17
+      out_degree: 39
+      reversed_neighborhood_size: 4044
+  task_complexity: 0
+- id: Iapetognathus fluctivagus_Pyemotes
+  path:
+  - http://dbpedia.org/resource/Iapetognathus_fluctivagus
+  - http://dbpedia.org/resource/Cretaceous
+  - http://dbpedia.org/resource/Termite
+  - http://dbpedia.org/resource/Pyemotes
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Iapetognathus_fluctivagus
+      and end URI http://dbpedia.org/resource/Pyemotes. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 4
+      out_degree: 13
+      reversed_neighborhood_size: 1213
+    start_uri_statistics:
+      in_degree: 10
+      out_degree: 43
+      reversed_neighborhood_size: 10938
+    statistics:
+      in_degree: 14
+      out_degree: 56
+      reversed_neighborhood_size: 12151
+  task_complexity: 0
+- id: Kenji Kaido_Silent protagonist
+  path:
+  - http://dbpedia.org/resource/Kenji_Kaido
+  - http://dbpedia.org/resource/Video_game
+  - http://dbpedia.org/resource/Player_character
+  - http://dbpedia.org/resource/Silent_protagonist
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Kenji_Kaido
+      and end URI http://dbpedia.org/resource/Silent_protagonist. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 95
+      out_degree: 34
+      reversed_neighborhood_size: 3965
+    start_uri_statistics:
+      in_degree: 6
+      out_degree: 20
+      reversed_neighborhood_size: 1108
+    statistics:
+      in_degree: 101
+      out_degree: 54
+      reversed_neighborhood_size: 5073
+  task_complexity: 0
+- id: Golden Horse Award for Best Supporting Actress_Samba effect
+  path:
+  - http://dbpedia.org/resource/Golden_Horse_Award_for_Best_Supporting_Actress
+  - http://dbpedia.org/resource/Taiwan
+  - http://dbpedia.org/resource/Hyperinflation
+  - http://dbpedia.org/resource/Samba_effect
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Golden_Horse_Award_for_Best_Supporting_Actress
+      and end URI http://dbpedia.org/resource/Samba_effect. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 9
+      out_degree: 16
+      reversed_neighborhood_size: 2813
+    start_uri_statistics:
+      in_degree: 108
+      out_degree: 392
+      reversed_neighborhood_size: 7188
+    statistics:
+      in_degree: 117
+      out_degree: 408
+      reversed_neighborhood_size: 10001
+  task_complexity: 0
+- id: 'List of television programs: S_Father of the Bride (2022 film)'
+  path:
+  - http://dbpedia.org/resource/List_of_television_programs:_S
+  - http://dbpedia.org/resource/Challenge_of_the_Yukon
+  - http://dbpedia.org/resource/Film_series
+  - http://dbpedia.org/resource/Father_of_the_Bride_(2022_film)
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/List_of_television_programs:_S
+      and end URI http://dbpedia.org/resource/Father_of_the_Bride_(2022_film). Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 31
+      out_degree: 50
+      reversed_neighborhood_size: 4765
+    start_uri_statistics:
+      in_degree: 2
+      out_degree: 620
+      reversed_neighborhood_size: 39042
+    statistics:
+      in_degree: 33
+      out_degree: 670
+      reversed_neighborhood_size: 43807
+  task_complexity: 0
+- id: Bordharan_Gene isoform
+  path:
+  - http://dbpedia.org/resource/Bordharan
+  - http://dbpedia.org/resource/Bengal_tiger
+  - http://dbpedia.org/resource/Albinism
+  - http://dbpedia.org/resource/Gene_isoform
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Bordharan
+      and end URI http://dbpedia.org/resource/Gene_isoform. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 11
+      out_degree: 19
+      reversed_neighborhood_size: 1272
+    start_uri_statistics:
+      in_degree: 0
+      out_degree: 16
+      reversed_neighborhood_size: 2101
+    statistics:
+      in_degree: 11
+      out_degree: 35
+      reversed_neighborhood_size: 3373
+  task_complexity: 0
+- id: Articulatory technique_Grabby Awards
+  path:
+  - http://dbpedia.org/resource/Articulatory_technique
+  - http://dbpedia.org/resource/American_Osteopathic_Association
+  - http://dbpedia.org/resource/Chicago
+  - http://dbpedia.org/resource/Grabby_Awards
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Articulatory_technique
+      and end URI http://dbpedia.org/resource/Grabby_Awards. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 44
+      out_degree: 69
+      reversed_neighborhood_size: 3379
+    start_uri_statistics:
+      in_degree: 2
+      out_degree: 5
+      reversed_neighborhood_size: 78
+    statistics:
+      in_degree: 46
+      out_degree: 74
+      reversed_neighborhood_size: 3457
+  task_complexity: 0
+- id: John E. Bridges_2021 British Columbia wildfires
+  path:
+  - http://dbpedia.org/resource/John_E._Bridges
+  - http://dbpedia.org/resource/Washington_(state)
+  - http://dbpedia.org/resource/2021_Western_North_America_heat_wave
+  - http://dbpedia.org/resource/2021_British_Columbia_wildfires
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/John_E._Bridges
+      and end URI http://dbpedia.org/resource/2021_British_Columbia_wildfires. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 13
+      out_degree: 37
+      reversed_neighborhood_size: 4460
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 19
+      reversed_neighborhood_size: 1991
+    statistics:
+      in_degree: 16
+      out_degree: 56
+      reversed_neighborhood_size: 6451
+  task_complexity: 0
+- id: La Kahena_Cheryl (drag queen)
+  path:
+  - http://dbpedia.org/resource/La_Kahena
+  - http://dbpedia.org/resource/Drag_queen
+  - http://dbpedia.org/resource/List_of_drag_queens
+  - http://dbpedia.org/resource/Cheryl_(drag_queen)
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/La_Kahena
+      and end URI http://dbpedia.org/resource/Cheryl_(drag_queen). Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    start_uri_statistics:
+      in_degree: 0
+      out_degree: 1
+      reversed_neighborhood_size: 38
+    statistics:
+      in_degree: 0
+      out_degree: 1
+      reversed_neighborhood_size: 39
+  task_complexity: 0
+- id: Joe McGrail_1931 All-America college football team
+  path:
+  - http://dbpedia.org/resource/Joe_McGrail
+  - http://dbpedia.org/resource/College_football
+  - http://dbpedia.org/resource/Harvard_Crimson_football
+  - http://dbpedia.org/resource/1931_All-America_college_football_team
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Joe_McGrail
+      and end URI http://dbpedia.org/resource/1931_All-America_college_football_team.
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    start_uri_statistics:
+      in_degree: 5
+      out_degree: 15
+      reversed_neighborhood_size: 2271
+    statistics:
+      in_degree: 5
+      out_degree: 15
+      reversed_neighborhood_size: 2272
+  task_complexity: 0
+- id: Life Office Management Association_Debenture
+  path:
+  - http://dbpedia.org/resource/Life_Office_Management_Association
+  - http://dbpedia.org/resource/Insurance
+  - http://dbpedia.org/resource/Trust_company
+  - http://dbpedia.org/resource/Debenture
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Life_Office_Management_Association
+      and end URI http://dbpedia.org/resource/Debenture. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 163
+      out_degree: 22
+      reversed_neighborhood_size: 3623
+    start_uri_statistics:
+      in_degree: 9
+      out_degree: 8
+      reversed_neighborhood_size: 306
+    statistics:
+      in_degree: 172
+      out_degree: 30
+      reversed_neighborhood_size: 3929
+  task_complexity: 0
+- id: WNJR (FM)_Kilolo Kijakazi
+  path:
+  - http://dbpedia.org/resource/WNJR_(FM)
+  - http://dbpedia.org/resource/Bill_Clinton
+  - http://dbpedia.org/resource/United_States_order_of_precedence
+  - http://dbpedia.org/resource/Kilolo_Kijakazi
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/WNJR_(FM)
+      and end URI http://dbpedia.org/resource/Kilolo_Kijakazi. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 5
+      out_degree: 29
+      reversed_neighborhood_size: 2964
+    start_uri_statistics:
+      in_degree: 12
+      out_degree: 41
+      reversed_neighborhood_size: 5284
+    statistics:
+      in_degree: 17
+      out_degree: 70
+      reversed_neighborhood_size: 8248
+  task_complexity: 0
+- id: Eve Oja_Shock therapy (economics)
+  path:
+  - http://dbpedia.org/resource/Eve_Oja
+  - http://dbpedia.org/resource/Functional_analysis
+  - http://dbpedia.org/resource/Poland
+  - http://dbpedia.org/resource/Shock_therapy_(economics)
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Eve_Oja
+      and end URI http://dbpedia.org/resource/Shock_therapy_(economics). Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 97
+      out_degree: 99
+      reversed_neighborhood_size: 12096
+    start_uri_statistics:
+      in_degree: 5
+      out_degree: 18
+      reversed_neighborhood_size: 2151
+    statistics:
+      in_degree: 102
+      out_degree: 117
+      reversed_neighborhood_size: 14247
+  task_complexity: 1
+- id: International Broadcasting Bureau_Steve Pajcic
+  path:
+  - http://dbpedia.org/resource/International_Broadcasting_Bureau
+  - http://dbpedia.org/resource/Bill_Clinton
+  - http://dbpedia.org/resource/Bob_Graham
+  - http://dbpedia.org/resource/Steve_Pajcic
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/International_Broadcasting_Bureau
+      and end URI http://dbpedia.org/resource/Steve_Pajcic. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 16
+      out_degree: 51
+      reversed_neighborhood_size: 7099
+    start_uri_statistics:
+      in_degree: 36
+      out_degree: 32
+      reversed_neighborhood_size: 4767
+    statistics:
+      in_degree: 52
+      out_degree: 83
+      reversed_neighborhood_size: 11866
+  task_complexity: 1
+- id: Dartmouth College's Rassias Center for World Languages and Cultures_Shock therapy
+    (economics)
+  path:
+  - http://dbpedia.org/resource/Dartmouth_College's_Rassias_Center_for_World_Languages_and_Cultures
+  - http://dbpedia.org/resource/New_Hampshire
+  - http://dbpedia.org/resource/Fiscal_conservatism
+  - http://dbpedia.org/resource/Shock_therapy_(economics)
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Dartmouth_College''s_Rassias_Center_for_World_Languages_and_Cultures
+      and end URI http://dbpedia.org/resource/Shock_therapy_(economics). Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 97
+      out_degree: 99
+      reversed_neighborhood_size: 12096
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 14
+      reversed_neighborhood_size: 4376
+    statistics:
+      in_degree: 101
+      out_degree: 113
+      reversed_neighborhood_size: 16472
+  task_complexity: 1
+- id: Frank Sulloway_Shock therapy (economics)
+  path:
+  - http://dbpedia.org/resource/Frank_Sulloway
+  - http://dbpedia.org/resource/David_Hume
+  - http://dbpedia.org/resource/Friedrich_Hayek
+  - http://dbpedia.org/resource/Shock_therapy_(economics)
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Frank_Sulloway
+      and end URI http://dbpedia.org/resource/Shock_therapy_(economics). Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 97
+      out_degree: 99
+      reversed_neighborhood_size: 12096
+    start_uri_statistics:
+      in_degree: 34
+      out_degree: 23
+      reversed_neighborhood_size: 4667
+    statistics:
+      in_degree: 131
+      out_degree: 122
+      reversed_neighborhood_size: 16763
+  task_complexity: 1
+- id: Tamiami Formation_Lisandro Formation
+  path:
+  - http://dbpedia.org/resource/Tamiami_Formation
+  - http://dbpedia.org/resource/Geologic_time_scale
+  - http://dbpedia.org/resource/List_of_fossil_sites
+  - http://dbpedia.org/resource/Lisandro_Formation
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Tamiami_Formation
+      and end URI http://dbpedia.org/resource/Lisandro_Formation. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 17
+      out_degree: 68
+      reversed_neighborhood_size: 6747
+    start_uri_statistics:
+      in_degree: 18
+      out_degree: 48
+      reversed_neighborhood_size: 2923
+    statistics:
+      in_degree: 35
+      out_degree: 116
+      reversed_neighborhood_size: 9670
+  task_complexity: 1
+- id: List of monarchs of Germany_Thomas de Mahy, Marquis de Favras
+  path:
+  - http://dbpedia.org/resource/List_of_monarchs_of_Germany
+  - http://dbpedia.org/resource/House_of_Plantagenet
+  - http://dbpedia.org/resource/Blois
+  - http://dbpedia.org/resource/Thomas_de_Mahy,_Marquis_de_Favras
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/List_of_monarchs_of_Germany
+      and end URI http://dbpedia.org/resource/Thomas_de_Mahy,_Marquis_de_Favras. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 7
+      out_degree: 51
+      reversed_neighborhood_size: 7001
+    start_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    statistics:
+      in_degree: 7
+      out_degree: 51
+      reversed_neighborhood_size: 7002
+  task_complexity: 1
+- id: Bass Building (Tonopah, Nevada)_Lists of state parks by U.S. state
+  path:
+  - http://dbpedia.org/resource/Bass_Building_(Tonopah,_Nevada)
+  - http://dbpedia.org/resource/Nevada
+  - http://dbpedia.org/resource/List_of_U.S._state_colors
+  - http://dbpedia.org/resource/Lists_of_state_parks_by_U.S._state
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Bass_Building_(Tonopah,_Nevada)
+      and end URI http://dbpedia.org/resource/Lists_of_state_parks_by_U.S._state.
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 15
+      out_degree: 56
+      reversed_neighborhood_size: 11694
+    start_uri_statistics:
+      in_degree: 1
+      out_degree: 10
+      reversed_neighborhood_size: 919
+    statistics:
+      in_degree: 16
+      out_degree: 66
+      reversed_neighborhood_size: 12613
+  task_complexity: 1
+- id: If Nobody Believed in You_APRA Music Awards of 2007
+  path: &id001
+  - http://dbpedia.org/resource/If_Nobody_Believed_in_You
+  - http://dbpedia.org/resource/Country_music
+  - http://dbpedia.org/resource/Lee_Kernaghan
+  - http://dbpedia.org/resource/APRA_Music_Awards_of_2007
+  question: &id002
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/If_Nobody_Believed_in_You
+      and end URI http://dbpedia.org/resource/APRA_Music_Awards_of_2007. Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics: &id003
+    end_uri_statistics:
+      in_degree: 34
+      out_degree: 174
+      reversed_neighborhood_size: 9610
+    start_uri_statistics:
+      in_degree: 7
+      out_degree: 18
+      reversed_neighborhood_size: 1595
+    statistics:
+      in_degree: 41
+      out_degree: 192
+      reversed_neighborhood_size: 11205
+  task_complexity: 1
+- id: Shock therapy (economics)_Vernik
+  path:
+  - http://dbpedia.org/resource/Shock_therapy_(economics)
+  - http://dbpedia.org/resource/Poland
+  - http://dbpedia.org/resource/Albania
+  - http://dbpedia.org/resource/Vernik
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Shock_therapy_(economics)
+      and end URI http://dbpedia.org/resource/Vernik. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 6
+      out_degree: 34
+      reversed_neighborhood_size: 6258
+    start_uri_statistics:
+      in_degree: 97
+      out_degree: 99
+      reversed_neighborhood_size: 12096
+    statistics:
+      in_degree: 103
+      out_degree: 133
+      reversed_neighborhood_size: 18354
+  task_complexity: 1
+- id: Tedorigawa Dam_Part of speech
+  path:
+  - http://dbpedia.org/resource/Tedorigawa_Dam
+  - http://dbpedia.org/resource/Japan
+  - http://dbpedia.org/resource/Endonym_and_exonym
+  - http://dbpedia.org/resource/Part_of_speech
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Tedorigawa_Dam
+      and end URI http://dbpedia.org/resource/Part_of_speech. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 191
+      out_degree: 117
+      reversed_neighborhood_size: 7363
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 6
+      reversed_neighborhood_size: 1310
+    statistics:
+      in_degree: 195
+      out_degree: 123
+      reversed_neighborhood_size: 8673
+  task_complexity: 1
+- id: The Beginning and the End (1993 film)_Los Angeles Film Critics Association Award
+    for Best Music
+  path:
+  - http://dbpedia.org/resource/The_Beginning_and_the_End_(1993_film)
+  - http://dbpedia.org/resource/Academy_Awards
+  - http://dbpedia.org/resource/Amadeus_(film)
+  - http://dbpedia.org/resource/Los_Angeles_Film_Critics_Association_Award_for_Best_Music
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/The_Beginning_and_the_End_(1993_film)
+      and end URI http://dbpedia.org/resource/Los_Angeles_Film_Critics_Association_Award_for_Best_Music.
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 81
+      out_degree: 80
+      reversed_neighborhood_size: 10953
+    start_uri_statistics:
+      in_degree: 20
+      out_degree: 24
+      reversed_neighborhood_size: 1175
+    statistics:
+      in_degree: 101
+      out_degree: 104
+      reversed_neighborhood_size: 12128
+  task_complexity: 1
+- id: Shin'ichirō Hattori_Four Books and Five Classics
+  path:
+  - http://dbpedia.org/resource/Shin'ichirō_Hattori
+  - http://dbpedia.org/resource/Sankei_Shimbun
+  - http://dbpedia.org/resource/Filial_piety
+  - http://dbpedia.org/resource/Four_Books_and_Five_Classics
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Shin''ichirō_Hattori
+      and end URI http://dbpedia.org/resource/Four_Books_and_Five_Classics. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 112
+      out_degree: 65
+      reversed_neighborhood_size: 7641
+    start_uri_statistics:
+      in_degree: 5
+      out_degree: 14
+      reversed_neighborhood_size: 288
+    statistics:
+      in_degree: 117
+      out_degree: 79
+      reversed_neighborhood_size: 7929
+  task_complexity: 1
+- id: Artyom Shneyerov_Falsifiability
+  path:
+  - http://dbpedia.org/resource/Artyom_Shneyerov
+  - http://dbpedia.org/resource/Econometrics
+  - http://dbpedia.org/resource/Supply_and_demand
+  - http://dbpedia.org/resource/Falsifiability
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Artyom_Shneyerov
+      and end URI http://dbpedia.org/resource/Falsifiability. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 340
+      out_degree: 120
+      reversed_neighborhood_size: 10604
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 29
+      reversed_neighborhood_size: 3390
+    statistics:
+      in_degree: 343
+      out_degree: 149
+      reversed_neighborhood_size: 13994
+  task_complexity: 1
+- id: Bounkiling_FIFA Men's World Ranking
+  path:
+  - http://dbpedia.org/resource/Bounkiling
+  - http://dbpedia.org/resource/Greenwich_Mean_Time
+  - http://dbpedia.org/resource/Faroe_Islands
+  - http://dbpedia.org/resource/FIFA_Men's_World_Ranking
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Bounkiling
+      and end URI http://dbpedia.org/resource/FIFA_Men''s_World_Ranking. Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 37
+      out_degree: 74
+      reversed_neighborhood_size: 11052
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 11
+      reversed_neighborhood_size: 719
+    statistics:
+      in_degree: 41
+      out_degree: 85
+      reversed_neighborhood_size: 11771
+  task_complexity: 1
+- id: Afşin-Elbistan power stations_2011–12 FIBA EuroChallenge
+  path:
+  - http://dbpedia.org/resource/Afşin-Elbistan_power_stations
+  - http://dbpedia.org/resource/Turkey
+  - http://dbpedia.org/resource/Sport_in_Turkey
+  - http://dbpedia.org/resource/2011–12_FIBA_EuroChallenge
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Afşin-Elbistan_power_stations
+      and end URI http://dbpedia.org/resource/2011–12_FIBA_EuroChallenge. Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 52
+      out_degree: 86
+      reversed_neighborhood_size: 6158
+    start_uri_statistics:
+      in_degree: 11
+      out_degree: 34
+      reversed_neighborhood_size: 3654
+    statistics:
+      in_degree: 63
+      out_degree: 120
+      reversed_neighborhood_size: 9812
+  task_complexity: 1
+- id: If Nobody Believed in You_APRA Music Awards of 2007
+  path: *id001
+  question: *id002
+  statistics: *id003
+  task_complexity: 1
+- id: Nicolas Nemiri_Carnac
+  path:
+  - http://dbpedia.org/resource/Nicolas_Nemiri
+  - http://dbpedia.org/resource/Jean_Giraud
+  - http://dbpedia.org/resource/François_Mitterrand
+  - http://dbpedia.org/resource/Carnac
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Nicolas_Nemiri
+      and end URI http://dbpedia.org/resource/Carnac. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 78
+      out_degree: 47
+      reversed_neighborhood_size: 8251
+    start_uri_statistics:
+      in_degree: 1
+      out_degree: 13
+      reversed_neighborhood_size: 2405
+    statistics:
+      in_degree: 79
+      out_degree: 60
+      reversed_neighborhood_size: 10656
+  task_complexity: 1
+- id: Mohamed Mnyaa_Shock therapy (economics)
+  path:
+  - http://dbpedia.org/resource/Mohamed_Mnyaa
+  - http://dbpedia.org/resource/Tanzania
+  - http://dbpedia.org/resource/World_Bank
+  - http://dbpedia.org/resource/Shock_therapy_(economics)
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Mohamed_Mnyaa
+      and end URI http://dbpedia.org/resource/Shock_therapy_(economics). Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 97
+      out_degree: 99
+      reversed_neighborhood_size: 12096
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 19
+      reversed_neighborhood_size: 1356
+    statistics:
+      in_degree: 101
+      out_degree: 118
+      reversed_neighborhood_size: 13452
+  task_complexity: 1
+- id: Luton Major_Shock therapy (economics)
+  path:
+  - http://dbpedia.org/resource/Luton_Major
+  - http://dbpedia.org/resource/United_Kingdom
+  - http://dbpedia.org/resource/Laissez-faire
+  - http://dbpedia.org/resource/Shock_therapy_(economics)
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Luton_Major
+      and end URI http://dbpedia.org/resource/Shock_therapy_(economics). Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 97
+      out_degree: 99
+      reversed_neighborhood_size: 12096
+    start_uri_statistics:
+      in_degree: 12
+      out_degree: 16
+      reversed_neighborhood_size: 3462
+    statistics:
+      in_degree: 109
+      out_degree: 115
+      reversed_neighborhood_size: 15558
+  task_complexity: 1
+- id: Boris Gulyayev_Ice Hockey Varsity Match
+  path:
+  - http://dbpedia.org/resource/Boris_Gulyayev
+  - http://dbpedia.org/resource/Speed_skating
+  - http://dbpedia.org/resource/St._Moritz
+  - http://dbpedia.org/resource/Ice_Hockey_Varsity_Match
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Boris_Gulyayev
+      and end URI http://dbpedia.org/resource/Ice_Hockey_Varsity_Match. Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 17
+      out_degree: 45
+      reversed_neighborhood_size: 9617
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 15
+      reversed_neighborhood_size: 847
+    statistics:
+      in_degree: 21
+      out_degree: 60
+      reversed_neighborhood_size: 10464
+  task_complexity: 1
+- id: Celebrity Treasure Island 2021_Continental drift
+  path:
+  - http://dbpedia.org/resource/Celebrity_Treasure_Island_2021
+  - http://dbpedia.org/resource/Southern_right_whale
+  - http://dbpedia.org/resource/Great_Barrier_Reef
+  - http://dbpedia.org/resource/Continental_drift
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Celebrity_Treasure_Island_2021
+      and end URI http://dbpedia.org/resource/Continental_drift. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 326
+      out_degree: 115
+      reversed_neighborhood_size: 14220
+    start_uri_statistics:
+      in_degree: 15
+      out_degree: 56
+      reversed_neighborhood_size: 3919
+    statistics:
+      in_degree: 341
+      out_degree: 171
+      reversed_neighborhood_size: 18139
+  task_complexity: 2
+- id: Ronald Clair Roat_Charles M. Schwab
+  path:
+  - http://dbpedia.org/resource/Ronald_Clair_Roat
+  - http://dbpedia.org/resource/Indiana
+  - http://dbpedia.org/resource/Pennsylvania
+  - http://dbpedia.org/resource/Charles_M._Schwab
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Ronald_Clair_Roat
+      and end URI http://dbpedia.org/resource/Charles_M._Schwab. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 115
+      out_degree: 99
+      reversed_neighborhood_size: 13713
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 18
+      reversed_neighborhood_size: 1713
+    statistics:
+      in_degree: 118
+      out_degree: 117
+      reversed_neighborhood_size: 15426
+  task_complexity: 2
+- id: Wall Street Warriors_Dot-com bubble
+  path:
+  - http://dbpedia.org/resource/Wall_Street_Warriors
+  - http://dbpedia.org/resource/Documentary_film
+  - http://dbpedia.org/resource/Cyberpunk
+  - http://dbpedia.org/resource/Dot-com_bubble
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Wall_Street_Warriors
+      and end URI http://dbpedia.org/resource/Dot-com_bubble. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 1106
+      out_degree: 150
+      reversed_neighborhood_size: 14406
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 13
+      reversed_neighborhood_size: 454
+    statistics:
+      in_degree: 1109
+      out_degree: 163
+      reversed_neighborhood_size: 14860
+  task_complexity: 2
+- id: Ingar Knudtsen_Hybrid word
+  path:
+  - http://dbpedia.org/resource/Ingar_Knudtsen
+  - http://dbpedia.org/resource/Norway
+  - http://dbpedia.org/resource/Latin
+  - http://dbpedia.org/resource/Hybrid_word
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Ingar_Knudtsen
+      and end URI http://dbpedia.org/resource/Hybrid_word. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 85
+      out_degree: 117
+      reversed_neighborhood_size: 14293
+    start_uri_statistics:
+      in_degree: 6
+      out_degree: 10
+      reversed_neighborhood_size: 1981
+    statistics:
+      in_degree: 91
+      out_degree: 127
+      reversed_neighborhood_size: 16274
+  task_complexity: 2
+- id: Atmospheric pressure_George Villiers, 4th Earl of Clarendon
+  path:
+  - http://dbpedia.org/resource/Atmospheric_pressure
+  - http://dbpedia.org/resource/Japan
+  - http://dbpedia.org/resource/Second_French_Empire
+  - http://dbpedia.org/resource/George_Villiers,_4th_Earl_of_Clarendon
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Atmospheric_pressure
+      and end URI http://dbpedia.org/resource/George_Villiers,_4th_Earl_of_Clarendon.
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 141
+      out_degree: 106
+      reversed_neighborhood_size: 12895
+    start_uri_statistics:
+      in_degree: 1067
+      out_degree: 88
+      reversed_neighborhood_size: 9741
+    statistics:
+      in_degree: 1208
+      out_degree: 194
+      reversed_neighborhood_size: 22636
+  task_complexity: 2
+- id: Boris Gulyayev_List of LTE networks
+  path:
+  - http://dbpedia.org/resource/Boris_Gulyayev
+  - http://dbpedia.org/resource/Yekaterinburg
+  - http://dbpedia.org/resource/LTE_Advanced
+  - http://dbpedia.org/resource/List_of_LTE_networks
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Boris_Gulyayev
+      and end URI http://dbpedia.org/resource/List_of_LTE_networks. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 34
+      out_degree: 149
+      reversed_neighborhood_size: 14699
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 15
+      reversed_neighborhood_size: 847
+    statistics:
+      in_degree: 38
+      out_degree: 164
+      reversed_neighborhood_size: 15546
+  task_complexity: 2
+- id: Jane Katjavivi_Andrew Huxley
+  path:
+  - http://dbpedia.org/resource/Jane_Katjavivi
+  - http://dbpedia.org/resource/England
+  - http://dbpedia.org/resource/Francis_Crick
+  - http://dbpedia.org/resource/Andrew_Huxley
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Jane_Katjavivi
+      and end URI http://dbpedia.org/resource/Andrew_Huxley. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 134
+      out_degree: 121
+      reversed_neighborhood_size: 13395
+    start_uri_statistics:
+      in_degree: 0
+      out_degree: 25
+      reversed_neighborhood_size: 4735
+    statistics:
+      in_degree: 134
+      out_degree: 146
+      reversed_neighborhood_size: 18130
+  task_complexity: 2
+- id: Dartmouth College's Rassias Center for World Languages and Cultures_Kangchenjunga
+  path:
+  - http://dbpedia.org/resource/Dartmouth_College's_Rassias_Center_for_World_Languages_and_Cultures
+  - http://dbpedia.org/resource/Hanover,_New_Hampshire
+  - http://dbpedia.org/resource/Köppen_climate_classification
+  - http://dbpedia.org/resource/Kangchenjunga
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Dartmouth_College''s_Rassias_Center_for_World_Languages_and_Cultures
+      and end URI http://dbpedia.org/resource/Kangchenjunga. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 320
+      out_degree: 212
+      reversed_neighborhood_size: 17914
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 14
+      reversed_neighborhood_size: 4376
+    statistics:
+      in_degree: 324
+      out_degree: 226
+      reversed_neighborhood_size: 22290
+  task_complexity: 2
+- id: Rothmannia_Carnivore
+  path:
+  - http://dbpedia.org/resource/Rothmannia
+  - http://dbpedia.org/resource/Carl_Linnaeus
+  - http://dbpedia.org/resource/Animal
+  - http://dbpedia.org/resource/Carnivore
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Rothmannia
+      and end URI http://dbpedia.org/resource/Carnivore. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 1008
+      out_degree: 102
+      reversed_neighborhood_size: 12798
+    start_uri_statistics:
+      in_degree: 13
+      out_degree: 57
+      reversed_neighborhood_size: 2230
+    statistics:
+      in_degree: 1021
+      out_degree: 159
+      reversed_neighborhood_size: 15028
+  task_complexity: 2
+- id: Blood Diamond_Mamie Gummer
+  path:
+  - http://dbpedia.org/resource/Blood_Diamond
+  - http://dbpedia.org/resource/12th_Critics'_Choice_Awards
+  - http://dbpedia.org/resource/Meryl_Streep
+  - http://dbpedia.org/resource/Mamie_Gummer
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Blood_Diamond
+      and end URI http://dbpedia.org/resource/Mamie_Gummer. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 116
+      out_degree: 109
+      reversed_neighborhood_size: 13388
+    start_uri_statistics:
+      in_degree: 118
+      out_degree: 163
+      reversed_neighborhood_size: 17171
+    statistics:
+      in_degree: 234
+      out_degree: 272
+      reversed_neighborhood_size: 30559
+  task_complexity: 2
+- id: Zbigniew Zieliński_Bartoszyce
+  path:
+  - http://dbpedia.org/resource/Zbigniew_Zieliński
+  - http://dbpedia.org/resource/Gdańsk
+  - http://dbpedia.org/resource/List_of_twin_towns_and_sister_cities_in_Poland
+  - http://dbpedia.org/resource/Bartoszyce
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Zbigniew_Zieliński
+      and end URI http://dbpedia.org/resource/Bartoszyce. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 250
+      out_degree: 98
+      reversed_neighborhood_size: 14729
+    start_uri_statistics:
+      in_degree: 5
+      out_degree: 18
+      reversed_neighborhood_size: 1348
+    statistics:
+      in_degree: 255
+      out_degree: 116
+      reversed_neighborhood_size: 16077
+  task_complexity: 2
+- id: Tambaksari_Carl Friedrich Philipp von Martius
+  path:
+  - http://dbpedia.org/resource/Tambaksari
+  - http://dbpedia.org/resource/East_Java
+  - http://dbpedia.org/resource/Acacia
+  - http://dbpedia.org/resource/Carl_Friedrich_Philipp_von_Martius
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Tambaksari
+      and end URI http://dbpedia.org/resource/Carl_Friedrich_Philipp_von_Martius.
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 392
+      out_degree: 124
+      reversed_neighborhood_size: 13794
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 7
+      reversed_neighborhood_size: 1724
+    statistics:
+      in_degree: 396
+      out_degree: 131
+      reversed_neighborhood_size: 15518
+  task_complexity: 2
+- id: Theology of Martin Luther_St. Vitus Cathedral
+  path:
+  - http://dbpedia.org/resource/Theology_of_Martin_Luther
+  - http://dbpedia.org/resource/Martin_Luther_(1953_film)
+  - http://dbpedia.org/resource/Relic
+  - http://dbpedia.org/resource/St._Vitus_Cathedral
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Theology_of_Martin_Luther
+      and end URI http://dbpedia.org/resource/St._Vitus_Cathedral. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 217
+      out_degree: 128
+      reversed_neighborhood_size: 15480
+    start_uri_statistics:
+      in_degree: 27
+      out_degree: 63
+      reversed_neighborhood_size: 5021
+    statistics:
+      in_degree: 244
+      out_degree: 191
+      reversed_neighborhood_size: 20501
+  task_complexity: 2
+- id: Iain Hamilton (journalist)_Northern Lights (Pullman novel)
+  path:
+  - http://dbpedia.org/resource/Iain_Hamilton_(journalist)
+  - http://dbpedia.org/resource/Paisley_Grammar_School
+  - http://dbpedia.org/resource/Christ_Church,_Oxford
+  - http://dbpedia.org/resource/Northern_Lights_(Pullman_novel)
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Iain_Hamilton_(journalist)
+      and end URI http://dbpedia.org/resource/Northern_Lights_(Pullman_novel). Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 68
+      out_degree: 132
+      reversed_neighborhood_size: 13782
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 15
+      reversed_neighborhood_size: 1733
+    statistics:
+      in_degree: 72
+      out_degree: 147
+      reversed_neighborhood_size: 15515
+  task_complexity: 2
+- id: 2018 Korea National League Championship_ISO 3166-2:CN
+  path:
+  - http://dbpedia.org/resource/2018_Korea_National_League_Championship
+  - http://dbpedia.org/resource/Gangwon_Province,_South_Korea
+  - http://dbpedia.org/resource/Guangzhou
+  - http://dbpedia.org/resource/ISO_3166-2:CN
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/2018_Korea_National_League_Championship
+      and end URI http://dbpedia.org/resource/ISO_3166-2:CN. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 375
+      out_degree: 78
+      reversed_neighborhood_size: 17121
+    start_uri_statistics:
+      in_degree: 6
+      out_degree: 18
+      reversed_neighborhood_size: 1459
+    statistics:
+      in_degree: 381
+      out_degree: 96
+      reversed_neighborhood_size: 18580
+  task_complexity: 2
+- id: Jeffrey Segal_Whig history
+  path:
+  - http://dbpedia.org/resource/Jeffrey_Segal
+  - http://dbpedia.org/resource/London
+  - http://dbpedia.org/resource/English_Reformation
+  - http://dbpedia.org/resource/Whig_history
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Jeffrey_Segal
+      and end URI http://dbpedia.org/resource/Whig_history. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 133
+      out_degree: 112
+      reversed_neighborhood_size: 13425
+    start_uri_statistics:
+      in_degree: 30
+      out_degree: 37
+      reversed_neighborhood_size: 4794
+    statistics:
+      in_degree: 163
+      out_degree: 149
+      reversed_neighborhood_size: 18219
+  task_complexity: 2
+- id: Anchialus_Hybrid word
+  path:
+  - http://dbpedia.org/resource/Anchialus
+  - http://dbpedia.org/resource/Odyssey
+  - http://dbpedia.org/resource/Translation
+  - http://dbpedia.org/resource/Hybrid_word
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Anchialus
+      and end URI http://dbpedia.org/resource/Hybrid_word. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 85
+      out_degree: 117
+      reversed_neighborhood_size: 14293
+    start_uri_statistics:
+      in_degree: 12
+      out_degree: 18
+      reversed_neighborhood_size: 2382
+    statistics:
+      in_degree: 97
+      out_degree: 135
+      reversed_neighborhood_size: 16675
+  task_complexity: 2
+- id: Gymnopternus vockerothi_Community
+  path:
+  - http://dbpedia.org/resource/Gymnopternus_vockerothi
+  - http://dbpedia.org/resource/Taxonomy_(biology)
+  - http://dbpedia.org/resource/Cluster_analysis
+  - http://dbpedia.org/resource/Community
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Gymnopternus_vockerothi
+      and end URI http://dbpedia.org/resource/Community. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 1339
+      out_degree: 128
+      reversed_neighborhood_size: 15659
+    start_uri_statistics:
+      in_degree: 1
+      out_degree: 6
+      reversed_neighborhood_size: 179
+    statistics:
+      in_degree: 1340
+      out_degree: 134
+      reversed_neighborhood_size: 15838
+  task_complexity: 2
+- id: Alex James (bassist)_Vic Elford
+  path:
+  - http://dbpedia.org/resource/Alex_James_(bassist)
+  - http://dbpedia.org/resource/Through_the_Keyhole
+  - http://dbpedia.org/resource/Stirling_Moss
+  - http://dbpedia.org/resource/Vic_Elford
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Alex_James_(bassist)
+      and end URI http://dbpedia.org/resource/Vic_Elford. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 144
+      out_degree: 171
+      reversed_neighborhood_size: 13140
+    start_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    statistics:
+      in_degree: 144
+      out_degree: 171
+      reversed_neighborhood_size: 13141
+  task_complexity: 2
+- id: List of fossil sites_George Villiers, 4th Earl of Clarendon
+  path:
+  - http://dbpedia.org/resource/List_of_fossil_sites
+  - http://dbpedia.org/resource/Killing_Fields
+  - http://dbpedia.org/resource/Circassian_genocide
+  - http://dbpedia.org/resource/George_Villiers,_4th_Earl_of_Clarendon
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/List_of_fossil_sites
+      and end URI http://dbpedia.org/resource/George_Villiers,_4th_Earl_of_Clarendon.
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 141
+      out_degree: 106
+      reversed_neighborhood_size: 12895
+    start_uri_statistics:
+      in_degree: 263
+      out_degree: 874
+      reversed_neighborhood_size: 102799
+    statistics:
+      in_degree: 404
+      out_degree: 980
+      reversed_neighborhood_size: 115694
+  task_complexity: 2
+- id: Conroy Marsh (Ontario)_Disease
+  path: &id004
+  - http://dbpedia.org/resource/Conroy_Marsh_(Ontario)
+  - http://dbpedia.org/resource/Bald_eagle
+  - http://dbpedia.org/resource/Prairie_dog
+  - http://dbpedia.org/resource/Disease
+  question: &id005
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Conroy_Marsh_(Ontario)
+      and end URI http://dbpedia.org/resource/Disease. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics: &id006
+    end_uri_statistics:
+      in_degree: 1888
+      out_degree: 289
+      reversed_neighborhood_size: 22909
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 19
+      reversed_neighborhood_size: 1483
+    statistics:
+      in_degree: 1891
+      out_degree: 308
+      reversed_neighborhood_size: 24392
+  task_complexity: 3
+- id: Eddie Hunter (baseball)_Minor league
+  path:
+  - http://dbpedia.org/resource/Eddie_Hunter_(baseball)
+  - http://dbpedia.org/resource/At_bat
+  - http://dbpedia.org/resource/Injured_list
+  - http://dbpedia.org/resource/Minor_league
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Eddie_Hunter_(baseball)
+      and end URI http://dbpedia.org/resource/Minor_league. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 764
+      out_degree: 187
+      reversed_neighborhood_size: 20072
+    start_uri_statistics:
+      in_degree: 6
+      out_degree: 12
+      reversed_neighborhood_size: 1183
+    statistics:
+      in_degree: 770
+      out_degree: 199
+      reversed_neighborhood_size: 21255
+  task_complexity: 3
+- id: Afşin-Elbistan power stations_Disease
+  path:
+  - http://dbpedia.org/resource/Afşin-Elbistan_power_stations
+  - http://dbpedia.org/resource/Carbon_dioxide
+  - http://dbpedia.org/resource/Acetone
+  - http://dbpedia.org/resource/Disease
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Afşin-Elbistan_power_stations
+      and end URI http://dbpedia.org/resource/Disease. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 1888
+      out_degree: 289
+      reversed_neighborhood_size: 22909
+    start_uri_statistics:
+      in_degree: 11
+      out_degree: 34
+      reversed_neighborhood_size: 3654
+    statistics:
+      in_degree: 1899
+      out_degree: 323
+      reversed_neighborhood_size: 26563
+  task_complexity: 3
+- id: Raj Narain_Albinism
+  path:
+  - http://dbpedia.org/resource/Raj_Narain
+  - http://dbpedia.org/resource/India
+  - http://dbpedia.org/resource/Bengal_tiger
+  - http://dbpedia.org/resource/Albinism
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Raj_Narain
+      and end URI http://dbpedia.org/resource/Albinism. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 505
+      out_degree: 272
+      reversed_neighborhood_size: 21159
+    start_uri_statistics:
+      in_degree: 54
+      out_degree: 87
+      reversed_neighborhood_size: 7279
+    statistics:
+      in_degree: 559
+      out_degree: 359
+      reversed_neighborhood_size: 28438
+  task_complexity: 3
+- id: Education in the Philippines during Spanish rule_Novaya Zemlya
+  path:
+  - http://dbpedia.org/resource/Education_in_the_Philippines_during_Spanish_rule
+  - http://dbpedia.org/resource/Animism
+  - http://dbpedia.org/resource/Arctic
+  - http://dbpedia.org/resource/Novaya_Zemlya
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Education_in_the_Philippines_during_Spanish_rule
+      and end URI http://dbpedia.org/resource/Novaya_Zemlya. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 496
+      out_degree: 170
+      reversed_neighborhood_size: 19906
+    start_uri_statistics:
+      in_degree: 13
+      out_degree: 117
+      reversed_neighborhood_size: 14207
+    statistics:
+      in_degree: 509
+      out_degree: 287
+      reversed_neighborhood_size: 34113
+  task_complexity: 3
+- id: Conroy Marsh (Ontario)_Disease
+  path: *id004
+  question: *id005
+  statistics: *id006
+  task_complexity: 3
+- id: Odontosia sieversii_Millennium Development Goals
+  path:
+  - http://dbpedia.org/resource/Odontosia_sieversii
+  - http://dbpedia.org/resource/China
+  - http://dbpedia.org/resource/Ghana
+  - http://dbpedia.org/resource/Millennium_Development_Goals
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Odontosia_sieversii
+      and end URI http://dbpedia.org/resource/Millennium_Development_Goals. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 822
+      out_degree: 158
+      reversed_neighborhood_size: 22073
+    start_uri_statistics:
+      in_degree: 15
+      out_degree: 12
+      reversed_neighborhood_size: 3663
+    statistics:
+      in_degree: 837
+      out_degree: 170
+      reversed_neighborhood_size: 25736
+  task_complexity: 3
+- id: Banner blindness_Minor league
+  path:
+  - http://dbpedia.org/resource/Banner_blindness
+  - http://dbpedia.org/resource/Gamification
+  - http://dbpedia.org/resource/Competition
+  - http://dbpedia.org/resource/Minor_league
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Banner_blindness
+      and end URI http://dbpedia.org/resource/Minor_league. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 764
+      out_degree: 187
+      reversed_neighborhood_size: 20072
+    start_uri_statistics:
+      in_degree: 11
+      out_degree: 33
+      reversed_neighborhood_size: 2410
+    statistics:
+      in_degree: 775
+      out_degree: 220
+      reversed_neighborhood_size: 22482
+  task_complexity: 3
+- id: Bing Crosby_Zack Greinke
+  path:
+  - http://dbpedia.org/resource/Bing_Crosby
+  - http://dbpedia.org/resource/Hollywood_Walk_of_Fame
+  - http://dbpedia.org/resource/Studio_City,_Los_Angeles
+  - http://dbpedia.org/resource/Zack_Greinke
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Bing_Crosby
+      and end URI http://dbpedia.org/resource/Zack_Greinke. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 434
+      out_degree: 240
+      reversed_neighborhood_size: 18610
+    start_uri_statistics:
+      in_degree: 3411
+      out_degree: 440
+      reversed_neighborhood_size: 46308
+    statistics:
+      in_degree: 3845
+      out_degree: 680
+      reversed_neighborhood_size: 64918
+  task_complexity: 3
+- id: Eddie Hunter (baseball)_21st Century Fox
+  path:
+  - http://dbpedia.org/resource/Eddie_Hunter_(baseball)
+  - http://dbpedia.org/resource/Cincinnati_Reds
+  - http://dbpedia.org/resource/Flagship_(broadcasting)
+  - http://dbpedia.org/resource/21st_Century_Fox
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Eddie_Hunter_(baseball)
+      and end URI http://dbpedia.org/resource/21st_Century_Fox. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 454
+      out_degree: 207
+      reversed_neighborhood_size: 19194
+    start_uri_statistics:
+      in_degree: 6
+      out_degree: 12
+      reversed_neighborhood_size: 1183
+    statistics:
+      in_degree: 460
+      out_degree: 219
+      reversed_neighborhood_size: 20377
+  task_complexity: 3
+- id: Luton Major_Blur (band)
+  path:
+  - http://dbpedia.org/resource/Luton_Major
+  - http://dbpedia.org/resource/United_Kingdom
+  - http://dbpedia.org/resource/Adele
+  - http://dbpedia.org/resource/Blur_(band)
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Luton_Major
+      and end URI http://dbpedia.org/resource/Blur_(band). Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 1273
+      out_degree: 174
+      reversed_neighborhood_size: 21122
+    start_uri_statistics:
+      in_degree: 12
+      out_degree: 16
+      reversed_neighborhood_size: 3462
+    statistics:
+      in_degree: 1285
+      out_degree: 190
+      reversed_neighborhood_size: 24584
+  task_complexity: 3
+- id: Qaravultomba_Turkestan
+  path:
+  - http://dbpedia.org/resource/Qaravultomba
+  - http://dbpedia.org/resource/Azerbaijan
+  - http://dbpedia.org/resource/Turkmens
+  - http://dbpedia.org/resource/Turkestan
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Qaravultomba
+      and end URI http://dbpedia.org/resource/Turkestan. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 690
+      out_degree: 111
+      reversed_neighborhood_size: 20724
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 6
+      reversed_neighborhood_size: 964
+    statistics:
+      in_degree: 693
+      out_degree: 117
+      reversed_neighborhood_size: 21688
+  task_complexity: 3
+- id: Dan Lennon_Don Valley Stadium
+  path:
+  - http://dbpedia.org/resource/Dan_Lennon
+  - http://dbpedia.org/resource/Track_and_field
+  - http://dbpedia.org/resource/AAA_Championships
+  - http://dbpedia.org/resource/Don_Valley_Stadium
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Dan_Lennon
+      and end URI http://dbpedia.org/resource/Don_Valley_Stadium. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 317
+      out_degree: 126
+      reversed_neighborhood_size: 19781
+    start_uri_statistics:
+      in_degree: 1
+      out_degree: 20
+      reversed_neighborhood_size: 1552
+    statistics:
+      in_degree: 318
+      out_degree: 146
+      reversed_neighborhood_size: 21333
+  task_complexity: 3
+- id: Agryouli_Albinism
+  path:
+  - http://dbpedia.org/resource/Agryouli
+  - http://dbpedia.org/resource/Time_zone
+  - http://dbpedia.org/resource/Tanzania
+  - http://dbpedia.org/resource/Albinism
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Agryouli
+      and end URI http://dbpedia.org/resource/Albinism. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 505
+      out_degree: 272
+      reversed_neighborhood_size: 21159
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 12
+      reversed_neighborhood_size: 812
+    statistics:
+      in_degree: 508
+      out_degree: 284
+      reversed_neighborhood_size: 21971
+  task_complexity: 3
+- id: John Doby Kennedy_Canadian Shield
+  path:
+  - http://dbpedia.org/resource/John_Doby_Kennedy
+  - http://dbpedia.org/resource/American_Civil_War
+  - http://dbpedia.org/resource/Midwestern_United_States
+  - http://dbpedia.org/resource/Canadian_Shield
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/John_Doby_Kennedy
+      and end URI http://dbpedia.org/resource/Canadian_Shield. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 638
+      out_degree: 180
+      reversed_neighborhood_size: 23144
+    start_uri_statistics:
+      in_degree: 21
+      out_degree: 67
+      reversed_neighborhood_size: 10441
+    statistics:
+      in_degree: 659
+      out_degree: 247
+      reversed_neighborhood_size: 33585
+  task_complexity: 3
+- id: 49_List of Alsatians and Lotharingians
+  path:
+  - http://dbpedia.org/resource/49
+  - http://dbpedia.org/resource/1949
+  - http://dbpedia.org/resource/Arsène_Wenger
+  - http://dbpedia.org/resource/List_of_Alsatians_and_Lotharingians
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/49 and
+      end URI http://dbpedia.org/resource/List_of_Alsatians_and_Lotharingians. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 11
+      out_degree: 167
+      reversed_neighborhood_size: 18995
+    start_uri_statistics:
+      in_degree: 1
+      out_degree: 6
+      reversed_neighborhood_size: 2009
+    statistics:
+      in_degree: 12
+      out_degree: 173
+      reversed_neighborhood_size: 21004
+  task_complexity: 3
+- id: Connie Kelly_Llan (placename)
+  path:
+  - http://dbpedia.org/resource/Connie_Kelly
+  - http://dbpedia.org/resource/Republic_of_Ireland
+  - http://dbpedia.org/resource/Culture_of_Cornwall
+  - http://dbpedia.org/resource/Llan_(placename)
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Connie_Kelly
+      and end URI http://dbpedia.org/resource/Llan_(placename). Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 37
+      out_degree: 767
+      reversed_neighborhood_size: 23532
+    start_uri_statistics:
+      in_degree: 11
+      out_degree: 52
+      reversed_neighborhood_size: 3243
+    statistics:
+      in_degree: 48
+      out_degree: 819
+      reversed_neighborhood_size: 26775
+  task_complexity: 3
+- id: Jam!_April Fools' Day
+  path:
+  - http://dbpedia.org/resource/Jam!
+  - http://dbpedia.org/resource/Cleveland
+  - http://dbpedia.org/resource/Saint_Patrick's_Day
+  - http://dbpedia.org/resource/April_Fools'_Day
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Jam!
+      and end URI http://dbpedia.org/resource/April_Fools''_Day. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 753
+      out_degree: 114
+      reversed_neighborhood_size: 20755
+    start_uri_statistics:
+      in_degree: 200
+      out_degree: 19
+      reversed_neighborhood_size: 3900
+    statistics:
+      in_degree: 953
+      out_degree: 133
+      reversed_neighborhood_size: 24655
+  task_complexity: 3
+- id: Agalakote (Malur)_Albinism
+  path:
+  - http://dbpedia.org/resource/Agalakote_(Malur)
+  - http://dbpedia.org/resource/India
+  - http://dbpedia.org/resource/Bengal_tiger
+  - http://dbpedia.org/resource/Albinism
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Agalakote_(Malur)
+      and end URI http://dbpedia.org/resource/Albinism. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 505
+      out_degree: 272
+      reversed_neighborhood_size: 21159
+    start_uri_statistics:
+      in_degree: 2
+      out_degree: 13
+      reversed_neighborhood_size: 2131
+    statistics:
+      in_degree: 507
+      out_degree: 285
+      reversed_neighborhood_size: 23290
+  task_complexity: 3
+- id: Gujratan_Disease
+  path:
+  - http://dbpedia.org/resource/Gujratan
+  - http://dbpedia.org/resource/India
+  - http://dbpedia.org/resource/Karma
+  - http://dbpedia.org/resource/Disease
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Gujratan
+      and end URI http://dbpedia.org/resource/Disease. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 1888
+      out_degree: 289
+      reversed_neighborhood_size: 22909
+    start_uri_statistics:
+      in_degree: 1
+      out_degree: 23
+      reversed_neighborhood_size: 1451
+    statistics:
+      in_degree: 1889
+      out_degree: 312
+      reversed_neighborhood_size: 24360
+  task_complexity: 3
+- id: Abdoul Karim Seck_Bandy
+  path:
+  - http://dbpedia.org/resource/Abdoul_Karim_Seck
+  - http://dbpedia.org/resource/Judo
+  - http://dbpedia.org/resource/Association_football
+  - http://dbpedia.org/resource/Bandy
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Abdoul_Karim_Seck
+      and end URI http://dbpedia.org/resource/Bandy. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 1438
+      out_degree: 352
+      reversed_neighborhood_size: 28412
+    start_uri_statistics:
+      in_degree: 6
+      out_degree: 11
+      reversed_neighborhood_size: 539
+    statistics:
+      in_degree: 1444
+      out_degree: 363
+      reversed_neighborhood_size: 28951
+  task_complexity: 4
+- id: Islamic views on sin_List of South African slang words
+  path:
+  - http://dbpedia.org/resource/Islamic_views_on_sin
+  - http://dbpedia.org/resource/Glossary_of_Islam
+  - http://dbpedia.org/resource/List_of_English_words_of_Arabic_origin
+  - http://dbpedia.org/resource/List_of_South_African_slang_words
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Islamic_views_on_sin
+      and end URI http://dbpedia.org/resource/List_of_South_African_slang_words. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 19
+      out_degree: 287
+      reversed_neighborhood_size: 26932
+    start_uri_statistics:
+      in_degree: 42
+      out_degree: 61
+      reversed_neighborhood_size: 6062
+    statistics:
+      in_degree: 61
+      out_degree: 348
+      reversed_neighborhood_size: 32994
+  task_complexity: 4
+- id: Saw Diga of Mye-Ne_Cyanobacteria
+  path:
+  - http://dbpedia.org/resource/Saw_Diga_of_Mye-Ne
+  - http://dbpedia.org/resource/Myanmar
+  - http://dbpedia.org/resource/Habitat
+  - http://dbpedia.org/resource/Cyanobacteria
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Saw_Diga_of_Mye-Ne
+      and end URI http://dbpedia.org/resource/Cyanobacteria. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 1318
+      out_degree: 442
+      reversed_neighborhood_size: 25325
+    start_uri_statistics:
+      in_degree: 15
+      out_degree: 30
+      reversed_neighborhood_size: 1162
+    statistics:
+      in_degree: 1333
+      out_degree: 472
+      reversed_neighborhood_size: 26487
+  task_complexity: 4
+- id: Adelaida García Morales_Mount Ararat
+  path:
+  - http://dbpedia.org/resource/Adelaida_García_Morales
+  - http://dbpedia.org/resource/Diacritic
+  - http://dbpedia.org/resource/Arabic_alphabet
+  - http://dbpedia.org/resource/Mount_Ararat
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Adelaida_García_Morales
+      and end URI http://dbpedia.org/resource/Mount_Ararat. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 330
+      out_degree: 339
+      reversed_neighborhood_size: 30585
+    start_uri_statistics:
+      in_degree: 8
+      out_degree: 15
+      reversed_neighborhood_size: 1846
+    statistics:
+      in_degree: 338
+      out_degree: 354
+      reversed_neighborhood_size: 32431
+  task_complexity: 4
+- id: Eve Oja_Gondwana
+  path:
+  - http://dbpedia.org/resource/Eve_Oja
+  - http://dbpedia.org/resource/Mali
+  - http://dbpedia.org/resource/Madagascar
+  - http://dbpedia.org/resource/Gondwana
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Eve_Oja
+      and end URI http://dbpedia.org/resource/Gondwana. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 1301
+      out_degree: 313
+      reversed_neighborhood_size: 25017
+    start_uri_statistics:
+      in_degree: 5
+      out_degree: 18
+      reversed_neighborhood_size: 2151
+    statistics:
+      in_degree: 1306
+      out_degree: 331
+      reversed_neighborhood_size: 27168
+  task_complexity: 4
+- id: List of flag bearers for Slovakia at the Olympics_World Bank
+  path:
+  - http://dbpedia.org/resource/List_of_flag_bearers_for_Slovakia_at_the_Olympics
+  - http://dbpedia.org/resource/Olympic_Games
+  - http://dbpedia.org/resource/Finland
+  - http://dbpedia.org/resource/World_Bank
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/List_of_flag_bearers_for_Slovakia_at_the_Olympics
+      and end URI http://dbpedia.org/resource/World_Bank. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 6924
+      out_degree: 186
+      reversed_neighborhood_size: 29223
+    start_uri_statistics:
+      in_degree: 12
+      out_degree: 30
+      reversed_neighborhood_size: 5992
+    statistics:
+      in_degree: 6936
+      out_degree: 216
+      reversed_neighborhood_size: 35215
+  task_complexity: 4
+- id: Isaías Pimentel_Cyanobacteria
+  path:
+  - http://dbpedia.org/resource/Isaías_Pimentel
+  - http://dbpedia.org/resource/Netherlands
+  - http://dbpedia.org/resource/Microorganism
+  - http://dbpedia.org/resource/Cyanobacteria
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Isaías_Pimentel
+      and end URI http://dbpedia.org/resource/Cyanobacteria. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 1318
+      out_degree: 442
+      reversed_neighborhood_size: 25325
+    start_uri_statistics:
+      in_degree: 40
+      out_degree: 24
+      reversed_neighborhood_size: 3659
+    statistics:
+      in_degree: 1358
+      out_degree: 466
+      reversed_neighborhood_size: 28984
+  task_complexity: 4
+- id: Leo Frigo_Mount Ararat
+  path:
+  - http://dbpedia.org/resource/Leo_Frigo
+  - http://dbpedia.org/resource/Iron_Mountain,_Michigan
+  - http://dbpedia.org/resource/Köppen_climate_classification
+  - http://dbpedia.org/resource/Mount_Ararat
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Leo_Frigo
+      and end URI http://dbpedia.org/resource/Mount_Ararat. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 330
+      out_degree: 339
+      reversed_neighborhood_size: 30585
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 11
+      reversed_neighborhood_size: 588
+    statistics:
+      in_degree: 333
+      out_degree: 350
+      reversed_neighborhood_size: 31173
+  task_complexity: 4
+- id: U Wisara Monument_Mount Ararat
+  path:
+  - http://dbpedia.org/resource/U_Wisara_Monument
+  - http://dbpedia.org/resource/Myanmar
+  - http://dbpedia.org/resource/Hkakabo_Razi
+  - http://dbpedia.org/resource/Mount_Ararat
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/U_Wisara_Monument
+      and end URI http://dbpedia.org/resource/Mount_Ararat. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 330
+      out_degree: 339
+      reversed_neighborhood_size: 30585
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 11
+      reversed_neighborhood_size: 479
+    statistics:
+      in_degree: 333
+      out_degree: 350
+      reversed_neighborhood_size: 31064
+  task_complexity: 4
+- id: Ahkam_List of South African slang words
+  path:
+  - http://dbpedia.org/resource/Ahkam
+  - http://dbpedia.org/resource/Profanity
+  - http://dbpedia.org/resource/List_of_ethnic_slurs
+  - http://dbpedia.org/resource/List_of_South_African_slang_words
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Ahkam
+      and end URI http://dbpedia.org/resource/List_of_South_African_slang_words. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 19
+      out_degree: 287
+      reversed_neighborhood_size: 26932
+    start_uri_statistics:
+      in_degree: 42
+      out_degree: 39
+      reversed_neighborhood_size: 3004
+    statistics:
+      in_degree: 61
+      out_degree: 326
+      reversed_neighborhood_size: 29936
+  task_complexity: 4
+- id: Ronald Clair Roat_Bobby Cannavale
+  path:
+  - http://dbpedia.org/resource/Ronald_Clair_Roat
+  - http://dbpedia.org/resource/Evansville,_Indiana
+  - http://dbpedia.org/resource/Boardwalk_Empire
+  - http://dbpedia.org/resource/Bobby_Cannavale
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Ronald_Clair_Roat
+      and end URI http://dbpedia.org/resource/Bobby_Cannavale. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 355
+      out_degree: 256
+      reversed_neighborhood_size: 28115
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 18
+      reversed_neighborhood_size: 1713
+    statistics:
+      in_degree: 358
+      out_degree: 274
+      reversed_neighborhood_size: 29828
+  task_complexity: 4
+- id: Artyom Shneyerov_World Bank
+  path:
+  - http://dbpedia.org/resource/Artyom_Shneyerov
+  - http://dbpedia.org/resource/Econometrics
+  - http://dbpedia.org/resource/List_of_economists
+  - http://dbpedia.org/resource/World_Bank
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Artyom_Shneyerov
+      and end URI http://dbpedia.org/resource/World_Bank. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 6924
+      out_degree: 186
+      reversed_neighborhood_size: 29223
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 29
+      reversed_neighborhood_size: 3390
+    statistics:
+      in_degree: 6927
+      out_degree: 215
+      reversed_neighborhood_size: 32613
+  task_complexity: 4
+- id: Iddah_List of South African slang words
+  path:
+  - http://dbpedia.org/resource/Iddah
+  - http://dbpedia.org/resource/Dhimmi
+  - http://dbpedia.org/resource/List_of_ethnic_slurs
+  - http://dbpedia.org/resource/List_of_South_African_slang_words
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Iddah
+      and end URI http://dbpedia.org/resource/List_of_South_African_slang_words. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 19
+      out_degree: 287
+      reversed_neighborhood_size: 26932
+    start_uri_statistics:
+      in_degree: 34
+      out_degree: 17
+      reversed_neighborhood_size: 1564
+    statistics:
+      in_degree: 53
+      out_degree: 304
+      reversed_neighborhood_size: 28496
+  task_complexity: 4
+- id: Vic Elford_Anne of Denmark
+  path:
+  - http://dbpedia.org/resource/Vic_Elford
+  - http://dbpedia.org/resource/Germany
+  - http://dbpedia.org/resource/Queen_consort
+  - http://dbpedia.org/resource/Anne_of_Denmark
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Vic_Elford
+      and end URI http://dbpedia.org/resource/Anne_of_Denmark. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 1022
+      out_degree: 352
+      reversed_neighborhood_size: 26299
+    start_uri_statistics:
+      in_degree: 144
+      out_degree: 171
+      reversed_neighborhood_size: 13140
+    statistics:
+      in_degree: 1166
+      out_degree: 523
+      reversed_neighborhood_size: 39439
+  task_complexity: 4
+- id: Life Office Management Association_Nadir of American race relations
+  path:
+  - http://dbpedia.org/resource/Life_Office_Management_Association
+  - http://dbpedia.org/resource/Insurance
+  - http://dbpedia.org/resource/Age_of_Enlightenment
+  - http://dbpedia.org/resource/Nadir_of_American_race_relations
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Life_Office_Management_Association
+      and end URI http://dbpedia.org/resource/Nadir_of_American_race_relations. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 116
+      out_degree: 162
+      reversed_neighborhood_size: 28812
+    start_uri_statistics:
+      in_degree: 9
+      out_degree: 8
+      reversed_neighborhood_size: 306
+    statistics:
+      in_degree: 125
+      out_degree: 170
+      reversed_neighborhood_size: 29118
+  task_complexity: 4
+- id: Shagging (baseball)_Miocene
+  path:
+  - http://dbpedia.org/resource/Shagging_(baseball)
+  - http://dbpedia.org/resource/Pittsburgh_Pirates
+  - http://dbpedia.org/resource/Coal_mining
+  - http://dbpedia.org/resource/Miocene
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Shagging_(baseball)
+      and end URI http://dbpedia.org/resource/Miocene. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 5112
+      out_degree: 249
+      reversed_neighborhood_size: 30640
+    start_uri_statistics:
+      in_degree: 7
+      out_degree: 48
+      reversed_neighborhood_size: 5405
+    statistics:
+      in_degree: 5119
+      out_degree: 297
+      reversed_neighborhood_size: 36045
+  task_complexity: 4
+- id: Steve Shagan_World Bank
+  path:
+  - http://dbpedia.org/resource/Steve_Shagan
+  - http://dbpedia.org/resource/Arthur_Laurents
+  - http://dbpedia.org/resource/Bloomberg_L.P.
+  - http://dbpedia.org/resource/World_Bank
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Steve_Shagan
+      and end URI http://dbpedia.org/resource/World_Bank. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 6924
+      out_degree: 186
+      reversed_neighborhood_size: 29223
+    start_uri_statistics:
+      in_degree: 47
+      out_degree: 40
+      reversed_neighborhood_size: 7381
+    statistics:
+      in_degree: 6971
+      out_degree: 226
+      reversed_neighborhood_size: 36604
+  task_complexity: 4
+- id: Xyleutes xuna_Mexico at the 2020 Summer Olympics
+  path:
+  - http://dbpedia.org/resource/Xyleutes_xuna
+  - http://dbpedia.org/resource/Mexico
+  - http://dbpedia.org/resource/Sport_in_Mexico
+  - http://dbpedia.org/resource/Mexico_at_the_2020_Summer_Olympics
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Xyleutes_xuna
+      and end URI http://dbpedia.org/resource/Mexico_at_the_2020_Summer_Olympics.
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 19
+      out_degree: 321
+      reversed_neighborhood_size: 24924
+    start_uri_statistics:
+      in_degree: 2
+      out_degree: 6
+      reversed_neighborhood_size: 1256
+    statistics:
+      in_degree: 21
+      out_degree: 327
+      reversed_neighborhood_size: 26180
+  task_complexity: 4
+- id: Bodzechów_International scientific vocabulary
+  path:
+  - http://dbpedia.org/resource/Bodzechów
+  - http://dbpedia.org/resource/ASCII
+  - http://dbpedia.org/resource/Grapheme
+  - http://dbpedia.org/resource/International_scientific_vocabulary
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Bodzechów
+      and end URI http://dbpedia.org/resource/International_scientific_vocabulary.
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 50
+      out_degree: 144
+      reversed_neighborhood_size: 27520
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 14
+      reversed_neighborhood_size: 1183
+    statistics:
+      in_degree: 54
+      out_degree: 158
+      reversed_neighborhood_size: 28703
+  task_complexity: 4
+- id: Education in the Philippines during Spanish rule_Mount Ararat
+  path:
+  - http://dbpedia.org/resource/Education_in_the_Philippines_during_Spanish_rule
+  - http://dbpedia.org/resource/Animism
+  - http://dbpedia.org/resource/Hetanism
+  - http://dbpedia.org/resource/Mount_Ararat
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Education_in_the_Philippines_during_Spanish_rule
+      and end URI http://dbpedia.org/resource/Mount_Ararat. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 330
+      out_degree: 339
+      reversed_neighborhood_size: 30585
+    start_uri_statistics:
+      in_degree: 13
+      out_degree: 117
+      reversed_neighborhood_size: 14207
+    statistics:
+      in_degree: 343
+      out_degree: 456
+      reversed_neighborhood_size: 44792
+  task_complexity: 4

@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Celebrity Treasure Island 2021_Continental drift
+  path:
+  - http://dbpedia.org/resource/Celebrity_Treasure_Island_2021
+  - http://dbpedia.org/resource/Southern_right_whale
+  - http://dbpedia.org/resource/Great_Barrier_Reef
+  - http://dbpedia.org/resource/Continental_drift
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Celebrity_Treasure_Island_2021
+      and end URI http://dbpedia.org/resource/Continental_drift. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 326
+      out_degree: 115
+      reversed_neighborhood_size: 14220
+    start_uri_statistics:
+      in_degree: 15
+      out_degree: 56
+      reversed_neighborhood_size: 3919
+    statistics:
+      in_degree: 341
+      out_degree: 171
+      reversed_neighborhood_size: 18139
+  task_complexity: 2
+- id: Ronald Clair Roat_Charles M. Schwab
+  path:
+  - http://dbpedia.org/resource/Ronald_Clair_Roat
+  - http://dbpedia.org/resource/Indiana
+  - http://dbpedia.org/resource/Pennsylvania
+  - http://dbpedia.org/resource/Charles_M._Schwab
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Ronald_Clair_Roat
+      and end URI http://dbpedia.org/resource/Charles_M._Schwab. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 115
+      out_degree: 99
+      reversed_neighborhood_size: 13713
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 18
+      reversed_neighborhood_size: 1713
+    statistics:
+      in_degree: 118
+      out_degree: 117
+      reversed_neighborhood_size: 15426
+  task_complexity: 2

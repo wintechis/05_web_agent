@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Conroy Marsh (Ontario)_Disease
+  path:
+  - https://en.wikipedia.com/wiki/Conroy_Marsh_(Ontario)
+  - https://en.wikipedia.com/wiki/Bald_eagle
+  - https://en.wikipedia.com/wiki/Prairie_dog
+  - https://en.wikipedia.com/wiki/Disease
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Conroy_Marsh_(Ontario)
+      and end URI https://en.wikipedia.com/wiki/Disease. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 1888
+      out_degree: 289
+      reversed_neighborhood_size: 22909
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 19
+      reversed_neighborhood_size: 1483
+    statistics:
+      in_degree: 1891
+      out_degree: 308
+      reversed_neighborhood_size: 24392
+  task_complexity: 3
+- id: Eddie Hunter (baseball)_Minor league
+  path:
+  - https://en.wikipedia.com/wiki/Eddie_Hunter_(baseball)
+  - https://en.wikipedia.com/wiki/At_bat
+  - https://en.wikipedia.com/wiki/Injured_list
+  - https://en.wikipedia.com/wiki/Minor_league
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Eddie_Hunter_(baseball)
+      and end URI https://en.wikipedia.com/wiki/Minor_league. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 764
+      out_degree: 187
+      reversed_neighborhood_size: 20072
+    start_uri_statistics:
+      in_degree: 6
+      out_degree: 12
+      reversed_neighborhood_size: 1183
+    statistics:
+      in_degree: 770
+      out_degree: 199
+      reversed_neighborhood_size: 21255
+  task_complexity: 3

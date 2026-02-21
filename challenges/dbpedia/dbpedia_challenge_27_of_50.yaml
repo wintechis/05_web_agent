@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Theology of Martin Luther_St. Vitus Cathedral
+  path:
+  - http://dbpedia.org/resource/Theology_of_Martin_Luther
+  - http://dbpedia.org/resource/Martin_Luther_(1953_film)
+  - http://dbpedia.org/resource/Relic
+  - http://dbpedia.org/resource/St._Vitus_Cathedral
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Theology_of_Martin_Luther
+      and end URI http://dbpedia.org/resource/St._Vitus_Cathedral. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 217
+      out_degree: 128
+      reversed_neighborhood_size: 15480
+    start_uri_statistics:
+      in_degree: 27
+      out_degree: 63
+      reversed_neighborhood_size: 5021
+    statistics:
+      in_degree: 244
+      out_degree: 191
+      reversed_neighborhood_size: 20501
+  task_complexity: 2
+- id: Iain Hamilton (journalist)_Northern Lights (Pullman novel)
+  path:
+  - http://dbpedia.org/resource/Iain_Hamilton_(journalist)
+  - http://dbpedia.org/resource/Paisley_Grammar_School
+  - http://dbpedia.org/resource/Christ_Church,_Oxford
+  - http://dbpedia.org/resource/Northern_Lights_(Pullman_novel)
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Iain_Hamilton_(journalist)
+      and end URI http://dbpedia.org/resource/Northern_Lights_(Pullman_novel). Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 68
+      out_degree: 132
+      reversed_neighborhood_size: 13782
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 15
+      reversed_neighborhood_size: 1733
+    statistics:
+      in_degree: 72
+      out_degree: 147
+      reversed_neighborhood_size: 15515
+  task_complexity: 2

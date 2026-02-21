@@ -55,25 +55,27 @@ To complete the task, you have the following tools available:
   {% endfor %}
   - Output: {{ tool.output_type }}
 {% endfor %}
-IMPORTANT: Always explain your reasoning step-by-step in plain text BEFORE calling any tool.
-IF you do not provide the reasoning step-by-step, the task will not be completed.
+
+Always explain your reasoning step-by-step in plain text BEFORE calling any tool.
+IF you do not provide the reasoning step-by-step, the task will not be considered completed.
 Every tool call must include a `_rationale` string argument that briefly explains why this tool was chosen.
 
 Use the tools to complete the task.
 
 """
 
-FINAL_ANSWER_PROMPT = """
-When you are done, call the final_answer tool with two arguments:
-1. urls: A list of URLs that answer the user's question. Use an empty list [] if you have no URLs.
-2. task_state: One of:
-   - completed: You found a full answer (the requested path or information).
-   - partial: You found some relevant URLs but the answer is incomplete.
-   - failed: You could not find the answer or encountered errors.
-   - unclear: The question is ambiguous or success criteria are unclear.
+# FINAL_ANSWER_PROMPT = """
+# When you are done, call the final_answer tool with two arguments:
+# 1. urls: A list of URLs that answer the user's question. Use an empty list [] if you have no URLs.
+# 2. task_state: One of:
+#    - completed: You found a full answer (the requested path or information).
+#    - partial: You found some relevant URLs but the answer is incomplete.
+#    - failed: You could not find the answer or encountered errors.
+#    - unclear: The question is ambiguous or success criteria are unclear.
 
-Always provide both urls and task_state.
-"""
+# Always provide both urls and task_state.
+# """
+FINAL_ANSWER_PROMPT = ""
 
 FINAL_ANSWER_USER_PROMPT = "The user asked: {{ task }}"
 

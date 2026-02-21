@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: 2018 Korea National League Championship_ISO 3166-2:CN
+  path:
+  - http://dbpedia.org/resource/2018_Korea_National_League_Championship
+  - http://dbpedia.org/resource/Gangwon_Province,_South_Korea
+  - http://dbpedia.org/resource/Guangzhou
+  - http://dbpedia.org/resource/ISO_3166-2:CN
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/2018_Korea_National_League_Championship
+      and end URI http://dbpedia.org/resource/ISO_3166-2:CN. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 375
+      out_degree: 78
+      reversed_neighborhood_size: 17121
+    start_uri_statistics:
+      in_degree: 6
+      out_degree: 18
+      reversed_neighborhood_size: 1459
+    statistics:
+      in_degree: 381
+      out_degree: 96
+      reversed_neighborhood_size: 18580
+  task_complexity: 2
+- id: Jeffrey Segal_Whig history
+  path:
+  - http://dbpedia.org/resource/Jeffrey_Segal
+  - http://dbpedia.org/resource/London
+  - http://dbpedia.org/resource/English_Reformation
+  - http://dbpedia.org/resource/Whig_history
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Jeffrey_Segal
+      and end URI http://dbpedia.org/resource/Whig_history. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 133
+      out_degree: 112
+      reversed_neighborhood_size: 13425
+    start_uri_statistics:
+      in_degree: 30
+      out_degree: 37
+      reversed_neighborhood_size: 4794
+    statistics:
+      in_degree: 163
+      out_degree: 149
+      reversed_neighborhood_size: 18219
+  task_complexity: 2

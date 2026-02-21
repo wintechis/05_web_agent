@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Wall Street Warriors_Dot-com bubble
+  path:
+  - https://en.wikipedia.com/wiki/Wall_Street_Warriors
+  - https://en.wikipedia.com/wiki/Documentary_film
+  - https://en.wikipedia.com/wiki/Cyberpunk
+  - https://en.wikipedia.com/wiki/Dot-com_bubble
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Wall_Street_Warriors
+      and end URI https://en.wikipedia.com/wiki/Dot-com_bubble. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 1106
+      out_degree: 150
+      reversed_neighborhood_size: 14406
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 13
+      reversed_neighborhood_size: 454
+    statistics:
+      in_degree: 1109
+      out_degree: 163
+      reversed_neighborhood_size: 14860
+  task_complexity: 2
+- id: Ingar Knudtsen_Hybrid word
+  path:
+  - https://en.wikipedia.com/wiki/Ingar_Knudtsen
+  - https://en.wikipedia.com/wiki/Norway
+  - https://en.wikipedia.com/wiki/Latin
+  - https://en.wikipedia.com/wiki/Hybrid_word
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Ingar_Knudtsen
+      and end URI https://en.wikipedia.com/wiki/Hybrid_word. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 85
+      out_degree: 117
+      reversed_neighborhood_size: 14293
+    start_uri_statistics:
+      in_degree: 6
+      out_degree: 10
+      reversed_neighborhood_size: 1981
+    statistics:
+      in_degree: 91
+      out_degree: 127
+      reversed_neighborhood_size: 16274
+  task_complexity: 2

@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Shock therapy (economics)_Vernik
+  path:
+  - https://en.wikipedia.com/wiki/Shock_therapy_(economics)
+  - https://en.wikipedia.com/wiki/Poland
+  - https://en.wikipedia.com/wiki/Albania
+  - https://en.wikipedia.com/wiki/Vernik
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Shock_therapy_(economics)
+      and end URI https://en.wikipedia.com/wiki/Vernik. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 6
+      out_degree: 34
+      reversed_neighborhood_size: 6258
+    start_uri_statistics:
+      in_degree: 97
+      out_degree: 99
+      reversed_neighborhood_size: 12096
+    statistics:
+      in_degree: 103
+      out_degree: 133
+      reversed_neighborhood_size: 18354
+  task_complexity: 1
+- id: Tedorigawa Dam_Part of speech
+  path:
+  - https://en.wikipedia.com/wiki/Tedorigawa_Dam
+  - https://en.wikipedia.com/wiki/Japan
+  - https://en.wikipedia.com/wiki/Endonym_and_exonym
+  - https://en.wikipedia.com/wiki/Part_of_speech
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Tedorigawa_Dam
+      and end URI https://en.wikipedia.com/wiki/Part_of_speech. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 191
+      out_degree: 117
+      reversed_neighborhood_size: 7363
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 6
+      reversed_neighborhood_size: 1310
+    statistics:
+      in_degree: 195
+      out_degree: 123
+      reversed_neighborhood_size: 8673
+  task_complexity: 1

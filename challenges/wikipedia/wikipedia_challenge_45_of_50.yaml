@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: U Wisara Monument_Mount Ararat
+  path:
+  - https://en.wikipedia.com/wiki/U_Wisara_Monument
+  - https://en.wikipedia.com/wiki/Myanmar
+  - https://en.wikipedia.com/wiki/Hkakabo_Razi
+  - https://en.wikipedia.com/wiki/Mount_Ararat
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/U_Wisara_Monument
+      and end URI https://en.wikipedia.com/wiki/Mount_Ararat. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 330
+      out_degree: 339
+      reversed_neighborhood_size: 30585
+    start_uri_statistics:
+      in_degree: 3
+      out_degree: 11
+      reversed_neighborhood_size: 479
+    statistics:
+      in_degree: 333
+      out_degree: 350
+      reversed_neighborhood_size: 31064
+  task_complexity: 4
+- id: Ahkam_List of South African slang words
+  path:
+  - https://en.wikipedia.com/wiki/Ahkam
+  - https://en.wikipedia.com/wiki/Profanity
+  - https://en.wikipedia.com/wiki/List_of_ethnic_slurs
+  - https://en.wikipedia.com/wiki/List_of_South_African_slang_words
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Ahkam
+      and end URI https://en.wikipedia.com/wiki/List_of_South_African_slang_words.
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 19
+      out_degree: 287
+      reversed_neighborhood_size: 26932
+    start_uri_statistics:
+      in_degree: 42
+      out_degree: 39
+      reversed_neighborhood_size: 3004
+    statistics:
+      in_degree: 61
+      out_degree: 326
+      reversed_neighborhood_size: 29936
+  task_complexity: 4

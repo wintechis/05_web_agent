@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Jane Katjavivi_Andrew Huxley
+  path:
+  - https://en.wikipedia.com/wiki/Jane_Katjavivi
+  - https://en.wikipedia.com/wiki/England
+  - https://en.wikipedia.com/wiki/Francis_Crick
+  - https://en.wikipedia.com/wiki/Andrew_Huxley
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Jane_Katjavivi
+      and end URI https://en.wikipedia.com/wiki/Andrew_Huxley. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 134
+      out_degree: 121
+      reversed_neighborhood_size: 13395
+    start_uri_statistics:
+      in_degree: 0
+      out_degree: 25
+      reversed_neighborhood_size: 4735
+    statistics:
+      in_degree: 134
+      out_degree: 146
+      reversed_neighborhood_size: 18130
+  task_complexity: 2
+- id: Dartmouth College's Rassias Center for World Languages and Cultures_Kangchenjunga
+  path:
+  - https://en.wikipedia.com/wiki/Dartmouth_College's_Rassias_Center_for_World_Languages_and_Cultures
+  - https://en.wikipedia.com/wiki/Hanover,_New_Hampshire
+  - https://en.wikipedia.com/wiki/Köppen_climate_classification
+  - https://en.wikipedia.com/wiki/Kangchenjunga
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Dartmouth_College''s_Rassias_Center_for_World_Languages_and_Cultures
+      and end URI https://en.wikipedia.com/wiki/Kangchenjunga. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 320
+      out_degree: 212
+      reversed_neighborhood_size: 17914
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 14
+      reversed_neighborhood_size: 4376
+    statistics:
+      in_degree: 324
+      out_degree: 226
+      reversed_neighborhood_size: 22290
+  task_complexity: 2

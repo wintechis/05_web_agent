@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Anchialus_Hybrid word
+  path:
+  - http://dbpedia.org/resource/Anchialus
+  - http://dbpedia.org/resource/Odyssey
+  - http://dbpedia.org/resource/Translation
+  - http://dbpedia.org/resource/Hybrid_word
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Anchialus
+      and end URI http://dbpedia.org/resource/Hybrid_word. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 85
+      out_degree: 117
+      reversed_neighborhood_size: 14293
+    start_uri_statistics:
+      in_degree: 12
+      out_degree: 18
+      reversed_neighborhood_size: 2382
+    statistics:
+      in_degree: 97
+      out_degree: 135
+      reversed_neighborhood_size: 16675
+  task_complexity: 2
+- id: Gymnopternus vockerothi_Community
+  path:
+  - http://dbpedia.org/resource/Gymnopternus_vockerothi
+  - http://dbpedia.org/resource/Taxonomy_(biology)
+  - http://dbpedia.org/resource/Cluster_analysis
+  - http://dbpedia.org/resource/Community
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Gymnopternus_vockerothi
+      and end URI http://dbpedia.org/resource/Community. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 1339
+      out_degree: 128
+      reversed_neighborhood_size: 15659
+    start_uri_statistics:
+      in_degree: 1
+      out_degree: 6
+      reversed_neighborhood_size: 179
+    statistics:
+      in_degree: 1340
+      out_degree: 134
+      reversed_neighborhood_size: 15838
+  task_complexity: 2

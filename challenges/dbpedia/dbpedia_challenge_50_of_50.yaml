@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Bodzechów_International scientific vocabulary
+  path:
+  - http://dbpedia.org/resource/Bodzechów
+  - http://dbpedia.org/resource/ASCII
+  - http://dbpedia.org/resource/Grapheme
+  - http://dbpedia.org/resource/International_scientific_vocabulary
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Bodzechów
+      and end URI http://dbpedia.org/resource/International_scientific_vocabulary.
+      Return all URIs of the path, including the start and end URIs, in the following
+      format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 50
+      out_degree: 144
+      reversed_neighborhood_size: 27520
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 14
+      reversed_neighborhood_size: 1183
+    statistics:
+      in_degree: 54
+      out_degree: 158
+      reversed_neighborhood_size: 28703
+  task_complexity: 4
+- id: Education in the Philippines during Spanish rule_Mount Ararat
+  path:
+  - http://dbpedia.org/resource/Education_in_the_Philippines_during_Spanish_rule
+  - http://dbpedia.org/resource/Animism
+  - http://dbpedia.org/resource/Hetanism
+  - http://dbpedia.org/resource/Mount_Ararat
+  question:
+    en: 'Task: Find a path between the start URI http://dbpedia.org/resource/Education_in_the_Philippines_during_Spanish_rule
+      and end URI http://dbpedia.org/resource/Mount_Ararat. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 330
+      out_degree: 339
+      reversed_neighborhood_size: 30585
+    start_uri_statistics:
+      in_degree: 13
+      out_degree: 117
+      reversed_neighborhood_size: 14207
+    statistics:
+      in_degree: 343
+      out_degree: 456
+      reversed_neighborhood_size: 44792
+  task_complexity: 4

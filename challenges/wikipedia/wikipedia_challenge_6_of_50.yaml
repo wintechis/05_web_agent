@@ -1,0 +1,54 @@
+dataset:
+  id: ''
+  prefix: dbpedia-challenge
+questions:
+- id: Kenji Kaido_Silent protagonist
+  path:
+  - https://en.wikipedia.com/wiki/Kenji_Kaido
+  - https://en.wikipedia.com/wiki/Video_game
+  - https://en.wikipedia.com/wiki/Player_character
+  - https://en.wikipedia.com/wiki/Silent_protagonist
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Kenji_Kaido
+      and end URI https://en.wikipedia.com/wiki/Silent_protagonist. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 95
+      out_degree: 34
+      reversed_neighborhood_size: 3965
+    start_uri_statistics:
+      in_degree: 6
+      out_degree: 20
+      reversed_neighborhood_size: 1108
+    statistics:
+      in_degree: 101
+      out_degree: 54
+      reversed_neighborhood_size: 5073
+  task_complexity: 0
+- id: Golden Horse Award for Best Supporting Actress_Samba effect
+  path:
+  - https://en.wikipedia.com/wiki/Golden_Horse_Award_for_Best_Supporting_Actress
+  - https://en.wikipedia.com/wiki/Taiwan
+  - https://en.wikipedia.com/wiki/Hyperinflation
+  - https://en.wikipedia.com/wiki/Samba_effect
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.com/wiki/Golden_Horse_Award_for_Best_Supporting_Actress
+      and end URI https://en.wikipedia.com/wiki/Samba_effect. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 9
+      out_degree: 16
+      reversed_neighborhood_size: 2813
+    start_uri_statistics:
+      in_degree: 108
+      out_degree: 392
+      reversed_neighborhood_size: 7188
+    statistics:
+      in_degree: 117
+      out_degree: 408
+      reversed_neighborhood_size: 10001
+  task_complexity: 0
