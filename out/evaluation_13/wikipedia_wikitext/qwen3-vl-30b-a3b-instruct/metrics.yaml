@@ -1,0 +1,86 @@
+metrics:
+  csr: 0.7
+  tsr: 0.0
+  po: 0.0
+  ppm: 0.0
+tasks:
+- id: OFK Grbalj_Luca Banti
+  predicted_length: 0
+  valid: true
+  success: []
+  start_uri: https://en.wikipedia.org/wiki/OFK_Grbalj
+  target_uri: https://en.wikipedia.org/wiki/Luca_Banti
+  prefix_ratio: 0.0
+  prefix_valid_edges: []
+- id: Luca Banti_OFK Grbalj
+  predicted_length: 3
+  valid: false
+  success: false
+  start_uri: https://en.wikipedia.org/wiki/Luca_Banti
+  target_uri: https://en.wikipedia.org/wiki/OFK_Grbalj
+  prefix_ratio: 0.0
+  prefix_valid_edges: []
+- id: OFK Grbalj_Alexandre Boucaut
+  predicted_length: 2
+  valid: false
+  success: false
+  start_uri: https://en.wikipedia.org/wiki/OFK_Grbalj
+  target_uri: https://en.wikipedia.org/wiki/Alexandre_Boucaut
+  prefix_ratio: 0.0
+  prefix_valid_edges: []
+- id: Alexandre Boucaut_OFK Grbalj
+  predicted_length: 2
+  valid: false
+  success: false
+  start_uri: https://en.wikipedia.org/wiki/Alexandre_Boucaut
+  target_uri: https://en.wikipedia.org/wiki/OFK_Grbalj
+  prefix_ratio: 0.0
+  prefix_valid_edges: []
+- id: Andraemon_A Treatise of Civil Power
+  predicted_length: 2
+  valid: false
+  success: false
+  start_uri: https://en.wikipedia.org/wiki/Andraemon
+  target_uri: https://en.wikipedia.org/wiki/A_Treatise_of_Civil_Power
+  prefix_ratio: 0.0
+  prefix_valid_edges: []
+- id: Andraemon_Apology for Smectymnuus
+  predicted_length: 2
+  valid: false
+  success: false
+  start_uri: https://en.wikipedia.org/wiki/Andraemon
+  target_uri: https://en.wikipedia.org/wiki/Apology_for_Smectymnuus
+  prefix_ratio: 0.0
+  prefix_valid_edges: []
+- id: Apology for Smectymnuus_Andraemon
+  predicted_length: 2
+  valid: false
+  success: false
+  start_uri: https://en.wikipedia.org/wiki/Apology_for_Smectymnuus
+  target_uri: https://en.wikipedia.org/wiki/Andraemon
+  prefix_ratio: 0.0
+  prefix_valid_edges: []
+- id: "K\xE4larne_Debbie Kilroy"
+  predicted_length: 0
+  valid: true
+  success: []
+  start_uri: "https://en.wikipedia.org/wiki/K\xE4larne"
+  target_uri: https://en.wikipedia.org/wiki/Debbie_Kilroy
+  prefix_ratio: 0.0
+  prefix_valid_edges: []
+- id: "K\xE4larne_List of monarchs of Germany"
+  predicted_length: 3
+  valid: true
+  success: false
+  start_uri: "https://en.wikipedia.org/wiki/K\xE4larne"
+  target_uri: https://en.wikipedia.org/wiki/List_of_monarchs_of_Germany
+  prefix_ratio: 0.0
+  prefix_valid_edges: []
+- id: Reorganization plan of United States Army_USS Marl
+  predicted_length: 0
+  valid: true
+  success: []
+  start_uri: https://en.wikipedia.org/wiki/Reorganization_plan_of_United_States_Army
+  target_uri: https://en.wikipedia.org/wiki/USS_Marl
+  prefix_ratio: 0.0
+  prefix_valid_edges: []

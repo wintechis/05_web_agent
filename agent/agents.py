@@ -13,15 +13,9 @@ from smolagents import (
 from smolagents.agents import populate_template
 from smolagents.models import parse_json_if_needed
 
-from agent.prompt import WEB_AGENT_PROMPT_TEMPLATES
+from agent.prompt import get_web_agent_prompt_templates
 from agent.tools import GETTool, POSTRdfTool, PUTTool, StructuredFinalAnswerTool
 from agent.clients import get_openai_inference_model
-
-RATIONALE_KEY = "_rationale"
-RATIONALE_INPUT_SPEC = {
-    "type": "string",
-    "description": "Describe your reasoning step-by-step in plain text BEFORE calling any tool.",
-}
 
 load_dotenv()
 
@@ -36,27 +30,8 @@ load_dotenv()
 # to interact with the web.
 
 
-def _with_rationale_inputs(
-    inputs: dict[str, dict[str, str | type | bool]],
-) -> dict[str, dict[str, str | type | bool]]:
-    if RATIONALE_KEY in inputs:
-        return dict(inputs)
-    # Ensure _rationale is the first element in the returned dict
-    return {RATIONALE_KEY: dict(RATIONALE_INPUT_SPEC), **inputs}
-
-
 class RationaleToolCallingAgent(ToolCallingAgent):
-    """ToolCallingAgent that requires a rationale for every tool call."""
-
-    def _setup_tools(self, tools, add_base_tools):
-        super()._setup_tools(tools, add_base_tools)
-        for tool in self.tools.values():
-            tool.inputs = _with_rationale_inputs(tool.inputs)
-
-    def _setup_managed_agents(self, managed_agents=None) -> None:
-        super()._setup_managed_agents(managed_agents)
-        for agent in self.managed_agents.values():
-            agent.inputs = _with_rationale_inputs(agent.inputs)
+    """ToolCallingAgent with custom error handling and forced final-answer on max-steps."""
 
     def execute_tool_call(self, tool_name: str, arguments: dict[str, str] | str) -> Any:
         available_tools = {**self.tools, **self.managed_agents}
@@ -80,17 +55,6 @@ class RationaleToolCallingAgent(ToolCallingAgent):
                 f"{type(exc).__name__}: {exc}"
             )
             raise AgentToolExecutionError(error_msg, self.logger) from exc
-
-        rationale = None
-        if isinstance(arguments, dict):
-            arguments = dict(arguments)
-            rationale = arguments.pop(RATIONALE_KEY, None)
-
-        if rationale:
-            self.logger.log(
-                f"Rationale: {rationale}",
-                level=LogLevel.DEBUG,
-            )
 
         try:
             if isinstance(arguments, dict):
@@ -159,12 +123,12 @@ class RationaleToolCallingAgent(ToolCallingAgent):
 
 
 def get_vanilla_web_agent() -> RationaleToolCallingAgent:
-    """Return the web agent using the current OPENAI_MODEL_ID (for Hydra/model switching)."""
+    """Return the web agent using the current OPENAI_MODEL_ID and SCRATCHPAD_MODE (for Hydra/model switching)."""
     return RationaleToolCallingAgent(
         model=get_openai_inference_model(),
         tools=[GETTool(), POSTRdfTool(), PUTTool(), StructuredFinalAnswerTool()],
         verbosity_level=LogLevel.INFO,
-        prompt_templates=WEB_AGENT_PROMPT_TEMPLATES,
+        prompt_templates=get_web_agent_prompt_templates(),
     )
 
 

@@ -1,0 +1,321 @@
+benchmark:
+- id: OFK Grbalj_Luca Banti
+  question: &id001
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/OFK_Grbalj
+      and end URI https://en.wikipedia.org/wiki/Luca_Banti. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: OFK Grbalj_Luca Banti
+    path:
+    - https://en.wikipedia.org/wiki/OFK_Grbalj
+    - https://en.wikipedia.org/wiki/Montenegro_national_under-17_football_team
+    - https://en.wikipedia.org/wiki/2005_UEFA_European_Under-17_Championship
+    - https://en.wikipedia.org/wiki/Luca_Banti
+    question: *id001
+    statistics:
+      end_uri_statistics:
+        in_degree: 291
+        out_degree: 13
+        reversed_neighborhood_size: 4537
+      start_uri_statistics:
+        in_degree: 207
+        out_degree: 93
+        reversed_neighborhood_size: 5027
+      statistics:
+        in_degree: 498
+        out_degree: 106
+        reversed_neighborhood_size: 9564
+  model: qwen3-vl-30b-a3b-instruct
+  predicted_answer: []
+  trace_file: /home/dorene/Documents/repositories/05_web_agent/out/evaluation_11/wikipedia_wikitext/qwen3-vl-30b-a3b-instruct/traces/7faafa36a6bd4a666cdd9be12c1bbeb6.jsonl
+  task_state: failed
+- id: Luca Banti_OFK Grbalj
+  question: &id002
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Luca_Banti
+      and end URI https://en.wikipedia.org/wiki/OFK_Grbalj. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: Luca Banti_OFK Grbalj
+    path:
+    - https://en.wikipedia.org/wiki/Luca_Banti
+    - https://en.wikipedia.org/wiki/Association_football
+    - https://en.wikipedia.org/wiki/2017_in_association_football
+    - https://en.wikipedia.org/wiki/OFK_Grbalj
+    question: *id002
+    statistics:
+      end_uri_statistics:
+        in_degree: 207
+        out_degree: 93
+        reversed_neighborhood_size: 5027
+      start_uri_statistics:
+        in_degree: 291
+        out_degree: 13
+        reversed_neighborhood_size: 4537
+      statistics:
+        in_degree: 498
+        out_degree: 106
+        reversed_neighborhood_size: 9564
+  model: qwen3-vl-30b-a3b-instruct
+  predicted_answer: 'Error: Error while generating output:
+
+    Error code: 400 - {''error'': {''message'': "This model''s maximum context length
+    is 262144 tokens. However, your request has 299109 input tokens. Please reduce
+    the length of the input messages. (parameter=input_tokens, value=299109) None",
+    ''type'': ''BadRequestError'', ''param'': None, ''code'': 400}}'
+  trace_file: /home/dorene/Documents/repositories/05_web_agent/out/evaluation_11/wikipedia_wikitext/qwen3-vl-30b-a3b-instruct/traces/2a09ba73d674595ba2c96b92b0f3cd1d.jsonl
+  task_state: failed
+- id: OFK Grbalj_Alexandre Boucaut
+  question: &id003
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/OFK_Grbalj
+      and end URI https://en.wikipedia.org/wiki/Alexandre_Boucaut. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: OFK Grbalj_Alexandre Boucaut
+    path:
+    - https://en.wikipedia.org/wiki/OFK_Grbalj
+    - https://en.wikipedia.org/wiki/Montenegro_national_under-19_football_team
+    - https://en.wikipedia.org/wiki/Wales_national_under-19_football_team
+    - https://en.wikipedia.org/wiki/Alexandre_Boucaut
+    question: *id003
+    statistics:
+      end_uri_statistics:
+        in_degree: 104
+        out_degree: 13
+        reversed_neighborhood_size: 1220
+      start_uri_statistics:
+        in_degree: 207
+        out_degree: 93
+        reversed_neighborhood_size: 5027
+      statistics:
+        in_degree: 311
+        out_degree: 106
+        reversed_neighborhood_size: 6247
+  model: qwen3-vl-30b-a3b-instruct
+  predicted_answer: []
+  trace_file: /home/dorene/Documents/repositories/05_web_agent/out/evaluation_11/wikipedia_wikitext/qwen3-vl-30b-a3b-instruct/traces/292ba32ceb50080c5351f4e376dd31d0.jsonl
+  task_state: failed
+- id: Alexandre Boucaut_OFK Grbalj
+  question: &id004
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Alexandre_Boucaut
+      and end URI https://en.wikipedia.org/wiki/OFK_Grbalj. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: Alexandre Boucaut_OFK Grbalj
+    path:
+    - https://en.wikipedia.org/wiki/Alexandre_Boucaut
+    - https://en.wikipedia.org/wiki/Belgian_Pro_League
+    - https://en.wikipedia.org/wiki/Montenegrin_First_League
+    - https://en.wikipedia.org/wiki/OFK_Grbalj
+    question: *id004
+    statistics:
+      end_uri_statistics:
+        in_degree: 207
+        out_degree: 93
+        reversed_neighborhood_size: 5027
+      start_uri_statistics:
+        in_degree: 104
+        out_degree: 13
+        reversed_neighborhood_size: 1220
+      statistics:
+        in_degree: 311
+        out_degree: 106
+        reversed_neighborhood_size: 6247
+  model: qwen3-vl-30b-a3b-instruct
+  predicted_answer: []
+  trace_file: /home/dorene/Documents/repositories/05_web_agent/out/evaluation_11/wikipedia_wikitext/qwen3-vl-30b-a3b-instruct/traces/5f5fc40245bf205e476e329094607aa7.jsonl
+  task_state: failed
+- id: Andraemon_A Treatise of Civil Power
+  question: &id005
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Andraemon
+      and end URI https://en.wikipedia.org/wiki/A_Treatise_of_Civil_Power. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: Andraemon_A Treatise of Civil Power
+    path:
+    - https://en.wikipedia.org/wiki/Andraemon
+    - https://en.wikipedia.org/wiki/Homer
+    - https://en.wikipedia.org/wiki/John_Milton
+    - https://en.wikipedia.org/wiki/A_Treatise_of_Civil_Power
+    question: *id005
+    statistics:
+      end_uri_statistics:
+        in_degree: 2
+        out_degree: 8
+        reversed_neighborhood_size: 959
+      start_uri_statistics:
+        in_degree: 21
+        out_degree: 44
+        reversed_neighborhood_size: 4328
+      statistics:
+        in_degree: 23
+        out_degree: 52
+        reversed_neighborhood_size: 5287
+  model: qwen3-vl-30b-a3b-instruct
+  predicted_answer: []
+  trace_file: /home/dorene/Documents/repositories/05_web_agent/out/evaluation_11/wikipedia_wikitext/qwen3-vl-30b-a3b-instruct/traces/a8f76e8c6fd931d41b6bb7e9148966b9.jsonl
+  task_state: failed
+- id: Andraemon_Apology for Smectymnuus
+  question: &id006
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Andraemon
+      and end URI https://en.wikipedia.org/wiki/Apology_for_Smectymnuus. Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: Andraemon_Apology for Smectymnuus
+    path:
+    - https://en.wikipedia.org/wiki/Andraemon
+    - https://en.wikipedia.org/wiki/Homer
+    - https://en.wikipedia.org/wiki/John_Milton
+    - https://en.wikipedia.org/wiki/Apology_for_Smectymnuus
+    question: *id006
+    statistics:
+      end_uri_statistics:
+        in_degree: 4
+        out_degree: 9
+        reversed_neighborhood_size: 1773
+      start_uri_statistics:
+        in_degree: 21
+        out_degree: 44
+        reversed_neighborhood_size: 4328
+      statistics:
+        in_degree: 25
+        out_degree: 53
+        reversed_neighborhood_size: 6101
+  model: qwen3-vl-30b-a3b-instruct
+  predicted_answer: []
+  trace_file: /home/dorene/Documents/repositories/05_web_agent/out/evaluation_11/wikipedia_wikitext/qwen3-vl-30b-a3b-instruct/traces/ee99a5e74e4b6840e58da0d95b5fe741.jsonl
+  task_state: failed
+- id: Apology for Smectymnuus_Andraemon
+  question: &id007
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Apology_for_Smectymnuus
+      and end URI https://en.wikipedia.org/wiki/Andraemon. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: Apology for Smectymnuus_Andraemon
+    path:
+    - https://en.wikipedia.org/wiki/Apology_for_Smectymnuus
+    - https://en.wikipedia.org/wiki/Aristotle
+    - https://en.wikipedia.org/wiki/Ionia
+    - https://en.wikipedia.org/wiki/Andraemon
+    question: *id007
+    statistics:
+      end_uri_statistics:
+        in_degree: 21
+        out_degree: 44
+        reversed_neighborhood_size: 4328
+      start_uri_statistics:
+        in_degree: 4
+        out_degree: 9
+        reversed_neighborhood_size: 1773
+      statistics:
+        in_degree: 25
+        out_degree: 53
+        reversed_neighborhood_size: 6101
+  model: qwen3-vl-30b-a3b-instruct
+  predicted_answer: []
+  trace_file: /home/dorene/Documents/repositories/05_web_agent/out/evaluation_11/wikipedia_wikitext/qwen3-vl-30b-a3b-instruct/traces/676a504f35448da6ff7b574774c70fb1.jsonl
+  task_state: failed
+- id: "K\xE4larne_Debbie Kilroy"
+  question: &id008
+    en: "Task: Find a path between the start URI https://en.wikipedia.org/wiki/K\xE4\
+      larne and end URI https://en.wikipedia.org/wiki/Debbie_Kilroy. Return all URIs\
+      \ of the path, including the start and end URIs, in the following format: <answer>\
+      \ <uri1> <uri2> <uri3> <uri4> </answer>"
+  gold_standard_answer:
+    id: "K\xE4larne_Debbie Kilroy"
+    path:
+    - "https://en.wikipedia.org/wiki/K\xE4larne"
+    - https://en.wikipedia.org/wiki/Country
+    - https://en.wikipedia.org/wiki/Melissa_Lucashenko
+    - https://en.wikipedia.org/wiki/Debbie_Kilroy
+    question: *id008
+    statistics:
+      end_uri_statistics:
+        in_degree: 9
+        out_degree: 66
+        reversed_neighborhood_size: 7621
+      start_uri_statistics:
+        in_degree: 10
+        out_degree: 13
+        reversed_neighborhood_size: 2144
+      statistics:
+        in_degree: 19
+        out_degree: 79
+        reversed_neighborhood_size: 9765
+  model: qwen3-vl-30b-a3b-instruct
+  predicted_answer: []
+  trace_file: /home/dorene/Documents/repositories/05_web_agent/out/evaluation_11/wikipedia_wikitext/qwen3-vl-30b-a3b-instruct/traces/0a68769efc4acbfbc78c6f3bf21c0a6f.jsonl
+  task_state: failed
+- id: "K\xE4larne_List of monarchs of Germany"
+  question: &id009
+    en: "Task: Find a path between the start URI https://en.wikipedia.org/wiki/K\xE4\
+      larne and end URI https://en.wikipedia.org/wiki/List_of_monarchs_of_Germany.\
+      \ Return all URIs of the path, including the start and end URIs, in the following\
+      \ format: <answer> <uri1> <uri2> <uri3> <uri4> </answer>"
+  gold_standard_answer:
+    id: "K\xE4larne_List of monarchs of Germany"
+    path:
+    - "https://en.wikipedia.org/wiki/K\xE4larne"
+    - https://en.wikipedia.org/wiki/Daylight_saving_time
+    - https://en.wikipedia.org/wiki/German_Empire
+    - https://en.wikipedia.org/wiki/List_of_monarchs_of_Germany
+    question: *id009
+    statistics:
+      end_uri_statistics:
+        in_degree: 0
+        out_degree: 0
+        reversed_neighborhood_size: 1
+      start_uri_statistics:
+        in_degree: 10
+        out_degree: 13
+        reversed_neighborhood_size: 2144
+      statistics:
+        in_degree: 10
+        out_degree: 13
+        reversed_neighborhood_size: 2145
+  model: qwen3-vl-30b-a3b-instruct
+  predicted_answer: []
+  trace_file: /home/dorene/Documents/repositories/05_web_agent/out/evaluation_11/wikipedia_wikitext/qwen3-vl-30b-a3b-instruct/traces/8d92b574c051ac2959614fb35a13c4f0.jsonl
+  task_state: failed
+- id: Reorganization plan of United States Army_USS Marl
+  question: &id010
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Reorganization_plan_of_United_States_Army
+      and end URI https://en.wikipedia.org/wiki/USS_Marl. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  gold_standard_answer:
+    id: Reorganization plan of United States Army_USS Marl
+    path:
+    - https://en.wikipedia.org/wiki/Reorganization_plan_of_United_States_Army
+    - https://en.wikipedia.org/wiki/Littoral_combat_ship
+    - https://en.wikipedia.org/wiki/List_of_United_States_Navy_ships:_M
+    - https://en.wikipedia.org/wiki/USS_Marl
+    question: *id010
+    statistics:
+      end_uri_statistics:
+        in_degree: 0
+        out_degree: 1
+        reversed_neighborhood_size: 27
+      start_uri_statistics:
+        in_degree: 60
+        out_degree: 504
+        reversed_neighborhood_size: 40795
+      statistics:
+        in_degree: 60
+        out_degree: 505
+        reversed_neighborhood_size: 40822
+  model: qwen3-vl-30b-a3b-instruct
+  predicted_answer: 'Error: Error while generating output:
+
+    Error code: 400 - {''error'': {''message'': "This model''s maximum context length
+    is 262144 tokens. However, your request has 280038 input tokens. Please reduce
+    the length of the input messages. (parameter=input_tokens, value=280038) None",
+    ''type'': ''BadRequestError'', ''param'': None, ''code'': 400}}'
+  trace_file: /home/dorene/Documents/repositories/05_web_agent/out/evaluation_11/wikipedia_wikitext/qwen3-vl-30b-a3b-instruct/traces/6f1aea73eca9a2a0b74b9bec451305c4.jsonl
+  task_state: failed

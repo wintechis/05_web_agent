@@ -108,7 +108,7 @@ class MetricsCalculator:
                 shortest = len(gold) if gold else 0
                 predicted_len = len(predicted)
                 if shortest > 0:
-                    po_sum += predicted_len / shortest
+                    po_sum += shortest / predicted_len
 
         csr = claimed / total
         tsr = success / total

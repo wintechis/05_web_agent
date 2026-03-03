@@ -30,16 +30,16 @@ def _normalize_answer(answer: Any, include_task_state_in_text: bool = False) -> 
     return str(answer)
 
 
-def _extract_answer_and_task_state(answer: Any) -> tuple[str, str | None]:
-    """Extract predicted answer string (complete response) and optional task_state from agent result."""
-    # Include task_state in predicted_answer so the stored string is the full agent response
-    predicted = _normalize_answer(answer, include_task_state_in_text=True)
+def _extract_answer_and_task_state(answer: Any) -> tuple[Any, str | None]:
+    """Extract predicted answer (URL list or string) and optional task_state from agent result."""
     task_state = None
     if isinstance(answer, dict) and "task_state" in answer:
         task_state = answer.get("task_state")
         if task_state is not None:
             task_state = str(task_state).strip() or None
-    return predicted, task_state
+    if isinstance(answer, dict) and "urls" in answer:
+        return answer.get("urls") or [], task_state
+    return _normalize_answer(answer), task_state
 
 
 def _model_id() -> str:
@@ -78,6 +78,7 @@ def _print_inference_config_overview(
     pruning = os.getenv("PRUNING_METHOD", "unpruned").strip().lower()
     ctx_comp = os.getenv("CONTEXT_COMPRESSION", "").strip().lower() in ("true", "1", "yes")
     max_tokens = os.getenv("MAX_TOKEN_FOR_MODEL", "120000").strip()
+    scratchpad = os.getenv("SCRATCHPAD_MODE", "").strip().lower() in ("true", "1", "yes")
     temperature = os.getenv("OPENAI_TEMPERATURE", "").strip() or "(not set)"
     top_p = os.getenv("OPENAI_TOP_P", "").strip() or "(not set)"
     seed = os.getenv("OPENAI_SEED", "").strip() or "(not set)"
@@ -104,6 +105,8 @@ def _print_inference_config_overview(
         "Context compression:",
         f"  CONTEXT_COMPRESSION  = {ctx_comp}",
         f"  MAX_TOKEN_FOR_MODEL  = {max_tokens}",
+        "Agent prompt:",
+        f"  SCRATCHPAD_MODE      = {scratchpad}",
         "============================================================",
     ]
     print("\n".join(lines))

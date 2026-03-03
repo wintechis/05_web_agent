@@ -55,6 +55,7 @@ _EXPERIMENT_ENV_MAP = {
     "pruning_method": ("PRUNING_METHOD", str),
     "context_compression": ("CONTEXT_COMPRESSION", lambda v: "true" if v else "false"),
     "max_token_for_model": ("MAX_TOKEN_FOR_MODEL", str),
+    "scratchpad_mode": ("SCRATCHPAD_MODE", lambda v: "true" if v else "false"),
 }
 
 
