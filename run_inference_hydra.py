@@ -56,6 +56,8 @@ _EXPERIMENT_ENV_MAP = {
     "context_compression": ("CONTEXT_COMPRESSION", lambda v: "true" if v else "false"),
     "max_token_for_model": ("MAX_TOKEN_FOR_MODEL", str),
     "scratchpad_mode": ("SCRATCHPAD_MODE", lambda v: "true" if v else "false"),
+    "thinking_mode": ("THINKING_MODE", lambda v: "true" if v else "false"),
+    "plan_mode":     ("PLAN_MODE",     lambda v: "true" if v else "false"),
 }
 
 

@@ -14,10 +14,15 @@ load_dotenv()
 # OpenAI Inference Model
 #################################################################
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-OPENAI_BASE_URL = os.getenv("OPENAI_BASE_URL")
+def _normalized_base_url() -> str | None:
+    raw = os.getenv("OPENAI_BASE_URL")
+    return raw.strip().rstrip("/") if raw else None
+
+
+OPENAI_BASE_URL = _normalized_base_url()
 
 # Used when OPENAI_MODEL_ID is not set (e.g. .env fallback)
-DEFAULT_MODEL_ID = os.getenv("OPENAI_MODEL_ID")
+DEFAULT_MODEL_ID = (os.getenv("OPENAI_MODEL_ID") or "").strip() or None
 
 
 def _model_kwargs_from_env() -> dict:
@@ -41,12 +46,26 @@ def _model_kwargs_from_env() -> dict:
     return kwargs
 
 
+_LLM_TIMEOUT_ENV = "OPENAI_TIMEOUT"
+_LLM_TIMEOUT_DEFAULT = 120.0  # seconds; prevents indefinite hangs on slow API responses
+
+
+
+def _llm_timeout() -> float:
+    raw = os.getenv(_LLM_TIMEOUT_ENV, "").strip()
+    try:
+        return float(raw) if raw else _LLM_TIMEOUT_DEFAULT
+    except ValueError:
+        return _LLM_TIMEOUT_DEFAULT
+
+
 def _build_openai_model(model_id: str) -> Any:
     """Build OpenAIModel (with optional ContextCompression wrapper) for the given model_id."""
     base = OpenAIModel(
-        model_id=model_id,
+        model_id = model_id.strip(),
         api_key=OPENAI_API_KEY,
         api_base=OPENAI_BASE_URL,
+        client_kwargs={"timeout": _llm_timeout()},
         **_model_kwargs_from_env(),
     )
     return (
@@ -61,7 +80,7 @@ _openai_model_cache: dict[str, Any] = {}
 
 def get_openai_inference_model() -> Any:
     """Return the inference model for the current OPENAI_MODEL_ID (cached per model_id)."""
-    model_id = os.getenv("OPENAI_MODEL_ID") or DEFAULT_MODEL_ID or ""
+    model_id = (os.getenv("OPENAI_MODEL_ID") or DEFAULT_MODEL_ID or "").strip()
     if not model_id:
         raise ValueError("OPENAI_MODEL_ID is not set; set it in .env or via Hydra model config.")
     if model_id not in _openai_model_cache:

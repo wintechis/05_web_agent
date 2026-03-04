@@ -161,10 +161,36 @@ def get_dbpedia_resource_uri(uri: str) -> str:
     return f"http://dbpedia.org/resource/{uri.split('/')[-1]}"
 
 
+# Regex patterns for normalizing DBpedia URL variants to canonical resource URIs.
+# Matches: http(s)://dbpedia.org/data/<local>[.<ext>]
+_DBPEDIA_DATA_RE = re.compile(r"https?://dbpedia\.org/data/([^.]+)(\.\w+)?$")
+# Matches: http(s)://dbpedia.org/page/<local>
+_DBPEDIA_PAGE_RE = re.compile(r"https?://dbpedia\.org/page/(.+)$")
+
+
+def _normalize_dbpedia_uri(uri: str) -> str:
+    """Normalize DBpedia URL variants back to canonical resource URI.
+
+    Handles:
+      http://dbpedia.org/data/X.ttl    → http://dbpedia.org/resource/X
+      http://dbpedia.org/data/X.json   → http://dbpedia.org/resource/X
+      https://dbpedia.org/page/X       → http://dbpedia.org/resource/X
+    Canonical http://dbpedia.org/resource/X is returned unchanged.
+    """
+    m = _DBPEDIA_DATA_RE.match(uri)
+    if m:
+        return f"http://dbpedia.org/resource/{m.group(1)}"
+    m = _DBPEDIA_PAGE_RE.match(uri)
+    if m:
+        return f"http://dbpedia.org/resource/{m.group(1)}"
+    return uri
+
+
 def modify_uri(uri: str) -> str:
     """Return the URL to fetch based on REPRESENTATION_FORMAT and RDF_REPRESENTATION."""
     fmt = get_representation_format()
     if fmt == "rdf":
+        uri = _normalize_dbpedia_uri(uri)
         rdf_repr = get_rdf_representation_env()
         local = uri.split("/")[-1]
         if rdf_repr == "html":

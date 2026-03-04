@@ -79,6 +79,8 @@ def _print_inference_config_overview(
     ctx_comp = os.getenv("CONTEXT_COMPRESSION", "").strip().lower() in ("true", "1", "yes")
     max_tokens = os.getenv("MAX_TOKEN_FOR_MODEL", "120000").strip()
     scratchpad = os.getenv("SCRATCHPAD_MODE", "").strip().lower() in ("true", "1", "yes")
+    thinking = os.getenv("THINKING_MODE", "").strip().lower() in ("true", "1", "yes")
+    plan     = os.getenv("PLAN_MODE",     "").strip().lower() in ("true", "1", "yes")
     temperature = os.getenv("OPENAI_TEMPERATURE", "").strip() or "(not set)"
     top_p = os.getenv("OPENAI_TOP_P", "").strip() or "(not set)"
     seed = os.getenv("OPENAI_SEED", "").strip() or "(not set)"
@@ -107,6 +109,9 @@ def _print_inference_config_overview(
         f"  MAX_TOKEN_FOR_MODEL  = {max_tokens}",
         "Agent prompt:",
         f"  SCRATCHPAD_MODE      = {scratchpad}",
+        "Agent reasoning:",
+        f"  THINKING_MODE        = {thinking}",
+        f"  PLAN_MODE            = {plan}",
         "============================================================",
     ]
     print("\n".join(lines))
