@@ -1,4 +1,5 @@
 import json
+import os
 import time
 import markdownify
 import httpx
@@ -390,5 +391,21 @@ class StructuredFinalAnswerTool(Tool):
             urls = [str(urls)] if urls else []
         else:
             urls = [str(u) for u in urls]
-        state = (task_state if task_state in TASK_STATE_VALUES else "unspecified") or "unspecified"
+        state = (task_state if task_state in TASK_STATE_VALUES else "unclear") or "unclear"
+
+        if os.getenv("PATH_VALIDATION", "").strip().lower() in ("true", "1", "yes") and len(urls) >= 2:
+            from benchmark.domain.edge_validator import EdgeValidator
+            valid_edges = EdgeValidator().validate_edges(urls)
+            invalid = [
+                f"{urls[i]} -> {urls[i + 1]}"
+                for i, ok in enumerate(valid_edges)
+                if not ok
+            ]
+            if invalid:
+                raise ValueError(
+                    f"Path validation failed: the following edges are not valid links: "
+                    + "; ".join(invalid)
+                    + ". Please correct your path and try again."
+                )
+
         return {"urls": urls, "task_state": state}

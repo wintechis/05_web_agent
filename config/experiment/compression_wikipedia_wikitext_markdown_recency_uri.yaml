@@ -1,0 +1,11 @@
+# wikipedia | wikitext | markdown | compression | recency_uri strategy
+dataset: wikipedia
+modify_context: true
+context: modified
+representation_format: wikitext
+rdf_representation: html
+pruning_method: unpruned
+context_compression: true
+max_token_for_model: "120000"
+compression_strategy: recency_uri
+compression_keep_full_last_n: "2"

@@ -1,5 +1,6 @@
 """Parse paths from YAML dict formats (gold standard, predicted)."""
 
+import urllib.parse
 from typing import Any
 
 from benchmark.constants import (
@@ -9,6 +10,16 @@ from benchmark.constants import (
     PREDICTED_KEY,
     QUESTION_KEY,
 )
+
+
+def normalize_uri(uri: str) -> str:
+    """Normalize a URI by decoding percent-encoded characters to Unicode.
+
+    Ensures that semantically identical URIs compare equal regardless of
+    whether non-ASCII characters are percent-encoded or represented as
+    Unicode, e.g. ``K%C3%A4larne`` and ``Kälarne`` both become ``Kälarne``.
+    """
+    return urllib.parse.unquote(uri)
 
 
 def strip_answer_wrapper(text: str) -> str:
@@ -21,14 +32,17 @@ def extract_uris(text: str) -> list[str]:
     if not text:
         return []
     cleaned = strip_answer_wrapper(text)
-    return [match.group(0).rstrip(".,)") for match in ANSWER_URI_PATTERN.finditer(cleaned)]
+    return [
+        normalize_uri(match.group(0).rstrip(".,)"))
+        for match in ANSWER_URI_PATTERN.finditer(cleaned)
+    ]
 
 
 def parse_predicted(entry: dict[str, Any]) -> list[str]:
     """Parse predicted answer from entry. Handles list or string format."""
     predicted = entry.get(PREDICTED_KEY, "")
     if isinstance(predicted, list):
-        return [str(item) for item in predicted if str(item).strip()]
+        return [normalize_uri(str(item)) for item in predicted if str(item).strip()]
     return extract_uris(str(predicted))
 
 
@@ -38,11 +52,11 @@ def parse_gold_path(entry: dict[str, Any]) -> list[str]:
     if isinstance(gold, dict):
         gold = gold.get(PATH_KEY, "")
     if isinstance(gold, list):
-        return [str(item) for item in gold if str(item).strip()]
+        return [normalize_uri(str(item)) for item in gold if str(item).strip()]
     if isinstance(gold, str):
         lines = [line.strip() for line in gold.splitlines() if line.strip()]
         if lines:
-            return lines
+            return [normalize_uri(line) for line in lines]
     return []
 
 

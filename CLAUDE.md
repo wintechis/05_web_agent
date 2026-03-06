@@ -9,6 +9,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ```bash
 # Install dependencies
 uv sync
+# For local inference (INFERENCE_BACKEND=transformers): install optional group
+uv sync --group transformers
 
 # Run HTTP server
 python -m agent.server
@@ -78,7 +80,9 @@ Copy `.env.example` to `.env`. Key variables:
 
 | Variable | Purpose |
 |----------|---------|
-| `OPENAI_MODEL_ID`, `OPENAI_API_KEY`, `OPENAI_BASE_URL` | LLM backend (OpenAI-compatible) |
+| `INFERENCE_BACKEND` | `openai` (default) or `transformers` for local Hugging Face inference |
+| `OPENAI_MODEL_ID`, `OPENAI_API_KEY`, `OPENAI_BASE_URL` | LLM backend (OpenAI-compatible when backend is openai) |
+| `HF_DEVICE`, `HF_MAX_NEW_TOKENS`, `TRUST_REMOTE_CODE`, `HF_TORCH_DTYPE` | Optional; used when `INFERENCE_BACKEND=transformers` (model id = `OPENAI_MODEL_ID` as Hugging Face id) |
 | `MODIFY_CONTEXT` | Enable resource transformation in GET tool |
 | `REPRESENTATION_FORMAT` | `wikitext` or `rdf` |
 | `RDF_REPRESENTATION` | `html`, `json-ld`, `turtle`, `turtle-compact`, `turtle-terser` |
@@ -87,3 +91,5 @@ Copy `.env.example` to `.env`. Key variables:
 | `MAX_TOKEN_FOR_MODEL` | Token budget (default 120000) |
 | `MAX_AGENT_STEPS` | Cap agent steps per question |
 | `OTEL_TRACE_DIR` | Output directory for JSONL trace files |
+
+**Local inference (transformers):** Set `INFERENCE_BACKEND=transformers` and `OPENAI_MODEL_ID` to a Hugging Face model id (e.g. `Qwen/Qwen2.5-7B-Instruct`). Install optional deps: `uv sync --group transformers`.

@@ -1,0 +1,10 @@
+# dbpedia | rdf | turtle | compression | path_validation
+dataset: dbpedia
+modify_context: true
+context: modified
+representation_format: rdf
+rdf_representation: turtle
+pruning_method: unpruned
+context_compression: true
+max_token_for_model: "120000"
+path_validation: true

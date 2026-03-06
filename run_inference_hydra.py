@@ -56,8 +56,11 @@ _EXPERIMENT_ENV_MAP = {
     "context_compression": ("CONTEXT_COMPRESSION", lambda v: "true" if v else "false"),
     "max_token_for_model": ("MAX_TOKEN_FOR_MODEL", str),
     "scratchpad_mode": ("SCRATCHPAD_MODE", lambda v: "true" if v else "false"),
-    "thinking_mode": ("THINKING_MODE", lambda v: "true" if v else "false"),
-    "plan_mode":     ("PLAN_MODE",     lambda v: "true" if v else "false"),
+    "thinking_mode":   ("THINKING_MODE",   lambda v: "true" if v else "false"),
+    "plan_mode":       ("PLAN_MODE",       lambda v: "true" if v else "false"),
+    "path_validation": ("PATH_VALIDATION", lambda v: "true" if v else "false"),
+    "compression_strategy":         ("COMPRESSION_STRATEGY",       str),
+    "compression_keep_full_last_n": ("COMPRESSION_KEEP_FULL_LAST_N", str),
 }
 
 
@@ -69,8 +72,12 @@ def _get_experiment_config(cfg: DictConfig) -> DictConfig:
     return cfg
 
 
-def _apply_experiment_to_env(experiment_cfg: DictConfig) -> None:
-    """Set os.environ from experiment-related config keys so existing code keeps working."""
+def _apply_experiment_to_env(experiment_cfg: DictConfig, overrides_cfg: DictConfig | None = None) -> None:
+    """Set os.environ from experiment config keys, then apply non-null top-level CLI overrides.
+
+    Priority (highest last, so it wins): .env < experiment YAML < CLI override.
+    A null value in overrides_cfg means "not set by user — keep experiment config value".
+    """
     for key, (env_key, coerce) in _EXPERIMENT_ENV_MAP.items():
         if key not in experiment_cfg or OmegaConf.is_missing(experiment_cfg, key):
             continue
@@ -78,6 +85,15 @@ def _apply_experiment_to_env(experiment_cfg: DictConfig) -> None:
         if val is None:
             continue
         os.environ[env_key] = coerce(val)
+
+    if overrides_cfg is not None:
+        for key, (env_key, coerce) in _EXPERIMENT_ENV_MAP.items():
+            if key not in overrides_cfg or OmegaConf.is_missing(overrides_cfg, key):
+                continue
+            val = OmegaConf.select(overrides_cfg, key)
+            if val is None:  # null = not explicitly set, skip
+                continue
+            os.environ[env_key] = coerce(val)
 
 
 def _model_slug(model_id: str) -> str:
@@ -155,7 +171,7 @@ def _resolve_paths(cfg: DictConfig) -> tuple[Path, Path]:
 @hydra.main(version_base=None, config_path="config", config_name="config")
 def main(cfg: DictConfig) -> None:
     experiment_cfg = _get_experiment_config(cfg)
-    _apply_experiment_to_env(experiment_cfg)
+    _apply_experiment_to_env(experiment_cfg, overrides_cfg=cfg)
     _apply_model_to_env(cfg)
 
     input_dir, output_dir = _resolve_paths(cfg)

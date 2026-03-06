@@ -1,0 +1,244 @@
+dataset:
+  id: ''
+  prefix: wikipedia-challenge
+questions:
+- id: OFK Grbalj_Luca Banti
+  path:
+  - https://en.wikipedia.org/wiki/OFK_Grbalj
+  - https://en.wikipedia.org/wiki/Montenegro_national_under-17_football_team
+  - https://en.wikipedia.org/wiki/2005_UEFA_European_Under-17_Championship
+  - https://en.wikipedia.org/wiki/Luca_Banti
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/OFK_Grbalj
+      and end URI https://en.wikipedia.org/wiki/Luca_Banti. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 291
+      out_degree: 13
+      reversed_neighborhood_size: 4537
+    start_uri_statistics:
+      in_degree: 207
+      out_degree: 93
+      reversed_neighborhood_size: 5027
+    statistics:
+      in_degree: 498
+      out_degree: 106
+      reversed_neighborhood_size: 9564
+- id: Luca Banti_OFK Grbalj
+  path:
+  - https://en.wikipedia.org/wiki/Luca_Banti
+  - https://en.wikipedia.org/wiki/Association_football
+  - https://en.wikipedia.org/wiki/2017_in_association_football
+  - https://en.wikipedia.org/wiki/OFK_Grbalj
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Luca_Banti
+      and end URI https://en.wikipedia.org/wiki/OFK_Grbalj. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 207
+      out_degree: 93
+      reversed_neighborhood_size: 5027
+    start_uri_statistics:
+      in_degree: 291
+      out_degree: 13
+      reversed_neighborhood_size: 4537
+    statistics:
+      in_degree: 498
+      out_degree: 106
+      reversed_neighborhood_size: 9564
+- id: OFK Grbalj_Alexandre Boucaut
+  path:
+  - https://en.wikipedia.org/wiki/OFK_Grbalj
+  - https://en.wikipedia.org/wiki/Montenegro_national_under-19_football_team
+  - https://en.wikipedia.org/wiki/Wales_national_under-19_football_team
+  - https://en.wikipedia.org/wiki/Alexandre_Boucaut
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/OFK_Grbalj
+      and end URI https://en.wikipedia.org/wiki/Alexandre_Boucaut. Return all URIs
+      of the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 104
+      out_degree: 13
+      reversed_neighborhood_size: 1220
+    start_uri_statistics:
+      in_degree: 207
+      out_degree: 93
+      reversed_neighborhood_size: 5027
+    statistics:
+      in_degree: 311
+      out_degree: 106
+      reversed_neighborhood_size: 6247
+- id: Alexandre Boucaut_OFK Grbalj
+  path:
+  - https://en.wikipedia.org/wiki/Alexandre_Boucaut
+  - https://en.wikipedia.org/wiki/Belgian_Pro_League
+  - https://en.wikipedia.org/wiki/Montenegrin_First_League
+  - https://en.wikipedia.org/wiki/OFK_Grbalj
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Alexandre_Boucaut
+      and end URI https://en.wikipedia.org/wiki/OFK_Grbalj. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 207
+      out_degree: 93
+      reversed_neighborhood_size: 5027
+    start_uri_statistics:
+      in_degree: 104
+      out_degree: 13
+      reversed_neighborhood_size: 1220
+    statistics:
+      in_degree: 311
+      out_degree: 106
+      reversed_neighborhood_size: 6247
+- id: Andraemon_A Treatise of Civil Power
+  path:
+  - https://en.wikipedia.org/wiki/Andraemon
+  - https://en.wikipedia.org/wiki/Homer
+  - https://en.wikipedia.org/wiki/John_Milton
+  - https://en.wikipedia.org/wiki/A_Treatise_of_Civil_Power
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Andraemon
+      and end URI https://en.wikipedia.org/wiki/A_Treatise_of_Civil_Power. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 2
+      out_degree: 8
+      reversed_neighborhood_size: 959
+    start_uri_statistics:
+      in_degree: 21
+      out_degree: 44
+      reversed_neighborhood_size: 4328
+    statistics:
+      in_degree: 23
+      out_degree: 52
+      reversed_neighborhood_size: 5287
+- id: Andraemon_Apology for Smectymnuus
+  path:
+  - https://en.wikipedia.org/wiki/Andraemon
+  - https://en.wikipedia.org/wiki/Homer
+  - https://en.wikipedia.org/wiki/John_Milton
+  - https://en.wikipedia.org/wiki/Apology_for_Smectymnuus
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Andraemon
+      and end URI https://en.wikipedia.org/wiki/Apology_for_Smectymnuus. Return all
+      URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 4
+      out_degree: 9
+      reversed_neighborhood_size: 1773
+    start_uri_statistics:
+      in_degree: 21
+      out_degree: 44
+      reversed_neighborhood_size: 4328
+    statistics:
+      in_degree: 25
+      out_degree: 53
+      reversed_neighborhood_size: 6101
+- id: Apology for Smectymnuus_Andraemon
+  path:
+  - https://en.wikipedia.org/wiki/Apology_for_Smectymnuus
+  - https://en.wikipedia.org/wiki/Aristotle
+  - https://en.wikipedia.org/wiki/Ionia
+  - https://en.wikipedia.org/wiki/Andraemon
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Apology_for_Smectymnuus
+      and end URI https://en.wikipedia.org/wiki/Andraemon. Return all URIs of the
+      path, including the start and end URIs, in the following format: <answer> <uri1>
+      <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 21
+      out_degree: 44
+      reversed_neighborhood_size: 4328
+    start_uri_statistics:
+      in_degree: 4
+      out_degree: 9
+      reversed_neighborhood_size: 1773
+    statistics:
+      in_degree: 25
+      out_degree: 53
+      reversed_neighborhood_size: 6101
+- id: Kälarne_Debbie Kilroy
+  path:
+  - https://en.wikipedia.org/wiki/Kälarne
+  - https://en.wikipedia.org/wiki/Country
+  - https://en.wikipedia.org/wiki/Melissa_Lucashenko
+  - https://en.wikipedia.org/wiki/Debbie_Kilroy
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Kälarne
+      and end URI https://en.wikipedia.org/wiki/Debbie_Kilroy. Return all URIs of
+      the path, including the start and end URIs, in the following format: <answer>
+      <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 9
+      out_degree: 66
+      reversed_neighborhood_size: 7621
+    start_uri_statistics:
+      in_degree: 10
+      out_degree: 13
+      reversed_neighborhood_size: 2144
+    statistics:
+      in_degree: 19
+      out_degree: 79
+      reversed_neighborhood_size: 9765
+- id: Kälarne_List of monarchs of Germany
+  path:
+  - https://en.wikipedia.org/wiki/Kälarne
+  - https://en.wikipedia.org/wiki/Daylight_saving_time
+  - https://en.wikipedia.org/wiki/German_Empire
+  - https://en.wikipedia.org/wiki/List_of_monarchs_of_Germany
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Kälarne
+      and end URI https://en.wikipedia.org/wiki/List_of_monarchs_of_Germany. Return
+      all URIs of the path, including the start and end URIs, in the following format:
+      <answer> <uri1> <uri2> <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 0
+      out_degree: 0
+      reversed_neighborhood_size: 1
+    start_uri_statistics:
+      in_degree: 10
+      out_degree: 13
+      reversed_neighborhood_size: 2144
+    statistics:
+      in_degree: 10
+      out_degree: 13
+      reversed_neighborhood_size: 2145
+- id: Reorganization plan of United States Army_USS Marl
+  path:
+  - https://en.wikipedia.org/wiki/Reorganization_plan_of_United_States_Army
+  - https://en.wikipedia.org/wiki/Littoral_combat_ship
+  - https://en.wikipedia.org/wiki/List_of_United_States_Navy_ships:_M
+  - https://en.wikipedia.org/wiki/USS_Marl
+  question:
+    en: 'Task: Find a path between the start URI https://en.wikipedia.org/wiki/Reorganization_plan_of_United_States_Army
+      and end URI https://en.wikipedia.org/wiki/USS_Marl. Return all URIs of the path,
+      including the start and end URIs, in the following format: <answer> <uri1> <uri2>
+      <uri3> <uri4> </answer>'
+  statistics:
+    end_uri_statistics:
+      in_degree: 0
+      out_degree: 1
+      reversed_neighborhood_size: 27
+    start_uri_statistics:
+      in_degree: 60
+      out_degree: 504
+      reversed_neighborhood_size: 40795
+    statistics:
+      in_degree: 60
+      out_degree: 505
+      reversed_neighborhood_size: 40822

@@ -78,9 +78,12 @@ def _print_inference_config_overview(
     pruning = os.getenv("PRUNING_METHOD", "unpruned").strip().lower()
     ctx_comp = os.getenv("CONTEXT_COMPRESSION", "").strip().lower() in ("true", "1", "yes")
     max_tokens = os.getenv("MAX_TOKEN_FOR_MODEL", "120000").strip()
+    comp_strategy = os.getenv("COMPRESSION_STRATEGY", "truncate").strip()
+    comp_keep_n = os.getenv("COMPRESSION_KEEP_FULL_LAST_N", "2").strip()
     scratchpad = os.getenv("SCRATCHPAD_MODE", "").strip().lower() in ("true", "1", "yes")
-    thinking = os.getenv("THINKING_MODE", "").strip().lower() in ("true", "1", "yes")
-    plan     = os.getenv("PLAN_MODE",     "").strip().lower() in ("true", "1", "yes")
+    thinking        = os.getenv("THINKING_MODE",   "").strip().lower() in ("true", "1", "yes")
+    plan            = os.getenv("PLAN_MODE",       "").strip().lower() in ("true", "1", "yes")
+    path_validation = os.getenv("PATH_VALIDATION", "").strip().lower() in ("true", "1", "yes")
     temperature = os.getenv("OPENAI_TEMPERATURE", "").strip() or "(not set)"
     top_p = os.getenv("OPENAI_TOP_P", "").strip() or "(not set)"
     seed = os.getenv("OPENAI_SEED", "").strip() or "(not set)"
@@ -105,13 +108,16 @@ def _print_inference_config_overview(
         f"  RDF_REPRESENTATION   = {rdf_repr}",
         f"  PRUNING_METHOD       = {pruning}",
         "Context compression:",
-        f"  CONTEXT_COMPRESSION  = {ctx_comp}",
-        f"  MAX_TOKEN_FOR_MODEL  = {max_tokens}",
+        f"  CONTEXT_COMPRESSION       = {ctx_comp}",
+        f"  MAX_TOKEN_FOR_MODEL       = {max_tokens}",
+        f"  COMPRESSION_STRATEGY      = {comp_strategy}",
+        f"  COMPRESSION_KEEP_FULL_LAST_N = {comp_keep_n}",
         "Agent prompt:",
         f"  SCRATCHPAD_MODE      = {scratchpad}",
         "Agent reasoning:",
         f"  THINKING_MODE        = {thinking}",
         f"  PLAN_MODE            = {plan}",
+        f"  PATH_VALIDATION      = {path_validation}",
         "============================================================",
     ]
     print("\n".join(lines))

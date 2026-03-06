@@ -26,6 +26,10 @@ dependencies = [
 dev = [
     "pytest>=9.0.2",
 ]
+# Local inference via Hugging Face Transformers; not required for API-based inference.
+transformers = [
+    "smolagents[transformers]>=1.24.0",
+]
 
 [tool.pytest.ini_options]
 pythonpath = ["."]

@@ -13,3 +13,14 @@ defaults:
 input_folder: null
 output_folder: null
 trace_dir: null
+
+# Agent behaviour overrides — null means "use experiment config or .env fallback"
+# Set to true/false on the CLI to override the experiment YAML, e.g.:
+#   python run_inference_hydra.py path_validation=true
+#   python run_inference_hydra.py thinking_mode=false
+scratchpad_mode: null
+thinking_mode: null
+plan_mode: null
+path_validation: null
+compression_strategy: null
+compression_keep_full_last_n: null
