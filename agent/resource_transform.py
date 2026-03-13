@@ -8,6 +8,8 @@ from rdflib import Graph, Namespace, URIRef
 from pyld import jsonld
 from markdownify import markdownify as md
 
+from crn import graph_to_crn, html_to_crn, serialize
+
 logger = logging.getLogger(__name__)
 
 # Config: env keys and defaults
@@ -22,7 +24,7 @@ DEFAULT_CONTEXT = "modified"
 DEFAULT_RDF_REPRESENTATION = "html"
 DEFAULT_PRUNING_METHOD = "unpruned"
 
-REPRESENTATION_FORMATS = ("rdf", "wikitext", "html")
+REPRESENTATION_FORMATS = ("rdf", "wikitext", "html", "crn")
 CONTEXT_VALUES = ("raw", "modified")
 RDF_REPRESENTATIONS = ("html", "json-ld", "turtle", "turtle-compact", "turtle-terser", "json-ld-compact")
 PRUNING_METHODS = ("unpruned", "outgoing-only", "in-and-outgoing")
@@ -196,6 +198,15 @@ def modify_uri(uri: str) -> str:
         if rdf_repr == "html":
             return f"https://dbpedia.org/page/{local}"
         return f"http://dbpedia.org/data/{local}.ttl"
+    if fmt == "crn":
+        if "dbpedia.org" in uri:
+            uri = _normalize_dbpedia_uri(uri)
+            local = uri.split("/")[-1]
+            return f"http://dbpedia.org/data/{local}.ttl"
+        if "wikipedia.org" in uri:
+            local = uri.split("/")[-1]
+            return f"https://en.wikipedia.org/api/rest_v1/page/html/{local}"
+        return uri
     if fmt == "wikitext":
         local = uri.split("/")[-1]
         return f"https://en.wikipedia.org/api/rest_v1/page/html/{local}"
@@ -216,8 +227,21 @@ def _accept_header_for_rdf_representation() -> str:
     )
 
 
-def get_accept_header_when_modify_context() -> str:
-    """Return the Accept header to use for the GET request when MODIFY_CONTEXT is true."""
+def get_accept_header_when_modify_context(fetch_url: str | None = None) -> str:
+    """Return the Accept header to use for the GET request when MODIFY_CONTEXT is true.
+    When REPRESENTATION_FORMAT is crn, fetch_url is used to choose Turtle (DBpedia) or HTML (Wikipedia).
+    """
+    fmt = get_representation_format()
+    if fmt == "crn" and fetch_url:
+        if "dbpedia.org" in fetch_url:
+            return (
+                "text/turtle;q=1, application/ld+json;q=0.99, application/rdf+xml;q=0.99, "
+                "application/n-triples;q=0.99, application/activity+json;q=0.99, "
+                "application/hal+json;q=0.975, application/json;q=0.95, application/atom+xml;q=0.9, "
+                "application/xml;q=0.85"
+            )
+        if "wikipedia.org" in fetch_url:
+            return "text/html, application/xhtml+xml, application/xml;q=0.9"
     return _accept_header_for_rdf_representation()
 
 
@@ -450,6 +474,26 @@ def get_rdf_representation(resource_representation: str, uri: str) -> str:
     )
 
 
+def _get_pruned_graph_for_uri(turtle_text: str, resource_uri: str) -> Graph:
+    """Parse Turtle and return graph pruned per PRUNING_METHOD for the given resource URI."""
+    g = Graph()
+    g.parse(data=turtle_text, format="turtle")
+    http_uri = URIRef(resource_uri.replace("https://", "http://"))
+    https_uri = URIRef(resource_uri.replace("http://", "https://"))
+    target_uris = {http_uri, https_uri}
+    pruning = get_pruning_method()
+    result_graph = initialize_graph()
+    if pruning == "unpruned":
+        result_graph += g
+    elif pruning == "outgoing-only":
+        result_graph = prune_graph_by_outgoing_resources_only(g, target_uris, result_graph)
+    elif pruning == "in-and-outgoing":
+        result_graph = prune_graph_by_in_and_outgoing_resources(g, target_uris, result_graph)
+    else:
+        raise ValueError(f"Unknown {ENV_PRUNING_METHOD}={pruning!r}; allowed: {PRUNING_METHODS}")
+    return result_graph
+
+
 def get_representation(resource_representation: str, uri: str) -> str:
     """Transform response body per REPRESENTATION_FORMAT and CONTEXT."""
     fmt = get_representation_format()
@@ -473,4 +517,17 @@ def get_representation(resource_representation: str, uri: str) -> str:
             return resource_representation
         if ctx == "modified":
             return md(resource_representation)
+    if fmt == "crn":
+        if ctx == "raw":
+            return resource_representation
+        if ctx == "modified":
+            if "dbpedia.org" in uri:
+                resource_uri = get_dbpedia_resource_uri(uri)
+                g = _get_pruned_graph_for_uri(resource_representation, resource_uri)
+                doc = graph_to_crn(g, resource_uri)
+                return serialize(doc)
+            if "wikipedia.org" in uri:
+                doc = html_to_crn(resource_representation, uri)
+                return serialize(doc)
+            return resource_representation
     return resource_representation

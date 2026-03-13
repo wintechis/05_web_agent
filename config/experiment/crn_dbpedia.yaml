@@ -1,0 +1,7 @@
+# CRN representation for DBpedia (experiment 17 dataset)
+dataset: dbpedia
+modify_context: true
+context: modified
+representation_format: crn
+pruning_method: outgoing-only
+context_compression: false

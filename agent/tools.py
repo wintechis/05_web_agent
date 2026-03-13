@@ -85,7 +85,11 @@ def _get(url: str) -> Response:
     """Internal synchronous function to fetch and process URL. Retries on transient transport errors."""
     # Server Configuration 
     fetch_url = modify_uri(url) if get_modify_context() else url
-    headers = {"Accept": get_accept_header_when_modify_context()} if get_modify_context() else None
+    headers = (
+        {"Accept": get_accept_header_when_modify_context(fetch_url)}
+        if get_modify_context()
+        else None
+    )
     last_exc: Exception | None = None
 
     for attempt in range(GET_MAX_RETRIES):

@@ -1,0 +1,8 @@
+# Dataset from evaluation/experiments/17 (same as used in experiments 17–19)
+dataset_paths:
+  dbpedia:
+    input_folder: evaluation/experiments/17/questions/dbpedia
+    output_folder: out/experiment_17/dbpedia
+  wikipedia:
+    input_folder: evaluation/experiments/17/questions/wikipedia
+    output_folder: out/experiment_17/wikipedia

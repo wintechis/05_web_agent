@@ -1,0 +1,6 @@
+# CRN representation for Wikipedia (experiment 17 dataset)
+dataset: wikipedia
+modify_context: true
+context: modified
+representation_format: crn
+context_compression: false
