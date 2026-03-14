@@ -1,21 +1,26 @@
+"""Model and HTTP client configuration for the web agent. Uses pi_ai for LLM inference."""
+
 import os
 from typing import Any
 
 from dotenv import load_dotenv
-from smolagents import OpenAIModel
 import httpx
 
-from agent.context_compression import ContextCompressionModelWrapper, is_context_compression_enabled
+from pi_ai import get_model
+from pi_ai.types import Model, ModelCost
 
 load_dotenv()
 
 
 #################################################################
-# Inference Model (OpenAI API or local Transformers)
+# Inference Model (OpenAI API via pi_ai)
 #################################################################
 INFERENCE_BACKEND_ENV = "INFERENCE_BACKEND"
 INFERENCE_BACKEND_OPENAI = "openai"
 INFERENCE_BACKEND_TRANSFORMERS = "transformers"
+
+# Local Hugging Face Transformers backend is not supported with pi-mono-python.
+# Set INFERENCE_BACKEND=openai and use OPENAI_MODEL_ID with an API-based model.
 
 
 def _is_transformers_backend() -> bool:
@@ -23,7 +28,6 @@ def _is_transformers_backend() -> bool:
     return raw == INFERENCE_BACKEND_TRANSFORMERS
 
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 def _normalized_base_url() -> str | None:
     raw = os.getenv("OPENAI_BASE_URL")
     return raw.strip().rstrip("/") if raw else None
@@ -34,87 +38,70 @@ OPENAI_BASE_URL = _normalized_base_url()
 # Used when OPENAI_MODEL_ID is not set (e.g. .env fallback)
 DEFAULT_MODEL_ID = (os.getenv("OPENAI_MODEL_ID") or "").strip() or None
 
-
-def _model_kwargs_from_env() -> dict:
-    """Build kwargs for OpenAIModel from env (temperature, top_p, seed for determinism)."""
-    kwargs: dict = {}
-    if (t := os.getenv("OPENAI_TEMPERATURE")) is not None and t != "":
-        try:
-            kwargs["temperature"] = float(t)
-        except ValueError:
-            pass
-    if (p := os.getenv("OPENAI_TOP_P")) is not None and p != "":
-        try:
-            kwargs["top_p"] = float(p)
-        except ValueError:
-            pass
-    if (s := os.getenv("OPENAI_SEED")) is not None and s != "":
-        try:
-            kwargs["seed"] = int(s)
-        except ValueError:
-            pass
-    return kwargs
+# Default base URL for OpenAI when not overridden
+_DEFAULT_OPENAI_BASE_URL = "https://api.openai.com/v1"
 
 
-_LLM_TIMEOUT_ENV = "OPENAI_TIMEOUT"
-_LLM_TIMEOUT_DEFAULT = 120.0  # seconds; prevents indefinite hangs on slow API responses
+def _build_pi_ai_model(model_id: str) -> Model:
+    """Build a pi_ai Model for the given model_id. Uses registry if available, else constructs one."""
+    model_id = model_id.strip()
+    base_url = _normalized_base_url() or _DEFAULT_OPENAI_BASE_URL
 
+    registered = get_model("openai", model_id)
+    if registered is not None:
+        if base_url and registered.base_url != base_url:
+            return registered.model_copy(update={"base_url": base_url})
+        return registered
 
-
-def _llm_timeout() -> float:
-    raw = os.getenv(_LLM_TIMEOUT_ENV, "").strip()
-    try:
-        return float(raw) if raw else _LLM_TIMEOUT_DEFAULT
-    except ValueError:
-        return _LLM_TIMEOUT_DEFAULT
-
-
-def _build_openai_model(model_id: str) -> Any:
-    """Build OpenAIModel (with optional ContextCompression wrapper) for the given model_id."""
-    base = OpenAIModel(
-        model_id = model_id.strip(),
-        api_key=OPENAI_API_KEY,
-        api_base=OPENAI_BASE_URL,
-        client_kwargs={"timeout": _llm_timeout()},
-        **_model_kwargs_from_env(),
-    )
-    return (
-        ContextCompressionModelWrapper(base)
-        if is_context_compression_enabled()
-        else base
+    # Custom or unknown model ID: construct a Model for openai-completions API
+    return Model(
+        id=model_id,
+        name=model_id,
+        api="openai-completions",
+        provider="openai",
+        base_url=base_url,
+        cost=ModelCost(),
     )
 
 
-_openai_model_cache: dict[str, Any] = {}
+_model_cache: dict[tuple[str, str | None], Model] = {}
 
 
-def get_openai_inference_model() -> Any:
-    """Return the inference model for the current backend and OPENAI_MODEL_ID (cached per model_id).
+def get_openai_inference_model() -> Model:
+    """Return the pi_ai Model for the current OPENAI_MODEL_ID (cached per model_id + base_url).
 
-    When INFERENCE_BACKEND=transformers, delegates to get_transformers_inference_model() so
-    the same entry point works for API and local inference. Otherwise builds OpenAIModel.
+    When INFERENCE_BACKEND=transformers, raises ValueError; local transformers are not
+    supported with pi-mono-python.
     """
     if _is_transformers_backend():
-        from agent.clients_transformers import get_transformers_inference_model
-        return get_transformers_inference_model()
+        raise ValueError(
+            "INFERENCE_BACKEND=transformers is not supported with pi-mono-python. "
+            "Use INFERENCE_BACKEND=openai and set OPENAI_MODEL_ID to an API model."
+        )
     model_id = (os.getenv("OPENAI_MODEL_ID") or DEFAULT_MODEL_ID or "").strip()
     if not model_id:
         raise ValueError("OPENAI_MODEL_ID is not set; set it in .env or via Hydra model config.")
-    if model_id not in _openai_model_cache:
-        _openai_model_cache[model_id] = _build_openai_model(model_id)
-    return _openai_model_cache[model_id]
+    cache_key = (model_id, _normalized_base_url())
+    if cache_key not in _model_cache:
+        _model_cache[cache_key] = _build_pi_ai_model(model_id)
+    return _model_cache[cache_key]
 
 
-# Default at import time (from .env); use get_openai_inference_model() when OPENAI_MODEL_ID
-# or INFERENCE_BACKEND may be set later (e.g. by Hydra) so the correct model is used.
-# When backend is transformers we do not build at import time to avoid loading torch.
-openai_inference_model = (
-    _build_openai_model(DEFAULT_MODEL_ID) if (DEFAULT_MODEL_ID and not _is_transformers_backend()) else None
-)
+# Lazy default: avoid building model at import time when OPENAI_MODEL_ID may not be set yet.
+def _default_model_or_none() -> Model | None:
+    if not DEFAULT_MODEL_ID or _is_transformers_backend():
+        return None
+    try:
+        return get_openai_inference_model()
+    except ValueError:
+        return None
+
+
+openai_inference_model: Model | None = _default_model_or_none()
 
 
 #################################################################
-# HTTP Client
+# HTTP Client (for tools)
 #################################################################
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "

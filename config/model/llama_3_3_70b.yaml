@@ -1,1 +1,2 @@
 openai_model_id: llama-3.3-70b-instruct
+provider: chatai

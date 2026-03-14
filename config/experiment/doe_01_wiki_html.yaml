@@ -1,0 +1,8 @@
+# DOE 01: Wikipedia HTML — no cleaning, no filtering, no compression
+dataset: wikipedia
+modify_context: true
+context: raw
+representation_format: html
+rdf_representation: html
+pruning_method: unpruned
+context_compression: false

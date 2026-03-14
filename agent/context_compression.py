@@ -78,6 +78,11 @@ def _role(m) -> str:
     return m.get("role", "") if isinstance(m, dict) else getattr(m, "role", "")
 
 
+def _is_tool_response(m) -> bool:
+    """True if message is a tool result (smolagents 'tool-response' or pi_ai 'toolResult')."""
+    return _role(m) in ("tool-response", "toolResult")
+
+
 def _content(m):
     return m.get("content", "") if isinstance(m, dict) else getattr(m, "content", "")
 
@@ -135,7 +140,7 @@ def _compress_truncate(messages: list) -> list:
     """Original strategy: truncate every tool response to TOOL_CONTENT_MAX_CHARS."""
     r = []
     for m in messages[:-1]:
-        if _role(m) == "tool-response":
+        if _is_tool_response(m):
             lim = copy.deepcopy(m)
             _set_content(lim, _truncate_content(_content(lim), TOOL_CONTENT_MAX_CHARS))
             r.append(lim)
@@ -153,12 +158,12 @@ def _compress_recency_uri(messages: list, keep_full_last_n: int) -> list:
     avoid re-fetching).
     """
     tool_indices = [
-        i for i, m in enumerate(messages[:-1]) if _role(m) == "tool-response"
+        i for i, m in enumerate(messages[:-1]) if _is_tool_response(m)
     ]
     keep_set = set(tool_indices[-keep_full_last_n:]) if keep_full_last_n > 0 else set()
     r = []
     for i, m in enumerate(messages[:-1]):
-        if _role(m) != "tool-response":
+        if not _is_tool_response(m):
             r.append(copy.deepcopy(m))
         elif i in keep_set:
             r.append(copy.deepcopy(m))
@@ -178,13 +183,13 @@ def _compress_tiered(messages: list) -> list:
     URI-extract.
     """
     tool_indices = [
-        i for i, m in enumerate(messages[:-1]) if _role(m) == "tool-response"
+        i for i, m in enumerate(messages[:-1]) if _is_tool_response(m)
     ]
     # rank 0 = most recent
     rank_of = {idx: len(tool_indices) - 1 - pos for pos, idx in enumerate(tool_indices)}
     r = []
     for i, m in enumerate(messages[:-1]):
-        if _role(m) != "tool-response":
+        if not _is_tool_response(m):
             r.append(copy.deepcopy(m))
             continue
         rank = rank_of.get(i, 0)

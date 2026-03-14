@@ -1,7 +1,7 @@
-import os
+"""Web agent prompt templates. No smolagents dependency; returns a simple struct for the runner."""
 
-from smolagents import PromptTemplates, FinalAnswerPromptTemplate
-from smolagents.agents import PlanningPromptTemplate, ManagedAgentPromptTemplate
+import os
+from dataclasses import dataclass
 
 ENV_SCRATCHPAD_MODE = "SCRATCHPAD_MODE"
 
@@ -27,15 +27,7 @@ LOOP Definition
 TOOLS
 - A TOOL is an operation that allows you to percieve or interact with the ENVIRONMENT.
 - During each CYCLE, invoke one or multiple TOOLS.
-- The following TOOLS are available to you:
-{% for tool_name, tool in tools.items() %}
-- **{{ tool.name }}**: {{ tool.description }}
-  - Inputs:
-  {% for input_name, input_spec in tool.inputs.items() %}
-    - `{{ input_name }}` ({{ input_spec.type }}): {{ input_spec.description }}
-  {% endfor %}
-  - Output: {{ tool.output_type }}
-{% endfor %}
+- The available tools (e.g. get, final_answer) and their parameters are provided by the system; use them as specified.
 
 ENVIRONMENT
 * Follow links via `get()` and submit forms via `post()` judiciously.
@@ -46,7 +38,7 @@ FINISHING
 * You have a limited number of steps — use them efficiently and act directly toward the goal.
 * Call `final_answer` as soon as you have enough information to answer the TASK. Do not continue after the answer is found.
 * When calling `final_answer`, always provide both arguments:
-  1. `urls`: a list of URLs that answer the question (use [] if none).
+  1. `answer`: a string that answers the question (use "" if none).
   2. `task_state`: one of:
      - completed: you found a full answer.
      - partial: you found some relevant URLs but the answer is incomplete.
@@ -55,57 +47,8 @@ FINISHING
 
 IMPORTANT: Always write your reasoning step-by-step as plain text in your response BEFORE calling any tool.
 """
-WEB_AGENT_PROMPT = """
-You are a Web Agent that can search the web for information.
-
-You will be given a task to complete.
-
-To complete the task, you have the following tools available:
-
-{% for tool_name, tool in tools.items() %}
-- **{{ tool.name }}**: {{ tool.description }}
-  - Inputs:
-  {% for input_name, input_spec in tool.inputs.items() %}
-    - `{{ input_name }}` ({{ input_spec.type }}): {{ input_spec.description }}
-  {% endfor %}
-  - Output: {{ tool.output_type }}
-{% endfor %}
-
-Always explain your reasoning step-by-step in plain text BEFORE calling any tool.
-IF you do not provide the reasoning step-by-step, the task will not be considered completed.
-Every tool call must include a `_rationale` string argument that briefly explains why this tool was chosen.
-
-Use the tools to complete the task.
-
-"""
-
-# FINAL_ANSWER_PROMPT = """
-# When you are done, call the final_answer tool with two arguments:
-# 1. urls: A list of URLs that answer the user's question. Use an empty list [] if you have no URLs.
-# 2. task_state: One of:
-#    - completed: You found a full answer (the requested path or information).
-#    - partial: You found some relevant URLs but the answer is incomplete.
-#    - failed: You could not find the answer or encountered errors.
-#    - unclear: The question is ambiguous or success criteria are unclear.
-
-# Always provide both urls and task_state.
-# """
-FINAL_ANSWER_PROMPT = ""
 
 FINAL_ANSWER_USER_PROMPT = "The user asked: {{ task }}"
-
-########################################################
-# pre_messages (str):
-# Instructions sent as a system message before the history. 
-# Use it to set context for generating the final answer.
-###
-# post_messages (str):
-#  Instructions sent as a user message after the history.
-#  Can include the task variable: {{ task }}.
-FINAL_ANSWER_PROMPT_TEMPLATES = FinalAnswerPromptTemplate(
-    pre_messages=FINAL_ANSWER_PROMPT,
-    post_messages=FINAL_ANSWER_USER_PROMPT,
-)
 
 SCRATCHPAD_SECTION = """
 SCRATCHPAD — write this block as plain text in your response before every tool call:
@@ -116,22 +59,21 @@ SCRATCHPAD — write this block as plain text in your response before every tool
 """
 
 
-def get_web_agent_prompt_templates() -> PromptTemplates:
+@dataclass
+class WebAgentPromptTemplates:
+    """Simple container for web agent prompts. Used by the runner (no smolagents)."""
+
+    system_prompt: str
+    final_answer_post_messages: str  # Template with {{ task }} for max-steps final answer
+
+
+def get_web_agent_prompt_templates() -> WebAgentPromptTemplates:
     """Return prompt templates, conditionally including the scratchpad section based on SCRATCHPAD_MODE."""
     scratchpad_enabled = os.getenv(ENV_SCRATCHPAD_MODE, "false").strip().lower() in ("true", "1", "yes")
     system_prompt = WEB_AGENT_PROMPT_2 + SCRATCHPAD_SECTION if scratchpad_enabled else WEB_AGENT_PROMPT_2
-    return PromptTemplates(
+    return WebAgentPromptTemplates(
         system_prompt=system_prompt,
-        planning=PlanningPromptTemplate(
-            initial_plan="",
-            update_plan_pre_messages="",
-            update_plan_post_messages="",
-        ),
-        managed_agent=ManagedAgentPromptTemplate(
-            task="",
-            report="",
-        ),
-        final_answer=FINAL_ANSWER_PROMPT_TEMPLATES,
+        final_answer_post_messages=FINAL_ANSWER_USER_PROMPT,
     )
 
 

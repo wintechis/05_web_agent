@@ -12,10 +12,9 @@ from opentelemetry.sdk.trace.export import (
     SpanExporter,
     SpanExportResult,
 )
-from openinference.instrumentation.smolagents import SmolagentsInstrumentor
 from openinference.instrumentation.openai import OpenAIInstrumentor
 
-DEFAULT_SERVICE_NAME = "smolagents-web-agent"
+DEFAULT_SERVICE_NAME = "web-agent"
 DEFAULT_TRACE_DIR = "web_agent_traces"
 TRACE_DIR_ENV = "OTEL_TRACE_DIR"
 
@@ -77,7 +76,27 @@ class JSONFileSpanExporter(SpanExporter):
             return SpanExportResult.FAILURE
 
     def shutdown(self) -> None:
-        return None
+        finalize_traces(self.output_dir)
+
+
+def finalize_traces(trace_dir: str) -> None:
+    """Convert all .jsonl trace files in trace_dir to .json with indent=4."""
+    if not os.path.isdir(trace_dir):
+        return
+    for filename in os.listdir(trace_dir):
+        if not filename.endswith(".jsonl"):
+            continue
+        jsonl_path = os.path.join(trace_dir, filename)
+        json_path = os.path.join(trace_dir, filename[:-1])  # .jsonl -> .json
+        spans = []
+        with open(jsonl_path, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line:
+                    spans.append(json.loads(line))
+        with open(json_path, "w", encoding="utf-8") as f:
+            json.dump(spans, f, indent=4, ensure_ascii=False)
+        os.remove(jsonl_path)
 
 
 def init_tracing() -> None:
@@ -93,8 +112,6 @@ def init_tracing() -> None:
         BatchSpanProcessor(JSONFileSpanExporter(trace_dir))
     )
     trace.set_tracer_provider(provider)
-    SmolagentsInstrumentor().instrument()
-    
     OpenAIInstrumentor().instrument()
 
     _TRACING_INITIALIZED = True

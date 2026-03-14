@@ -1,0 +1,9 @@
+# DOE 14: DBpedia HTML — cleaning + compression
+dataset: dbpedia
+modify_context: true
+context: modified
+representation_format: rdf
+rdf_representation: html
+pruning_method: unpruned
+context_compression: true
+max_token_for_model: "120000"

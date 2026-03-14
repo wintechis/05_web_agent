@@ -1,0 +1,9 @@
+# DOE 12: DBpedia HTML — compression only
+dataset: dbpedia
+modify_context: true
+context: raw
+representation_format: rdf
+rdf_representation: html
+pruning_method: unpruned
+context_compression: true
+max_token_for_model: "120000"

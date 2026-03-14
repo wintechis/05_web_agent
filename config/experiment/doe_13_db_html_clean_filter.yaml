@@ -1,0 +1,8 @@
+# DOE 13: DBpedia HTML — cleaning + filtering (md + outgoing-only)
+dataset: dbpedia
+modify_context: true
+context: modified
+representation_format: rdf
+rdf_representation: html
+pruning_method: outgoing-only
+context_compression: false

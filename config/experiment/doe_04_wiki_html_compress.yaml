@@ -1,0 +1,9 @@
+# DOE 04: Wikipedia HTML — compression only
+dataset: wikipedia
+modify_context: true
+context: raw
+representation_format: html
+rdf_representation: html
+pruning_method: unpruned
+context_compression: true
+max_token_for_model: "120000"

@@ -109,6 +109,26 @@ def _get_model_config(cfg: DictConfig) -> DictConfig | None:
     return None
 
 
+def _apply_provider_to_env(cfg: DictConfig) -> None:
+    """Set OPENAI_API_KEY and OPENAI_BASE_URL from the provider config referenced by the model."""
+    model_cfg = _get_model_config(cfg)
+    if model_cfg is None:
+        return
+    provider_name = OmegaConf.select(model_cfg, "provider")
+    if not provider_name:
+        return
+    provider_path = Path(__file__).parent / "config" / "providers" / f"{provider_name}.yaml"
+    if not provider_path.exists():
+        raise ValueError(f"Provider config not found: {provider_path}")
+    provider_cfg = OmegaConf.load(provider_path)
+    api_key = OmegaConf.select(provider_cfg, "api_key")
+    base_url = OmegaConf.select(provider_cfg, "base_url")
+    if api_key:
+        os.environ["OPENAI_API_KEY"] = str(api_key)
+    if base_url:
+        os.environ["OPENAI_BASE_URL"] = str(base_url)
+
+
 def _apply_model_to_env(cfg: DictConfig) -> None:
     """Set OPENAI_MODEL_ID from config so get_openai_inference_model() uses the chosen model."""
     model_cfg = _get_model_config(cfg)
@@ -172,6 +192,7 @@ def _resolve_paths(cfg: DictConfig) -> tuple[Path, Path]:
 def main(cfg: DictConfig) -> None:
     experiment_cfg = _get_experiment_config(cfg)
     _apply_experiment_to_env(experiment_cfg, overrides_cfg=cfg)
+    _apply_provider_to_env(cfg)
     _apply_model_to_env(cfg)
 
     input_dir, output_dir = _resolve_paths(cfg)

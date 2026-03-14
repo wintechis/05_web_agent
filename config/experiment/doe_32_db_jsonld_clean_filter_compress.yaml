@@ -1,0 +1,9 @@
+# DOE 32: DBpedia JSON-LD — cleaning + filtering + compression (all three)
+dataset: dbpedia
+modify_context: true
+context: modified
+representation_format: rdf
+rdf_representation: json-ld-compact
+pruning_method: outgoing-only
+context_compression: true
+max_token_for_model: "120000"

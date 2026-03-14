@@ -1,0 +1,8 @@
+# DOE 26: DBpedia JSON-LD — cleaning only (json-ld-compact)
+dataset: dbpedia
+modify_context: true
+context: modified
+representation_format: rdf
+rdf_representation: json-ld-compact
+pruning_method: unpruned
+context_compression: false

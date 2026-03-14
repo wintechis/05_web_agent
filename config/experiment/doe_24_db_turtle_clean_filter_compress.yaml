@@ -1,0 +1,9 @@
+# DOE 24: DBpedia Turtle — cleaning + filtering + compression (all three)
+dataset: dbpedia
+modify_context: true
+context: modified
+representation_format: rdf
+rdf_representation: turtle-terser
+pruning_method: outgoing-only
+context_compression: true
+max_token_for_model: "120000"

@@ -1,0 +1,8 @@
+# DOE 11: DBpedia HTML — filtering only (outgoing-only triples)
+dataset: dbpedia
+modify_context: true
+context: raw
+representation_format: rdf
+rdf_representation: html
+pruning_method: outgoing-only
+context_compression: false

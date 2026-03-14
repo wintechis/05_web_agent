@@ -1,0 +1,8 @@
+# DOE 10: DBpedia HTML — cleaning only (HTML → md)
+dataset: dbpedia
+modify_context: true
+context: modified
+representation_format: rdf
+rdf_representation: html
+pruning_method: unpruned
+context_compression: false

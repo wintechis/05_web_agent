@@ -8,7 +8,7 @@ from opentelemetry import trace
 
 from agent.agents import get_vanilla_web_agent
 from agent.clients import get_openai_inference_model
-from agent.telemetry import DEFAULT_TRACE_DIR, TRACE_DIR_ENV, init_tracing
+from agent.telemetry import DEFAULT_TRACE_DIR, TRACE_DIR_ENV, finalize_traces, init_tracing
 from benchmark.constants import (
     BENCHMARK_KEY,
     DEFAULT_MAX_AGENT_STEPS,
@@ -43,15 +43,15 @@ def _extract_answer_and_task_state(answer: Any) -> tuple[Any, str | None]:
 
 
 def _model_id() -> str:
-    """Get current model identifier from clients."""
+    """Get current model identifier from clients (pi_ai Model uses .id)."""
     model = get_openai_inference_model()
-    model_id = getattr(model, "model_id", None)
+    model_id = getattr(model, "model_id", None) or getattr(model, "id", None)
     return str(model_id) if model_id else "unknown"
 
 
 def _trace_file_for_id(trace_dir: str, trace_id: str) -> str:
     """Build trace file path for trace ID."""
-    return os.path.join(trace_dir, f"{trace_id}.jsonl")
+    return os.path.join(trace_dir, f"{trace_id}.json")
 
 
 def _max_agent_steps() -> int:
@@ -69,7 +69,7 @@ def _print_inference_config_overview(
     input_dir: str, output_dir: str, trace_dir: str
 ) -> None:
     """Print configuration overview at the start of a run (paths + env-driven settings)."""
-    model_id = getattr(get_openai_inference_model(), "model_id", None) or "unknown"
+    model_id = getattr(get_openai_inference_model(), "model_id", None) or getattr(get_openai_inference_model(), "id", None) or "unknown"
     max_steps = _max_agent_steps()
     modify_ctx = os.getenv("MODIFY_CONTEXT", "").strip().lower() in ("true", "1", "yes")
     repr_fmt = os.getenv("REPRESENTATION_FORMAT", "wikitext").strip().lower()
@@ -190,6 +190,8 @@ class RunInferenceUseCase:
 
         for input_path in yaml_files:
             self._run_benchmark_file(input_path, abs_output, abs_trace)
+
+        finalize_traces(abs_trace)
 
     def _run_benchmark_file(
         self, input_path: str, output_dir: str, trace_dir: str

@@ -1,1 +1,2 @@
 openai_model_id: qwen3-vl-30b-a3b-instruct
+provider: chatai

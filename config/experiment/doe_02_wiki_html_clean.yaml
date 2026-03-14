@@ -1,0 +1,8 @@
+# DOE 02: Wikipedia HTML — cleaning only
+dataset: wikipedia
+modify_context: true
+context: modified
+representation_format: html
+rdf_representation: html
+pruning_method: unpruned
+context_compression: false

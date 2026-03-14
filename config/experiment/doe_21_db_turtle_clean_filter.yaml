@@ -1,0 +1,8 @@
+# DOE 21: DBpedia Turtle — cleaning + filtering (turtle-terser + outgoing-only)
+dataset: dbpedia
+modify_context: true
+context: modified
+representation_format: rdf
+rdf_representation: turtle-terser
+pruning_method: outgoing-only
+context_compression: false

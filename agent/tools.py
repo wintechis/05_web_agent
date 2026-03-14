@@ -1,10 +1,13 @@
+import asyncio
 import json
 import os
 import time
 import markdownify
 import httpx
 from pydantic import BaseModel
-from smolagents import Tool
+
+from pi_agent.types import AgentTool, AgentToolResult
+from pi_ai.types import TextContent
 
 from agent.clients import http_client
 
@@ -31,6 +34,7 @@ def markdownify_text(text: str) -> str:
 def modify_header(httpx_client: httpx.Client, headers: dict[str, str]) -> httpx.Client:
     return httpx_client.with_headers(headers)
 
+
 def get_query(url: str) -> str:
     query = """
     PREFIX dbo: <http://dbpedia.org/ontology/>
@@ -40,9 +44,9 @@ def get_query(url: str) -> str:
         <{url}> dbo:wikiPageWikiLink ?neighbor .
     }
     """
-    
     query = query.replace("{url}", url)
     return query
+
 
 def get_with_sparql(url: str, query: str) -> Response:
     http_client = modify_header(http_client, {"Accept": "application/sparql-results+json"})
@@ -83,7 +87,6 @@ def _http_error_response(response: httpx.Response, url: str) -> Response | None:
 
 def _get(url: str) -> Response:
     """Internal synchronous function to fetch and process URL. Retries on transient transport errors."""
-    # Server Configuration 
     fetch_url = modify_uri(url) if get_modify_context() else url
     headers = (
         {"Accept": get_accept_header_when_modify_context(fetch_url)}
@@ -113,9 +116,6 @@ def _get(url: str) -> Response:
         if error_response is not None:
             return error_response
 
-
-        # Client Configuration
-        # Syntactic Noise Cleaning
         if get_modify_context():
             text = get_representation(response.text, url)
         else:
@@ -140,27 +140,48 @@ def _get(url: str) -> Response:
     )
 
 
-class GETTool(Tool):
-    """Tool to fetch and convert web resources."""
+def _inputs_to_parameters(inputs: dict) -> dict:
+    """Convert smolagents-style inputs to JSON Schema parameters."""
+    required = [k for k, v in inputs.items() if not v.get("nullable")]
+    properties: dict = {}
+    for k, v in inputs.items():
+        prop = {"type": v["type"], "description": v.get("description", "")}
+        if v.get("nullable"):
+            prop["nullable"] = True
+        if "items" in v:
+            prop["items"] = v["items"]
+        if "enum" in v:
+            prop["enum"] = list(v["enum"])
+        properties[k] = prop
+    return {"type": "object", "properties": properties, "required": required}
 
-    name = "get"
-    description = "Fetches a URL and returns the resource content. Takes a URL as input and returns the the URL with the resource content."
-    inputs = {
-        "url": {
-            "type": "string",
-            "description": "The URL to fetch and the resource content.",
-        }
+
+async def _execute_get(tool_call_id: str, args: dict, cancel_event: asyncio.Event | None, on_update: None) -> AgentToolResult:
+    url = (args.get("url") or "").strip()
+    result = await asyncio.to_thread(_get, url)
+    text = f"URL: {result.url}\n\nStatus Code: {result.status_code}\n\nContent:\n{result.text}"
+    return AgentToolResult(content=[TextContent(type="text", text=text)], details=None)
+
+
+GET_TOOL_INPUTS = {
+    "url": {
+        "type": "string",
+        "description": "The URL to fetch and the resource content.",
     }
-    output_type = "string"
+}
 
-    def forward(self, url: str) -> str:
-        """Synchronous function to fetch URL and return markdown content."""
-        result = _get(url)
-        return f"URL: {result.url}\n\nStatus Code: {result.status_code}\n\nContent:\n{result.text}"
+GETTool = AgentTool(
+    name="get",
+    label="get",
+    description="Fetches a URL and returns the resource content. Takes a URL as input and returns the the URL with the resource content.",
+    parameters=_inputs_to_parameters(GET_TOOL_INPUTS),
+    execute=_execute_get,
+)
 
 
 def _post(url: str, json_body: str | None = None) -> Response:
     """Internal synchronous function to POST to a URL and return the response."""
+    response = None
     try:
         if json_body:
             body = json.loads(json_body)
@@ -171,7 +192,7 @@ def _post(url: str, json_body: str | None = None) -> Response:
         return Response(
             text=f"Invalid JSON body: {json_body}",
             url=url,
-            status_code=response.status_code,
+            status_code=response.status_code if response is not None else None,
         )
 
     error_response = _http_error_response(response, url)
@@ -187,31 +208,36 @@ def _post(url: str, json_body: str | None = None) -> Response:
     return Response(text=text, url=url, status_code=response.status_code)
 
 
-class POSTTool(Tool):
-    """Tool to send a POST request to a URL and return the response content."""
+async def _execute_post(tool_call_id: str, args: dict, cancel_event: asyncio.Event | None, on_update: None) -> AgentToolResult:
+    url = (args.get("url") or "").strip()
+    json_body = (args.get("json_body") or "").strip() or None
+    result = await asyncio.to_thread(_post, url, json_body)
+    text = f"URL: {result.url}\n\nStatus Code: {result.status_code}\n\nContent:\n{result.text}"
+    return AgentToolResult(content=[TextContent(type="text", text=text)], details=None)
 
-    name = "post"
-    description = (
+
+POST_TOOL_INPUTS = {
+    "url": {
+        "type": "string",
+        "description": "The URL to send the POST request to.",
+    },
+    "json_body": {
+        "type": "string",
+        "description": "Optional JSON string to send as request body (e.g. '{\"key\": \"value\"}').",
+        "nullable": True,
+    },
+}
+
+POSTTool = AgentTool(
+    name="post",
+    label="post",
+    description=(
         "Sends a POST request to a URL. Use for submitting forms or sending JSON payloads. "
         "Takes URL as input; optionally provide json_body as a JSON string to send in the request body."
-    )
-    inputs = {
-        "url": {
-            "type": "string",
-            "description": "The URL to send the POST request to.",
-        },
-        "json_body": {
-            "type": "string",
-            "description": "Optional JSON string to send as request body (e.g. '{\"key\": \"value\"}').",
-            "nullable": True,
-        },
-    }
-    output_type = "string"
-
-    def forward(self, url: str, json_body: str = "") -> str:
-        """Synchronous function to POST to URL and return response content."""
-        result = _post(url, json_body=json_body.strip() or None)
-        return f"URL: {result.url}\n\nStatus Code: {result.status_code}\n\nContent:\n{result.text}"
+    ),
+    parameters=_inputs_to_parameters(POST_TOOL_INPUTS),
+    execute=_execute_post,
+)
 
 
 def _put(url: str, text_body: str | None = None) -> Response:
@@ -238,31 +264,36 @@ def _put(url: str, text_body: str | None = None) -> Response:
     return Response(text=text, url=url, status_code=response.status_code)
 
 
-class PUTTool(Tool):
-    """Tool to send a PUT request to a URL with a text body."""
+async def _execute_put(tool_call_id: str, args: dict, cancel_event: asyncio.Event | None, on_update: None) -> AgentToolResult:
+    url = (args.get("url") or "").strip()
+    text_body = (args.get("text_body") or "").strip() or None
+    result = await asyncio.to_thread(_put, url, text_body)
+    text = f"URL: {result.url}\n\nStatus Code: {result.status_code}\n\nContent:\n{result.text}"
+    return AgentToolResult(content=[TextContent(type="text", text=text)], details=None)
 
-    name = "put"
-    description = (
+
+PUT_TOOL_INPUTS = {
+    "url": {
+        "type": "string",
+        "description": "The URL to send the PUT request to.",
+    },
+    "text_body": {
+        "type": "string",
+        "description": "Text to send as request body (plain text).",
+        "nullable": True,
+    },
+}
+
+PUTTool = AgentTool(
+    name="put",
+    label="put",
+    description=(
         "Sends a PUT request to a URL. Use for replacing or updating resources. "
         "Takes URL and text_body as input; sends the body with Content-Type: text/plain."
-    )
-    inputs = {
-        "url": {
-            "type": "string",
-            "description": "The URL to send the PUT request to.",
-        },
-        "text_body": {
-            "type": "string",
-            "description": "Text to send as request body (plain text).",
-            "nullable": True,
-        },
-    }
-    output_type = "string"
-
-    def forward(self, url: str, text_body: str = "") -> str:
-        """Synchronous function to PUT to URL and return response content."""
-        result = _put(url, text_body=text_body.strip() or None)
-        return f"URL: {result.url}\n\nStatus Code: {result.status_code}\n\nContent:\n{result.text}"
+    ),
+    parameters=_inputs_to_parameters(PUT_TOOL_INPUTS),
+    execute=_execute_put,
+)
 
 
 RDF_FORMATS = (
@@ -329,87 +360,103 @@ def _post_rdf(url: str, data_binary: str) -> Response:
     return Response(text=text, url=url, status_code=response.status_code)
 
 
-class POSTRdfTool(Tool):
-    """
-    Tool to POST RDF data to a URL. Validates input as RDF, converts to Turtle,
-    and sends with Content-Type: text/turtle.
-    """
+async def _execute_post_rdf(tool_call_id: str, args: dict, cancel_event: asyncio.Event | None, on_update: None) -> AgentToolResult:
+    url = (args.get("url") or "").strip()
+    data_binary = (args.get("data_binary") or "").strip()
+    result = await asyncio.to_thread(_post_rdf, url, data_binary)
+    text = f"URL: {result.url}\n\nStatus Code: {result.status_code}\n\nContent:\n{result.text}"
+    return AgentToolResult(content=[TextContent(type="text", text=text)], details=None)
 
-    name = "post_rdf"
-    description = (
+
+POST_RDF_TOOL_INPUTS = {
+    "url": {
+        "type": "string",
+        "description": "The URL to send the RDF data to.",
+    },
+    "data_binary": {
+        "type": "string",
+        "description": "RDF data as a string (Turtle, N-Triples, RDF/XML, TriG, N3, or JSON-LD).",
+    },
+}
+
+POSTRdfTool = AgentTool(
+    name="post_rdf",
+    label="post_rdf",
+    description=(
         "Sends RDF data to a URL via POST. Accepts RDF in various formats (Turtle, "
         "N-Triples, RDF/XML, TriG, N3, JSON-LD). Use for updating RDF stores or "
         "submitting RDF payloads."
-    )
-    inputs = {
-        "url": {
-            "type": "string",
-            "description": "The URL to send the RDF data to.",
-        },
-        "data_binary": {
-            "type": "string",
-            "description": "RDF data as a string (Turtle, N-Triples, RDF/XML, TriG, N3, or JSON-LD).",
-        },
-    }
-    output_type = "string"
-
-    def forward(self, url: str, data_binary: str) -> str:
-        """Parse RDF, validate, convert to Turtle, POST to URL."""
-        result = _post_rdf(url, data_binary.strip())
-        return f"URL: {result.url}\n\nStatus Code: {result.status_code}\n\nContent:\n{result.text}"
+    ),
+    parameters=_inputs_to_parameters(POST_RDF_TOOL_INPUTS),
+    execute=_execute_post_rdf,
+)
 
 
 # Allowed values for LLM-reported task state (structured final answer).
 TASK_STATE_VALUES = ("completed", "partial", "failed")
 
 
-class StructuredFinalAnswerTool(Tool):
-    """Final-answer tool that returns structured output: list of URLs + task state."""
+def _forward_final_answer(urls: list[str] | None = None, task_state: str | None = None) -> dict:
+    """Synchronous logic for structured final answer (path validation, normalisation)."""
+    if urls is None:
+        urls = []
+    elif isinstance(urls, str):
+        urls = [urls]
+    elif not isinstance(urls, list):
+        urls = [str(urls)] if urls else []
+    else:
+        urls = [str(u) for u in urls]
+    state = (task_state if task_state in TASK_STATE_VALUES else "unclear") or "unclear"
 
-    name = "final_answer"
-    description = (
+    if os.getenv("PATH_VALIDATION", "").strip().lower() in ("true", "1", "yes") and len(urls) >= 2:
+        from benchmark.domain.edge_validator import EdgeValidator
+
+        valid_edges = EdgeValidator().validate_edges(urls)
+        invalid = [
+            f"{urls[i]} -> {urls[i + 1]}"
+            for i, ok in enumerate(valid_edges)
+            if not ok
+        ]
+        if invalid:
+            raise ValueError(
+                f"Path validation failed: the following edges are not valid links: "
+                + "; ".join(invalid)
+                + ". Please correct your path and try again."
+            )
+
+    return {"urls": urls, "task_state": state}
+
+
+async def _execute_final_answer(tool_call_id: str, args: dict, cancel_event: asyncio.Event | None, on_update: None) -> AgentToolResult:
+    urls = args.get("urls")
+    task_state = args.get("task_state")
+    result_dict = await asyncio.to_thread(_forward_final_answer, urls, task_state)
+    text = json.dumps(result_dict, ensure_ascii=False)
+    return AgentToolResult(content=[TextContent(type="text", text=text)], details=result_dict)
+
+
+FINAL_ANSWER_TOOL_INPUTS = {
+    "urls": {
+        "type": "array",
+        "items": {"type": "string"},
+        "description": "List of URLs that form the answer. Use empty list if none.",
+        "nullable": True,
+    },
+    "task_state": {
+        "type": "string",
+        "description": "State of the task: completed (goal achieved), partial (some progress, goal not fully met), failed (goal not achieved).",
+        "enum": list(TASK_STATE_VALUES),
+        "nullable": True,
+    },
+}
+
+StructuredFinalAnswerTool = AgentTool(
+    name="final_answer",
+    label="final_answer",
+    description=(
         "Call this when you are done with the task. Provide the list of URLs that answer the user's question "
         "and the task state (completed, partial, failed)."
-    )
-    inputs = {
-        "urls": {
-            "type": "array",
-            "items": {"type": "string"},
-            "description": "List of URLs that form the answer. Use empty list if none.",
-            "nullable": True,
-        },
-        "task_state": {
-            "type": "string",
-            "description": "State of the task: completed (goal achieved), partial (some progress, goal not fully met), failed (goal not achieved).",
-            "enum": list(TASK_STATE_VALUES),
-            "nullable": True,
-        },
-    }
-    output_type = "object"
-
-    def forward(self, urls: list[str] | None = None, task_state: str | None = None) -> dict:
-        """Return structured final answer for the pipeline."""
-        if urls is None:
-            urls = []
-        elif not isinstance(urls, list):
-            urls = [str(urls)] if urls else []
-        else:
-            urls = [str(u) for u in urls]
-        state = (task_state if task_state in TASK_STATE_VALUES else "unclear") or "unclear"
-
-        if os.getenv("PATH_VALIDATION", "").strip().lower() in ("true", "1", "yes") and len(urls) >= 2:
-            from benchmark.domain.edge_validator import EdgeValidator
-            valid_edges = EdgeValidator().validate_edges(urls)
-            invalid = [
-                f"{urls[i]} -> {urls[i + 1]}"
-                for i, ok in enumerate(valid_edges)
-                if not ok
-            ]
-            if invalid:
-                raise ValueError(
-                    f"Path validation failed: the following edges are not valid links: "
-                    + "; ".join(invalid)
-                    + ". Please correct your path and try again."
-                )
-
-        return {"urls": urls, "task_state": state}
+    ),
+    parameters=_inputs_to_parameters(FINAL_ANSWER_TOOL_INPUTS),
+    execute=_execute_final_answer,
+)

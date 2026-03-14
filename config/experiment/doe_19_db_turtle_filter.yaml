@@ -1,0 +1,8 @@
+# DOE 19: DBpedia Turtle — filtering only (outgoing-only triples)
+dataset: dbpedia
+modify_context: true
+context: modified
+representation_format: rdf
+rdf_representation: turtle
+pruning_method: outgoing-only
+context_compression: false
